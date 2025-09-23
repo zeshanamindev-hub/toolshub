@@ -1,12 +1,15 @@
 {
-  "name": "timio",
+  "name": "word-counter-tool",
+  "description": "Fast and accurate word counter tool. Count words, characters, sentences, and paragraphs instantly. Perfect for writers, students, and content creators.",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "dependencies": {
     "next": "15.5.3",

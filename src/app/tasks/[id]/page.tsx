@@ -31,14 +31,19 @@ type TasksData = {
 };
 
 async function getTasks(): Promise<TasksData> {
-  const tasksFilePath = join(
-    process.cwd(),
-    ".taskmaster",
-    "tasks",
-    "tasks.json",
-  );
-  const fileContent = await readFile(tasksFilePath, "utf-8");
-  return JSON.parse(fileContent);
+  try {
+    const tasksFilePath = join(
+      process.cwd(),
+      ".taskmaster",
+      "tasks",
+      "tasks.json",
+    );
+    const fileContent = await readFile(tasksFilePath, "utf-8");
+    return JSON.parse(fileContent);
+  } catch (error) {
+    console.error('Error reading tasks file:', error);
+    throw new Error('Failed to load tasks');
+  }
 }
 
 export default async function TaskDetailPage({

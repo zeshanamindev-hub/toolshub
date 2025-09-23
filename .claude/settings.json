@@ -1,0 +1,32 @@
+{
+  "allowedTools": [
+    "Edit",
+    "Read", 
+    "Write",
+    "Glob",
+    "Grep",
+    "Bash(npm run *)",
+    "Bash(task-master *)",
+    "Bash(git *)",
+    "Bash(gh *)",
+    "mcp__task_master_ai__*",
+    "mcp__ide__*"
+  ],
+  "codeBlocks": {
+    "inline": true,
+    "maxLineLength": 120
+  },
+  "completion": {
+    "enabled": true,
+    "maxSuggestions": 5
+  },
+  "editor": {
+    "tabSize": 2,
+    "insertSpaces": true
+  },
+  "taskMaster": {
+    "autoUpdateStatus": true,
+    "showSubtasks": true,
+    "enableResearch": true
+  }
+}
