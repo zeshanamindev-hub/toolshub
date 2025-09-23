@@ -1,0 +1,142 @@
+{
+  "master": {
+    "tasks": [
+      {
+        "id": 1,
+        "title": "Update project metadata and branding",
+        "description": "Configure project branding, SEO metadata, and favicon for the Word Counter tool",
+        "details": "Update package.json name/description, layout.tsx metadata (title: 'Word Counter Tool - Free Online Text Analysis', description: 'Fast and accurate word counter tool. Count words, characters, sentences, and paragraphs instantly. Perfect for writers, students, and content creators.'), and replace favicon.ico with a word counter themed icon. Add proper Open Graph and Twitter meta tags for social sharing.",
+        "testStrategy": "Verify metadata appears correctly in browser tab, social media previews, and search engine results. Test favicon displays properly across different browsers.",
+        "priority": "high",
+        "dependencies": [],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 2,
+        "title": "Create responsive layout and navigation structure",
+        "description": "Build the main application layout with header, navigation, and responsive design foundation",
+        "details": "Create components/Layout.tsx with header containing app title 'Word Counter Tool', optional navigation for future tools, and responsive grid structure. Update globals.css with custom CSS variables for consistent theming. Implement mobile-first responsive design using Tailwind CSS breakpoints (sm:, md:, lg:). Add semantic HTML structure with proper ARIA labels for accessibility.",
+        "testStrategy": "Test responsiveness across mobile (320px), tablet (768px), and desktop (1024px+) viewports. Verify accessibility with screen readers and keyboard navigation. Check layout consistency across Chrome, Firefox, Safari.",
+        "priority": "high",
+        "dependencies": [
+          1
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 3,
+        "title": "Implement core text counting algorithms",
+        "description": "Create utility functions for word, character, sentence, and paragraph counting with high accuracy",
+        "details": "Create utils/textAnalysis.ts with functions: countWords() using regex /\\S+/g for accuracy, countCharacters() with/without spaces options, countSentences() using regex /[.!?]+/g with edge cases, countParagraphs() detecting \\n\\n or \\r\\n\\r\\n breaks. Handle edge cases: multiple spaces, unicode characters, punctuation, empty strings, and very large texts. Optimize for performance with up to 20,000 words.",
+        "testStrategy": "Unit tests with Jest covering normal text, edge cases (empty strings, special characters, multiple spaces), unicode text, and large content (20,000+ words). Performance tests ensuring sub-100ms processing time.",
+        "priority": "high",
+        "dependencies": [],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 4,
+        "title": "Build main word counter interface component",
+        "description": "Create the primary text input area and real-time statistics display panel",
+        "details": "Create components/WordCounter.tsx with large textarea (min-height: 300px) supporting paste, drag-drop, and typing. Implement useState for text state and useEffect for real-time updates with 100ms debounce using useMemo for performance. Create StatisticsPanel component displaying word count, characters (with/without spaces), sentences, and paragraphs in clean dashboard layout. Use Tailwind for styling with proper focus states and accessibility.",
+        "testStrategy": "Test real-time updates while typing, paste functionality, drag-and-drop file support. Verify statistics accuracy against manual counting. Test with large text inputs and ensure smooth performance without lag.",
+        "priority": "high",
+        "dependencies": [
+          2,
+          3
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 5,
+        "title": "Add text manipulation and utility features",
+        "description": "Implement clear text, copy results, and text formatting utilities",
+        "details": "Add Clear Text button with confirmation for large content (>1000 characters). Implement Copy Results button using navigator.clipboard.writeText() with fallback for older browsers. Add text formatting utilities: trim whitespace, normalize line breaks, and basic text cleanup. Include keyboard shortcuts (Ctrl+K for clear, Ctrl+Shift+C for copy results) with proper event handling and preventDefault.",
+        "testStrategy": "Test clear functionality with various text sizes. Verify copy results works across browsers and includes proper error handling. Test keyboard shortcuts and ensure they don't conflict with browser shortcuts.",
+        "priority": "medium",
+        "dependencies": [
+          4
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 6,
+        "title": "Implement privacy-focused text handling",
+        "description": "Ensure user text privacy with client-side only processing and clear privacy messaging",
+        "details": "Implement client-side only text processing with no server requests or data storage. Add privacy notice component: 'Your text is not stored or shared. All processing happens locally in your browser.' Use sessionStorage only for user preferences, never for text content. Add clear privacy policy page explaining data handling practices. Implement proper data sanitization to prevent any potential XSS issues.",
+        "testStrategy": "Audit network requests to ensure no text data is transmitted. Verify localStorage/sessionStorage usage. Test with sensitive content to ensure privacy. Review code for any potential data leakage points.",
+        "priority": "high",
+        "dependencies": [
+          4
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 7,
+        "title": "Optimize performance for large text processing",
+        "description": "Implement performance optimizations for handling large texts up to 20,000 words efficiently",
+        "details": "Implement debounced updates using custom useDebounce hook with 150ms delay. Add useMemo for expensive calculations and React.memo for StatisticsPanel component. Use Web Workers for texts >10,000 words to prevent UI blocking. Implement virtual scrolling for large text areas using react-window or custom solution. Add loading states and progress indicators for heavy processing.",
+        "testStrategy": "Performance testing with texts of varying sizes (1K, 5K, 10K, 20K words). Monitor rendering time, memory usage, and CPU utilization. Test UI responsiveness during heavy processing. Verify Web Worker implementation doesn't break on older browsers.",
+        "priority": "medium",
+        "dependencies": [
+          3,
+          4
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 8,
+        "title": "Add accessibility features and keyboard shortcuts",
+        "description": "Implement comprehensive accessibility support and keyboard navigation",
+        "details": "Add proper ARIA labels, roles, and descriptions for all interactive elements. Implement keyboard navigation with Tab, Enter, and arrow keys. Add screen reader announcements for statistic updates using aria-live regions. Include high contrast mode support and focus indicators. Implement keyboard shortcuts with visual indicators: Ctrl+K (clear), Ctrl+Shift+C (copy), F2 (focus textarea). Add skip links for screen reader users.",
+        "testStrategy": "Test with screen readers (NVDA, JAWS, VoiceOver). Verify keyboard-only navigation works completely. Test with high contrast themes. Validate HTML with accessibility checkers and axe-core. Test with users who rely on assistive technologies.",
+        "priority": "medium",
+        "dependencies": [
+          4,
+          5
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 9,
+        "title": "Implement SEO optimization and meta tags",
+        "description": "Add comprehensive SEO optimization for search engine visibility and social sharing",
+        "details": "Implement structured data markup (JSON-LD) for WebApplication schema. Add comprehensive meta tags: description, keywords, author, Open Graph tags for social media sharing, Twitter Cards. Create dynamic page titles based on content. Add sitemap.xml and robots.txt. Implement canonical URLs and meta robots tags. Add Google Analytics/Google Search Console integration code (placeholder for future setup).",
+        "testStrategy": "Test social media previews on Facebook, Twitter, LinkedIn. Validate structured data with Google's Rich Results Test. Check page speed with Lighthouse and ensure 90+ SEO score. Verify meta tags appear correctly in search results simulation.",
+        "priority": "medium",
+        "dependencies": [
+          1,
+          2
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 10,
+        "title": "Add comprehensive error handling and user feedback",
+        "description": "Implement robust error handling, loading states, and user feedback mechanisms",
+        "details": "Create custom Error Boundary component for graceful error handling. Add toast notifications for user actions (text cleared, results copied) using react-hot-toast or custom implementation. Implement loading states for heavy processing operations. Add input validation for maximum text length (50,000 characters) with user-friendly warnings. Create fallback UI for JavaScript disabled scenarios with server-side rendering.",
+        "testStrategy": "Test error scenarios: JavaScript disabled, network failures, clipboard API failures, maximum text length exceeded. Verify error messages are user-friendly and actionable. Test loading states appear appropriately for slow operations. Validate graceful degradation functionality.",
+        "priority": "medium",
+        "dependencies": [
+          4,
+          6
+        ],
+        "status": "pending",
+        "subtasks": []
+      }
+    ],
+    "metadata": {
+      "created": "2025-09-23T16:15:14.341Z",
+      "updated": "2025-09-23T16:15:14.341Z",
+      "description": "Tasks for master context"
+    }
+  }
+}
