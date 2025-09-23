@@ -10,7 +10,7 @@ Currently, the project includes tools under the **Text & Writing Tools** categor
 - ✍️ **Word Counter** – Count words, sentences, and paragraphs in your text.
 - 🔤 **Character Counter** – Count the exact number of characters, including or excluding spaces.
 
-As the project grows, more tools will be added across different categories such as **SEO Tools, Conversion Tools, Calculators, File Utilities, and more.**
+As the project grows, more tools will be added across different categories.
 
 ---
 
