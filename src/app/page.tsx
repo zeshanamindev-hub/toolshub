@@ -11,7 +11,12 @@ import {
   ArrowRight,
   Zap,
   Shield,
-  Smartphone
+  Smartphone,
+  Lock,
+  BarChart3,
+  Binary,
+  Shuffle,
+  Code
 } from "lucide-react"
 
 const tools = [
@@ -50,6 +55,48 @@ const tools = [
     href: "/tools/reverse-text",
     color: "text-red-600",
   },
+  {
+    name: "Password Generator",
+    description: "Generate secure passwords with customizable length and character sets.",
+    icon: Lock,
+    href: "/tools/password-generator",
+    color: "text-green-700",
+  },
+  {
+    name: "Letter Counter",
+    description: "Analyze letter frequency and character distribution in your text.",
+    icon: BarChart3,
+    href: "/tools/letter-counter",
+    color: "text-blue-700",
+  },
+  {
+    name: "Text to ASCII",
+    description: "Convert text to ASCII codes in decimal, hexadecimal, binary, and octal formats.",
+    icon: Binary,
+    href: "/tools/text-to-ascii",
+    color: "text-purple-700",
+  },
+  {
+    name: "Random String Generator",
+    description: "Generate random strings with customizable length and character sets.",
+    icon: Shuffle,
+    href: "/tools/random-string",
+    color: "text-indigo-600",
+  },
+  {
+    name: "HTML Entities Encoder/Decoder",
+    description: "Encode and decode HTML entities for safe HTML display and processing.",
+    icon: Code,
+    href: "/tools/html-entities",
+    color: "text-orange-700",
+  },
+  {
+    name: "ASCII to Text",
+    description: "Convert ASCII codes back to readable text with error handling and validation.",
+    icon: FileText,
+    href: "/tools/ascii-to-text",
+    color: "text-teal-600",
+  },
 ]
 
 const features = [
@@ -75,7 +122,7 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Tools Hub",
-    "description": "Free online text manipulation tools including word counter, character counter, case converter, space remover, and text reverser.",
+    "description": "Free online text manipulation tools including word counter, character counter, case converter, password generator, ASCII converters, HTML entities encoder/decoder, and more.",
     "url": "https://toolshub.com",
     "potentialAction": {
       "@type": "SearchAction",
@@ -121,8 +168,8 @@ export default function Home() {
             <span className="block text-primary">Made Simple</span>
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Powerful, fast, and free text manipulation tools. Count words, convert cases, 
-            remove spaces, and more - all in one place.
+            Comprehensive collection of 11 powerful text manipulation tools. Count words, convert cases, 
+            generate passwords, encode HTML entities, convert ASCII codes, and much more - all in one place.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild>

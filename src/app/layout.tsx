@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Tools Hub - Essential Text Manipulation Tools",
-  description: "Free online text tools including word counter, character counter, case converter, space remover, and text reverser. Fast, reliable, and easy to use.",
-  keywords: "text tools, word counter, character counter, case converter, text manipulation, online tools",
+  description: "Free online text tools including word counter, character counter, case converter, password generator, ASCII converters, HTML entities encoder/decoder, and more. Fast, reliable, and easy to use.",
+  keywords: "text tools, word counter, character counter, case converter, password generator, ASCII converter, HTML entities, text manipulation, online tools",
   authors: [{ name: "Tools Hub" }],
 }
 
