@@ -322,7 +322,7 @@ export default function AsciiToTextPage() {
             {inputCodes && (
               <div className="flex justify-center">
                 <div className="flex items-center space-x-2 text-gray-500">
-                  <ArrowRight className="h-6 w-6" />
+                  <ArrowRight className="h-6 w-6 transition-transform duration-200 group-hover:translate-x-0.5" />
                   <span className="text-sm font-medium">Converting from ASCII codes</span>
                 </div>
               </div>

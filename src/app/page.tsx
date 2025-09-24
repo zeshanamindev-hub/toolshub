@@ -159,26 +159,31 @@ export default function Home() {
   return (
     <>
       <StructuredData data={structuredData} />
-      <div className="bg-gradient-to-b from-white to-gray-50">
+      <div className="relative overflow-hidden bg-gradient-to-b from-white to-gray-50">
+      {/* decorative gradient blobs */}
+      <div className="pointer-events-none absolute inset-0 -z-10">
+        <div className="absolute left-[-10%] top-[-10%] h-72 w-72 rounded-full bg-primary/10 blur-3xl" />
+        <div className="absolute right-[-10%] bottom-[-10%] h-72 w-72 rounded-full bg-indigo-200/40 blur-3xl" />
+      </div>
       {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-6xl font-bold text-gray-900 mb-6">
+          <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-gray-900 mb-6">
             Essential Text Tools
-            <span className="block text-primary">Made Simple</span>
+            <span className="block bg-gradient-to-r from-primary to-indigo-600 bg-clip-text text-transparent">Made Simple</span>
           </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          <p className="text-base sm:text-xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">
             Comprehensive collection of 11 powerful text manipulation tools. Count words, convert cases, 
             generate passwords, encode HTML entities, convert ASCII codes, and much more - all in one place.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" asChild>
+            <Button size="lg" asChild className="shadow-sm hover:shadow-md">
               <Link href="#tools">
                 Explore Tools
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
               </Link>
             </Button>
-            <Button variant="outline" size="lg" asChild>
+            <Button variant="outline" size="lg" asChild className="border-gray-300 hover:border-gray-400">
               <Link href="/about">Learn More</Link>
             </Button>
           </div>

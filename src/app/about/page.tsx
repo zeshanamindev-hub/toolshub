@@ -212,7 +212,7 @@ export default function AboutPage() {
                 <Button size="lg" asChild>
                   <Link href="/">
                     Explore Tools
-                    <ArrowRight className="ml-2 h-4 w-4" />
+                    <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
                   </Link>
                 </Button>
                 <Button variant="outline" size="lg" asChild>
