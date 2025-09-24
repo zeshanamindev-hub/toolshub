@@ -21,6 +21,7 @@ const toolCategories = [
       { name: "Word Counter", href: "/tools/word-counter" },
       { name: "Character Counter", href: "/tools/character-counter" },
       { name: "Letter Counter", href: "/tools/letter-counter" },
+      { name: "Palindrome Checker", href: "/tools/palindrome-checker" },
     ]
   },
   {
@@ -30,6 +31,7 @@ const toolCategories = [
       { name: "Case Converter", href: "/tools/case-converter" },
       { name: "Remove Spaces", href: "/tools/remove-spaces" },
       { name: "Reverse Text", href: "/tools/reverse-text" },
+      { name: "Reverse Word Order", href: "/tools/reverse-word-order" },
     ]
   },
   {
@@ -39,6 +41,8 @@ const toolCategories = [
       { name: "Text to ASCII", href: "/tools/text-to-ascii" },
       { name: "ASCII to Text", href: "/tools/ascii-to-text" },
       { name: "HTML Entities", href: "/tools/html-entities" },
+      { name: "Morse Translator", href: "/tools/morse-translator" },
+      { name: "Emoji Translator", href: "/tools/emoji-translator" },
     ]
   },
   {
@@ -47,6 +51,8 @@ const toolCategories = [
     tools: [
       { name: "Password Generator", href: "/tools/password-generator" },
       { name: "Random String", href: "/tools/random-string" },
+      { name: "Lorem Generator", href: "/tools/lorem-generator" },
+      { name: "Name Generator", href: "/tools/name-generator" },
     ]
   }
 ]

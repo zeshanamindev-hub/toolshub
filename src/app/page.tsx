@@ -16,16 +16,24 @@ import {
   BarChart3,
   Binary,
   Shuffle,
-  Code
+  Code,
+  ArrowLeftRight,
+  Smile,
+  User,
+  CheckCircle,
+  Radio,
+  FileType
 } from "lucide-react"
 
 const tools = [
+  // Text Analysis Tools
   {
     name: "Word Counter",
     description: "Count words, characters, paragraphs, and sentences in your text instantly.",
     icon: FileText,
     href: "/tools/word-counter",
     color: "text-blue-600",
+    category: "Text Analysis"
   },
   {
     name: "Character Counter",
@@ -33,34 +41,7 @@ const tools = [
     icon: Hash,
     href: "/tools/character-counter",
     color: "text-green-600",
-  },
-  {
-    name: "Case Converter",
-    description: "Convert text to UPPERCASE, lowercase, Title Case, and more formats.",
-    icon: Type,
-    href: "/tools/case-converter",
-    color: "text-purple-600",
-  },
-  {
-    name: "Remove Extra Spaces",
-    description: "Clean up your text by removing extra spaces and normalizing whitespace.",
-    icon: Scissors,
-    href: "/tools/remove-spaces",
-    color: "text-orange-600",
-  },
-  {
-    name: "Reverse Text",
-    description: "Reverse your text character by character or word by word.",
-    icon: RotateCcw,
-    href: "/tools/reverse-text",
-    color: "text-red-600",
-  },
-  {
-    name: "Password Generator",
-    description: "Generate secure passwords with customizable length and character sets.",
-    icon: Lock,
-    href: "/tools/password-generator",
-    color: "text-green-700",
+    category: "Text Analysis"
   },
   {
     name: "Letter Counter",
@@ -68,27 +49,59 @@ const tools = [
     icon: BarChart3,
     href: "/tools/letter-counter",
     color: "text-blue-700",
+    category: "Text Analysis"
   },
+  {
+    name: "Palindrome Checker",
+    description: "Check if your text is a palindrome with customizable checking options.",
+    icon: CheckCircle,
+    href: "/tools/palindrome-checker",
+    color: "text-emerald-600",
+    category: "Text Analysis"
+  },
+  
+  // Text Transformation Tools
+  {
+    name: "Case Converter",
+    description: "Convert text to UPPERCASE, lowercase, Title Case, and more formats.",
+    icon: Type,
+    href: "/tools/case-converter",
+    color: "text-purple-600",
+    category: "Text Transformation"
+  },
+  {
+    name: "Remove Extra Spaces",
+    description: "Clean up your text by removing extra spaces and normalizing whitespace.",
+    icon: Scissors,
+    href: "/tools/remove-spaces",
+    color: "text-orange-600",
+    category: "Text Transformation"
+  },
+  {
+    name: "Reverse Text",
+    description: "Reverse your text character by character or word by word.",
+    icon: RotateCcw,
+    href: "/tools/reverse-text",
+    color: "text-red-600",
+    category: "Text Transformation"
+  },
+  {
+    name: "Reverse Word Order",
+    description: "Reverse the order of words while keeping individual words intact.",
+    icon: ArrowLeftRight,
+    href: "/tools/reverse-word-order",
+    color: "text-pink-600",
+    category: "Text Transformation"
+  },
+  
+  // Text Conversion Tools
   {
     name: "Text to ASCII",
     description: "Convert text to ASCII codes in decimal, hexadecimal, binary, and octal formats.",
     icon: Binary,
     href: "/tools/text-to-ascii",
     color: "text-purple-700",
-  },
-  {
-    name: "Random String Generator",
-    description: "Generate random strings with customizable length and character sets.",
-    icon: Shuffle,
-    href: "/tools/random-string",
-    color: "text-indigo-600",
-  },
-  {
-    name: "HTML Entities Encoder/Decoder",
-    description: "Encode and decode HTML entities for safe HTML display and processing.",
-    icon: Code,
-    href: "/tools/html-entities",
-    color: "text-orange-700",
+    category: "Text Conversion"
   },
   {
     name: "ASCII to Text",
@@ -96,6 +109,65 @@ const tools = [
     icon: FileText,
     href: "/tools/ascii-to-text",
     color: "text-teal-600",
+    category: "Text Conversion"
+  },
+  {
+    name: "HTML Entities Encoder/Decoder",
+    description: "Encode and decode HTML entities for safe HTML display and processing.",
+    icon: Code,
+    href: "/tools/html-entities",
+    color: "text-orange-700",
+    category: "Text Conversion"
+  },
+  {
+    name: "Morse Code Translator",
+    description: "Convert text to Morse code and vice versa with audio playback support.",
+    icon: Radio,
+    href: "/tools/morse-translator",
+    color: "text-cyan-600",
+    category: "Text Conversion"
+  },
+  {
+    name: "Emoji Translator",
+    description: "Convert text descriptions to emojis and emojis back to text descriptions.",
+    icon: Smile,
+    href: "/tools/emoji-translator",
+    color: "text-yellow-600",
+    category: "Text Conversion"
+  },
+  
+  // Generator Tools
+  {
+    name: "Password Generator",
+    description: "Generate secure passwords with customizable length and character sets.",
+    icon: Lock,
+    href: "/tools/password-generator",
+    color: "text-green-700",
+    category: "Generators"
+  },
+  {
+    name: "Random String Generator",
+    description: "Generate random strings with customizable length and character sets.",
+    icon: Shuffle,
+    href: "/tools/random-string",
+    color: "text-indigo-600",
+    category: "Generators"
+  },
+  {
+    name: "Lorem Ipsum Generator",
+    description: "Generate placeholder text with customizable paragraphs, words, and characters.",
+    icon: FileType,
+    href: "/tools/lorem-generator",
+    color: "text-slate-600",
+    category: "Generators"
+  },
+  {
+    name: "Random Name Generator",
+    description: "Generate random names including first names, usernames, and business names.",
+    icon: User,
+    href: "/tools/name-generator",
+    color: "text-violet-600",
+    category: "Generators"
   },
 ]
 
@@ -168,8 +240,8 @@ export default function Home() {
             <span className="block text-primary">Made Simple</span>
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Comprehensive collection of 11 powerful text manipulation tools. Count words, convert cases, 
-            generate passwords, encode HTML entities, convert ASCII codes, and much more - all in one place.
+            Comprehensive collection of 17 powerful text manipulation tools. Count words, convert cases, 
+            generate passwords, translate Morse code, create Lorem Ipsum, check palindromes, and much more - all in one place.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild>
