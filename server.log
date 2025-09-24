@@ -7,120 +7,37 @@
    - Network:      http://10.2.28.17:12000
 
  ✓ Starting...
- ✓ Ready in 933ms
+ ✓ Ready in 959ms
  ○ Compiling / ...
- ✓ Compiled / in 3.2s
- GET / 200 in 3777ms
- GET / 200 in 220ms
- GET / 200 in 182ms
- ✓ Compiled /tools/password-generator in 339ms
- ⨯ ./src/app/tools/password-generator/page.tsx:17:14
-Ecmascript file had an error
-[0m [90m 15 |[39m } [36mfrom[39m [32m"lucide-react"[39m
- [90m 16 |[39m
-[31m[1m>[22m[39m[90m 17 |[39m [36mexport[39m [36mconst[39m metadata [33m=[39m {
- [90m    |[39m              [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
- [90m 18 |[39m   title[33m:[39m [32m"Password Generator - Create Secure Passwords | Tools Hub"[39m[33m,[39m
- [90m 19 |[39m   description[33m:[39m [32m"Generate strong, secure passwords with customizable length and character sets. Include uppercase, lowercase, numbers, and special characters."[39m[33m,[39m
- [90m 20 |[39m   keywords[33m:[39m [32m"password generator, secure password, random password, strong password, password creator"[39m[33m,[39m[0m
-
-You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
-
-
-
-Import traces:
-  Client Component Browser:
-    ./src/app/tools/password-generator/page.tsx [Client Component Browser]
-    ./src/app/tools/password-generator/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./src/app/tools/password-generator/page.tsx [Client Component SSR]
-    ./src/app/tools/password-generator/page.tsx [Server Component]
-
-
- ○ Compiling /_error ...
- ✓ Compiled /_error in 1319ms
- GET /tools/password-generator 500 in 1801ms
- GET / 200 in 195ms
- GET / 200 in 252ms
- GET / 200 in 223ms
- ✓ Compiled /tools/password-generator in 31ms
- GET /tools/password-generator 200 in 439ms
- GET / 200 in 235ms
- GET / 200 in 190ms
- GET / 200 in 179ms
- GET / 200 in 241ms
- GET / 200 in 169ms
- GET / 200 in 170ms
- GET / 200 in 214ms
- GET / 200 in 217ms
- GET / 200 in 192ms
- GET / 200 in 180ms
- GET / 200 in 229ms
- GET / 200 in 179ms
- GET / 200 in 261ms
- GET / 200 in 161ms
- GET / 200 in 187ms
- GET / 200 in 242ms
- GET / 200 in 166ms
+ ✓ Compiled / in 3.8s
+ GET / 200 in 4317ms
+ GET / 200 in 225ms
+ GET / 200 in 256ms
  GET / 200 in 202ms
- GET / 200 in 165ms
- GET / 200 in 171ms
- GET / 200 in 336ms
- GET / 200 in 183ms
- GET / 200 in 200ms
- GET / 200 in 187ms
- GET /tools/password-generator 200 in 176ms
- GET / 200 in 235ms
- GET / 200 in 171ms
- GET / 200 in 170ms
- GET / 200 in 183ms
- GET / 200 in 223ms
- GET / 200 in 351ms
- GET / 200 in 167ms
- GET / 200 in 161ms
- GET / 200 in 162ms
- GET / 200 in 169ms
- GET / 200 in 247ms
- GET / 200 in 161ms
- GET /tools/password-generator 200 in 53ms
- GET / 200 in 166ms
- GET / 200 in 162ms
- GET / 200 in 167ms
- GET / 200 in 175ms
- ✓ Compiled /tools/html-entities in 296ms
- GET /tools/html-entities 200 in 374ms
- GET / 200 in 165ms
- GET / 200 in 162ms
- GET / 200 in 158ms
- GET / 200 in 163ms
- GET / 200 in 264ms
- GET / 200 in 178ms
- GET / 200 in 163ms
- GET / 200 in 159ms
- GET / 200 in 168ms
- GET / 200 in 169ms
- GET / 200 in 280ms
- GET / 200 in 155ms
- GET / 200 in 170ms
- GET / 200 in 155ms
- GET / 200 in 169ms
- GET / 200 in 260ms
- GET / 200 in 168ms
- GET / 200 in 164ms
- GET / 200 in 158ms
- GET / 200 in 177ms
- GET / 200 in 285ms
- GET / 200 in 188ms
- GET / 200 in 162ms
- GET / 200 in 159ms
- GET / 200 in 175ms
- GET / 200 in 165ms
- GET / 200 in 166ms
- GET / 200 in 252ms
- GET / 200 in 161ms
- GET / 200 in 162ms
+ GET / 200 in 242ms
+ GET / 200 in 206ms
+ GET / 200 in 509ms
+ GET / 200 in 407ms
+ ⚠ Cross origin request detected from work-1-kxekqioadwvtmcdw.prod-runtime.all-hands.dev to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ GET / 200 in 194ms
+ GET / 200 in 214ms
  GET / 200 in 195ms
- GET / 200 in 184ms
- GET / 200 in 283ms
- GET / 200 in 172ms
+ GET / 200 in 199ms
+ GET / 200 in 244ms
+ ✓ Compiled /tools/word-counter in 396ms
+ GET /tools/word-counter 200 in 451ms
+ GET / 200 in 230ms
+ GET / 200 in 191ms
+ GET / 200 in 191ms
+ GET / 200 in 205ms
+ GET / 200 in 199ms
+ ✓ Compiled /tools/password-generator in 324ms
+ GET /tools/password-generator 200 in 376ms
+ GET / 200 in 244ms
+ GET / 200 in 264ms
+ ✓ Compiled /tools/case-converter in 330ms
+ GET /tools/case-converter 200 in 407ms
+ GET / 200 in 267ms
+ GET / 200 in 200ms
+ GET / 200 in 211ms
