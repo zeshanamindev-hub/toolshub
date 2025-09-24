@@ -97,6 +97,13 @@ const tools = [
     href: "/tools/ascii-to-text",
     color: "text-teal-600",
   },
+  {
+    name: "Text to Morse Code",
+    description: "Convert text to Morse code with support for letters, numbers, and punctuation.",
+    icon: Code,
+    href: "/tools/text-to-morse",
+    color: "text-cyan-600",
+  },
 ]
 
 const features = [

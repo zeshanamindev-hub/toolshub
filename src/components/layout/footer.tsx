@@ -8,6 +8,7 @@ const footerNavigation = {
     { name: "Case Converter", href: "/tools/case-converter" },
     { name: "Remove Spaces", href: "/tools/remove-spaces" },
     { name: "Reverse Text", href: "/tools/reverse-text" },
+    { name: "Text to Morse", href: "/tools/text-to-morse" },
   ],
   company: [
     { name: "About", href: "/about" },

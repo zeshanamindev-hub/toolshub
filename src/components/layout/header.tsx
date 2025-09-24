@@ -39,6 +39,7 @@ const toolCategories = [
       { name: "Text to ASCII", href: "/tools/text-to-ascii" },
       { name: "ASCII to Text", href: "/tools/ascii-to-text" },
       { name: "HTML Entities", href: "/tools/html-entities" },
+      { name: "Text to Morse", href: "/tools/text-to-morse" },
     ]
   },
   {
