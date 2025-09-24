@@ -12,6 +12,12 @@ const navigation = [
   { name: "Case Converter", href: "/tools/case-converter" },
   { name: "Remove Spaces", href: "/tools/remove-spaces" },
   { name: "Reverse Text", href: "/tools/reverse-text" },
+  { name: "Password Generator", href: "/tools/password-generator" },
+  { name: "Letter Counter", href: "/tools/letter-counter" },
+  { name: "Text to ASCII", href: "/tools/text-to-ascii" },
+  { name: "Random String", href: "/tools/random-string" },
+  { name: "HTML Entities", href: "/tools/html-entities" },
+  { name: "ASCII to Text", href: "/tools/ascii-to-text" },
 ]
 
 export default function Header() {
