@@ -9,6 +9,7 @@ const footerNavigation = {
     { name: "Remove Spaces", href: "/tools/remove-spaces" },
     { name: "Reverse Text", href: "/tools/reverse-text" },
     { name: "Text to Morse", href: "/tools/text-to-morse" },
+    { name: "Morse to Text", href: "/tools/morse-to-text" },
   ],
   company: [
     { name: "About", href: "/about" },
