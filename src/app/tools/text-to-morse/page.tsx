@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useRef, useCallback } from "react"
+import { useState, useMemo, useCallback, useRef } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
@@ -70,7 +70,7 @@ export default function TextToMorsePage() {
 
   const getSelectedStyle = () => morseStyles.find(style => style.name === selectedStyle) || morseStyles[0]
 
-  const convertToMorse = (text: string): string => {
+  const convertToMorse = useCallback((text: string): string => {
     const style = getSelectedStyle()
     return text
       .toUpperCase()
@@ -82,7 +82,7 @@ export default function TextToMorsePage() {
         return morse.replace(/\./g, style.dot).replace(/-/g, style.dash)
       })
       .join(' ') // 1 space between characters
-  }
+  }, [selectedStyle])
 
   const handleCopy = async () => {
     const morseCode = convertToMorse(inputText)
@@ -156,7 +156,7 @@ export default function TextToMorsePage() {
         setIsPlaying(false)
       }
     }, (time - ctx.currentTime) * 1000)
-  }, [inputText, playbackSpeed])
+  }, [inputText, playbackSpeed, convertToMorse])
 
   const handlePlayback = () => {
     if (isPlaying) {

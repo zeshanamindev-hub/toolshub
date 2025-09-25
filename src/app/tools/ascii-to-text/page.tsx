@@ -18,11 +18,12 @@ import {
 
 
 type InputFormat = 'auto' | 'decimal' | 'hexadecimal' | 'binary' | 'octal'
+type SeparatorType = 'auto' | 'space' | 'comma' | 'tab' | 'newline'
 
 export default function AsciiToTextPage() {
   const [inputCodes, setInputCodes] = useState("")
   const [inputFormat, setInputFormat] = useState<InputFormat>('auto')
-  const [separator, setSeparator] = useState<'auto' | 'space' | 'comma' | 'newline'>('auto')
+  const [separator, setSeparator] = useState<SeparatorType>('auto')
   const [copied, setCopied] = useState(false)
 
   const conversionResult = useMemo(() => {
@@ -30,7 +31,7 @@ export default function AsciiToTextPage() {
 
     const errors: string[] = []
     const warnings: string[] = []
-    let processedInput = inputCodes.trim()
+    const processedInput = inputCodes.trim()
 
     // Determine separator
     let actualSeparator = ' '
@@ -273,7 +274,7 @@ export default function AsciiToTextPage() {
                     </label>
                     <select
                       value={separator}
-                      onChange={(e) => setSeparator(e.target.value as any)}
+                      onChange={(e) => setSeparator(e.target.value as SeparatorType)}
                       className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm"
                     >
                       <option value="auto">Auto-detect</option>

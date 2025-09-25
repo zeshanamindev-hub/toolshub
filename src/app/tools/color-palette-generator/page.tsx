@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useCallback } from "react"
+import { useState, useCallback, useMemo } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -40,7 +40,8 @@ export default function ColorPaletteGeneratorPage() {
     g /= 255
     b /= 255
     const max = Math.max(r, g, b), min = Math.min(r, g, b)
-    let h, s, l = (max + min) / 2
+    let h, s;
+    const l = (max + min) / 2
 
     if (max === min) {
       h = s = 0 // achromatic
@@ -116,7 +117,7 @@ export default function ColorPaletteGeneratorPage() {
     }
   }
 
-  const paletteTypes: PaletteType[] = [
+  const paletteTypes = useMemo<PaletteType[]>(() => [
     {
       name: "complementary",
       description: "Two colors opposite on the color wheel",
@@ -199,10 +200,10 @@ export default function ColorPaletteGeneratorPage() {
         return colors.map(createColor)
       }
     }
-  ]
+  ], []) // Empty dependency array since these are static functions
 
   const generatePalette = useCallback(() => {
-    const paletteType = paletteTypes.find(p => p.name === selectedPaletteType) || paletteTypes[0]
+    const paletteType = paletteTypes.find((p: PaletteType) => p.name === selectedPaletteType) || paletteTypes[0]
     const newPalette = paletteType.generate(baseColor)
     setPalette(newPalette)
   }, [baseColor, selectedPaletteType])
@@ -322,7 +323,7 @@ export default function ColorPaletteGeneratorPage() {
                     onChange={(e) => setSelectedPaletteType(e.target.value)}
                     className="border rounded px-3 py-1 text-sm"
                   >
-                    {paletteTypes.map((type) => (
+                    {paletteTypes.map((type: PaletteType) => (
                       <option key={type.name} value={type.name}>
                         {type.name.charAt(0).toUpperCase() + type.name.slice(1)}
                       </option>
@@ -352,7 +353,7 @@ export default function ColorPaletteGeneratorPage() {
                 <div>
                   <CardTitle>Color Palette</CardTitle>
                   <CardDescription>
-                    {paletteTypes.find(p => p.name === selectedPaletteType)?.description}
+                    {paletteTypes.find((p: PaletteType) => p.name === selectedPaletteType)?.description}
                   </CardDescription>
                 </div>
                 <Button onClick={exportPalette} variant="outline" size="sm">
@@ -427,7 +428,7 @@ export default function ColorPaletteGeneratorPage() {
             </CardHeader>
             <CardContent>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {paletteTypes.map((type) => (
+                {paletteTypes.map((type: PaletteType) => (
                   <div 
                     key={type.name}
                     className={`p-4 border rounded-lg cursor-pointer transition-colors ${

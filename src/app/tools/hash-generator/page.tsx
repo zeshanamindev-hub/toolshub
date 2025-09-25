@@ -1,10 +1,10 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
+
 import { Shield, Copy, Trash2, Eye, EyeOff, Upload } from "lucide-react"
 
 interface HashResult {
@@ -69,7 +69,7 @@ export default function HashGeneratorPage() {
     return "MD5 deprecated - use SHA-256 instead"
   }
 
-  const generateAllHashes = async () => {
+  const generateAllHashes = useCallback(async () => {
     const results: HashResult[] = []
     
     for (const algorithm of selectedAlgorithms) {
@@ -85,11 +85,11 @@ export default function HashGeneratorPage() {
     }
     
     setHashes(results)
-  }
+  }, [inputText, selectedAlgorithms])
 
   useEffect(() => {
     generateAllHashes()
-  }, [inputText, selectedAlgorithms])
+  }, [generateAllHashes])
 
   const handleClear = () => {
     setInputText("")

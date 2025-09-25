@@ -124,7 +124,7 @@ export default function TextDiffCheckerPage() {
   const diff = useMemo(() => {
     if (!originalText && !modifiedText) return []
     return computeDiff(originalText, modifiedText)
-  }, [originalText, modifiedText, ignoreCase, ignoreWhitespace])
+  }, [originalText, modifiedText, ignoreCase, ignoreWhitespace, computeDiff])
 
   const stats = useMemo(() => {
     const insertions = diff.filter(d => d.type === 'insert').length

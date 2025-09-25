@@ -133,15 +133,16 @@ export default function JsonFormatterPage() {
         size: inputText.length
       }
 
-      const count = (obj: any, isRoot = true) => {
+      const count = (obj: unknown, isRoot = true) => {
         if (Array.isArray(obj)) {
           if (!isRoot) stats.arrays++
           obj.forEach(item => count(item, false))
         } else if (obj !== null && typeof obj === 'object') {
           if (!isRoot) stats.objects++
-          const keys = Object.keys(obj)
+          const jsonObj = obj as { [key: string]: unknown }
+          const keys = Object.keys(jsonObj)
           stats.properties += keys.length
-          keys.forEach(key => count(obj[key], false))
+          keys.forEach(key => count(jsonObj[key], false))
         }
       }
 

@@ -19,7 +19,7 @@ interface CharacterStats {
 interface SocialMediaLimit {
   platform: string
   limit: number
-  icon: any
+  icon: React.ElementType
   color: string
   remaining: number
   percentage: number

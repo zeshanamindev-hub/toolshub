@@ -85,7 +85,7 @@ export default function RandomStringPage() {
     
     setGeneratedStrings(strings)
     setCopied(false)
-  }, [length, quantity, options])
+  }, [length, quantity, options, characterSets.lowercase, characterSets.uppercase, characterSets.numbers, characterSets.symbols, characterSets.similar])
 
   const copyToClipboard = async () => {
     if (generatedStrings.length > 0 && generatedStrings[0] !== "Please select at least one character type") {

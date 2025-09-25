@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { useState, useRef, useEffect } from "react"
-import { Menu, X, Wrench, ChevronDown, Search, Flame, Grid3X3, ArrowRight, Sparkles } from "lucide-react"
+import { Menu, X, Wrench, ChevronDown, Search, Flame, Grid3X3, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 

@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Shield, Eye, Cookie, Mail } from "lucide-react"
+import { Shield, Eye, Mail } from "lucide-react"
 
 export const metadata = {
   title: "Privacy Policy - Tools Hub",

@@ -1,10 +1,11 @@
 "use client"
 
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect, useRef, useCallback } from "react"
+import Image from "next/image"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
+
 import { QrCode, Download, Copy, Trash2, Smartphone } from "lucide-react"
 
 export default function QrGeneratorPage() {
@@ -15,7 +16,7 @@ export default function QrGeneratorPage() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
 
   // Simple QR Code generation using a public API
-  const generateQRCode = async () => {
+  const generateQRCode = useCallback(async () => {
     if (!text.trim()) {
       setQrCodeUrl("")
       return
@@ -29,7 +30,7 @@ export default function QrGeneratorPage() {
       console.error("Failed to generate QR code:", error)
       setQrCodeUrl("")
     }
-  }
+  }, [text, size, errorLevel])
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
@@ -37,7 +38,7 @@ export default function QrGeneratorPage() {
     }, 300)
 
     return () => clearTimeout(timeoutId)
-  }, [text, size, errorLevel])
+  }, [generateQRCode])
 
   const handleDownload = async () => {
     if (!qrCodeUrl) return
@@ -268,10 +269,13 @@ END:VCARD`,
                 <CardContent className="space-y-4">
                   <div className="flex justify-center">
                     <div className="p-4 bg-white rounded-lg border-2 border-dashed border-gray-300">
-                      <img 
+                      <Image 
                         src={qrCodeUrl} 
                         alt="Generated QR Code" 
                         className="max-w-full h-auto"
+                        width={size}
+                        height={size}
+                        unoptimized
                         style={{ width: size, height: size }}
                       />
                     </div>

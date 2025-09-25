@@ -27,7 +27,7 @@ export default function LetterCounterPage() {
 
     const letterCount: { [key: string]: number } = {}
     let totalLetters = 0
-    let totalChars = text.length
+    const totalChars = text.length
 
     for (const char of text) {
       if (showOnlyLetters) {
@@ -119,7 +119,6 @@ export default function LetterCounterPage() {
     return 'bg-blue-500'
   }
 
-  const commonLetters = ['e', 't', 'a', 'o', 'i', 'n', 's', 'h', 'r', 'd', 'l', 'u']
   const vowels = ['a', 'e', 'i', 'o', 'u']
   const consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z']
 
@@ -224,7 +223,7 @@ export default function LetterCounterPage() {
                     <span className="text-sm font-medium">Sort by:</span>
                     <select
                       value={sortBy}
-                      onChange={(e) => setSortBy(e.target.value as any)}
+                      onChange={(e) => setSortBy(e.target.value as "frequency" | "alphabetical")}
                       className="text-sm border border-gray-300 rounded px-2 py-1"
                     >
                       <option value="frequency">Frequency</option>

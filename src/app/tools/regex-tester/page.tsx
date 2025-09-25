@@ -104,7 +104,7 @@ export default function RegexTesterPage() {
     }, 300)
 
     return () => clearTimeout(timeoutId)
-  }, [pattern, flags, testString])
+  }, [pattern, flags, testString, testRegex])
 
   const handleCopyPattern = async () => {
     try {

@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
@@ -87,13 +87,7 @@ export default function TimestampConverterPage() {
     }
   }
 
-  const updateCurrentTime = () => {
-    const now = new Date()
-    const currentResult = convertTimestamp(now.getTime().toString(), "unix")
-    setCurrentTime(currentResult)
-  }
-
-  const handleConvert = () => {
+  const handleConvert = useCallback(() => {
     if (!inputValue.trim()) {
       setResult(null)
       return
@@ -101,7 +95,7 @@ export default function TimestampConverterPage() {
 
     const converted = convertTimestamp(inputValue.trim(), inputType)
     setResult(converted)
-  }
+  }, [inputValue, inputType])
 
   const handleCopy = async (text: string) => {
     try {
@@ -124,11 +118,17 @@ export default function TimestampConverterPage() {
 
   useEffect(() => {
     handleConvert()
-  }, [inputValue, inputType])
+  }, [inputValue, inputType, handleConvert])
 
   useEffect(() => {
-    updateCurrentTime()
-    const interval = setInterval(updateCurrentTime, 1000)
+    const updateTime = () => {
+      const now = new Date()
+      const currentResult = convertTimestamp(now.getTime().toString(), "unix")
+      setCurrentTime(currentResult)
+    }
+    
+    updateTime()
+    const interval = setInterval(updateTime, 1000)
     return () => clearInterval(interval)
   }, [])
 

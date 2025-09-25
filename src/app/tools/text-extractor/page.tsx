@@ -21,7 +21,7 @@ export default function TextExtractorPage() {
   ])
   const [showMatches, setShowMatches] = useState(true)
 
-  const extractors = [
+  const extractors = useMemo(() => [
     {
       id: "emails",
       name: "Email Addresses",
@@ -94,7 +94,7 @@ export default function TextExtractorPage() {
       pattern: /#(?:[0-9a-fA-F]{3}){1,2}\b/g,
       description: "Extract hexadecimal color codes"
     }
-  ]
+  ], [])
 
   const extractionResults = useMemo<ExtractionResult[]>(() => {
     if (!inputText.trim()) return []
@@ -115,7 +115,7 @@ export default function TextExtractorPage() {
         }
       })
       .filter(result => result.count > 0)
-  }, [inputText, selectedExtractors])
+  }, [inputText, selectedExtractors, extractors])
 
   const totalMatches = extractionResults.reduce((sum, result) => sum + result.count, 0)
 

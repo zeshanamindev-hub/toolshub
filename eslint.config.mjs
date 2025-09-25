@@ -22,4 +22,22 @@ const eslintConfig = [
   },
 ];
 
+// Add rules configuration
+eslintConfig.push({
+  rules: {
+    "react/no-unescaped-entities": ["error", {
+      "forbid": [{
+        "char": ">",
+        "alternatives": ["&gt;"]
+      }, {
+        "char": "}",
+        "alternatives": ["&#125;"]
+      }]
+    }],
+    "@typescript-eslint/no-empty-interface": ["error", {
+      "allowSingleExtends": true
+    }]
+  }
+});
+
 export default eslintConfig;

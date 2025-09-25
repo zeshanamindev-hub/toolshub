@@ -66,7 +66,7 @@ export default function PasswordGeneratorPage() {
     
     setPassword(result)
     setCopied(false)
-  }, [length, options])
+  }, [length, options, characterSets.lowercase, characterSets.uppercase, characterSets.numbers, characterSets.symbols, characterSets.similar, characterSets.ambiguous])
 
   const copyToClipboard = async () => {
     if (password && password !== "Please select at least one character type") {
@@ -80,7 +80,7 @@ export default function PasswordGeneratorPage() {
     if (!password || password === "Please select at least one character type") return { level: 0, text: "No password", color: "text-gray-500" }
     
     let score = 0
-    let feedback = []
+    const feedback = []
 
     // Length scoring
     if (password.length >= 12) score += 2

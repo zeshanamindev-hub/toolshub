@@ -24,7 +24,7 @@ export default function HtmlEntitiesPage() {
   const [copied, setCopied] = useState(false)
 
   // Common HTML entities mapping
-  const htmlEntities: { [key: string]: string } = {
+  const htmlEntities = useMemo<{ [key: string]: string }>(() => ({
     '&': '&amp;',
     '<': '&lt;',
     '>': '&gt;',
@@ -125,7 +125,7 @@ export default function HtmlEntitiesPage() {
     'ý': '&yacute;',
     'þ': '&thorn;',
     'ÿ': '&yuml;'
-  }
+  }), [])
 
   // Reverse mapping for decoding
   const reverseEntities = useMemo(() => {
@@ -134,7 +134,7 @@ export default function HtmlEntitiesPage() {
       reverse[entity] = char
     })
     return reverse
-  }, [])
+  }, [htmlEntities])
 
   const processedText = useMemo(() => {
     if (!inputText) return ""

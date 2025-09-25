@@ -4,7 +4,7 @@ import { useState, useRef } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
-import { RotateCcw, Copy, Check, Settings, Play, Pause, Volume2, Trash2, Info } from "lucide-react"
+import { RotateCcw, Copy, Check, Pause, Volume2, Info } from "lucide-react"
 
 interface MorseCodeStyle {
   name: string
