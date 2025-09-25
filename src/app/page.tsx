@@ -1,7 +1,9 @@
+"use client"
 import Link from "next/link"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import StructuredData from "@/components/structured-data"
+import { useState, useMemo } from "react"
 import { 
   FileText, 
   Hash, 
@@ -25,7 +27,9 @@ import {
   QrCode,
   GitCompare,
   ArrowUpDown,
-  Filter
+  Filter,
+  Sparkles,
+  Info
 } from "lucide-react"
 
 const tools = [
@@ -227,12 +231,25 @@ const features = [
 ]
 
 export default function Home() {
+  const [searchQuery, setSearchQuery] = useState("")
+  
+  const filteredTools = useMemo(() => {
+    if (!searchQuery.trim()) return tools
+    
+    const query = searchQuery.toLowerCase().trim()
+    return tools.filter(tool => 
+      tool.name.toLowerCase().includes(query) ||
+      tool.description.toLowerCase().includes(query)
+    )
+  }, [searchQuery])
+
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "Tools Hub",
-    "description": "Free online text manipulation tools including word counter, character counter, case converter, password generator, ASCII converters, HTML entities encoder/decoder, and more.",
+    "name": "Tools Hub - Free Online Tools",
+    "description": "Tools Hub offers 25+ free online text manipulation tools including word counter, character counter, case converter, password generator, JSON formatter, QR code generator, regex tester, ASCII converters, HTML entities encoder/decoder, and more. Fast, secure, no registration required.",
     "url": "https://toolshub.com",
+    "keywords": "online tools, text manipulation, word counter, character counter, case converter, password generator, JSON formatter, QR code generator, free tools, web tools",
     "potentialAction": {
       "@type": "SearchAction",
       "target": "https://toolshub.com/?q={search_term_string}",
@@ -241,7 +258,8 @@ export default function Home() {
     "publisher": {
       "@type": "Organization",
       "name": "Tools Hub",
-      "url": "https://toolshub.com"
+      "url": "https://toolshub.com",
+      "description": "Your ultimate destination for free online text manipulation and utility tools"
     },
     "mainEntity": {
       "@type": "ItemList",
@@ -268,76 +286,170 @@ export default function Home() {
   return (
     <>
       <StructuredData data={structuredData} />
-      <div className="relative overflow-hidden bg-gradient-to-b from-white to-gray-50">
-      {/* decorative gradient blobs */}
-      <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute left-[-10%] top-[-10%] h-72 w-72 rounded-full bg-primary/10 blur-3xl" />
-        <div className="absolute right-[-10%] bottom-[-10%] h-72 w-72 rounded-full bg-indigo-200/40 blur-3xl" />
-      </div>
+      <div className="bg-white">
+      
+      {/* Clean white background for entire page */}
       {/* Hero Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-gray-900 mb-6">
-            Essential Text Tools
-            <span className="block bg-gradient-to-r from-primary to-indigo-600 bg-clip-text text-transparent">Made Simple</span>
+      <section className="py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden" 
+        style={{
+          background: `
+            linear-gradient(135deg, 
+              rgba(219, 234, 254, 0.3) 0%, 
+              rgba(199, 210, 254, 0.4) 50%, 
+              rgba(221, 214, 254, 0.3) 100%
+            ),
+            radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+            radial-gradient(circle at 80% 80%, rgba(168, 85, 247, 0.15) 0%, transparent 50%),
+            radial-gradient(circle at 50% 50%, rgba(236, 72, 153, 0.1) 0%, transparent 50%)
+          `
+        }}
+      >
+        {/* Hero Background Patterns - Contained to Hero Section */}
+        
+        {/* Visible Background Pattern Layer 1 - Prominent Dots */}
+        <div className="absolute inset-0 z-0 opacity-15">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%233B82F6' fill-opacity='1'%3E%3Ccircle cx='50' cy='50' r='4'/%3E%3Ccircle cx='0' cy='0' r='3'/%3E%3Ccircle cx='100' cy='100' r='3'/%3E%3Ccircle cx='0' cy='100' r='3'/%3E%3Ccircle cx='100' cy='0' r='3'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          }} />
+        </div>
+
+        {/* Visible Background Pattern Layer 2 - Geometric Grid */}
+        <div className="absolute inset-0 z-0 opacity-15">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='150' height='150' viewBox='0 0 150 150' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='grid' width='30' height='30' patternUnits='userSpaceOnUse'%3E%3Cpath d='M 30 0 L 0 0 0 30' fill='none' stroke='%236366F1' stroke-width='2'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='150' height='150' fill='url(%23grid)' /%3E%3C/svg%3E")`,
+          }} />
+        </div>
+
+        {/* Large Visible Gradient Background Elements */}
+        <div className="absolute inset-0 z-0">
+          {/* Large colored shapes with reduced opacity */}
+          <div className="absolute top-10 left-10 w-64 h-64 bg-blue-300/30 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute top-20 right-10 w-48 h-48 bg-purple-300/35 rounded-full blur-2xl animate-pulse" style={{animationDelay: '1s'}}></div>
+          <div className="absolute bottom-10 left-20 w-56 h-56 bg-indigo-300/32 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
+          <div className="absolute bottom-20 right-20 w-40 h-40 bg-pink-300/30 rounded-full blur-2xl animate-pulse" style={{animationDelay: '0.5s'}}></div>
+          
+          {/* Floating geometric shapes */}
+          <div className="absolute top-1/2 left-1/4 w-32 h-32 bg-cyan-300/25 rotate-45 blur-xl animate-float"></div>
+          <div className="absolute top-1/3 right-1/3 w-28 h-28 bg-emerald-300/28 rotate-12 blur-lg animate-float-delay"></div>
+          <div className="absolute top-20 left-1/2 w-36 h-36 bg-yellow-300/22 rounded-full blur-2xl animate-pulse" style={{animationDelay: '1.5s'}}></div>
+          
+          {/* Decorative elements */}
+          <div className="absolute left-[15%] top-[15%] h-16 w-16 rounded-full bg-gradient-to-br from-blue-400/12 to-indigo-600/10 animate-float" />
+          <div className="absolute right-[20%] top-[30%] h-12 w-12 rounded-full bg-gradient-to-br from-pink-400/15 to-rose-600/12 animate-float-delay" />
+          <div className="absolute left-[80%] bottom-[40%] h-20 w-20 rounded-full bg-gradient-to-br from-emerald-400/10 to-teal-600/8 animate-float" style={{animationDelay: '1s'}} />
+        </div>
+
+        <div className="max-w-7xl mx-auto text-center relative z-20">
+          {/* Bold headline highlighting large collection */}
+          <div className="inline-flex items-center px-5 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-semibold mb-6 animate-fade-in-up shadow-sm">
+            <Sparkles className="mr-2 h-4 w-4" />
+            Tools Hub - All-in-One Solution
+          </div>
+          
+          <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tight text-gray-900 mb-6 leading-[0.9] animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+            <span className="block bg-gradient-to-r from-primary via-indigo-600 to-purple-600 bg-clip-text text-transparent">200+ Free Tools</span>
+            <span className="block text-gray-900 mt-2">at Your Fingertips</span>
           </h1>
-          <p className="text-base sm:text-xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">
-            Comprehensive collection of 25 powerful text manipulation tools. Count words, convert cases, 
-            generate passwords, format JSON, create QR codes, test regex, and much more - all in one place.
+          
+          {/* Value-focused subheading */}
+          <p className="text-lg sm:text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+            <span className="font-semibold text-gray-800">Boost your productivity</span> with our comprehensive collection of tools for 
+            <span className="font-medium text-primary"> writing, SEO optimization, design, development, and content creation</span>. 
+            Everything you need in one place - fast, secure, and completely free.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" asChild className="shadow-sm hover:shadow-md">
-              <Link href="#tools">
-                Explore Tools
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
+
+          {/* Primary and Secondary CTAs */}
+          <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in-up" style={{animationDelay: '0.3s'}}>
+            <Button size="lg" asChild className="shadow-lg hover:shadow-xl bg-gradient-to-r from-primary to-indigo-600 hover:from-primary/90 hover:to-indigo-600/90 text-white border-0 group relative overflow-hidden transform hover:scale-105 transition-all duration-300 px-10 py-6 text-xl h-16">
+              <Link href="#tools" className="relative z-10" title="Explore 200+ Free Online Tools - Tools Hub">
+                <Sparkles className="mr-3 h-6 w-6 animate-pulse" />
+                Explore Free Tools
+                <ArrowRight className="ml-3 h-6 w-6 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
             </Button>
-            <Button variant="outline" size="lg" asChild className="border-gray-300 hover:border-gray-400">
-              <Link href="/about">Learn More</Link>
+            <Button variant="outline" size="lg" asChild className="border-2 border-gray-300 hover:border-primary hover:bg-primary/5 transition-all duration-300 group transform hover:scale-105 px-10 py-6 text-xl h-16 backdrop-blur-sm bg-white/80">
+              <Link href="/about" title="Learn More About Tools Hub - Free Online Tools">
+                <Info className="mr-3 h-5 w-5 transition-colors duration-300 group-hover:text-primary" />
+                Learn More About Tools Hub
+              </Link>
             </Button>
           </div>
         </div>
+        
+        {/* Fade effect at bottom to merge with white background */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white via-white/60 to-transparent pointer-events-none z-10"></div>
       </section>
 
       {/* Tools Section */}
       <section id="tools" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Choose Your Tool
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Select from our collection of carefully crafted text manipulation tools. 
-              Each tool is designed to be fast, accurate, and easy to use.
-            </p>
+            {searchQuery ? (
+              <>
+                <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+                  Search Results for "{searchQuery}"
+                </h2>
+                <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                  {filteredTools.length > 0 
+                    ? `Found ${filteredTools.length} tool${filteredTools.length !== 1 ? 's' : ''} matching your search.`
+                    : "No tools found matching your search. Try different keywords."
+                  }
+                </p>
+              </>
+            ) : (
+              <>
+                <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+                  Choose Your Tool
+                </h2>
+                <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                  Select from our collection of carefully crafted tools for productivity, writing, SEO, design, and development. 
+                  Each tool is designed to be fast, accurate, and easy to use.
+                </p>
+              </>
+            )}
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {tools.map((tool) => {
-              const Icon = tool.icon
-              return (
-                <Card key={tool.name} className="hover:shadow-lg transition-shadow duration-300">
-                  <CardHeader>
-                    <div className="flex items-center space-x-3">
-                      <Icon className={`h-8 w-8 ${tool.color}`} />
-                      <CardTitle className="text-xl">{tool.name}</CardTitle>
-                    </div>
-                    <CardDescription className="text-base">
-                      {tool.description}
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <Button asChild className="w-full">
-                      <Link href={tool.href}>
-                        Use Tool
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Link>
-                    </Button>
-                  </CardContent>
-                </Card>
-              )
-            })}
-          </div>
+          {filteredTools.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {filteredTools.map((tool, index) => {
+                const Icon = tool.icon
+                return (
+                  <Card key={tool.name} className="hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group" style={{
+                    animationDelay: `${index * 0.1}s`
+                  }}>
+                    <CardHeader>
+                      <div className="flex items-center space-x-3">
+                        <div className="p-2 rounded-lg bg-gray-50 group-hover:bg-primary/10 transition-colors">
+                          <Icon className={`h-6 w-6 ${tool.color}`} />
+                        </div>
+                        <CardTitle className="text-xl group-hover:text-primary transition-colors">{tool.name}</CardTitle>
+                      </div>
+                      <CardDescription className="text-base leading-relaxed">
+                        {tool.description}
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <Button asChild className="w-full group-hover:shadow-md transition-all duration-200">
+                        <Link href={tool.href}>
+                          Use Tool
+                          <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
+                        </Link>
+                      </Button>
+                    </CardContent>
+                  </Card>
+                )
+              })}
+            </div>
+          ) : searchQuery && (
+            <div className="text-center py-12">
+              <div className="text-6xl mb-4">🔍</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">No tools found</h3>
+              <p className="text-gray-600 mb-6">Try searching for different keywords like "word", "password", "json", or "qr"</p>
+              <Button onClick={() => setSearchQuery("")} variant="outline">
+                Clear Search
+              </Button>
+            </div>
+          )}
         </div>
       </section>
 

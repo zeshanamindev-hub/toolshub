@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { useState, useRef, useEffect } from "react"
-import { Menu, X, Wrench, ChevronDown, Search, Flame, Grid3X3, ArrowRight } from "lucide-react"
+import { Menu, X, Wrench, ChevronDown, Search, Flame, Grid3X3, ArrowRight, Sparkles } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 
@@ -37,6 +37,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [toolsDropdownOpen, setToolsDropdownOpen] = useState(false)
   const [searchQuery, setSearchQuery] = useState("")
+  const [searchFocused, setSearchFocused] = useState(false)
   const dropdownRef = useRef<HTMLDivElement>(null)
 
   // Close dropdown when clicking outside
@@ -60,15 +61,63 @@ export default function Header() {
   )
 
   return (
-    <header className="bg-white shadow-sm border-b sticky top-0 z-50">
+    <header className="bg-white/95 backdrop-blur-md shadow-sm border-b sticky top-0 z-50">
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Top">
         <div className="flex w-full items-center justify-between py-4">
           {/* Logo */}
           <div className="flex items-center">
-            <Link href="/" className="flex items-center space-x-2">
-              <Wrench className="h-8 w-8 text-primary" />
-              <span className="text-2xl font-bold text-gray-900">Tools Hub</span>
+            <Link href="/" className="flex items-center space-x-2 group">
+              <div className="p-2 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl group-hover:scale-105 transition-transform">
+                <Wrench className="h-6 w-6 text-white" />
+              </div>
+              <span className="text-2xl font-bold bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent">Tools Hub</span>
             </Link>
+          </div>
+
+          {/* Search Bar - Desktop */}
+          <div className="hidden md:flex flex-1 max-w-lg mx-8">
+            <div className="relative w-full group">
+              <Search className={`absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 transition-colors ${searchFocused ? 'text-blue-500' : 'text-gray-400'}`} />
+              <Input
+                type="text"
+                placeholder="Search 25+ tools..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                onFocus={() => setSearchFocused(true)}
+                onBlur={() => setSearchFocused(false)}
+                className="pl-12 pr-4 py-3 w-full bg-gray-50/50 border-gray-200 focus:bg-white focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 rounded-xl transition-all duration-200"
+              />
+              {searchQuery && (
+                <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-xl shadow-xl border border-gray-200 p-4 z-50">
+                  <div className="space-y-2 max-h-96 overflow-y-auto">
+                    {filteredPopularTools.length > 0 ? (
+                      filteredPopularTools.map((tool) => (
+                        <Link
+                          key={tool.name}
+                          href={tool.href}
+                          className="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group"
+                          onClick={() => setSearchQuery("")}
+                        >
+                          <div className="flex-shrink-0 w-2 h-2 bg-blue-500 rounded-full mt-2" />
+                          <div>
+                            <div className="font-medium text-gray-900 group-hover:text-blue-600">
+                              {tool.name}
+                            </div>
+                            <div className="text-sm text-gray-500">
+                              {tool.description}
+                            </div>
+                          </div>
+                        </Link>
+                      ))
+                    ) : (
+                      <div className="text-center py-4 text-gray-500">
+                        No tools found matching "{searchQuery}"
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
           
           {/* Desktop navigation */}
@@ -87,10 +136,11 @@ export default function Header() {
             <div className="relative" ref={dropdownRef}>
               <Button 
                 variant="ghost" 
-                className="text-sm font-medium text-gray-700 hover:text-primary transition-colors h-auto px-3 py-2 gap-1"
+                className="text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors h-auto px-4 py-2 gap-1 rounded-lg hover:bg-blue-50"
                 onClick={() => setToolsDropdownOpen(!toolsDropdownOpen)}
                 onMouseEnter={() => setToolsDropdownOpen(true)}
               >
+                <Grid3X3 className="h-4 w-4" />
                 <span>Tools</span>
                 <ChevronDown className={`h-4 w-4 transition-transform ${toolsDropdownOpen ? 'rotate-180' : ''}`} />
               </Button>
@@ -98,22 +148,9 @@ export default function Header() {
               {/* Mega Dropdown */}
               {toolsDropdownOpen && (
                 <div 
-                  className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-white rounded-lg shadow-xl border border-gray-200 p-6 w-[800px] z-50"
+                  className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-white rounded-xl shadow-2xl border border-gray-200 p-6 w-[700px] z-50"
                   onMouseLeave={() => setToolsDropdownOpen(false)}
                 >
-                  {/* Search Section */}
-                  <div className="mb-6">
-                    <div className="relative">
-                      <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
-                      <Input
-                        type="text"
-                        placeholder="Search 200+ tools..."
-                        value={searchQuery}
-                        onChange={(e) => setSearchQuery(e.target.value)}
-                        className="pl-10 pr-4 py-3 w-full text-lg border-2 border-gray-200 focus:border-primary"
-                      />
-                    </div>
-                  </div>
 
                   {/* Popular Tools Section */}
                   <div className="mb-8">
@@ -122,16 +159,16 @@ export default function Header() {
                       <h3 className="text-lg font-semibold text-gray-900">Popular Tools</h3>
                     </div>
                     <div className="grid grid-cols-2 gap-3">
-                      {(searchQuery ? filteredPopularTools : popularTools).slice(0, 8).map((tool) => (
+                      {popularTools.slice(0, 8).map((tool) => (
                         <Link
                           key={tool.name}
                           href={tool.href}
                           className="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group"
                           onClick={() => setToolsDropdownOpen(false)}
                         >
-                          <div className="flex-shrink-0 w-2 h-2 bg-primary rounded-full mt-2 group-hover:bg-primary/80" />
+                          <div className="flex-shrink-0 w-2 h-2 bg-blue-500 rounded-full mt-2 group-hover:bg-blue-600" />
                           <div>
-                            <div className="font-medium text-gray-900 group-hover:text-primary">
+                            <div className="font-medium text-gray-900 group-hover:text-blue-600">
                               {tool.name}
                             </div>
                             <div className="text-sm text-gray-500">
