@@ -16,10 +16,20 @@ import {
   BarChart3,
   Binary,
   Shuffle,
-  Code
+  Code,
+  Link as LinkIcon,
+  Braces,
+  Palette,
+  Search,
+  Clock,
+  QrCode,
+  GitCompare,
+  ArrowUpDown,
+  Filter
 } from "lucide-react"
 
 const tools = [
+  // Existing Tools
   {
     name: "Word Counter",
     description: "Count words, characters, paragraphs, and sentences in your text instantly.",
@@ -104,6 +114,98 @@ const tools = [
     href: "/tools/text-to-morse",
     color: "text-cyan-600",
   },
+  {
+    name: "Morse to Text",
+    description: "Convert Morse code back to readable text with error handling.",
+    icon: Code,
+    href: "/tools/morse-to-text",
+    color: "text-slate-600",
+  },
+  // New Tools
+  {
+    name: "URL Encoder/Decoder",
+    description: "Encode or decode URLs and text for safe web transmission and processing.",
+    icon: LinkIcon,
+    href: "/tools/url-encoder",
+    color: "text-blue-600",
+  },
+  {
+    name: "Base64 Converter",
+    description: "Convert text to Base64 encoding and decode Base64 strings back to text.",
+    icon: Binary,
+    href: "/tools/base64-converter",
+    color: "text-purple-600",
+  },
+  {
+    name: "JSON Formatter",
+    description: "Format, validate, and beautify JSON data with syntax highlighting.",
+    icon: Braces,
+    href: "/tools/json-formatter",
+    color: "text-orange-600",
+  },
+  {
+    name: "Hash Generator",
+    description: "Generate MD5, SHA-1, SHA-256, SHA-384, and SHA-512 hashes from text.",
+    icon: Shield,
+    href: "/tools/hash-generator",
+    color: "text-red-600",
+  },
+  {
+    name: "Color Palette Generator",
+    description: "Create beautiful color palettes using color theory principles.",
+    icon: Palette,
+    href: "/tools/color-palette-generator",
+    color: "text-pink-600",
+  },
+  {
+    name: "Regex Tester",
+    description: "Test and debug regular expressions with real-time matching and highlighting.",
+    icon: Search,
+    href: "/tools/regex-tester",
+    color: "text-indigo-600",
+  },
+  {
+    name: "Lorem Ipsum Generator",
+    description: "Generate placeholder text in various formats for designs and layouts.",
+    icon: FileText,
+    href: "/tools/lorem-ipsum-generator",
+    color: "text-teal-600",
+  },
+  {
+    name: "Timestamp Converter",
+    description: "Convert between Unix timestamps, ISO dates, and human-readable formats.",
+    icon: Clock,
+    href: "/tools/timestamp-converter",
+    color: "text-blue-600",
+  },
+  {
+    name: "QR Code Generator",
+    description: "Generate QR codes for URLs, text, WiFi, contacts, and more with customization.",
+    icon: QrCode,
+    href: "/tools/qr-generator",
+    color: "text-gray-900",
+  },
+  {
+    name: "Text Diff Checker",
+    description: "Compare two text blocks and highlight differences line by line.",
+    icon: GitCompare,
+    href: "/tools/text-diff-checker",
+    color: "text-green-600",
+  },
+  {
+    name: "Line Sorter",
+    description: "Sort text lines alphabetically, numerically, by length, or randomly.",
+    icon: ArrowUpDown,
+    href: "/tools/line-sorter",
+    color: "text-purple-600",
+  },
+  {
+    name: "Text Extractor",
+    description: "Extract emails, URLs, phone numbers, dates, and patterns from text.",
+    icon: Filter,
+    href: "/tools/text-extractor",
+    color: "text-cyan-600",
+  },
 ]
 
 const features = [
@@ -180,8 +282,8 @@ export default function Home() {
             <span className="block bg-gradient-to-r from-primary to-indigo-600 bg-clip-text text-transparent">Made Simple</span>
           </h1>
           <p className="text-base sm:text-xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">
-            Comprehensive collection of 11 powerful text manipulation tools. Count words, convert cases, 
-            generate passwords, encode HTML entities, convert ASCII codes, and much more - all in one place.
+            Comprehensive collection of 25 powerful text manipulation tools. Count words, convert cases, 
+            generate passwords, format JSON, create QR codes, test regex, and much more - all in one place.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild className="shadow-sm hover:shadow-md">
