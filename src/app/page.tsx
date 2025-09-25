@@ -29,7 +29,10 @@ import {
   ArrowUpDown,
   Filter,
   Sparkles,
-  Info
+  Info,
+  TrendingUp,
+  Star,
+  Users
 } from "lucide-react"
 
 const tools = [
@@ -230,6 +233,64 @@ const features = [
   },
 ]
 
+// Popular tools selection - most commonly used tools
+const popularTools = [
+  {
+    name: "Word Counter",
+    description: "Count words, characters, paragraphs instantly",
+    icon: FileText,
+    href: "/tools/word-counter",
+    color: "text-blue-600",
+    stats: "50k+ uses",
+    badge: "Most Popular"
+  },
+  {
+    name: "Password Generator", 
+    description: "Generate secure passwords instantly",
+    icon: Lock,
+    href: "/tools/password-generator",
+    color: "text-green-600",
+    stats: "35k+ uses",
+    badge: "Essential"
+  },
+  {
+    name: "Case Converter",
+    description: "Convert text to any case format",
+    icon: Type,
+    href: "/tools/case-converter", 
+    color: "text-purple-600",
+    stats: "30k+ uses",
+    badge: "Trending"
+  },
+  {
+    name: "QR Code Generator",
+    description: "Create QR codes for any content",
+    icon: QrCode,
+    href: "/tools/qr-generator",
+    color: "text-indigo-600",
+    stats: "25k+ uses",
+    badge: "Hot"
+  },
+  {
+    name: "JSON Formatter", 
+    description: "Format and validate JSON data",
+    icon: Braces,
+    href: "/tools/json-formatter",
+    color: "text-orange-600",
+    stats: "20k+ uses", 
+    badge: "Developer"
+  },
+  {
+    name: "Character Counter",
+    description: "Count characters for social media",
+    icon: Hash,
+    href: "/tools/character-counter",
+    color: "text-cyan-600",
+    stats: "18k+ uses",
+    badge: "Social"
+  }
+]
+
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState("")
   
@@ -380,6 +441,96 @@ export default function Home() {
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white via-white/60 to-transparent pointer-events-none z-10"></div>
       </section>
 
+      {/* Popular Tools Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
+        <div className="max-w-7xl mx-auto">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4 animate-fade-in-up">
+              <TrendingUp className="mr-2 h-4 w-4" />
+              Popular Tools
+            </div>
+            <h2 className="text-3xl sm:text-5xl font-bold text-gray-900 mb-6 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+              Most Used Tools
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+              Discover our most popular tools loved by thousands of users worldwide. 
+              Perfect for everyday tasks and productivity boosts.
+            </p>
+          </div>
+
+          {/* Popular Tools Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {popularTools.map((tool, index) => {
+              const Icon = tool.icon
+              return (
+                <div
+                  key={tool.name}
+                  className="group relative bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 overflow-hidden animate-fade-in-up"
+                  style={{animationDelay: `${0.3 + index * 0.1}s`}}
+                >
+                  {/* Gradient overlay on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  
+                  {/* Badge */}
+                  <div className="absolute top-4 right-4 z-10">
+                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-primary text-white shadow-lg">
+                      {tool.badge}
+                    </span>
+                  </div>
+
+                  {/* Card Content */}
+                  <div className="relative p-8">
+                    {/* Icon with animated background */}
+                    <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-gray-50 group-hover:bg-white group-hover:shadow-lg transition-all duration-300 mb-6 relative overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-indigo-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      <Icon className={`h-8 w-8 ${tool.color} relative z-10 group-hover:scale-110 transition-transform duration-300`} />
+                    </div>
+
+                    {/* Tool Info */}
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors duration-300">
+                      {tool.name}
+                    </h3>
+                    <p className="text-gray-600 mb-4 leading-relaxed">
+                      {tool.description}
+                    </p>
+
+                    {/* Stats */}
+                    <div className="flex items-center text-sm text-gray-500 mb-6">
+                      <Users className="h-4 w-4 mr-2" />
+                      <span>{tool.stats}</span>
+                    </div>
+
+                    {/* CTA Button */}
+                    <Link 
+                      href={tool.href}
+                      className="inline-flex items-center justify-center w-full px-6 py-3 rounded-xl bg-gray-50 text-gray-700 font-medium group-hover:bg-primary group-hover:text-white transition-all duration-300 transform group-hover:scale-105"
+                    >
+                      Try Now
+                      <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                    </Link>
+                  </div>
+
+                  {/* Animated border on hover */}
+                  <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-primary/20 transition-all duration-300"></div>
+                </div>
+              )
+            })}
+          </div>
+
+          {/* View All Tools Button */}
+          <div className="text-center animate-fade-in-up" style={{animationDelay: '0.9s'}}>
+            <Button size="lg" asChild className="bg-gradient-to-r from-primary to-indigo-600 hover:from-primary/90 hover:to-indigo-600/90 text-white shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+              <Link href="/tools">
+                <Star className="mr-2 h-5 w-5" />
+                View All Tools A-Z
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Tools Section */}
       <section id="tools" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -410,36 +561,51 @@ export default function Home() {
           </div>
           
           {filteredTools.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredTools.map((tool, index) => {
-                const Icon = tool.icon
-                return (
-                  <Card key={tool.name} className="hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group" style={{
-                    animationDelay: `${index * 0.1}s`
-                  }}>
-                    <CardHeader>
-                      <div className="flex items-center space-x-3">
-                        <div className="p-2 rounded-lg bg-gray-50 group-hover:bg-primary/10 transition-colors">
-                          <Icon className={`h-6 w-6 ${tool.color}`} />
+            <>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {(searchQuery ? filteredTools : filteredTools.slice(0, 12)).map((tool, index) => {
+                  const Icon = tool.icon
+                  return (
+                    <Card key={tool.name} className="hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group" style={{
+                      animationDelay: `${index * 0.1}s`
+                    }}>
+                      <CardHeader>
+                        <div className="flex items-center space-x-3">
+                          <div className="p-2 rounded-lg bg-gray-50 group-hover:bg-primary/10 transition-colors">
+                            <Icon className={`h-6 w-6 ${tool.color}`} />
+                          </div>
+                          <CardTitle className="text-xl group-hover:text-primary transition-colors">{tool.name}</CardTitle>
                         </div>
-                        <CardTitle className="text-xl group-hover:text-primary transition-colors">{tool.name}</CardTitle>
-                      </div>
-                      <CardDescription className="text-base leading-relaxed">
-                        {tool.description}
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <Button asChild className="w-full group-hover:shadow-md transition-all duration-200">
-                        <Link href={tool.href}>
-                          Use Tool
-                          <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
-                        </Link>
-                      </Button>
-                    </CardContent>
-                  </Card>
-                )
-              })}
-            </div>
+                        <CardDescription className="text-base leading-relaxed">
+                          {tool.description}
+                        </CardDescription>
+                      </CardHeader>
+                      <CardContent>
+                        <Button asChild className="w-full group-hover:shadow-md transition-all duration-200">
+                          <Link href={tool.href}>
+                            Use Tool
+                            <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
+                          </Link>
+                        </Button>
+                      </CardContent>
+                    </Card>
+                  )
+                })}
+              </div>
+              
+              {/* View All Tools Button - only show when not searching and there are more than 12 tools */}
+              {!searchQuery && tools.length > 12 && (
+                <div className="text-center mt-12">
+                  <Button size="lg" asChild className="bg-gradient-to-r from-primary to-indigo-600 hover:from-primary/90 hover:to-indigo-600/90 text-white shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 px-8 py-4">
+                    <Link href="/tools">
+                      View All Tools ({tools.length} total)
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </Link>
+                  </Button>
+                </div>
+              )}
+            </>
+          
           ) : searchQuery && (
             <div className="text-center py-12">
               <div className="text-6xl mb-4">🔍</div>
