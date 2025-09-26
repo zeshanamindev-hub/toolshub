@@ -84,7 +84,7 @@ const categories = [
   {
     name: "Developer Tools",
     description: "Essential utilities for developers and programmers",
-    count: 6,
+    count: 9,
     color: "text-orange-600",
     bgColor: "bg-orange-50",
     borderColor: "border-orange-200",
@@ -95,6 +95,9 @@ const categories = [
       { name: "URL Encoder", href: "/tools/url-encoder", icon: LinkIcon },
       { name: "Hash Generator", href: "/tools/hash-generator", icon: Shield },
       { name: "Timestamp Converter", href: "/tools/timestamp-converter", icon: Clock },
+      { name: "CSS Minifier", href: "/tools/css-minifier", icon: Code },
+      { name: "JS Minifier", href: "/tools/js-minifier", icon: Code },
+      { name: "Percentage Calculator", href: "/tools/percentage-calculator", icon: BarChart3 },
     ]
   }
 ]

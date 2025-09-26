@@ -223,6 +223,27 @@ const tools = [
     href: "/tools/text-extractor",
     color: "text-cyan-600",
   },
+  {
+    name: "CSS Minifier",
+    description: "Minify CSS code to reduce file size and improve loading performance.",
+    icon: Code,
+    href: "/tools/css-minifier",
+    color: "text-blue-600",
+  },
+  {
+    name: "JS Minifier",
+    description: "Minify JavaScript code to reduce file size and improve loading performance.",
+    icon: Code,
+    href: "/tools/js-minifier",
+    color: "text-yellow-600",
+  },
+  {
+    name: "Percentage Calculator",
+    description: "Calculate percentages, percentage change, and percentage of amounts.",
+    icon: BarChart3,
+    href: "/tools/percentage-calculator",
+    color: "text-green-600",
+  },
 ]
 
 const features = [

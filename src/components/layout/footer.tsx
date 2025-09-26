@@ -35,6 +35,9 @@ const footerNavigation = {
     { name: "Regex Tester", href: "/tools/regex-tester" },
     { name: "Timestamp Converter", href: "/tools/timestamp-converter" },
     { name: "Letter Counter", href: "/tools/letter-counter" },
+    { name: "CSS Minifier", href: "/tools/css-minifier" },
+    { name: "JS Minifier", href: "/tools/js-minifier" },
+    { name: "Percentage Calculator", href: "/tools/percentage-calculator" },
   ],
   company: [
     { name: "About", href: "/about" },
