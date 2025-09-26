@@ -18,18 +18,3 @@ Tootls list:
 
 Added new tools links where need on categories page, header, footer etc. 
 
-
-
-
-- Add Tools Category Section
-- Improve Why Choose Tool Hub? Section 
-- Improve CTA Section make more modern and attractive.
-
-
-
-Hero Section Requirements:
-All is good now need some improvements
-- reduce the opacity of pattern 50%
-- Remove search  from Hero Section 
-- Increase the button height
-
