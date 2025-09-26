@@ -15,6 +15,7 @@ const footerNavigation = {
   converters: [
     { name: "URL Encoder/Decoder", href: "/tools/url-encoder" },
     { name: "Base64 Converter", href: "/tools/base64-converter" },
+    { name: "BMI Calculator", href: "/tools/bmi-calculator" },
     { name: "JSON Formatter", href: "/tools/json-formatter" },
     { name: "Text to ASCII", href: "/tools/text-to-ascii" },
     { name: "ASCII to Text", href: "/tools/ascii-to-text" },

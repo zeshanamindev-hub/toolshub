@@ -4,11 +4,11 @@ import { Button } from "@/components/ui/button"
 import StructuredData from "@/components/structured-data"
 import ToolsCategorySection from "@/components/tools-category-section"
 import { useState, useMemo } from "react"
-import { 
-  FileText, 
-  Hash, 
-  Type, 
-  Scissors, 
+import {
+  FileText,
+  Hash,
+  Type,
+  Scissors,
   RotateCcw,
   ArrowRight,
   Zap,
@@ -34,7 +34,8 @@ import {
   Star,
   Users,
   ChevronRight,
-  Grid3X3
+  Grid3X3,
+  Activity
 } from "lucide-react"
 
 const tools = [
@@ -144,6 +145,13 @@ const tools = [
     icon: Binary,
     href: "/tools/base64-converter",
     color: "text-purple-600",
+  },
+  {
+    name: "BMI Calculator",
+    description: "Calculate BMI, ideal weight range, body fat estimation, and health recommendations.",
+    icon: Activity,
+    href: "/tools/bmi-calculator",
+    color: "text-emerald-600",
   },
   {
     name: "JSON Formatter",

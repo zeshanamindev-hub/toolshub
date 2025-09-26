@@ -4,11 +4,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { useState, useMemo } from "react"
-import { 
-  FileText, 
-  Hash, 
-  Type, 
-  Scissors, 
+import {
+  FileText,
+  Hash,
+  Type,
+  Scissors,
   RotateCcw,
   ArrowRight,
   Lock,
@@ -27,7 +27,8 @@ import {
   Filter,
   ArrowLeft,
   Grid3X3,
-  List
+  List,
+  Activity
 } from "lucide-react"
 
 // Import the same tools array (you'll need to move this to a shared file)
@@ -138,6 +139,13 @@ const tools = [
     icon: Binary,
     href: "/tools/base64-converter",
     color: "text-purple-600",
+  },
+  {
+    name: "BMI Calculator",
+    description: "Calculate BMI, ideal weight range, body fat estimation, and health recommendations.",
+    icon: Activity,
+    href: "/tools/bmi-calculator",
+    color: "text-emerald-600",
   },
   {
     name: "JSON Formatter",
