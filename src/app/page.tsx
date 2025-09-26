@@ -1,8 +1,8 @@
 "use client"
 import Link from "next/link"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import StructuredData from "@/components/structured-data"
+import ToolsCategorySection from "@/components/tools-category-section"
 import { useState, useMemo } from "react"
 import { 
   FileText, 
@@ -32,7 +32,9 @@ import {
   Info,
   TrendingUp,
   Star,
-  Users
+  Users,
+  ChevronRight,
+  Grid3X3
 } from "lucide-react"
 
 const tools = [
@@ -218,19 +220,70 @@ const tools = [
 const features = [
   {
     name: "Lightning Fast",
-    description: "All tools work instantly in your browser without any delays.",
+    description: "All tools work instantly in your browser without any delays. No waiting, no loading - just immediate results.",
     icon: Zap,
+    color: "text-yellow-600",
+    bgColor: "bg-yellow-50",
+    iconBg: "bg-yellow-100",
+    accent: "from-yellow-400 to-orange-500",
+    stats: "< 100ms",
+    benefit: "Processing Time"
   },
   {
     name: "Privacy First",
-    description: "Your text never leaves your browser. Everything is processed locally.",
+    description: "Your data never leaves your browser. Everything is processed locally with zero server communication for maximum security.",
     icon: Shield,
+    color: "text-green-600",
+    bgColor: "bg-green-50",
+    iconBg: "bg-green-100",
+    accent: "from-green-400 to-emerald-500",
+    stats: "100%",
+    benefit: "Local Processing"
   },
   {
     name: "Mobile Friendly",
-    description: "Works perfectly on all devices - desktop, tablet, and mobile.",
+    description: "Perfect responsive design that works seamlessly on all devices - desktop, tablet, and mobile with touch optimization.",
     icon: Smartphone,
+    color: "text-blue-600",
+    bgColor: "bg-blue-50",
+    iconBg: "bg-blue-100",
+    accent: "from-blue-400 to-indigo-500",
+    stats: "All Devices",
+    benefit: "Supported"
   },
+  {
+    name: "No Registration",
+    description: "Start using any tool immediately. No sign-up, no account creation, no personal information required.",
+    icon: Users,
+    color: "text-purple-600",
+    bgColor: "bg-purple-50",
+    iconBg: "bg-purple-100",
+    accent: "from-purple-400 to-pink-500",
+    stats: "0 Steps",
+    benefit: "To Get Started"
+  },
+  {
+    name: "Always Updated",
+    description: "Regular updates with new features, improvements, and additional tools based on user feedback and needs.",
+    icon: TrendingUp,
+    color: "text-indigo-600",
+    bgColor: "bg-indigo-50",
+    iconBg: "bg-indigo-100",
+    accent: "from-indigo-400 to-purple-500",
+    stats: "Weekly",
+    benefit: "Updates"
+  },
+  {
+    name: "Developer Friendly",
+    description: "Built with modern web standards, optimized performance, and clean architecture for the best user experience.",
+    icon: Code,
+    color: "text-orange-600",
+    bgColor: "bg-orange-50",
+    iconBg: "bg-orange-100",
+    accent: "from-orange-400 to-red-500",
+    stats: "Modern",
+    benefit: "Technology"
+  }
 ]
 
 // Popular tools selection - most commonly used tools
@@ -531,30 +584,52 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Tools Section */}
-      <section id="tools" className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+      {/* Tools Category Section */}
+      <ToolsCategorySection />
+
+      {/* Enhanced Tools Section */}
+      <section id="tools" className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-50/30 to-white"></div>
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-10 left-10 w-32 h-32 bg-blue-200/40 rounded-full blur-2xl animate-pulse"></div>
+          <div className="absolute top-40 right-20 w-28 h-28 bg-purple-200/40 rounded-full blur-xl animate-pulse" style={{animationDelay: '1s'}}></div>
+          <div className="absolute bottom-20 left-1/4 w-36 h-36 bg-green-200/40 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
+          <div className="absolute bottom-10 right-1/3 w-24 h-24 bg-orange-200/40 rounded-full blur-xl animate-pulse" style={{animationDelay: '0.5s'}}></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto relative z-10">
+          {/* Enhanced Section Header */}
+          <div className="text-center mb-20">
             {searchQuery ? (
               <>
-                <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-                  Search Results for "{searchQuery}"
+                <div className="inline-flex items-center px-5 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-semibold mb-6 animate-fade-in-up">
+                  <Search className="mr-2 h-4 w-4" />
+                  Search Results
+                </div>
+                <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+                  Results for <span className="bg-gradient-to-r from-primary to-indigo-600 bg-clip-text text-transparent">"{searchQuery}"</span>
                 </h2>
-                <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed animate-fade-in-up" style={{animationDelay: '0.2s'}}>
                   {filteredTools.length > 0 
-                    ? `Found ${filteredTools.length} tool${filteredTools.length !== 1 ? 's' : ''} matching your search.`
-                    : "No tools found matching your search. Try different keywords."
+                    ? `Found ${filteredTools.length} perfect tool${filteredTools.length !== 1 ? 's' : ''} matching your search. Click any tool to get started instantly.`
+                    : "No tools found matching your search. Try different keywords or browse our categories below."
                   }
                 </p>
               </>
             ) : (
               <>
-                <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-                  Choose Your Tool
+                <div className="inline-flex items-center px-5 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-semibold mb-6 animate-fade-in-up">
+                  <Zap className="mr-2 h-4 w-4" />
+                  Featured Tools
+                </div>
+                <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+                  <span className="bg-gradient-to-r from-primary via-indigo-600 to-purple-600 bg-clip-text text-transparent">Choose Your Tool</span>
                 </h2>
-                <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                  Select from our collection of carefully crafted tools for productivity, writing, SEO, design, and development. 
-                  Each tool is designed to be fast, accurate, and easy to use.
+                <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+                  Discover our <span className="font-semibold text-gray-800">handpicked selection</span> of the most powerful and popular tools. 
+                  Each tool is crafted for <span className="font-medium text-primary">speed, accuracy, and ease of use</span> - 
+                  perfect for productivity, writing, development, and creative tasks.
                 </p>
               </>
             )}
@@ -562,113 +637,403 @@ export default function Home() {
           
           {filteredTools.length > 0 ? (
             <>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {/* Enhanced Tools Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
                 {(searchQuery ? filteredTools : filteredTools.slice(0, 12)).map((tool, index) => {
                   const Icon = tool.icon
                   return (
-                    <Card key={tool.name} className="hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group" style={{
-                      animationDelay: `${index * 0.1}s`
-                    }}>
-                      <CardHeader>
-                        <div className="flex items-center space-x-3">
-                          <div className="p-2 rounded-lg bg-gray-50 group-hover:bg-primary/10 transition-colors">
-                            <Icon className={`h-6 w-6 ${tool.color}`} />
-                          </div>
-                          <CardTitle className="text-xl group-hover:text-primary transition-colors">{tool.name}</CardTitle>
+                    <div
+                      key={tool.name} 
+                      className="group relative bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border border-gray-100 hover:border-transparent overflow-hidden animate-fade-in-up"
+                      style={{animationDelay: `${0.3 + index * 0.1}s`}}
+                    >
+                      {/* Background gradient on hover */}
+                      <div className={`absolute inset-0 bg-gradient-to-br from-${tool.color.replace('text-', '')}/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
+                      
+                      {/* Floating background element */}
+                      <div className="absolute top-4 right-4 opacity-10 group-hover:opacity-30 transition-opacity duration-300">
+                        <div className={`w-20 h-20 rounded-full bg-gradient-to-br from-${tool.color.replace('text-', '')}/20 to-indigo-400/20 blur-2xl`}></div>
+                      </div>
+
+                      {/* Card Content */}
+                      <div className="relative z-10 p-8">
+                        {/* Icon with enhanced styling */}
+                        <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-gray-50 group-hover:bg-white group-hover:shadow-lg transition-all duration-300 mb-6 relative overflow-hidden">
+                          <div className={`absolute inset-0 bg-gradient-to-br from-${tool.color.replace('text-', '')}/10 to-indigo-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
+                          <Icon className={`h-8 w-8 ${tool.color} relative z-10 group-hover:scale-110 transition-transform duration-300`} />
                         </div>
-                        <CardDescription className="text-base leading-relaxed">
+
+                        {/* Tool Info with better typography */}
+                        <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors duration-300 leading-tight">
+                          {tool.name}
+                        </h3>
+                        <p className="text-gray-600 leading-relaxed mb-6 text-base">
                           {tool.description}
-                        </CardDescription>
-                      </CardHeader>
-                      <CardContent>
-                        <Button asChild className="w-full group-hover:shadow-md transition-all duration-200">
-                          <Link href={tool.href}>
-                            Use Tool
-                            <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
-                          </Link>
-                        </Button>
-                      </CardContent>
-                    </Card>
+                        </p>
+
+                        {/* Enhanced CTA Button */}
+                        <Link 
+                          href={tool.href}
+                          className="group/btn relative inline-flex items-center justify-center w-full px-6 py-4 rounded-xl bg-gray-50 text-gray-700 font-semibold group-hover:bg-primary group-hover:text-white transition-all duration-300 transform group-hover:scale-105 overflow-hidden border border-gray-200 group-hover:border-primary"
+                        >
+                          {/* Button background effect */}
+                          <div className="absolute inset-0 bg-gradient-to-r from-primary to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                          <span className="relative z-10 flex items-center">
+                            <Sparkles className="mr-2 h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                            Use Tool Now
+                            <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-2" />
+                          </span>
+                        </Link>
+                      </div>
+
+                      {/* Animated border effect */}
+                      <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-primary/20 transition-all duration-300"></div>
+                      
+                      {/* Corner accent */}
+                      <div className="absolute top-0 right-0 w-16 h-16 overflow-hidden">
+                        <div className={`absolute top-0 right-0 w-8 h-8 bg-gradient-to-bl ${tool.color.replace('text-', 'from-')}/20 to-transparent rotate-45 transform translate-x-4 -translate-y-4 group-hover:scale-150 transition-transform duration-300`}></div>
+                      </div>
+                    </div>
                   )
                 })}
               </div>
               
-              {/* View All Tools Button - only show when not searching and there are more than 12 tools */}
+              {/* Enhanced View All Tools Section */}
               {!searchQuery && tools.length > 12 && (
-                <div className="text-center mt-12">
-                  <Button size="lg" asChild className="bg-gradient-to-r from-primary to-indigo-600 hover:from-primary/90 hover:to-indigo-600/90 text-white shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 px-8 py-4">
-                    <Link href="/tools">
-                      View All Tools ({tools.length} total)
-                      <ArrowRight className="ml-2 h-5 w-5" />
-                    </Link>
-                  </Button>
+                <div className="text-center bg-gradient-to-r from-gray-50 to-gray-100/50 rounded-2xl p-12 animate-fade-in-up" style={{animationDelay: '1.2s'}}>
+                  <div className="max-w-3xl mx-auto">
+                    <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
+                      <Star className="mr-2 h-4 w-4" />
+                      More Tools Available
+                    </div>
+                    <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                      Explore All {tools.length} Tools
+                    </h3>
+                    <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                      Discover our complete collection of professional tools. From text manipulation to code formatting, 
+                      we have everything you need to boost your productivity.
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                      <Button size="lg" asChild className="bg-gradient-to-r from-primary to-indigo-600 hover:from-primary/90 hover:to-indigo-600/90 text-white shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 px-8 py-4 text-lg font-semibold">
+                        <Link href="/tools">
+                          <Grid3X3 className="mr-2 h-5 w-5" />
+                          View All Tools A-Z
+                          <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 hover:translate-x-1" />
+                        </Link>
+                      </Button>
+                      <Button variant="outline" size="lg" asChild className="border-2 border-gray-300 hover:border-primary hover:bg-primary/5 transition-all duration-300 transform hover:scale-105 px-8 py-4 text-lg backdrop-blur-sm">
+                        <Link href="/categories">
+                          <Filter className="mr-2 h-5 w-5" />
+                          Browse Categories
+                        </Link>
+                      </Button>
+                    </div>
+                  </div>
                 </div>
               )}
             </>
           
           ) : searchQuery && (
-            <div className="text-center py-12">
-              <div className="text-6xl mb-4">🔍</div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">No tools found</h3>
-              <p className="text-gray-600 mb-6">Try searching for different keywords like "word", "password", "json", or "qr"</p>
-              <Button onClick={() => setSearchQuery("")} variant="outline">
-                Clear Search
-              </Button>
+            <div className="text-center py-20 bg-white/60 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-200">
+              <div className="max-w-md mx-auto">
+                {/* Enhanced No Results State */}
+                <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
+                  <Search className="h-12 w-12 text-gray-400" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">No Tools Found</h3>
+                <p className="text-gray-600 mb-8 leading-relaxed">
+                  We couldn't find any tools matching <span className="font-semibold">"{searchQuery}"</span>. 
+                  Try different keywords or explore our categories below.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button onClick={() => setSearchQuery("")} className="bg-primary hover:bg-primary/90 text-white">
+                    <ArrowRight className="mr-2 h-4 w-4 rotate-180" />
+                    Clear Search
+                  </Button>
+                  <Button asChild variant="outline">
+                    <Link href="/categories">
+                      <Grid3X3 className="mr-2 h-4 w-4" />
+                      Browse Categories
+                    </Link>
+                  </Button>
+                </div>
+                
+                {/* Popular search suggestions */}
+                <div className="mt-8 pt-6 border-t border-gray-200">
+                  <p className="text-sm text-gray-500 mb-4">Popular searches:</p>
+                  <div className="flex flex-wrap gap-2 justify-center">
+                    {['word counter', 'password', 'json', 'qr code', 'base64'].map((suggestion) => (
+                      <button
+                        key={suggestion}
+                        onClick={() => setSearchQuery(suggestion)}
+                        className="px-3 py-1 text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-full transition-colors duration-200"
+                      >
+                        {suggestion}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
           )}
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+      {/* Enhanced Features Section */}
+      <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-gray-50/50 to-white"></div>
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-20 left-20 w-40 h-40 bg-blue-200/30 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute top-40 right-10 w-32 h-32 bg-purple-200/30 rounded-full blur-2xl animate-pulse" style={{animationDelay: '1s'}}></div>
+          <div className="absolute bottom-20 left-10 w-36 h-36 bg-green-200/30 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
+          <div className="absolute bottom-40 right-20 w-28 h-28 bg-orange-200/30 rounded-full blur-2xl animate-pulse" style={{animationDelay: '0.5s'}}></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto relative z-10">
+          {/* Section Header */}
+          <div className="text-center mb-20">
+            <div className="inline-flex items-center px-5 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-semibold mb-6 animate-fade-in-up">
+              <Star className="mr-2 h-4 w-4" />
               Why Choose Tools Hub?
+            </div>
+            <h2 className="text-4xl sm:text-6xl font-bold text-gray-900 mb-6 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+              <span className="bg-gradient-to-r from-primary via-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                Built for Excellence
+              </span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Built with modern web technologies to provide the best user experience.
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+              Experience the perfect blend of <span className="font-semibold text-gray-800">speed, security, and simplicity</span>. 
+              Our tools are crafted with modern web technologies to deliver an exceptional user experience that puts your needs first.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {features.map((feature) => {
+
+          {/* Features Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {features.map((feature, index) => {
               const Icon = feature.icon
               return (
-                <div key={feature.name} className="text-center">
-                  <div className="flex justify-center mb-4">
-                    <Icon className="h-12 w-12 text-primary" />
+                <div
+                  key={feature.name}
+                  className="group relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 hover:border-transparent overflow-hidden animate-fade-in-up"
+                  style={{animationDelay: `${0.3 + index * 0.1}s`}}
+                >
+                  {/* Background Gradient on Hover */}
+                  <div className={`absolute inset-0 bg-gradient-to-br ${feature.accent} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
+                  
+                  {/* Floating Background Element */}
+                  <div className="absolute top-4 right-4 opacity-10 group-hover:opacity-20 transition-opacity duration-300">
+                    <div className={`w-20 h-20 rounded-full bg-gradient-to-br ${feature.accent} blur-2xl`}></div>
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    {feature.name}
-                  </h3>
-                  <p className="text-gray-600">
-                    {feature.description}
-                  </p>
+
+                  {/* Content */}
+                  <div className="relative z-10">
+                    {/* Icon */}
+                    <div className={`inline-flex p-4 rounded-2xl ${feature.iconBg} group-hover:shadow-lg transition-all duration-300 mb-6 relative overflow-hidden`}>
+                      <div className={`absolute inset-0 bg-gradient-to-br ${feature.accent} opacity-0 group-hover:opacity-20 transition-opacity duration-300`}></div>
+                      <Icon className={`h-8 w-8 ${feature.color} relative z-10 group-hover:scale-110 transition-transform duration-300`} />
+                    </div>
+
+                    {/* Title */}
+                    <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors duration-300">
+                      {feature.name}
+                    </h3>
+
+                    {/* Description */}
+                    <p className="text-gray-600 leading-relaxed mb-6 text-base">
+                      {feature.description}
+                    </p>
+
+                    {/* Stats */}
+                    <div className={`inline-flex items-center gap-3 px-4 py-2 rounded-full ${feature.bgColor} group-hover:shadow-md transition-all duration-300`}>
+                      <div className={`text-lg font-bold ${feature.color}`}>
+                        {feature.stats}
+                      </div>
+                      <div className="text-sm text-gray-600 font-medium">
+                        {feature.benefit}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Hover Border Effect */}
+                  <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-primary/20 transition-all duration-300"></div>
                 </div>
               )
             })}
           </div>
+
+          {/* Bottom CTA */}
+          <div className="text-center bg-white/60 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-200 p-12 animate-fade-in-up" style={{animationDelay: '0.9s'}}>
+            <div className="max-w-3xl mx-auto">
+              <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                Ready to Experience the Difference?
+              </h3>
+              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                Join thousands of users who trust Tools Hub for their daily productivity needs. 
+                Fast, secure, and completely free - just the way tools should be.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button 
+                  size="lg" 
+                  asChild 
+                  className="bg-gradient-to-r from-primary to-indigo-600 hover:from-primary/90 hover:to-indigo-600/90 text-white shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 px-8 py-4 text-lg font-semibold"
+                >
+                  <Link href="#tools">
+                    <Sparkles className="mr-2 h-5 w-5 animate-pulse" />
+                    Try Tools Now
+                    <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 hover:translate-x-1" />
+                  </Link>
+                </Button>
+                <Button 
+                  variant="outline" 
+                  size="lg" 
+                  asChild 
+                  className="border-2 border-gray-300 hover:border-primary hover:bg-primary/5 transition-all duration-300 transform hover:scale-105 px-8 py-4 text-lg backdrop-blur-sm bg-white/80"
+                >
+                  <Link href="/about">
+                    <Info className="mr-2 h-5 w-5" />
+                    Learn More
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-primary">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8">
-            Choose any tool above and start manipulating your text right away. 
-            No registration required, completely free to use.
-          </p>
-          <Button size="lg" variant="secondary" asChild>
-            <Link href="#tools">
-              Start Using Tools
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </Button>
+      {/* Enhanced CTA Section */}
+      <section className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        {/* Dynamic Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary via-indigo-600 to-purple-700"></div>
+        
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0">
+          {/* Large floating orbs */}
+          <div className="absolute top-10 left-10 w-64 h-64 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute top-20 right-20 w-48 h-48 bg-indigo-300/20 rounded-full blur-2xl animate-pulse" style={{animationDelay: '1s'}}></div>
+          <div className="absolute bottom-10 left-20 w-56 h-56 bg-purple-300/15 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
+          <div className="absolute bottom-20 right-10 w-40 h-40 bg-pink-300/20 rounded-full blur-2xl animate-pulse" style={{animationDelay: '0.5s'}}></div>
+          
+          {/* Geometric shapes */}
+          <div className="absolute top-1/3 left-1/4 w-32 h-32 bg-white/5 rotate-45 blur-xl animate-float"></div>
+          <div className="absolute top-1/2 right-1/3 w-24 h-24 bg-indigo-200/10 rotate-12 blur-lg animate-float-delay"></div>
+          <div className="absolute bottom-1/3 left-1/2 w-28 h-28 bg-purple-200/8 rounded-full blur-xl animate-slow-spin"></div>
         </div>
+
+        {/* Pattern overlay */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.3'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3Ccircle cx='0' cy='0' r='1'/%3E%3Ccircle cx='60' cy='60' r='1'/%3E%3Ccircle cx='0' cy='60' r='1'/%3E%3Ccircle cx='60' cy='0' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          }} />
+        </div>
+
+        <div className="max-w-6xl mx-auto relative z-20">
+          {/* Main CTA Content */}
+          <div className="text-center mb-16">
+            {/* Badge */}
+            <div className="inline-flex items-center px-5 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-sm font-semibold mb-6 animate-fade-in-up">
+              <Sparkles className="mr-2 h-4 w-4" />
+              Join Thousands of Happy Users
+            </div>
+
+            {/* Main Headline */}
+            <h2 className="text-4xl sm:text-6xl lg:text-7xl font-black text-white mb-6 animate-fade-in-up leading-tight" style={{animationDelay: '0.1s'}}>
+              <span className="block">Ready to</span>
+              <span className="block bg-gradient-to-r from-yellow-300 via-pink-300 to-cyan-300 bg-clip-text text-transparent">
+                Supercharge
+              </span>
+              <span className="block">Your Productivity?</span>
+            </h2>
+
+            {/* Subheading */}
+            <p className="text-xl sm:text-2xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+              <span className="font-semibold text-white">Start using our tools instantly</span> - no registration, no setup, no hassle. 
+              Just pure productivity at your fingertips, completely free forever.
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in-up" style={{animationDelay: '0.3s'}}>
+              <Button 
+                size="lg" 
+                asChild 
+                className="group relative bg-white text-primary hover:bg-gray-100 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 px-10 py-6 text-xl h-16 font-bold overflow-hidden"
+              >
+                <Link href="#tools">
+                  {/* Button background effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 via-pink-400 to-cyan-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                  <Zap className="mr-3 h-6 w-6 animate-pulse relative z-10" />
+                  <span className="relative z-10">Start Using Tools Now</span>
+                  <ArrowRight className="ml-3 h-6 w-6 transition-transform duration-300 group-hover:translate-x-2 relative z-10" />
+                </Link>
+              </Button>
+              
+              <Button 
+                variant="outline" 
+                size="lg" 
+                asChild 
+                className="group border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 backdrop-blur-sm transition-all duration-300 transform hover:scale-105 px-10 py-6 text-xl h-16 font-semibold"
+              >
+                <Link href="/categories">
+                  <Grid3X3 className="mr-3 h-5 w-5 transition-transform duration-300 group-hover:rotate-12" />
+                  Browse Categories
+                  <ChevronRight className="ml-3 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+                </Link>
+              </Button>
+            </div>
+          </div>
+
+          {/* Features Preview Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <div className="group bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 transform hover:-translate-y-2 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
+              <div className="flex items-center justify-center w-14 h-14 rounded-2xl bg-white/20 group-hover:bg-white/30 transition-colors duration-300 mb-4">
+                <Zap className="h-8 w-8 text-yellow-300 group-hover:scale-110 transition-transform duration-300" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">Instant Results</h3>
+              <p className="text-blue-100 leading-relaxed">All tools work instantly in your browser. No waiting, no loading times.</p>
+            </div>
+
+            <div className="group bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 transform hover:-translate-y-2 animate-fade-in-up" style={{animationDelay: '0.5s'}}>
+              <div className="flex items-center justify-center w-14 h-14 rounded-2xl bg-white/20 group-hover:bg-white/30 transition-colors duration-300 mb-4">
+                <Shield className="h-8 w-8 text-green-300 group-hover:scale-110 transition-transform duration-300" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">100% Private</h3>
+              <p className="text-blue-100 leading-relaxed">Your data never leaves your browser. Complete privacy guaranteed.</p>
+            </div>
+
+            <div className="group bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 transform hover:-translate-y-2 animate-fade-in-up" style={{animationDelay: '0.6s'}}>
+              <div className="flex items-center justify-center w-14 h-14 rounded-2xl bg-white/20 group-hover:bg-white/30 transition-colors duration-300 mb-4">
+                <Star className="h-8 w-8 text-cyan-300 group-hover:scale-110 transition-transform duration-300" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">Always Free</h3>
+              <p className="text-blue-100 leading-relaxed">No subscriptions, no limits. All tools are completely free forever.</p>
+            </div>
+          </div>
+
+          {/* Social Proof / Stats */}
+          <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-8 animate-fade-in-up" style={{animationDelay: '0.7s'}}>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+              <div className="group">
+                <div className="text-3xl sm:text-4xl font-bold text-white mb-2 group-hover:scale-110 transition-transform duration-300">25+</div>
+                <div className="text-blue-200 font-medium">Tools Available</div>
+              </div>
+              <div className="group">
+                <div className="text-3xl sm:text-4xl font-bold text-white mb-2 group-hover:scale-110 transition-transform duration-300">100K+</div>
+                <div className="text-blue-200 font-medium">Happy Users</div>
+              </div>
+              <div className="group">
+                <div className="text-3xl sm:text-4xl font-bold text-white mb-2 group-hover:scale-110 transition-transform duration-300">1M+</div>
+                <div className="text-blue-200 font-medium">Tools Used</div>
+              </div>
+              <div className="group">
+                <div className="text-3xl sm:text-4xl font-bold text-white mb-2 group-hover:scale-110 transition-transform duration-300">99%</div>
+                <div className="text-blue-200 font-medium">Satisfaction</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom fade effect */}
+        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none"></div>
       </section>
     </div>
     </>
