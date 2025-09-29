@@ -3,6 +3,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import StructuredData from "@/components/structured-data"
 import ToolsCategorySection from "@/components/tools-category-section"
+import GoogleAdSlot from "@/components/ads/google-ad-slot"
 import { useState, useMemo } from "react"
 import {
   FileText,
@@ -377,7 +378,20 @@ export default function Home() {
   const [searchQuery, setSearchQuery] = useState("")
   
   const filteredTools = useMemo(() => {
-    if (!searchQuery.trim()) return tools
+    if (!searchQuery.trim()) {
+      // Show only featured tools when not searching
+      const featuredToolsData = [
+        { name: "Word Counter", href: "/tools/word-counter", description: "Count words, characters, paragraphs, and sentences instantly", icon: FileText, gradient: "from-blue-500 to-indigo-600", color: "text-blue-600", featured: true },
+        { name: "JSON Formatter", href: "/tools/json-formatter", description: "Format, validate, and beautify JSON data with syntax highlighting", icon: Code, gradient: "from-green-500 to-emerald-600", color: "text-green-600", featured: true },
+        { name: "Password Generator", href: "/tools/password-generator", description: "Generate secure passwords with customizable options", icon: Shield, gradient: "from-red-500 to-pink-600", color: "text-red-600", featured: true },
+        { name: "QR Code Generator", href: "/tools/qr-generator", description: "Generate QR codes for URLs, text, WiFi, and more", icon: Grid3X3, gradient: "from-purple-500 to-indigo-600", color: "text-purple-600", featured: true },
+        { name: "Base64 Converter", href: "/tools/base64-converter", description: "Encode and decode Base64 strings with ease", icon: ArrowRight, gradient: "from-orange-500 to-red-600", color: "text-orange-600", featured: true },
+        { name: "URL Encoder", href: "/tools/url-encoder", description: "Encode and decode URLs for safe web transmission", icon: ArrowRight, gradient: "from-teal-500 to-cyan-600", color: "text-teal-600", featured: true },
+        { name: "Hash Generator", href: "/tools/hash-generator", description: "Generate MD5, SHA-1, SHA-256, and other hash types", icon: Shield, gradient: "from-indigo-500 to-purple-600", color: "text-indigo-600", featured: true },
+        { name: "Regex Tester", href: "/tools/regex-tester", description: "Test and debug regular expressions with real-time matching", icon: Search, gradient: "from-yellow-500 to-orange-600", color: "text-yellow-600", featured: true }
+      ]
+      return featuredToolsData
+    }
     
     const query = searchQuery.toLowerCase().trim()
     return tools.filter(tool => 
@@ -503,17 +517,25 @@ export default function Home() {
 
           {/* Primary and Secondary CTAs */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in-up" style={{animationDelay: '0.3s'}}>
-            <Button size="lg" asChild className="shadow-lg hover:shadow-xl bg-gradient-to-r from-primary to-indigo-600 hover:from-primary/90 hover:to-indigo-600/90 text-white border-0 group relative overflow-hidden transform hover:scale-105 transition-all duration-300 px-10 py-6 text-xl h-16">
-              <Link href="#tools" className="relative z-10" title="Explore 200+ Free Online Tools - Tools Hub">
-                <Sparkles className="mr-3 h-6 w-6 animate-pulse" />
-                Explore Free Tools
-                <ArrowRight className="ml-3 h-6 w-6 transition-transform duration-300 group-hover:translate-x-1" />
+            <Button size="lg" asChild className="relative group overflow-hidden shadow-lg hover:shadow-2xl bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-700 hover:via-indigo-700 hover:to-purple-700 text-white border-0 transform hover:scale-[1.02] transition-all duration-500 px-12 py-6 text-xl h-16 rounded-2xl">
+              <Link href="#tools" className="relative z-10 flex items-center" title="Explore 28+ Free Online Tools - Tools Hub">
+                {/* Animated background overlay */}
+                <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
+                <Sparkles className="mr-3 h-6 w-6 animate-pulse group-hover:animate-bounce transition-all duration-300" />
+                <span className="font-bold">Explore Free Tools</span>
+                <ArrowRight className="ml-3 h-6 w-6 transition-all duration-300 group-hover:translate-x-2 group-hover:scale-110" />
+                {/* Shine effect */}
+                <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-1000 skew-x-12" />
               </Link>
             </Button>
-            <Button variant="outline" size="lg" asChild className="border-2 border-gray-300 hover:border-primary hover:bg-primary/5 transition-all duration-300 group transform hover:scale-105 px-10 py-6 text-xl h-16 backdrop-blur-sm bg-white/80">
-              <Link href="/about" title="Learn More About Tools Hub - Free Online Tools">
-                <Info className="mr-3 h-5 w-5 transition-colors duration-300 group-hover:text-primary" />
-                Learn More About Tools Hub
+            <Button variant="outline" size="lg" asChild className="relative group border-2 border-gray-300 hover:border-blue-500 hover:bg-blue-50 transition-all duration-300 transform hover:scale-[1.02] px-12 py-6 text-xl h-16 backdrop-blur-sm bg-white/90 hover:shadow-lg rounded-2xl overflow-hidden">
+              <Link href="/about" title="Learn More About Tools Hub - Free Online Tools" className="relative z-10 flex items-center">
+                {/* Animated background */}
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-indigo-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <Info className="mr-3 h-5 w-5 transition-all duration-300 group-hover:text-blue-600 group-hover:scale-110" />
+                <span className="font-semibold text-gray-700 group-hover:text-blue-700 transition-colors duration-300">Learn More</span>
+                {/* Subtle shine effect */}
+                <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-blue-100/30 to-transparent transition-transform duration-700 skew-x-12" />
               </Link>
             </Button>
           </div>
@@ -546,56 +568,65 @@ export default function Home() {
             {popularTools.map((tool, index) => {
               const Icon = tool.icon
               return (
-                <div
+                <Link
                   key={tool.name}
-                  className="group relative bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 overflow-hidden animate-fade-in-up"
+                  href={tool.href}
+                  className="group relative bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border-2 border-gray-100 hover:border-orange-200 overflow-hidden animate-fade-in-up block p-8"
                   style={{animationDelay: `${0.3 + index * 0.1}s`}}
                 >
                   {/* Gradient overlay on hover */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-orange-50/80 to-red-50/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
+                  
+                  {/* Floating decoration */}
+                  <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                    <div className="w-8 h-8 bg-orange-200 rounded-full blur-sm animate-pulse"></div>
+                  </div>
+                  <div className="absolute bottom-6 left-6 opacity-0 group-hover:opacity-60 transition-all duration-500">
+                    <div className="w-12 h-12 bg-blue-200 rounded-full blur-lg animate-pulse"></div>
+                  </div>
                   
                   {/* Badge */}
-                  <div className="absolute top-4 right-4 z-10">
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-primary text-white shadow-lg">
+                  <div className="absolute top-6 right-6 z-10">
+                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-orange-500 to-red-500 text-white shadow-lg">
                       {tool.badge}
                     </span>
                   </div>
 
                   {/* Card Content */}
-                  <div className="relative p-8">
+                  <div className="relative z-10">
                     {/* Icon with animated background */}
-                    <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-gray-50 group-hover:bg-white group-hover:shadow-lg transition-all duration-300 mb-6 relative overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-indigo-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                      <Icon className={`h-8 w-8 ${tool.color} relative z-10 group-hover:scale-110 transition-transform duration-300`} />
+                    <div className="flex items-center justify-center w-18 h-18 rounded-3xl bg-gradient-to-br from-gray-50 to-gray-100 group-hover:from-orange-50 group-hover:to-orange-100 group-hover:shadow-xl transition-all duration-500 mb-6 relative overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-br from-orange-100/50 to-red-100/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl"></div>
+                      <Icon className={`h-9 w-9 ${tool.color} relative z-10 group-hover:scale-125 group-hover:text-orange-600 transition-all duration-300`} />
                     </div>
 
                     {/* Tool Info */}
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors duration-300">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-orange-700 transition-colors duration-300">
                       {tool.name}
                     </h3>
-                    <p className="text-gray-600 mb-4 leading-relaxed">
+                    <p className="text-gray-600 mb-6 leading-relaxed text-base">
                       {tool.description}
                     </p>
 
-                    {/* Stats */}
-                    <div className="flex items-center text-sm text-gray-500 mb-6">
-                      <Users className="h-4 w-4 mr-2" />
-                      <span>{tool.stats}</span>
+                    {/* Stats and CTA Row */}
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center text-sm text-gray-500">
+                        <Users className="h-4 w-4 mr-2" />
+                        <span>{tool.stats}</span>
+                      </div>
+                      <div className="flex items-center text-orange-600 group-hover:text-orange-700 font-semibold">
+                        <span className="text-sm mr-2">Try now</span>
+                        <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-2 group-hover:scale-110" />
+                      </div>
                     </div>
-
-                    {/* CTA Button */}
-                    <Link 
-                      href={tool.href}
-                      className="inline-flex items-center justify-center w-full px-6 py-3 rounded-xl bg-gray-50 text-gray-700 font-medium group-hover:bg-primary group-hover:text-white transition-all duration-300 transform group-hover:scale-105"
-                    >
-                      Try Now
-                      <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                    </Link>
                   </div>
 
                   {/* Animated border on hover */}
-                  <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-primary/20 transition-all duration-300"></div>
-                </div>
+                  <div className="absolute inset-0 rounded-3xl border-2 border-transparent group-hover:border-orange-300 transition-all duration-300"></div>
+                  
+                  {/* Shine effect */}
+                  <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-1000 skew-x-12 rounded-3xl" />
+                </Link>
               )
             })}
           </div>
@@ -613,8 +644,163 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Tools Category Section */}
-      <ToolsCategorySection />
+      {/* Google Ad Slot 1 - After Popular Tools */}
+      <div className="py-8 bg-gray-50/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center">
+          <GoogleAdSlot slot="header" className="mx-auto" />
+        </div>
+      </div>
+
+      {/* Tools Category Section - Redesigned */}
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-indigo-50/50 via-white to-purple-50/50 relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute top-20 left-1/4 w-64 h-64 bg-gradient-to-r from-indigo-200/30 to-purple-200/30 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-1/4 w-48 h-48 bg-gradient-to-r from-blue-200/30 to-indigo-200/30 rounded-full blur-2xl animate-pulse" style={{animationDelay: '1s'}}></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto relative z-10">
+          {/* Section Header */}
+          <div className="text-center mb-20">
+            <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-indigo-100 to-purple-100 border border-indigo-200 text-indigo-700 text-sm font-bold mb-6 animate-fade-in-up shadow-sm">
+              <Grid3X3 className="mr-2 h-4 w-4" />
+              Browse by Category
+            </div>
+            <h2 className="text-4xl sm:text-6xl font-black text-gray-900 mb-6 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+              <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+                Tools by Category
+              </span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+              Explore our carefully organized collection of professional tools. Each category is designed to help you accomplish specific tasks with maximum efficiency.
+            </p>
+          </div>
+
+          {/* Categories Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {[
+              {
+                name: "Text & Writing",
+                description: "Word counters, text analysis, case conversion, and writing tools",
+                count: 12,
+                icon: FileText,
+                gradient: "from-blue-500 to-indigo-600",
+                href: "/categories/text-writing"
+              },
+              {
+                name: "Converters",
+                description: "URL encoding, Base64, ASCII, JSON formatting, and data conversion",
+                count: 15,
+                icon: ArrowRight,
+                gradient: "from-purple-500 to-pink-600",
+                href: "/categories/converters"
+              },
+              {
+                name: "Generators",
+                description: "Password, QR code, lorem ipsum, and random content generation",
+                count: 8,
+                icon: Zap,
+                gradient: "from-green-500 to-emerald-600",
+                href: "/categories/generators"
+              },
+              {
+                name: "Developer Tools",
+                description: "Code minifiers, regex testing, JSON tools, and dev utilities",
+                count: 6,
+                icon: Code,
+                gradient: "from-orange-500 to-red-600",
+                href: "/categories/developers"
+              },
+              {
+                name: "Security",
+                description: "Hash generators, encryption tools, and security utilities",
+                count: 4,
+                icon: Shield,
+                gradient: "from-red-500 to-pink-600",
+                href: "/categories/security"
+              },
+              {
+                name: "Calculators",
+                description: "BMI, percentage, and various calculation tools",
+                count: 3,
+                icon: Star,
+                gradient: "from-teal-500 to-cyan-600",
+                href: "/categories/calculators"
+              }
+            ].map((category, index) => {
+              const Icon = category.icon
+              return (
+                <Link
+                  key={category.name}
+                  href={category.href}
+                  className="group relative bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 hover:border-indigo-200 overflow-hidden animate-fade-in-up block"
+                  style={{animationDelay: `${0.3 + index * 0.1}s`}}
+                >
+                  {/* Gradient Background */}
+                  <div className={`absolute inset-0 bg-gradient-to-br ${category.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500 rounded-3xl`}></div>
+                  
+                  {/* Content */}
+                  <div className="relative p-8 z-10">
+                    {/* Icon and Count */}
+                    <div className="flex items-center justify-between mb-6">
+                      <div className={`p-4 rounded-2xl bg-gradient-to-br ${category.gradient} shadow-lg group-hover:scale-110 group-hover:shadow-xl transition-all duration-300`}>
+                        <Icon className="h-8 w-8 text-white" />
+                      </div>
+                      <div className="text-right">
+                        <div className={`text-3xl font-black bg-gradient-to-r ${category.gradient} bg-clip-text text-transparent`}>
+                          {category.count}
+                        </div>
+                        <div className="text-sm text-gray-500 font-medium">tools</div>
+                      </div>
+                    </div>
+                    
+                    {/* Category Info */}
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-indigo-700 transition-colors duration-300">
+                      {category.name}
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed mb-6">
+                      {category.description}
+                    </p>
+                    
+                    {/* CTA */}
+                    <div className="flex items-center justify-between">
+                      <span className="text-indigo-600 font-semibold group-hover:text-indigo-700">
+                        Explore tools
+                      </span>
+                      <ArrowRight className="h-5 w-5 text-indigo-500 group-hover:text-indigo-600 transition-all duration-300 group-hover:translate-x-2" />
+                    </div>
+                  </div>
+                  
+                  {/* Shine Effect */}
+                  <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-1000 skew-x-12 rounded-3xl" />
+                </Link>
+              )
+            })}
+          </div>
+          
+          {/* Bottom CTA */}
+          <div className="text-center animate-fade-in-up" style={{animationDelay: '0.9s'}}>
+            <Button 
+              size="lg" 
+              asChild 
+              className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 hover:from-indigo-700 hover:via-purple-700 hover:to-pink-700 text-white shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 px-10 py-5 text-lg font-bold rounded-2xl"
+            >
+              <Link href="/categories">
+                <Grid3X3 className="mr-3 h-6 w-6" />
+                Browse All Categories
+                <ArrowRight className="ml-3 h-6 w-6" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Google Ad Slot 2 - After Categories */}
+      <div className="py-8 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center">
+          <GoogleAdSlot slot="content" className="mx-auto" />
+        </div>
+      </div>
 
       {/* Enhanced Tools Section */}
       <section id="tools" className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -648,17 +834,15 @@ export default function Home() {
               </>
             ) : (
               <>
-                <div className="inline-flex items-center px-5 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-semibold mb-6 animate-fade-in-up">
-                  <Zap className="mr-2 h-4 w-4" />
+                <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-yellow-100 to-orange-100 border border-yellow-200 text-yellow-800 text-sm font-bold mb-6 animate-fade-in-up shadow-sm">
+                  <Star className="mr-2 h-4 w-4 animate-spin" />
                   Featured Tools
                 </div>
-                <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
-                  <span className="bg-gradient-to-r from-primary via-indigo-600 to-purple-600 bg-clip-text text-transparent">Choose Your Tool</span>
+                <h2 className="text-4xl sm:text-6xl font-black text-gray-900 mb-6 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+                  <span className="bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 bg-clip-text text-transparent">Editor's Choice</span>
                 </h2>
                 <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-                  Discover our <span className="font-semibold text-gray-800">handpicked selection</span> of the most powerful and popular tools. 
-                  Each tool is crafted for <span className="font-medium text-primary">speed, accuracy, and ease of use</span> - 
-                  perfect for productivity, writing, development, and creative tasks.
+                  Hand-selected tools that our team and community love most. These are the <span className="font-bold text-yellow-600">top performers</span> that deliver exceptional results every time.
                 </p>
               </>
             )}
@@ -891,41 +1075,9 @@ export default function Home() {
             })}
           </div>
 
-          {/* Bottom CTA */}
-          <div className="text-center bg-white/60 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-200 p-12 animate-fade-in-up" style={{animationDelay: '0.9s'}}>
-            <div className="max-w-3xl mx-auto">
-              <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                Ready to Experience the Difference?
-              </h3>
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Join thousands of users who trust Tools Hub for their daily productivity needs. 
-                Fast, secure, and completely free - just the way tools should be.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button 
-                  size="lg" 
-                  asChild 
-                  className="bg-gradient-to-r from-primary to-indigo-600 hover:from-primary/90 hover:to-indigo-600/90 text-white shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 px-8 py-4 text-lg font-semibold"
-                >
-                  <Link href="#tools">
-                    <Sparkles className="mr-2 h-5 w-5 animate-pulse" />
-                    Try Tools Now
-                    <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 hover:translate-x-1" />
-                  </Link>
-                </Button>
-                <Button 
-                  variant="outline" 
-                  size="lg" 
-                  asChild 
-                  className="border-2 border-gray-300 hover:border-primary hover:bg-primary/5 transition-all duration-300 transform hover:scale-105 px-8 py-4 text-lg backdrop-blur-sm bg-white/80"
-                >
-                  <Link href="/about">
-                    <Info className="mr-2 h-5 w-5" />
-                    Learn More
-                  </Link>
-                </Button>
-              </div>
-            </div>
+          {/* Google Ad Slot 3 - After Featured Tools */}
+          <div className="text-center bg-white/60 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-200 p-8 animate-fade-in-up" style={{animationDelay: '0.9s'}}>
+            <GoogleAdSlot slot="footer" className="mx-auto" />
           </div>
         </div>
       </section>
