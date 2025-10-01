@@ -431,7 +431,7 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Tools Hub - Free Online Tools",
-    "description": "Tools Hub offers 28+ free online text manipulation tools including word counter, character counter, case converter, password generator, JSON formatter, QR code generator, regex tester, ASCII converters, HTML entities encoder/decoder, and more. Fast, secure, no registration required.",
+    "description": "Tools Hub offers 33+ free online text manipulation tools including word counter, character counter, case converter, password generator, JSON formatter, QR code generator, regex tester, ASCII converters, HTML entities encoder/decoder, and more. Fast, secure, no registration required.",
     "url": "https://toolshub.com",
     "keywords": "online tools, text manipulation, word counter, character counter, case converter, password generator, JSON formatter, QR code generator, free tools, web tools",
     "potentialAction": {
@@ -531,7 +531,7 @@ export default function Home() {
           </div>
           
           <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tight text-gray-900 mb-6 leading-[0.9] animate-fade-in-up" style={{animationDelay: '0.1s'}}>
-            <span className="block bg-gradient-to-r from-primary via-indigo-600 to-purple-600 bg-clip-text text-transparent">28+ Free Tools</span>
+            <span className="block bg-gradient-to-r from-primary via-indigo-600 to-purple-600 bg-clip-text text-transparent">33+ Free Tools</span>
             <span className="block text-gray-900 mt-2">at Your Fingertips</span>
           </h1>
           
@@ -709,50 +709,42 @@ export default function Home() {
               {
                 name: "Text & Writing",
                 description: "Word counters, text analysis, case conversion, and writing tools",
-                count: 12,
+                count: 13,
                 icon: FileText,
                 gradient: "from-blue-500 to-indigo-600",
-                href: "/categories/text-writing"
+                href: "/tools"
               },
               {
-                name: "Converters",
+                name: "Converters & Encoding",
                 description: "URL encoding, Base64, ASCII, JSON formatting, and data conversion",
-                count: 15,
+                count: 9,
                 icon: ArrowRight,
                 gradient: "from-purple-500 to-pink-600",
-                href: "/categories/converters"
+                href: "/tools"
               },
               {
                 name: "Generators",
                 description: "Password, QR code, lorem ipsum, and random content generation",
-                count: 8,
+                count: 6,
                 icon: Zap,
                 gradient: "from-green-500 to-emerald-600",
-                href: "/categories/generators"
+                href: "/tools"
               },
               {
                 name: "Developer Tools",
                 description: "Code minifiers, regex testing, JSON tools, and dev utilities",
-                count: 6,
+                count: 3,
                 icon: Code,
                 gradient: "from-orange-500 to-red-600",
-                href: "/categories/developers"
-              },
-              {
-                name: "Security",
-                description: "Hash generators, encryption tools, and security utilities",
-                count: 4,
-                icon: Shield,
-                gradient: "from-red-500 to-pink-600",
-                href: "/categories/security"
+                href: "/tools"
               },
               {
                 name: "Calculators",
                 description: "BMI, percentage, and various calculation tools",
-                count: 3,
-                icon: Star,
+                count: 2,
+                icon: Activity,
                 gradient: "from-teal-500 to-cyan-600",
-                href: "/categories/calculators"
+                href: "/tools"
               }
             ].map((category, index) => {
               const Icon = category.icon
@@ -1221,7 +1213,7 @@ export default function Home() {
           <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-8 animate-fade-in-up" style={{animationDelay: '0.7s'}}>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               <div className="group">
-                <div className="text-3xl sm:text-4xl font-bold text-white mb-2 group-hover:scale-110 transition-transform duration-300">28+</div>
+                <div className="text-3xl sm:text-4xl font-bold text-white mb-2 group-hover:scale-110 transition-transform duration-300">33+</div>
                 <div className="text-blue-200 font-medium">Tools Available</div>
               </div>
               <div className="group">
