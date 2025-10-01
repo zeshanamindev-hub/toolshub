@@ -1,0 +1,48 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="url(#gradient)"/>
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#8B5CF6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#EC4899;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Pattern -->
+  <g opacity="0.1">
+    <circle cx="100" cy="100" r="50" fill="white"/>
+    <circle cx="1100" cy="530" r="40" fill="white"/>
+    <circle cx="200" cy="500" r="30" fill="white"/>
+    <circle cx="1000" cy="150" r="35" fill="white"/>
+  </g>
+
+  <!-- Main Content -->
+  <g transform="translate(100, 200)">
+    <!-- Icon -->
+    <rect x="0" y="0" width="80" height="80" rx="16" fill="white" opacity="0.9"/>
+    <text x="40" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="#3B82F6">🛠️</text>
+
+    <!-- Title -->
+    <text x="120" y="35" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white">
+      Tools Hub
+    </text>
+
+    <!-- Subtitle -->
+    <text x="120" y="75" font-family="Arial, sans-serif" font-size="24" fill="white" opacity="0.9">
+      Free Online Text Tools & Utilities
+    </text>
+
+    <!-- Description -->
+    <text x="0" y="130" font-family="Arial, sans-serif" font-size="18" fill="white" opacity="0.8">
+      33+ free online tools for text manipulation, development, and productivity.
+    </text>
+    <text x="0" y="155" font-family="Arial, sans-serif" font-size="18" fill="white" opacity="0.8">
+      Word counter, JSON formatter, password generator, and more.
+    </text>
+  </g>
+
+  <!-- Bottom text -->
+  <text x="600" y="580" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="white" opacity="0.7">
+    toolshub.com - No registration required
+  </text>
+</svg>

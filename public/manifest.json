@@ -1,0 +1,55 @@
+{
+  "name": "Tools Hub - Free Online Text Tools",
+  "short_name": "Tools Hub",
+  "description": "Free online text manipulation and utility tools including word counter, JSON formatter, password generator, and more.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3b82f6",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en-US",
+  "categories": ["productivity", "utilities", "developer-tools"],
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16 32x32 48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "192x192",
+      "type": "image/x-icon",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "512x512",
+      "type": "image/x-icon",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Word Counter",
+      "short_name": "Word Counter",
+      "description": "Count words and characters instantly",
+      "url": "/tools/word-counter",
+      "icons": [{ "src": "/favicon.ico", "sizes": "96x96" }]
+    },
+    {
+      "name": "JSON Formatter",
+      "short_name": "JSON Formatter",
+      "description": "Format and validate JSON data",
+      "url": "/tools/json-formatter",
+      "icons": [{ "src": "/favicon.ico", "sizes": "96x96" }]
+    },
+    {
+      "name": "Password Generator",
+      "short_name": "Password Generator",
+      "description": "Generate secure passwords",
+      "url": "/tools/password-generator",
+      "icons": [{ "src": "/favicon.ico", "sizes": "96x96" }]
+    }
+  ]
+}

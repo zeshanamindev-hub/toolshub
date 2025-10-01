@@ -5,6 +5,30 @@ import "./globals.css";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 
+const organizationStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Tools Hub",
+  "url": "https://toolshub.com",
+  "logo": "https://toolshub.com/favicon.ico",
+  "description": "Tools Hub offers free online text manipulation and utility tools including word counter, character counter, case converter, password generator, JSON formatter, and more.",
+  "foundingDate": "2024",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "url": "https://toolshub.com/contact"
+  },
+  "sameAs": [
+    "https://github.com/toolshub", // Replace with actual social media if available
+    "https://twitter.com/toolshub"
+  ],
+  "offers": {
+    "@type": "Offer",
+    "category": "Software",
+    "description": "Free online tools and utilities"
+  }
+};
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -16,10 +40,66 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Tools Hub - Essential Text Manipulation Tools",
-  description: "Free online text tools including word counter, character counter, case converter, password generator, ASCII converters, HTML entities encoder/decoder, and more. Fast, reliable, and easy to use.",
-  keywords: "text tools, word counter, character counter, case converter, password generator, ASCII converter, HTML entities, text manipulation, online tools",
+  title: "Tools Hub - Free Online Text Tools & Utilities | Word Counter, JSON Formatter, Password Generator",
+  description: "Tools Hub offers 33+ free online tools for text manipulation, development, and productivity. Word counter, JSON formatter, password generator, QR code generator, ASCII converter, and more. No registration required, works instantly in your browser.",
+  keywords: "online tools, text tools, word counter, character counter, case converter, password generator, JSON formatter, QR code generator, ASCII converter, HTML entities, text manipulation, free tools, web utilities, developer tools",
   authors: [{ name: "Tools Hub" }],
+  creator: "Tools Hub",
+  publisher: "Tools Hub",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL('https://toolshub.com'),
+  alternates: {
+    canonical: 'https://toolshub.com',
+  },
+  openGraph: {
+    title: "Tools Hub - 33+ Free Online Tools for Text, Development & Productivity",
+    description: "Free online text tools including word counter, character counter, case converter, password generator, JSON formatter, QR code generator, and more. Fast, secure, no registration required.",
+    url: 'https://toolshub.com',
+    siteName: 'Tools Hub',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Tools Hub - Free Online Text Tools and Utilities',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Tools Hub - Free Online Tools & Utilities",
+    description: "33+ free online tools for text manipulation, development, and productivity. Word counter, JSON formatter, password generator, and more.",
+    images: ['/og-image.png'],
+    creator: '@toolshub',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'your-google-site-verification-code', // Replace with actual code
+  },
+  category: 'technology',
+  manifest: '/manifest.json',
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/favicon.ico',
+  },
 }
 
 export const viewport = {
@@ -49,6 +129,18 @@ export default function RootLayout({
             gtag('config', 'G-X4BXT9D1SX');
           `}
         </Script>
+        <Script
+          id="organization-structured-data"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationStructuredData),
+          }}
+        />
+        {/* DNS prefetch for performance */}
+        <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="//www.google-analytics.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <Header />
         <main className="flex-1">
           {children}

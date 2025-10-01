@@ -468,9 +468,58 @@ export default function Home() {
     }
   }
 
+  // FAQ Structured Data
+  const faqStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Are Tools Hub tools really free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, all Tools Hub tools are completely free to use. No registration, no hidden fees, no premium features. Everything is available instantly in your browser."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to create an account to use the tools?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No, you don't need to create an account or register. All tools work directly in your browser without any sign-up process."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is my data safe and private?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, your data never leaves your browser. All processing happens locally on your device, ensuring complete privacy and security."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use Tools Hub on mobile devices?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Tools Hub is fully responsive and works perfectly on all devices including smartphones, tablets, and desktops."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many tools are available on Tools Hub?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tools Hub currently offers 33+ free online tools covering text manipulation, development utilities, generators, and calculators."
+        }
+      }
+    ]
+  }
+
   return (
     <>
       <StructuredData data={structuredData} />
+      <StructuredData data={faqStructuredData} />
       <div className="bg-white">
       
       {/* Clean white background for entire page */}
