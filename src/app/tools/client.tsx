@@ -29,7 +29,8 @@ import {
   ArrowLeft,
   Grid3X3,
   List,
-  Activity
+  Activity,
+  Smile
 } from "lucide-react"
 
 const tools = [
@@ -68,6 +69,34 @@ const tools = [
     icon: RotateCcw,
     href: "/tools/reverse-text",
     color: "text-red-600",
+  },
+  {
+    name: "Palindrome Checker",
+    description: "Check if text is a palindrome, ignoring case, spaces, and punctuation.",
+    icon: RotateCcw,
+    href: "/tools/palindrome-checker",
+    color: "text-cyan-600",
+  },
+  {
+    name: "Palindrome Detector",
+    description: "Detect and highlight palindromic words within text, ignoring case and punctuation.",
+    icon: Search,
+    href: "/tools/palindrome-detector",
+    color: "text-purple-600",
+  },
+  {
+    name: "Reverse Word Order Tool",
+    description: "Reverse the order of words in your text instantly.",
+    icon: RotateCcw,
+    href: "/tools/reverse-word-order",
+    color: "text-indigo-600",
+  },
+  {
+    name: "Emoji Translator",
+    description: "Translate emojis to text and text to emojis instantly.",
+    icon: Smile,
+    href: "/tools/emoji-translator",
+    color: "text-yellow-600",
   },
   {
     name: "Password Generator",

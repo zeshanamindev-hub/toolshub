@@ -1,11 +1,11 @@
 import Link from "next/link"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { 
-  FileText, 
-  Hash, 
-  Type, 
-  Scissors, 
+import {
+  FileText,
+  Hash,
+  Type,
+  Scissors,
   RotateCcw,
   ArrowRight,
   Shield,
@@ -23,14 +23,15 @@ import {
   GitCompare,
   ArrowUpDown,
   Filter,
-  Grid3X3
+  Grid3X3,
+  Smile
 } from "lucide-react"
 
 const categories = [
   {
     name: "Text & Writing",
     description: "Analyze, transform, and process text content with powerful utilities",
-    count: 12,
+    count: 16,
     color: "text-blue-600",
     bgColor: "bg-blue-50",
     borderColor: "border-blue-200",
@@ -40,6 +41,10 @@ const categories = [
       { name: "Case Converter", href: "/tools/case-converter", icon: Type },
       { name: "Remove Extra Spaces", href: "/tools/remove-spaces", icon: Scissors },
       { name: "Reverse Text", href: "/tools/reverse-text", icon: RotateCcw },
+      { name: "Palindrome Checker", href: "/tools/palindrome-checker", icon: RotateCcw },
+      { name: "Palindrome Detector", href: "/tools/palindrome-detector", icon: Search },
+      { name: "Reverse Word Order Tool", href: "/tools/reverse-word-order", icon: RotateCcw },
+      { name: "Emoji Translator", href: "/tools/emoji-translator", icon: Smile },
       { name: "Letter Counter", href: "/tools/letter-counter", icon: BarChart3 },
       { name: "Text Diff Checker", href: "/tools/text-diff-checker", icon: GitCompare },
       { name: "Text Extractor", href: "/tools/text-extractor", icon: Filter },
@@ -117,7 +122,7 @@ export default function CategoriesPage() {
             Tool Categories
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Browse our collection of {totalTools}+ tools organized by category. 
+            Browse our collection of {totalTools}+ tools organized by category.
             Find exactly what you need for your text processing, conversion, and generation tasks.
           </p>
         </div>
@@ -159,7 +164,7 @@ export default function CategoriesPage() {
                     )
                   })}
                 </div>
-                
+
                 {category.tools.length > 6 && (
                   <div className="text-sm text-gray-500 mb-4">
                     +{category.tools.length - 6} more tools in this category
@@ -204,7 +209,7 @@ export default function CategoriesPage() {
           <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-8 border border-blue-200">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">More Categories Coming Soon!</h2>
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              We're constantly expanding our collection. Upcoming categories include: 
+              We're constantly expanding our collection. Upcoming categories include:
               Image Processing, File Converters, Math Calculators, and much more.
             </p>
             <Button asChild variant="outline">
