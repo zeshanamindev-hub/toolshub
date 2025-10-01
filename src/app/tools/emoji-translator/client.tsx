@@ -14,7 +14,6 @@ import {
   Check,
   Zap,
   FileText,
-  Search,
   Shuffle
 } from "lucide-react"
 
@@ -238,7 +237,6 @@ const emojiToTextMap: Record<string, string> = {
   "🥧": "pie",
   "🧁": "cupcake",
   "🍰": "shortcake",
-  "🎂": "birthday cake",
   "🍮": "custard",
   "🍭": "lollipop",
   "🍬": "candy",
@@ -400,15 +398,12 @@ const emojiToTextMap: Record<string, string> = {
   "🧖": "person in steamy room",
   "🧗": "person climbing",
   "🏇": "horse racing",
-  "⛷️": "skier",
-  "🏂": "snowboarder",
   "🏌️": "person golfing",
   "🏄": "person surfing",
   "🚣": "person rowing boat",
   "🏊": "person swimming",
   "🚴": "person biking",
   "🚵": "person mountain biking",
-  "🤸": "person cartwheeling",
   "🤼": "people wrestling",
   "🤽": "person playing water polo",
   "🤹": "person juggling",

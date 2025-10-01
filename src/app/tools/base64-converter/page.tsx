@@ -20,7 +20,7 @@ export default function Base64ConverterPage() {
       } else {
         return atob(text)
       }
-    } catch (error) {
+    } catch (_error) {
       return "Invalid Base64 input"
     }
   }

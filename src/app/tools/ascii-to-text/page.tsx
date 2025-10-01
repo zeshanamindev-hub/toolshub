@@ -166,7 +166,7 @@ export default function AsciiToTextPage() {
           convertedChars.push(char)
         }
 
-      } catch (error) {
+      } catch (_error) {
         errors.push(`Error processing code "${trimmedCode}" at position ${index + 1}`)
       }
     })

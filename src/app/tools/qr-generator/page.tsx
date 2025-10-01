@@ -13,7 +13,6 @@ export default function QrGeneratorPage() {
   const [qrCodeUrl, setQrCodeUrl] = useState("")
   const [size, setSize] = useState(200)
   const [errorLevel, setErrorLevel] = useState("M")
-  const canvasRef = useRef<HTMLCanvasElement>(null)
 
   // Simple QR Code generation using a public API
   const generateQRCode = useCallback(async () => {

@@ -4,7 +4,7 @@ import { useState, useCallback, useMemo } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { Palette, Copy, RefreshCw, Download, Trash2, Eye } from "lucide-react"
+import { Palette, Copy, RefreshCw, Download, Eye } from "lucide-react"
 
 interface Color {
   hex: string
@@ -200,13 +200,13 @@ export default function ColorPaletteGeneratorPage() {
         return colors.map(createColor)
       }
     }
-  ], []) // Empty dependency array since these are static functions
+  ], [createColor]) // Empty dependency array since these are static functions
 
   const generatePalette = useCallback(() => {
     const paletteType = paletteTypes.find((p: PaletteType) => p.name === selectedPaletteType) || paletteTypes[0]
     const newPalette = paletteType.generate(baseColor)
     setPalette(newPalette)
-  }, [baseColor, selectedPaletteType])
+  }, [baseColor, selectedPaletteType, paletteTypes])
 
   const handleCopyColor = async (color: Color, format: 'hex' | 'rgb' | 'hsl' = 'hex') => {
     let textToCopy: string

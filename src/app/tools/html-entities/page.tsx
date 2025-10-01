@@ -191,7 +191,7 @@ export default function HtmlEntitiesPage() {
       
       return result
     }
-  }, [inputText, mode, encodingType, reverseEntities])
+  }, [inputText, mode, encodingType, reverseEntities, htmlEntities])
 
   const copyToClipboard = async () => {
     if (processedText) {

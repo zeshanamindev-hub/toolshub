@@ -14,7 +14,6 @@ import {
   Check,
   ArrowLeftRight,
   FileText,
-  Hash,
   Type,
   Eye,
   Zap

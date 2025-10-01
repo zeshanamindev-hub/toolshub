@@ -8,9 +8,6 @@ import {
   Calculator,
   Copy,
   Trash2,
-  RotateCcw,
-  Percent,
-  ArrowRight,
   CheckCircle
 } from "lucide-react"
 
@@ -29,7 +26,7 @@ export default function PercentageCalculatorPage() {
   const [copied, setCopied] = useState(false)
 
   const calculatePercentage = () => {
-    let calcResult: CalculationResult = {
+    const calcResult: CalculationResult = {
       result: 0,
       formula: "",
       explanation: ""

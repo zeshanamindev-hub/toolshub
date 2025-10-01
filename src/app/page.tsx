@@ -2,7 +2,6 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import StructuredData from "@/components/structured-data"
-import ToolsCategorySection from "@/components/tools-category-section"
 import GoogleAdSlot from "@/components/ads/google-ad-slot"
 import { useState, useMemo } from "react"
 import {
@@ -36,8 +35,7 @@ import {
   Users,
   ChevronRight,
   Grid3X3,
-  Activity,
-  Smile
+  Activity
 } from "lucide-react"
 
 const tools = [

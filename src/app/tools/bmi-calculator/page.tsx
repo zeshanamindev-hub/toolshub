@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -10,12 +10,10 @@ import {
   TrendingUp,
   Download,
   Settings,
-  Eye,
   CheckCircle,
   AlertTriangle,
   Heart,
   Scale,
-  Ruler,
   Zap,
   Award,
   Calendar,
@@ -23,9 +21,7 @@ import {
   RefreshCw,
   Info,
   BarChart3,
-  Users,
-  Shield,
-  Clock
+  Shield
 } from "lucide-react"
 
 interface BMIResult {
@@ -290,18 +286,6 @@ export default function BMICalculatorPage() {
     URL.revokeObjectURL(url)
   }
 
-  const getBMIScale = (bmi: number) => {
-    const ranges = [
-      { min: 0, max: 18.5, label: "Underweight", color: "bg-blue-500" },
-      { min: 18.5, max: 25, label: "Normal", color: "bg-green-500" },
-      { min: 25, max: 30, label: "Overweight", color: "bg-yellow-500" },
-      { min: 30, max: 35, label: "Obese I", color: "bg-orange-500" },
-      { min: 35, max: 40, label: "Obese II", color: "bg-red-500" },
-      { min: 40, max: 50, label: "Obese III", color: "bg-red-700" }
-    ]
-
-    return ranges.find(range => bmi >= range.min && bmi < range.max) || ranges[0]
-  }
 
   const healthMetrics = result && showAdvanced ? calculateHealthMetrics(
     unit === "imperial" ? parseFloat(weight) * 0.453592 : parseFloat(weight),
@@ -493,7 +477,7 @@ export default function BMICalculatorPage() {
                         <label className="block text-sm font-medium text-gray-700 mb-2">Activity Level</label>
                         <select
                           value={activityLevel}
-                          onChange={(e) => setActivityLevel(e.target.value as any)}
+                          onChange={(e) => setActivityLevel(e.target.value as "sedentary" | "light" | "moderate" | "active" | "very_active")}
                           className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
                         >
                           <option value="sedentary">Sedentary</option>

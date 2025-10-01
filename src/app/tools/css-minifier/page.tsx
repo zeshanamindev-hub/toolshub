@@ -13,7 +13,6 @@ import {
   FileText,
   Minimize2,
   CheckCircle,
-  AlertCircle,
   BarChart3
 } from "lucide-react"
 

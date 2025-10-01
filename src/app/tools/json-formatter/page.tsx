@@ -62,10 +62,10 @@ export default function JsonFormatterPage() {
     
     try {
       const parsed = JSON.parse(text)
-      return minimize 
+      return minimize
         ? JSON.stringify(parsed)
         : JSON.stringify(parsed, null, indent)
-    } catch (error) {
+    } catch (_error) {
       return text // Return original if invalid
     }
   }

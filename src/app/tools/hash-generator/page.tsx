@@ -63,7 +63,7 @@ export default function HashGeneratorPage() {
   }
 
   // Simple MD5 implementation (for educational purposes)
-  const generateMD5 = async (text: string): Promise<string> => {
+  const generateMD5 = async (_text: string): Promise<string> => {
     // This is a simplified version. In production, you might want to use a proper MD5 library
     // For now, we'll return a placeholder that indicates MD5 is not recommended
     return "MD5 deprecated - use SHA-256 instead"
@@ -85,7 +85,7 @@ export default function HashGeneratorPage() {
     }
     
     setHashes(results)
-  }, [inputText, selectedAlgorithms])
+  }, [inputText, selectedAlgorithms, algorithms, generateHash])
 
   useEffect(() => {
     generateAllHashes()

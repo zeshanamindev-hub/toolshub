@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
@@ -28,7 +28,7 @@ export default function RegexTesterPage() {
   const [result, setResult] = useState<RegexResult>({ isValid: true, matches: [], matchCount: 0 })
   const [highlightedText, setHighlightedText] = useState("")
 
-  const testRegex = () => {
+  const testRegex = useCallback(() => {
     if (!pattern) {
       setResult({ isValid: true, matches: [], matchCount: 0 })
       setHighlightedText(testString)
@@ -96,7 +96,7 @@ export default function RegexTesterPage() {
       })
       setHighlightedText(testString)
     }
-  }
+  }, [pattern, flags, testString])
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
@@ -104,7 +104,7 @@ export default function RegexTesterPage() {
     }, 300)
 
     return () => clearTimeout(timeoutId)
-  }, [pattern, flags, testString, testRegex])
+  }, [testRegex])
 
   const handleCopyPattern = async () => {
     try {
@@ -167,11 +167,6 @@ export default function RegexTesterPage() {
     setFlags("g")
   }
 
-  const escapeHtml = (text: string) => {
-    const div = document.createElement('div')
-    div.textContent = text
-    return div.innerHTML
-  }
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 py-12">
