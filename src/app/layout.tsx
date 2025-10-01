@@ -130,6 +130,12 @@ export default function RootLayout({
           `}
         </Script>
         <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
+        <Script
           id="organization-structured-data"
           type="application/ld+json"
           dangerouslySetInnerHTML={{

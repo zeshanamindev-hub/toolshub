@@ -721,8 +721,9 @@ export default function Home() {
         </div>
       </section>
 
+
       {/* Google Ad Slot 1 - After Popular Tools */}
-      <div className="py-8 bg-gray-50/50">
+      <div className="py-4 bg-gray-50/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center">
           <GoogleAdSlot slot="header" className="mx-auto" />
         </div>
@@ -865,7 +866,7 @@ export default function Home() {
       </section>
 
       {/* Google Ad Slot 2 - After Categories */}
-      <div className="py-8 bg-white">
+      <div className="py-4 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center">
           <GoogleAdSlot slot="content" className="mx-auto" />
         </div>
@@ -1145,7 +1146,7 @@ export default function Home() {
           </div>
 
           {/* Google Ad Slot 3 - After Featured Tools */}
-          <div className="text-center bg-white/60 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-200 p-8 animate-fade-in-up" style={{animationDelay: '0.9s'}}>
+          <div className="text-center bg-white/60 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-200 p-4 animate-fade-in-up" style={{animationDelay: '0.9s'}}>
             <GoogleAdSlot slot="footer" className="mx-auto" />
           </div>
         </div>
