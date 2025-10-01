@@ -65,7 +65,7 @@ export default function JsonFormatterPage() {
       return minimize
         ? JSON.stringify(parsed)
         : JSON.stringify(parsed, null, indent)
-    } catch (_error) {
+    } catch {
       return text // Return original if invalid
     }
   }

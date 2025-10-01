@@ -101,7 +101,7 @@ export default function MorseToTextPage() {
             .join('')
         )
         .join(' ') || ''
-    } catch (_e) {
+    } catch {
       return ''
     }
   }

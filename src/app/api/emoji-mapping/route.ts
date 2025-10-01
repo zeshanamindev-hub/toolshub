@@ -409,7 +409,7 @@ const emojiToTextMap: Record<string, string> = {
 export async function GET() {
   try {
     return NextResponse.json(emojiToTextMap)
-  } catch (_error) {
+  } catch {
     return NextResponse.json(
       { error: 'Failed to fetch emoji mapping data' },
       { status: 500 }

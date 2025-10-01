@@ -171,7 +171,7 @@ export default function TextToMorseClient() {
         setIsPlaying(false)
       }
     }, (time - ctx.currentTime) * 1000)
-  }, [inputText, playbackSpeed, convertToMorse])
+  }, [inputText, playbackSpeed])
 
   const handlePlayback = () => {
     if (isPlaying) {

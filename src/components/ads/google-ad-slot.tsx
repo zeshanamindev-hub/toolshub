@@ -5,7 +5,7 @@ import { useEffect } from "react"
 // Declare AdSense global
 declare global {
   interface Window {
-    adsbygoogle: any[]
+    adsbygoogle: unknown[]
   }
 }
 

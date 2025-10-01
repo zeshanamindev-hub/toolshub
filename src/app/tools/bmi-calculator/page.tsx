@@ -159,7 +159,7 @@ export default function BMICalculatorPage() {
     return { bmr: Math.round(bmr), tdee, waterIntake, proteinNeeds }
   }
 
-  const getRecommendations = (bmi: number, category: string): string[] => {
+  const getRecommendations = (bmi: number): string[] => {
     const recommendations = []
 
     if (bmi < 18.5) {
@@ -203,7 +203,7 @@ export default function BMICalculatorPage() {
     const categoryInfo = getBMICategory(bmi)
     const idealWeight = calculateIdealWeight(heightM)
     const bodyFat = estimateBodyFat(bmi, ageNum, gender)
-    const recommendations = getRecommendations(bmi, categoryInfo.category)
+    const recommendations = getRecommendations(bmi)
 
     const newResult: BMIResult = {
       bmi,
