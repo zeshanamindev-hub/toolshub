@@ -35,7 +35,8 @@ import {
   Users,
   ChevronRight,
   Grid3X3,
-  Activity
+  Activity,
+  Smile
 } from "lucide-react"
 
 const tools = [
@@ -90,11 +91,11 @@ const tools = [
     color: "text-purple-600",
   },
   {
-    name: "Text to Morse Code Translator",
-    description: "Convert text to Morse code with multiple styles and audio playback.",
-    icon: Code,
-    href: "/tools/text-to-morse",
-    color: "text-cyan-600",
+    name: "Emoji Translator",
+    description: "Translate emojis to text and text to emojis instantly.",
+    icon: Smile,
+    href: "/tools/emoji-translator",
+    color: "text-yellow-600",
   },
   {
     name: "Reverse Word Order Tool",

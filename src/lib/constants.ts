@@ -2,9 +2,9 @@
 
 export const SITE_CONFIG = {
   name: "Tools Hub",
-  description: "28+ free online tools for text manipulation, development, security, and content creation",
+  description: "33+ free online tools for text manipulation, development, security, and content creation",
   url: "https://toolshub.com",
-  toolCount: 28
+  toolCount: 33
 }
 
 export const CATEGORIES = {
