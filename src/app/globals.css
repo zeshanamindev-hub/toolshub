@@ -145,6 +145,50 @@ body {
   animation: slow-spin 20s linear infinite;
 }
 
+/* Grid movement animation */
+@keyframes gridMove {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(20px, 20px);
+  }
+}
+
+/* Spin reverse animation */
+@keyframes spin-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.animate-spin-reverse {
+  animation: spin-reverse 15s linear infinite;
+}
+
+/* Enhanced floating animation */
+@keyframes float-enhanced {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) scale(1);
+  }
+  25% {
+    transform: translateY(-15px) translateX(5px) scale(1.05);
+  }
+  50% {
+    transform: translateY(-8px) translateX(-3px) scale(0.95);
+  }
+  75% {
+    transform: translateY(-20px) translateX(2px) scale(1.02);
+  }
+}
+
+.animate-float-enhanced {
+  animation: float-enhanced 12s ease-in-out infinite;
+}
+
 /* Dark mode header styles */
 .dark header {
   background-color: hsl(var(--card) / 0.9);

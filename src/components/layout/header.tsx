@@ -96,10 +96,10 @@ export default function Header() {
   }).slice(0, 12) // Limit to 12 results for performance
 
   return (
-    <header className="bg-white/90 dark:bg-gray-900/90 backdrop-blur-lg shadow-lg border-b border-gray-200/30 dark:border-gray-700/30 sticky top-0 z-50">
+    <header className="bg-white/90 dark:bg-gray-900/90 backdrop-blur-md  border-b border-gray-200/30 dark:border-gray-700/30 sticky top-0 z-50">
       {/* Top Branding Bar */}
       <div className="bg-gradient-to-r from-blue-600/95 via-indigo-600/95 to-purple-600/95 backdrop-blur-sm border-b border-white/10">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-4 sm:px-4 lg:px-4 py-2">
           <div className="flex items-center justify-center py-2">
             <div className="flex items-center space-x-2 text-white text-sm font-medium">
               <Flame className="h-4 w-4 text-orange-300" />
@@ -114,7 +114,7 @@ export default function Header() {
       </div>
 
       {/* Main Navigation */}
-      <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
+      <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4" aria-label="Main navigation">
         <div className="flex w-full items-center justify-between py-2">
           {/* Logo */}
           <div className="flex items-center">

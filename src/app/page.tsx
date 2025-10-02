@@ -524,12 +524,12 @@ export default function Home() {
       
       {/* Clean white background for entire page */}
       {/* Hero Section */}
-      <section className="py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden" 
+      <section className="py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden"
         style={{
           background: `
-            linear-gradient(135deg, 
-              rgba(219, 234, 254, 0.3) 0%, 
-              rgba(199, 210, 254, 0.4) 50%, 
+            linear-gradient(135deg,
+              rgba(219, 234, 254, 0.3) 0%,
+              rgba(199, 210, 254, 0.4) 50%,
               rgba(221, 214, 254, 0.3) 100%
             ),
             radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
@@ -538,20 +538,36 @@ export default function Home() {
           `
         }}
       >
-        {/* Hero Background Patterns - Contained to Hero Section */}
-        
-        {/* Visible Background Pattern Layer 1 - Prominent Dots */}
-        <div className="absolute inset-0 z-0 opacity-15">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%233B82F6' fill-opacity='1'%3E%3Ccircle cx='50' cy='50' r='4'/%3E%3Ccircle cx='0' cy='0' r='3'/%3E%3Ccircle cx='100' cy='100' r='3'/%3E%3Ccircle cx='0' cy='100' r='3'/%3E%3Ccircle cx='100' cy='0' r='3'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+        {/* Enhanced Background Patterns */}
+        <div className="absolute inset-0 z-0">
+          {/* Animated Grid Pattern */}
+          <div className="absolute inset-0 opacity-20 animate-pulse" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='hero-grid' width='20' height='20' patternUnits='userSpaceOnUse'%3E%3Cpath d='M 20 0 L 0 0 0 20' fill='none' stroke='%233B82F6' stroke-width='0.5' opacity='0.3'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23hero-grid)' /%3E%3C/svg%3E")`,
+            animation: 'gridMove 20s linear infinite'
           }} />
-        </div>
 
-        {/* Visible Background Pattern Layer 2 - Geometric Grid */}
-        <div className="absolute inset-0 z-0 opacity-15">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='150' height='150' viewBox='0 0 150 150' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='grid' width='30' height='30' patternUnits='userSpaceOnUse'%3E%3Cpath d='M 30 0 L 0 0 0 30' fill='none' stroke='%236366F1' stroke-width='2'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='150' height='150' fill='url(%23grid)' /%3E%3C/svg%3E")`,
-          }} />
+          {/* Floating Particles */}
+          <div className="absolute inset-0">
+            {[...Array(12)].map((_, i) => (
+              <div
+                key={i}
+                className="absolute w-1 h-1 bg-blue-400/40 rounded-full animate-float"
+                style={{
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`,
+                  animationDelay: `${Math.random() * 5}s`,
+                  animationDuration: `${8 + Math.random() * 4}s`
+                }}
+              />
+            ))}
+          </div>
+
+          {/* Geometric Shapes */}
+          <div className="absolute inset-0">
+            <div className="absolute top-1/4 left-1/4 w-32 h-32 border border-blue-300/20 rotate-45 animate-spin-slow"></div>
+            <div className="absolute top-3/4 right-1/4 w-24 h-24 border border-purple-300/20 rotate-12 animate-spin-reverse"></div>
+            <div className="absolute top-1/2 left-3/4 w-16 h-16 bg-gradient-to-br from-pink-300/10 to-purple-300/10 rounded-full animate-pulse"></div>
+          </div>
         </div>
 
         {/* Large Visible Gradient Background Elements */}
@@ -562,10 +578,12 @@ export default function Home() {
           <div className="absolute bottom-10 left-20 w-56 h-56 bg-indigo-300/32 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
           <div className="absolute bottom-20 right-20 w-40 h-40 bg-pink-300/30 rounded-full blur-2xl animate-pulse" style={{animationDelay: '0.5s'}}></div>
           
-          {/* Floating geometric shapes */}
-          <div className="absolute top-1/2 left-1/4 w-32 h-32 bg-cyan-300/25 rotate-45 blur-xl animate-float"></div>
-          <div className="absolute top-1/3 right-1/3 w-28 h-28 bg-emerald-300/28 rotate-12 blur-lg animate-float-delay"></div>
-          <div className="absolute top-20 left-1/2 w-36 h-36 bg-yellow-300/22 rounded-full blur-2xl animate-pulse" style={{animationDelay: '1.5s'}}></div>
+          {/* Enhanced Floating geometric shapes */}
+          <div className="absolute top-1/2 left-1/4 w-32 h-32 bg-cyan-300/25 rotate-45 blur-xl animate-float-enhanced"></div>
+          <div className="absolute top-1/3 right-1/3 w-28 h-28 bg-emerald-300/28 rotate-12 blur-lg animate-float-enhanced" style={{animationDelay: '3s'}}></div>
+          <div className="absolute top-20 left-1/2 w-36 h-36 bg-yellow-300/22 rounded-full blur-2xl animate-float-enhanced" style={{animationDelay: '1.5s'}}></div>
+          <div className="absolute bottom-1/3 right-1/4 w-24 h-24 bg-pink-300/20 rounded-full blur-xl animate-float-enhanced" style={{animationDelay: '4s'}}></div>
+          <div className="absolute bottom-1/4 left-1/3 w-20 h-20 bg-indigo-300/25 rotate-45 blur-lg animate-float-enhanced" style={{animationDelay: '2s'}}></div>
           
           {/* Decorative elements */}
           <div className="absolute left-[15%] top-[15%] h-16 w-16 rounded-full bg-gradient-to-br from-blue-400/12 to-indigo-600/10 animate-float" />
@@ -579,18 +597,20 @@ export default function Home() {
             <Sparkles className="mr-2 h-4 w-4" />
             Tools Hub - All-in-One Solution
           </div>
-          
-          <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tight text-gray-900 dark:text-white mb-6 leading-[0.9] animate-fade-in-up" style={{animationDelay: '0.1s'}}>
-           <span className="block bg-gradient-to-r from-primary via-indigo-600 to-purple-600 bg-clip-text text-transparent">33+ Free Tools</span>
-           <span className="block text-gray-900 dark:text-white mt-2">at Your Fingertips</span>
-         </h1>
 
-         {/* Value-focused subheading */}
-         <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-           <span className="font-semibold text-gray-800 dark:text-gray-200">Boost your productivity</span> with our growing collection of professional tools for
-           <span className="font-medium text-primary"> text manipulation, development, security, and content creation</span>.
-           Everything you need in one place - fast, secure, and completely free.
-         </p>
+          <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tight text-gray-900 mb-6 leading-[0.9] animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+            <span className="block bg-gradient-to-r from-primary via-indigo-600 to-purple-600 bg-clip-text text-transparent">
+              33+ Free Tools
+            </span>
+            <span className="block text-gray-900 mt-2">at Your Fingertips</span>
+          </h1>
+
+          {/* Value-focused subheading */}
+          <p className="text-lg sm:text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+            <span className="font-semibold text-gray-800">Boost your productivity</span> with our growing collection of professional tools for
+            <span className="font-medium text-primary"> text manipulation, development, security, and content creation</span>.
+            Everything you need in one place - fast, secure, and completely free.
+          </p>
 
           {/* Primary and Secondary CTAs */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in-up" style={{animationDelay: '0.3s'}}>
@@ -605,14 +625,14 @@ export default function Home() {
                 <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-1000 skew-x-12" />
               </Link>
             </Button>
-            <Button variant="outline" size="lg" asChild className="relative group border-2 border-gray-300 hover:border-blue-500 hover:bg-blue-50 transition-all duration-300 transform hover:scale-[1.02] px-12 py-6 text-xl h-16 backdrop-blur-sm bg-white/90 hover:shadow-lg rounded-2xl overflow-hidden">
+            <Button variant="outline" size="lg" asChild className="relative group border-2 border-gray-300 hover:border-none hover:bg-gradient-to-r hover:from-blue-700 hover:via-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-[1.02] px-12 py-6 text-xl h-16 backdrop-blur-sm bg-white/90 hover:shadow-2xl rounded-2xl overflow-hidden hover:text-white">
               <Link href="/about" title="Learn More About Tools Hub - Free Online Tools" className="relative z-10 flex items-center">
                 {/* Animated background */}
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-indigo-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <Info className="mr-3 h-5 w-5 transition-all duration-300 group-hover:text-blue-600 group-hover:scale-110" />
-                <span className="font-semibold text-gray-700 group-hover:text-blue-700 transition-colors duration-300">Learn More</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-700 via-indigo-700 to-purple-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <Info className="mr-3 h-5 w-5 transition-all duration-300 !group-hover:text-white group-hover:scale-110" />
+                <span className="font-semibold text-gray-700 group-hover:text-white transition-colors duration-300 z-10">Learn More</span>
                 {/* Subtle shine effect */}
-                <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-blue-100/30 to-transparent transition-transform duration-700 skew-x-12" />
+                <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 skew-x-12" />
               </Link>
             </Button>
           </div>
