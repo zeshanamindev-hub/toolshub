@@ -9,21 +9,21 @@ export const metadata = {
 
 export default function TermsPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 py-12">
+    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 py-12">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
           <div className="flex justify-center mb-4">
             <FileText className="h-12 w-12 text-blue-600" />
           </div>
-          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-6">
             Terms of Service
           </h1>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Please read these Terms of Service carefully before using Tools Hub. 
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            Please read these Terms of Service carefully before using Tools Hub.
             By using our services, you agree to these terms.
           </p>
-          <p className="text-sm text-gray-500 mt-4">
+          <p className="text-sm text-gray-500 dark:text-gray-400 mt-4">
             Last updated: {new Date().toLocaleDateString('en-US', { 
               year: 'numeric', 
               month: 'long', 
@@ -137,7 +137,7 @@ export default function TermsPage() {
               <CardTitle>6. Disclaimers</CardTitle>
             </div>
           </CardHeader>
-          <CardContent className="text-gray-600 space-y-4">
+          <CardContent className="text-gray-600 dark:text-gray-300 space-y-4">
             <p>
               <strong>AS IS BASIS:</strong> The Service is provided on an "AS IS" and "AS AVAILABLE" 
               basis. We make no representations or warranties of any kind, express or implied, 
@@ -178,7 +178,7 @@ export default function TermsPage() {
           <CardHeader>
             <CardTitle>8. Indemnification</CardTitle>
           </CardHeader>
-          <CardContent className="text-gray-600">
+          <CardContent className="text-gray-600 dark:text-gray-300">
             <p>
               You agree to defend, indemnify, and hold harmless Tools Hub and its licensee and 
               licensors, and their employees, contractors, agents, officers and directors, from 

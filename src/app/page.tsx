@@ -520,7 +520,7 @@ export default function Home() {
     <>
       <StructuredData data={structuredData} />
       <StructuredData data={faqStructuredData} />
-      <div className="bg-white">
+      <div className="bg-white dark:bg-gray-900">
       
       {/* Clean white background for entire page */}
       {/* Hero Section */}
@@ -580,17 +580,17 @@ export default function Home() {
             Tools Hub - All-in-One Solution
           </div>
           
-          <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tight text-gray-900 mb-6 leading-[0.9] animate-fade-in-up" style={{animationDelay: '0.1s'}}>
-            <span className="block bg-gradient-to-r from-primary via-indigo-600 to-purple-600 bg-clip-text text-transparent">33+ Free Tools</span>
-            <span className="block text-gray-900 mt-2">at Your Fingertips</span>
-          </h1>
-          
-          {/* Value-focused subheading */}
-          <p className="text-lg sm:text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-            <span className="font-semibold text-gray-800">Boost your productivity</span> with our growing collection of professional tools for 
-            <span className="font-medium text-primary"> text manipulation, development, security, and content creation</span>. 
-            Everything you need in one place - fast, secure, and completely free.
-          </p>
+          <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tight text-gray-900 dark:text-white mb-6 leading-[0.9] animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+           <span className="block bg-gradient-to-r from-primary via-indigo-600 to-purple-600 bg-clip-text text-transparent">33+ Free Tools</span>
+           <span className="block text-gray-900 dark:text-white mt-2">at Your Fingertips</span>
+         </h1>
+
+         {/* Value-focused subheading */}
+         <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+           <span className="font-semibold text-gray-800 dark:text-gray-200">Boost your productivity</span> with our growing collection of professional tools for
+           <span className="font-medium text-primary"> text manipulation, development, security, and content creation</span>.
+           Everything you need in one place - fast, secure, and completely free.
+         </p>
 
           {/* Primary and Secondary CTAs */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in-up" style={{animationDelay: '0.3s'}}>
@@ -623,7 +623,7 @@ export default function Home() {
       </section>
 
       {/* Popular Tools Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
@@ -631,11 +631,11 @@ export default function Home() {
               <TrendingUp className="mr-2 h-4 w-4" />
               Popular Tools
             </div>
-            <h2 className="text-3xl sm:text-5xl font-bold text-gray-900 mb-6 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+            <h2 className="text-3xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-6 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
               Most Used Tools
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-              Discover our most popular tools loved by thousands of users worldwide. 
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+              Discover our most popular tools loved by thousands of users worldwide.
               Perfect for everyday tasks and productivity boosts.
             </p>
           </div>
@@ -648,7 +648,7 @@ export default function Home() {
                 <Link
                   key={tool.name}
                   href={tool.href}
-                  className="group relative bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border-2 border-gray-100 hover:border-orange-200 overflow-hidden animate-fade-in-up block p-8"
+                  className="group relative bg-white dark:bg-gray-800 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border-2 border-gray-100 dark:border-gray-700 hover:border-orange-200 dark:hover:border-orange-300 overflow-hidden animate-fade-in-up block p-8"
                   style={{animationDelay: `${0.3 + index * 0.1}s`}}
                 >
                   {/* Gradient overlay on hover */}
@@ -678,20 +678,20 @@ export default function Home() {
                     </div>
 
                     {/* Tool Info */}
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-orange-700 transition-colors duration-300">
+                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-orange-700 dark:group-hover:text-orange-400 transition-colors duration-300">
                       {tool.name}
                     </h3>
-                    <p className="text-gray-600 mb-6 leading-relaxed text-base">
+                    <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed text-base">
                       {tool.description}
                     </p>
 
                     {/* Stats and CTA Row */}
                     <div className="flex items-center justify-between">
-                      <div className="flex items-center text-sm text-gray-500">
+                      <div className="flex items-center text-sm text-gray-500 dark:text-gray-400">
                         <Users className="h-4 w-4 mr-2" />
                         <span>{tool.stats}</span>
                       </div>
-                      <div className="flex items-center text-orange-600 group-hover:text-orange-700 font-semibold">
+                      <div className="flex items-center text-orange-600 group-hover:text-orange-700 dark:group-hover:text-orange-400 font-semibold">
                         <span className="text-sm mr-2">Try now</span>
                         <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-2 group-hover:scale-110" />
                       </div>
@@ -730,7 +730,7 @@ export default function Home() {
       </div>
 
       {/* Tools Category Section - Redesigned */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-indigo-50/50 via-white to-purple-50/50 relative overflow-hidden">
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-indigo-50/50 via-white to-purple-50/50 dark:from-indigo-900/20 dark:via-gray-900 dark:to-purple-900/20 relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-30">
           <div className="absolute top-20 left-1/4 w-64 h-64 bg-gradient-to-r from-indigo-200/30 to-purple-200/30 rounded-full blur-3xl animate-pulse"></div>
@@ -744,12 +744,12 @@ export default function Home() {
               <Grid3X3 className="mr-2 h-4 w-4" />
               Browse by Category
             </div>
-            <h2 className="text-4xl sm:text-6xl font-black text-gray-900 mb-6 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+            <h2 className="text-4xl sm:text-6xl font-black text-gray-900 dark:text-white mb-6 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
               <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
                 Tools by Category
               </span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed animate-fade-in-up" style={{animationDelay: '0.2s'}}>
               Explore our carefully organized collection of professional tools. Each category is designed to help you accomplish specific tasks with maximum efficiency.
             </p>
           </div>
@@ -803,7 +803,7 @@ export default function Home() {
                 <Link
                   key={category.name}
                   href={category.href}
-                  className="group relative bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 hover:border-indigo-200 overflow-hidden animate-fade-in-up block"
+                  className="group relative bg-white dark:bg-gray-800 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 dark:border-gray-700 hover:border-indigo-200 dark:hover:border-indigo-300 overflow-hidden animate-fade-in-up block"
                   style={{animationDelay: `${0.3 + index * 0.1}s`}}
                 >
                   {/* Gradient Background */}
@@ -820,24 +820,24 @@ export default function Home() {
                         <div className={`text-3xl font-black bg-gradient-to-r ${category.gradient} bg-clip-text text-transparent`}>
                           {category.count}
                         </div>
-                        <div className="text-sm text-gray-500 font-medium">tools</div>
+                        <div className="text-sm text-gray-500 dark:text-gray-400 font-medium">tools</div>
                       </div>
                     </div>
-                    
+
                     {/* Category Info */}
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-indigo-700 transition-colors duration-300">
+                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-indigo-700 dark:group-hover:text-indigo-400 transition-colors duration-300">
                       {category.name}
                     </h3>
-                    <p className="text-gray-600 leading-relaxed mb-6">
+                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
                       {category.description}
                     </p>
-                    
+
                     {/* CTA */}
                     <div className="flex items-center justify-between">
-                      <span className="text-indigo-600 font-semibold group-hover:text-indigo-700">
+                      <span className="text-indigo-600 font-semibold group-hover:text-indigo-700 dark:group-hover:text-indigo-400">
                         Explore tools
                       </span>
-                      <ArrowRight className="h-5 w-5 text-indigo-500 group-hover:text-indigo-600 transition-all duration-300 group-hover:translate-x-2" />
+                      <ArrowRight className="h-5 w-5 text-indigo-500 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-all duration-300 group-hover:translate-x-2" />
                     </div>
                   </div>
                   
@@ -875,7 +875,7 @@ export default function Home() {
       {/* Enhanced Tools Section */}
       <section id="tools" className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         {/* Background Elements */}
-        <div className="absolute inset-0 bg-gradient-to-b from-gray-50/30 to-white"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-50/30 to-white dark:from-gray-800/30 dark:to-gray-900"></div>
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-10 left-10 w-32 h-32 bg-blue-200/40 rounded-full blur-2xl animate-pulse"></div>
           <div className="absolute top-40 right-20 w-28 h-28 bg-purple-200/40 rounded-full blur-xl animate-pulse" style={{animationDelay: '1s'}}></div>
@@ -892,11 +892,11 @@ export default function Home() {
                   <Search className="mr-2 h-4 w-4" />
                   Search Results
                 </div>
-                <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+                <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-6 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
                   Results for <span className="bg-gradient-to-r from-primary to-indigo-600 bg-clip-text text-transparent">"{searchQuery}"</span>
                 </h2>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-                  {filteredTools.length > 0 
+                <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+                  {filteredTools.length > 0
                     ? `Found ${filteredTools.length} perfect tool${filteredTools.length !== 1 ? 's' : ''} matching your search. Click any tool to get started instantly.`
                     : "No tools found matching your search. Try different keywords or browse our categories below."
                   }
@@ -908,11 +908,11 @@ export default function Home() {
                   <Star className="mr-2 h-4 w-4 animate-spin" />
                   Featured Tools
                 </div>
-                <h2 className="text-4xl sm:text-6xl font-black text-gray-900 mb-6 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+                <h2 className="text-4xl sm:text-6xl font-black text-gray-900 dark:text-white mb-6 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
                   <span className="bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 bg-clip-text text-transparent">Editor's Choice</span>
                 </h2>
-                <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-                  Hand-selected tools that our team and community love most. These are the <span className="font-bold text-yellow-600">top performers</span> that deliver exceptional results every time.
+                <p className="text-xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+                  Hand-selected tools that our team and community love most. These are the <span className="font-bold text-yellow-600 dark:text-yellow-400">top performers</span> that deliver exceptional results every time.
                 </p>
               </>
             )}
@@ -1065,7 +1065,7 @@ export default function Home() {
       {/* Enhanced Features Section */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         {/* Background Elements */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-gray-50/50 to-white"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-gray-50/50 to-white dark:from-gray-900 dark:via-gray-800/50 dark:to-gray-900"></div>
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-20 left-20 w-40 h-40 bg-blue-200/30 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute top-40 right-10 w-32 h-32 bg-purple-200/30 rounded-full blur-2xl animate-pulse" style={{animationDelay: '1s'}}></div>
@@ -1080,13 +1080,13 @@ export default function Home() {
               <Star className="mr-2 h-4 w-4" />
               Why Choose Tools Hub?
             </div>
-            <h2 className="text-4xl sm:text-6xl font-bold text-gray-900 mb-6 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+            <h2 className="text-4xl sm:text-6xl font-bold text-gray-900 dark:text-white mb-6 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
               <span className="bg-gradient-to-r from-primary via-indigo-600 to-purple-600 bg-clip-text text-transparent">
                 Built for Excellence
               </span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-              Experience the perfect blend of <span className="font-semibold text-gray-800">speed, security, and simplicity</span>. 
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+              Experience the perfect blend of <span className="font-semibold text-gray-800 dark:text-gray-200">speed, security, and simplicity</span>.
               Our tools are crafted with modern web technologies to deliver an exceptional user experience that puts your needs first.
             </p>
           </div>
@@ -1098,7 +1098,7 @@ export default function Home() {
               return (
                 <div
                   key={feature.name}
-                  className="group relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 hover:border-transparent overflow-hidden animate-fade-in-up"
+                  className="group relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 dark:border-gray-700 hover:border-transparent overflow-hidden animate-fade-in-up"
                   style={{animationDelay: `${0.3 + index * 0.1}s`}}
                 >
                   {/* Background Gradient on Hover */}
@@ -1118,12 +1118,12 @@ export default function Home() {
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors duration-300">
+                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-primary transition-colors duration-300">
                       {feature.name}
                     </h3>
 
                     {/* Description */}
-                    <p className="text-gray-600 leading-relaxed mb-6 text-base">
+                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6 text-base">
                       {feature.description}
                     </p>
 
@@ -1284,7 +1284,7 @@ export default function Home() {
         </div>
 
         {/* Bottom fade effect */}
-        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white via-white/80 to-transparent dark:from-gray-900 dark:via-gray-900/80 dark:to-transparent pointer-events-none"></div>
       </section>
     </div>
     </>

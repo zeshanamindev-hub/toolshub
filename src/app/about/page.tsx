@@ -50,15 +50,15 @@ export default function AboutPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 py-12">
+    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 py-12">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-6">
             About Tools Hub
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We're dedicated to providing the best free online text manipulation tools 
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            We're dedicated to providing the best free online text manipulation tools
             with a focus on privacy, speed, and user experience.
           </p>
         </div>
@@ -71,7 +71,7 @@ export default function AboutPage() {
               <CardTitle className="text-2xl">Our Mission</CardTitle>
             </div>
           </CardHeader>
-          <CardContent className="text-gray-600 space-y-4">
+          <CardContent className="text-gray-600 dark:text-gray-300 space-y-4">
             <p>
               At Tools Hub, we believe that powerful text manipulation tools should be accessible 
               to everyone. Our mission is to provide a comprehensive suite of free, fast, and 
@@ -97,7 +97,7 @@ export default function AboutPage() {
               {tools.map((tool, index) => (
                 <div key={index} className="flex items-start space-x-3">
                   <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">{tool}</span>
+                  <span className="text-gray-700 dark:text-gray-300">{tool}</span>
                 </div>
               ))}
             </div>
@@ -125,7 +125,7 @@ export default function AboutPage() {
                       <h3 className="font-semibold text-gray-900 mb-2">
                         {feature.title}
                       </h3>
-                      <p className="text-gray-600 text-sm">
+                      <p className="text-gray-600 dark:text-gray-300 text-sm">
                         {feature.description}
                       </p>
                     </div>
@@ -141,7 +141,7 @@ export default function AboutPage() {
           <CardHeader>
             <CardTitle className="text-2xl">Our Commitment</CardTitle>
           </CardHeader>
-          <CardContent className="text-gray-600 space-y-4">
+          <CardContent className="text-gray-600 dark:text-gray-300 space-y-4">
             <div>
               <h3 className="font-semibold text-gray-900 mb-2">Privacy & Security</h3>
               <p>
@@ -171,7 +171,7 @@ export default function AboutPage() {
           <CardHeader>
             <CardTitle className="text-2xl">Built with Modern Technology</CardTitle>
           </CardHeader>
-          <CardContent className="text-gray-600">
+          <CardContent className="text-gray-600 dark:text-gray-300">
             <p className="mb-4">
               Tools Hub is built using cutting-edge web technologies to ensure 
               the best performance and user experience:
@@ -201,11 +201,11 @@ export default function AboutPage() {
         <div className="text-center">
           <Card>
             <CardContent className="pt-6">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
                 Ready to Get Started?
               </h2>
-              <p className="text-gray-600 mb-6">
-                Try our tools now and experience the difference of fast, 
+              <p className="text-gray-600 dark:text-gray-300 mb-6">
+                Try our tools now and experience the difference of fast,
                 private, and reliable text manipulation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

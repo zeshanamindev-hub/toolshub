@@ -47,28 +47,26 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 217.2 91.2% 65%;
-    --primary-foreground: 222.2 84% 4.9%;
-    --secondary: 217.2 32.6% 25%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 62.8% 40%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 224.3 76.3% 94.1%;
-  }
+.dark {
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+  --card: 222.2 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+  --popover: 222.2 84% 4.9%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 217.2 91.2% 65%;
+  --primary-foreground: 222.2 84% 4.9%;
+  --secondary: 217.2 32.6% 25%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+  --accent: 217.2 32.6% 17.5%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 62.8% 40%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
+  --ring: 224.3 76.3% 94.1%;
 }
 
 * {
@@ -145,4 +143,26 @@ body {
 
 .animate-slow-spin {
   animation: slow-spin 20s linear infinite;
+}
+
+/* Dark mode header styles */
+.dark header {
+  background-color: hsl(var(--card) / 0.9);
+  border-color: hsl(var(--border) / 0.3);
+}
+
+.dark .dark\:bg-gray-800 {
+  background-color: hsl(var(--card));
+}
+
+.dark .dark\:text-gray-200 {
+  color: hsl(var(--foreground));
+}
+
+.dark .dark\:text-gray-300 {
+  color: hsl(var(--muted-foreground));
+}
+
+.dark .dark\:border-gray-600 {
+  border-color: hsl(var(--border));
 }

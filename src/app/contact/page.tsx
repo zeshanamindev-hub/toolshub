@@ -46,7 +46,7 @@ export default function ContactPage() {
 
   if (submitted) {
     return (
-      <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 py-12">
+      <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 py-12">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <Card>
             <CardContent className="pt-6 text-center">
@@ -55,11 +55,11 @@ export default function ContactPage() {
                   <Send className="h-8 w-8 text-green-600" />
                 </div>
               </div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
                 Message Sent Successfully!
               </h2>
-              <p className="text-gray-600 mb-6">
-                Thank you for contacting us. We'll get back to you as soon as possible, 
+              <p className="text-gray-600 dark:text-gray-300 mb-6">
+                Thank you for contacting us. We'll get back to you as soon as possible,
                 usually within 24-48 hours.
               </p>
               <Button onClick={() => {
@@ -82,18 +82,18 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 py-12">
+    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 py-12">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
           <div className="flex justify-center mb-4">
             <Mail className="h-12 w-12 text-blue-600" />
           </div>
-          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-6">
             Contact Us
           </h1>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Have a question, suggestion, or found a bug? We'd love to hear from you. 
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            Have a question, suggestion, or found a bug? We'd love to hear from you.
             Send us a message and we'll respond as quickly as possible.
           </p>
         </div>
@@ -112,7 +112,7 @@ export default function ContactPage() {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Contact Type */}
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-3">
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
                       What can we help you with?
                     </label>
                     <div className="grid grid-cols-2 gap-3">
@@ -137,7 +137,7 @@ export default function ContactPage() {
                   {/* Name and Email */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                         Name *
                       </label>
                       <Input
@@ -151,7 +151,7 @@ export default function ContactPage() {
                       />
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                         Email *
                       </label>
                       <Input
@@ -168,7 +168,7 @@ export default function ContactPage() {
 
                   {/* Subject */}
                   <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                       Subject *
                     </label>
                     <Input
@@ -184,7 +184,7 @@ export default function ContactPage() {
 
                   {/* Message */}
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                       Message *
                     </label>
                     <Textarea
@@ -228,7 +228,7 @@ export default function ContactPage() {
               <CardHeader>
                 <CardTitle className="text-lg">Response Time</CardTitle>
               </CardHeader>
-              <CardContent className="text-sm text-gray-600">
+              <CardContent className="text-sm text-gray-600 dark:text-gray-300">
                 <p>
                   We typically respond to all inquiries within 24-48 hours during business days. 
                   For urgent technical issues, we aim to respond even faster.
@@ -241,17 +241,17 @@ export default function ContactPage() {
               <CardHeader>
                 <CardTitle className="text-lg">Common Questions</CardTitle>
               </CardHeader>
-              <CardContent className="text-sm text-gray-600 space-y-4">
+              <CardContent className="text-sm text-gray-600 dark:text-gray-300 space-y-4">
                 <div>
-                  <h4 className="font-semibold text-gray-900">Is my data safe?</h4>
+                  <h4 className="font-semibold text-gray-900 dark:text-white">Is my data safe?</h4>
                   <p>Yes! All text processing happens in your browser. We never see or store your content.</p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900">Are the tools really free?</h4>
+                  <h4 className="font-semibold text-gray-900 dark:text-white">Are the tools really free?</h4>
                   <p>Absolutely! All our core tools are completely free with no hidden fees or subscriptions.</p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900">Can I suggest new tools?</h4>
+                  <h4 className="font-semibold text-gray-900 dark:text-white">Can I suggest new tools?</h4>
                   <p>We love feature requests! Use the "Feature Request" option above to suggest new tools.</p>
                 </div>
               </CardContent>
@@ -262,17 +262,17 @@ export default function ContactPage() {
               <CardHeader>
                 <CardTitle className="text-lg">Other Ways to Reach Us</CardTitle>
               </CardHeader>
-              <CardContent className="text-sm text-gray-600 space-y-3">
+              <CardContent className="text-sm text-gray-600 dark:text-gray-300 space-y-3">
                 <div>
-                  <h4 className="font-semibold text-gray-900">General Inquiries</h4>
+                  <h4 className="font-semibold text-gray-900 dark:text-white">General Inquiries</h4>
                   <p>hello@toolshub.com</p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900">Technical Support</h4>
+                  <h4 className="font-semibold text-gray-900 dark:text-white">Technical Support</h4>
                   <p>support@toolshub.com</p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900">Privacy & Legal</h4>
+                  <h4 className="font-semibold text-gray-900 dark:text-white">Privacy & Legal</h4>
                   <p>legal@toolshub.com</p>
                 </div>
               </CardContent>

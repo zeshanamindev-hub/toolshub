@@ -9,21 +9,21 @@ export const metadata = {
 
 export default function PrivacyPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 py-12">
+    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 py-12">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
           <div className="flex justify-center mb-4">
             <Shield className="h-12 w-12 text-green-600" />
           </div>
-          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-6">
             Privacy Policy
           </h1>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Your privacy is important to us. This policy explains how we handle your data 
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            Your privacy is important to us. This policy explains how we handle your data
             when you use Tools Hub.
           </p>
-          <p className="text-sm text-gray-500 mt-4">
+          <p className="text-sm text-gray-500 dark:text-gray-400 mt-4">
             Last updated: {new Date().toLocaleDateString('en-US', { 
               year: 'numeric', 
               month: 'long', 
@@ -111,7 +111,7 @@ export default function PrivacyPage() {
           <CardHeader>
             <CardTitle>How We Use Information</CardTitle>
           </CardHeader>
-          <CardContent className="text-gray-600 space-y-4">
+          <CardContent className="text-gray-600 dark:text-gray-300 space-y-4">
             <p>The limited information we collect is used to:</p>
             <ul className="list-disc list-inside space-y-2 ml-4">
               <li>Improve our tools and user experience</li>
@@ -132,7 +132,7 @@ export default function PrivacyPage() {
           <CardHeader>
             <CardTitle>Third-Party Services</CardTitle>
           </CardHeader>
-          <CardContent className="text-gray-600 space-y-6">
+          <CardContent className="text-gray-600 dark:text-gray-300 space-y-6">
             <div>
               <h3 className="font-semibold text-gray-900 mb-2">Google AdSense</h3>
               <p>
@@ -161,7 +161,7 @@ export default function PrivacyPage() {
           <CardHeader>
             <CardTitle>Data Security</CardTitle>
           </CardHeader>
-          <CardContent className="text-gray-600 space-y-4">
+          <CardContent className="text-gray-600 dark:text-gray-300 space-y-4">
             <p>
               Since we don't collect or store your text data, there's no risk of your 
               sensitive content being compromised in a data breach. Your text processing 
@@ -197,7 +197,7 @@ export default function PrivacyPage() {
           <CardHeader>
             <CardTitle>Children's Privacy</CardTitle>
           </CardHeader>
-          <CardContent className="text-gray-600">
+          <CardContent className="text-gray-600 dark:text-gray-300">
             <p>
               Our services are not directed to children under 13. We do not knowingly 
               collect personal information from children under 13. If you are a parent 
@@ -212,7 +212,7 @@ export default function PrivacyPage() {
           <CardHeader>
             <CardTitle>Changes to This Policy</CardTitle>
           </CardHeader>
-          <CardContent className="text-gray-600">
+          <CardContent className="text-gray-600 dark:text-gray-300">
             <p>
               We may update this privacy policy from time to time. We will notify you 
               of any changes by posting the new policy on this page and updating the 
