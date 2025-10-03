@@ -1,8 +1,17 @@
-Create below tools:
-- Lorem Ipsum with Custom Word Generator
-- Dummy JSON Generator
-- HTML Character Counter (For SEO titles)
-- JavaScript Obfuscator (basic)
+Now we create more tools:
+- Robotos.txt Generator
+- Sitemap Generator (manual XML Builder)
+- Meta Tag Preview Tool
+- Open Graph Preview Tool
+- Favicon Generator (PNG to ICO with JS Lib)
+- UTM Link Generator
+- URL Shortener (base64 style, not real redirect)
+- Keyword Density Checker 
+- Heading Extractor for HTML
+- Broken Link Checker (Local HTML Paste)
+
+Add all tools on all necessary place. also update tools status on the entire website. If you find any missing tool link on  the website then add it.
+also maksure updte stats of tools like (number of tools) on entire website.
 
 
 Instructions:

@@ -14,7 +14,7 @@ export default function SqlBeautifierClient() {
   const [outputText, setOutputText] = useState("");
   const [inputCopied, setInputCopied] = useState(false);
   const [outputCopied, setOutputCopied] = useState(false);
-  const [dialect, setDialect] = useState("sql");
+  const [dialect, setDialect] = useState<"sql" | "mysql" | "postgresql" | "tsql">("sql");
 
   const handleBeautify = () => {
     try {
@@ -141,7 +141,7 @@ export default function SqlBeautifierClient() {
           <div className="flex justify-center gap-4 items-center">
             <select
               value={dialect}
-              onChange={(e) => setDialect(e.target.value)}
+              onChange={(e) => setDialect(e.target.value as "sql" | "mysql" | "postgresql" | "tsql")}
               className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
               <option value="sql">Standard SQL</option>

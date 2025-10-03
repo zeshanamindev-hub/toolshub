@@ -2,9 +2,9 @@
 
 export const SITE_CONFIG = {
   name: "Tools Hub",
-  description: "44+ free online tools for text manipulation, development, security, and content creation",
+  description: "54+ free online tools for text manipulation, development, security, and content creation",
   url: "https://toolshub.com",
-  toolCount: 44
+  toolCount: 54
 }
 
 export const CATEGORIES = {
@@ -57,7 +57,8 @@ export const NAVIGATION_LINKS = {
       { name: "Reverse Text", href: "/tools/reverse-text" },
       { name: "Line Sorter", href: "/tools/line-sorter" },
       { name: "Text Diff Checker", href: "/tools/text-diff-checker" },
-      { name: "Text Extractor", href: "/tools/text-extractor" }
+      { name: "Text Extractor", href: "/tools/text-extractor" },
+      { name: "Keyword Density Checker", href: "/tools/keyword-density-checker" }
     ],
     converters: [
       { name: "URL Encoder/Decoder", href: "/tools/url-encoder" },
@@ -78,7 +79,10 @@ export const NAVIGATION_LINKS = {
       { name: "Lorem Ipsum with Custom Words", href: "/tools/lorem-ipsum-custom-generator" },
       { name: "Dummy JSON Generator", href: "/tools/dummy-json-generator" },
       { name: "Color Palette Generator", href: "/tools/color-palette-generator" },
-      { name: "Random String", href: "/tools/random-string" }
+      { name: "Random String", href: "/tools/random-string" },
+      { name: "Favicon Generator", href: "/tools/favicon-generator" },
+      { name: "UTM Link Generator", href: "/tools/utm-link-generator" },
+      { name: "URL Shortener", href: "/tools/url-shortener" }
     ],
     developers: [
       { name: "Regex Tester", href: "/tools/regex-tester" },
@@ -92,7 +96,13 @@ export const NAVIGATION_LINKS = {
       { name: "HTML Escape/Unescape", href: "/tools/html-escape-unescape" },
       { name: "SQL Beautifier", href: "/tools/sql-beautifier" },
       { name: "CSV to Markdown Table Converter", href: "/tools/csv-to-markdown-table" },
-      { name: "Markdown Table Generator", href: "/tools/markdown-table-generator" }
+      { name: "Markdown Table Generator", href: "/tools/markdown-table-generator" },
+      { name: "Robots.txt Generator", href: "/tools/robots-txt-generator" },
+      { name: "Sitemap Generator", href: "/tools/sitemap-generator" },
+      { name: "Meta Tag Preview Tool", href: "/tools/meta-tag-preview" },
+      { name: "Open Graph Preview Tool", href: "/tools/open-graph-preview" },
+      { name: "Heading Extractor for HTML", href: "/tools/heading-extractor" },
+      { name: "Broken Link Checker", href: "/tools/broken-link-checker" }
     ],
     company: [
       { name: "About", href: "/about" },
@@ -136,7 +146,10 @@ import {
   ArrowUpDown,
   Filter,
   Activity,
-  Smile
+  Smile,
+  Eye,
+  Facebook,
+  Image as ImageIcon
 } from "lucide-react"
 
 export const ALL_TOOLS = [
@@ -435,6 +448,77 @@ export const ALL_TOOLS = [
     icon: Code,
     href: "/tools/javascript-obfuscator",
     color: "text-orange-600",
+  },
+  // New Tools
+  {
+    name: "Robots.txt Generator",
+    description: "Generate robots.txt files for your website with customizable rules for search engine crawlers.",
+    icon: FileText,
+    href: "/tools/robots-txt-generator",
+    color: "text-blue-600",
+  },
+  {
+    name: "Sitemap Generator",
+    description: "Generate XML sitemaps for your website with customizable URLs, priorities, and change frequencies.",
+    icon: FileText,
+    href: "/tools/sitemap-generator",
+    color: "text-green-600",
+  },
+  {
+    name: "Meta Tag Preview Tool",
+    description: "Preview how your meta tags will appear in Google search results and social media platforms.",
+    icon: Eye,
+    href: "/tools/meta-tag-preview",
+    color: "text-purple-600",
+  },
+  {
+    name: "Open Graph Preview Tool",
+    description: "Preview how your Open Graph meta tags will appear when shared on Facebook and other social platforms.",
+    icon: Facebook,
+    href: "/tools/open-graph-preview",
+    color: "text-blue-700",
+  },
+  {
+    name: "Favicon Generator",
+    description: "Convert PNG images to ICO favicon files instantly in your browser.",
+    icon: ImageIcon,
+    href: "/tools/favicon-generator",
+    color: "text-yellow-600",
+  },
+  {
+    name: "UTM Link Generator",
+    description: "Generate UTM tracking parameters for your links to monitor campaign performance in Google Analytics.",
+    icon: LinkIcon,
+    href: "/tools/utm-link-generator",
+    color: "text-indigo-600",
+  },
+  {
+    name: "URL Shortener",
+    description: "Shorten long URLs using base64 encoding for easy sharing.",
+    icon: LinkIcon,
+    href: "/tools/url-shortener",
+    color: "text-teal-600",
+  },
+  {
+    name: "Keyword Density Checker",
+    description: "Analyze keyword density in your content for SEO optimization.",
+    icon: BarChart3,
+    href: "/tools/keyword-density-checker",
+    color: "text-red-600",
+  },
+  {
+    name: "Heading Extractor for HTML",
+    description: "Extract and analyze headings (H1, H2, H3, etc.) from HTML content.",
+    icon: Hash,
+    href: "/tools/heading-extractor",
+    color: "text-cyan-600",
+  },
+  {
+    name: "Broken Link Checker",
+    description: "Check for broken links in your HTML content and validate URL formats.",
+    icon: LinkIcon,
+    href: "/tools/broken-link-checker",
+    color: "text-orange-700",
   },
 ] as const
 
