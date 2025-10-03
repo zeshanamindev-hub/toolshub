@@ -25,7 +25,10 @@ import {
   Filter,
   Grid3X3,
   Smile,
-  Activity
+  Activity,
+  Eye,
+  Facebook,
+  Image as ImageIcon
 } from "lucide-react"
 
 const categories = [
@@ -74,7 +77,7 @@ const categories = [
     {
       name: "Generators",
       description: "Generate passwords, QR codes, placeholder content, and more",
-      count: 8,
+      count: 7,
       color: "text-green-600",
       bgColor: "bg-green-50",
       borderColor: "border-green-200",
@@ -88,9 +91,29 @@ const categories = [
       ]
     },
     {
+      name: "SEO Tools",
+      description: "Search engine optimization tools for better website visibility",
+      count: 10,
+      color: "text-green-700",
+      bgColor: "bg-green-50",
+      borderColor: "border-green-200",
+      tools: [
+        { name: "Meta Tag Preview Tool", href: "/tools/meta-tag-preview", icon: Eye },
+        { name: "Open Graph Preview Tool", href: "/tools/open-graph-preview", icon: Facebook },
+        { name: "Robots.txt Generator", href: "/tools/robots-txt-generator", icon: FileText },
+        { name: "Sitemap Generator", href: "/tools/sitemap-generator", icon: FileText },
+        { name: "Heading Extractor for HTML", href: "/tools/heading-extractor", icon: Hash },
+        { name: "Keyword Density Checker", href: "/tools/keyword-density-checker", icon: BarChart3 },
+        { name: "URL Shortener", href: "/tools/url-shortener", icon: LinkIcon },
+        { name: "UTM Link Generator", href: "/tools/utm-link-generator", icon: LinkIcon },
+        { name: "Favicon Generator", href: "/tools/favicon-generator", icon: ImageIcon },
+        { name: "Broken Link Checker", href: "/tools/broken-link-checker", icon: LinkIcon },
+      ]
+    },
+    {
       name: "Developer Tools",
       description: "Essential utilities for developers and programmers",
-      count: 11,
+      count: 12,
       color: "text-orange-600",
       bgColor: "bg-orange-50",
       borderColor: "border-orange-200",
@@ -136,7 +159,7 @@ export default function CategoriesPage() {
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Browse our collection of {totalTools}+ tools organized by category.
-            Find exactly what you need for your text processing, conversion, and generation tasks.
+            Find exactly what you need for your text processing, conversion, generation, SEO, and development tasks.
           </p>
         </div>
 
@@ -203,7 +226,7 @@ export default function CategoriesPage() {
               <div className="text-gray-600">Total Tools</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-purple-600 mb-2">{categories.length}</div>
+              <div className="text-3xl font-bold text-purple-600 mb-2">6</div>
               <div className="text-gray-600">Categories</div>
             </div>
             <div className="text-center">

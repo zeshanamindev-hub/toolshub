@@ -214,8 +214,8 @@ export default function HeadingExtractorClient() {
         toolName="Heading Extractor for HTML"
         toolDescription="Extract and analyze headings (H1, H2, H3, etc.) from HTML content. Perfect for SEO analysis, content structure review, and accessibility checking."
         toolIcon={Hash}
-        category="Developer Tools"
-        categoryHref="/categories/developers"
+        category="SEO Tools"
+        categoryHref="/categories/seo"
         features={features}
         useCases={useCases}
         relatedTools={relatedTools}

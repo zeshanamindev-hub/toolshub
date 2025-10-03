@@ -2,9 +2,9 @@
 
 export const SITE_CONFIG = {
   name: "Tools Hub",
-  description: "54+ free online tools for text manipulation, development, security, and content creation",
+  description: "53+ free online tools for text manipulation, development, security, SEO, and content creation",
   url: "https://toolshub.com",
-  toolCount: 54
+  toolCount: 53
 }
 
 export const CATEGORIES = {
@@ -16,15 +16,21 @@ export const CATEGORIES = {
   },
   "converters": {
     id: "converters",
-    name: "Converters & Encoding", 
+    name: "Converters & Encoding",
     href: "/categories/converters",
     description: "Convert between formats, encodings, and data representations"
   },
   "generators": {
     id: "generators",
     name: "Generators",
-    href: "/categories/generators", 
+    href: "/categories/generators",
     description: "Generate passwords, QR codes, placeholder content, and assets"
+  },
+  "seo": {
+    id: "seo",
+    name: "SEO Tools",
+    href: "/categories/seo",
+    description: "Search engine optimization tools for better website visibility"
   },
   "developers": {
     id: "developers",
@@ -79,10 +85,19 @@ export const NAVIGATION_LINKS = {
       { name: "Lorem Ipsum with Custom Words", href: "/tools/lorem-ipsum-custom-generator" },
       { name: "Dummy JSON Generator", href: "/tools/dummy-json-generator" },
       { name: "Color Palette Generator", href: "/tools/color-palette-generator" },
-      { name: "Random String", href: "/tools/random-string" },
-      { name: "Favicon Generator", href: "/tools/favicon-generator" },
+      { name: "Random String", href: "/tools/random-string" }
+    ],
+    seo: [
+      { name: "Meta Tag Preview Tool", href: "/tools/meta-tag-preview" },
+      { name: "Open Graph Preview Tool", href: "/tools/open-graph-preview" },
+      { name: "Robots.txt Generator", href: "/tools/robots-txt-generator" },
+      { name: "Sitemap Generator", href: "/tools/sitemap-generator" },
+      { name: "Heading Extractor for HTML", href: "/tools/heading-extractor" },
+      { name: "Keyword Density Checker", href: "/tools/keyword-density-checker" },
+      { name: "URL Shortener", href: "/tools/url-shortener" },
       { name: "UTM Link Generator", href: "/tools/utm-link-generator" },
-      { name: "URL Shortener", href: "/tools/url-shortener" }
+      { name: "Favicon Generator", href: "/tools/favicon-generator" },
+      { name: "Broken Link Checker", href: "/tools/broken-link-checker" }
     ],
     developers: [
       { name: "Regex Tester", href: "/tools/regex-tester" },
@@ -96,13 +111,7 @@ export const NAVIGATION_LINKS = {
       { name: "HTML Escape/Unescape", href: "/tools/html-escape-unescape" },
       { name: "SQL Beautifier", href: "/tools/sql-beautifier" },
       { name: "CSV to Markdown Table Converter", href: "/tools/csv-to-markdown-table" },
-      { name: "Markdown Table Generator", href: "/tools/markdown-table-generator" },
-      { name: "Robots.txt Generator", href: "/tools/robots-txt-generator" },
-      { name: "Sitemap Generator", href: "/tools/sitemap-generator" },
-      { name: "Meta Tag Preview Tool", href: "/tools/meta-tag-preview" },
-      { name: "Open Graph Preview Tool", href: "/tools/open-graph-preview" },
-      { name: "Heading Extractor for HTML", href: "/tools/heading-extractor" },
-      { name: "Broken Link Checker", href: "/tools/broken-link-checker" }
+      { name: "Markdown Table Generator", href: "/tools/markdown-table-generator" }
     ],
     company: [
       { name: "About", href: "/about" },

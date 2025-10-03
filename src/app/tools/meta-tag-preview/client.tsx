@@ -224,8 +224,8 @@ export default function MetaTagPreviewClient() {
         toolName="Meta Tag Preview Tool"
         toolDescription="Preview how your meta tags will appear in Google search results and social media platforms. Test title tags, descriptions, and Open Graph meta tags for optimal SEO and social sharing."
         toolIcon={Eye}
-        category="Developer Tools"
-        categoryHref="/categories/developers"
+        category="SEO Tools"
+        categoryHref="/categories/seo"
         features={features}
         useCases={useCases}
         relatedTools={relatedTools}

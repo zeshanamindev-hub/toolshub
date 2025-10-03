@@ -161,8 +161,8 @@ export default function OpenGraphPreviewClient() {
         toolName="Open Graph Preview Tool"
         toolDescription="Preview how your Open Graph meta tags will appear when shared on Facebook, LinkedIn, and other social platforms. Test titles, descriptions, and images for perfect social sharing."
         toolIcon={Facebook}
-        category="Developer Tools"
-        categoryHref="/categories/developers"
+        category="SEO Tools"
+        categoryHref="/categories/seo"
         features={features}
         useCases={useCases}
         relatedTools={relatedTools}

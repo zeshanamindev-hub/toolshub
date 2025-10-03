@@ -213,8 +213,8 @@ export default function BrokenLinkCheckerClient() {
         toolName="Broken Link Checker (Local HTML Paste)"
         toolDescription="Check for broken links in your HTML content. Extract and validate all links from pasted HTML to identify potential broken or malformed URLs."
         toolIcon={LinkIcon}
-        category="Developer Tools"
-        categoryHref="/categories/developers"
+        category="SEO Tools"
+        categoryHref="/categories/seo"
         features={features}
         useCases={useCases}
         relatedTools={relatedTools}

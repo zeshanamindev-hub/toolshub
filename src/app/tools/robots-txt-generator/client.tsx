@@ -284,8 +284,8 @@ export default function RobotsTxtGeneratorClient() {
         toolName="Robots.txt Generator"
         toolDescription="Generate robots.txt files for your website with customizable rules for search engine crawlers. Control which pages bots can access and set crawl delays."
         toolIcon={Bot}
-        category="Developer Tools"
-        categoryHref="/categories/developers"
+        category="SEO Tools"
+        categoryHref="/categories/seo"
         features={features}
         useCases={useCases}
         relatedTools={relatedTools}

@@ -221,8 +221,8 @@ export default function SitemapGeneratorClient() {
         toolName="Sitemap Generator"
         toolDescription="Generate XML sitemaps for your website with customizable URLs, priorities, and change frequencies. Perfect for SEO and helping search engines discover your content."
         toolIcon={FileText}
-        category="Developer Tools"
-        categoryHref="/categories/developers"
+        category="SEO Tools"
+        categoryHref="/categories/seo"
         features={features}
         useCases={useCases}
         relatedTools={relatedTools}
