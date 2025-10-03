@@ -184,6 +184,20 @@ const tools = [
     color: "text-orange-600",
   },
   {
+    name: "JSON Escape/Unescape",
+    description: "Escape and unescape JSON strings for safe embedding.",
+    icon: Code,
+    href: "/tools/json-escape-unescape",
+    color: "text-yellow-600",
+  },
+  {
+    name: "HTML Escape/Unescape",
+    description: "Escape and unescape HTML entities for safe embedding.",
+    icon: Code,
+    href: "/tools/html-escape-unescape",
+    color: "text-orange-600",
+  },
+  {
     name: "Hash Generator",
     description: "Generate MD5, SHA-1, SHA-256, SHA-384, and SHA-512 hashes from text.",
     icon: Lock,

@@ -83,7 +83,9 @@ export const NAVIGATION_LINKS = {
       { name: "CSS Minifier", href: "/tools/css-minifier" },
       { name: "JS Minifier", href: "/tools/js-minifier" },
       { name: "Percentage Calculator", href: "/tools/percentage-calculator" },
-      { name: "BMI Calculator", href: "/tools/bmi-calculator" }
+      { name: "BMI Calculator", href: "/tools/bmi-calculator" },
+      { name: "JSON Escape/Unescape", href: "/tools/json-escape-unescape" },
+      { name: "HTML Escape/Unescape", href: "/tools/html-escape-unescape" }
     ],
     company: [
       { name: "About", href: "/about" },
@@ -278,6 +280,20 @@ export const ALL_TOOLS = [
     description: "Format, validate, and beautify JSON data with syntax highlighting.",
     icon: Braces,
     href: "/tools/json-formatter",
+    color: "text-orange-600",
+  },
+  {
+    name: "JSON Escape/Unescape",
+    description: "Escape and unescape JSON strings for safe embedding.",
+    icon: Code,
+    href: "/tools/json-escape-unescape",
+    color: "text-yellow-600",
+  },
+  {
+    name: "HTML Escape/Unescape",
+    description: "Escape and unescape HTML entities for safe embedding.",
+    icon: Code,
+    href: "/tools/html-escape-unescape",
     color: "text-orange-600",
   },
   {
