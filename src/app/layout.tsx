@@ -41,7 +41,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Tools Hub - Free Online Text Tools & Utilities | Word Counter, JSON Formatter, Password Generator",
-  description: "Tools Hub offers 33+ free online tools for text manipulation, development, and productivity. Word counter, JSON formatter, password generator, QR code generator, ASCII converter, and more. No registration required, works instantly in your browser.",
+  description: "Tools Hub offers 44+ free online tools for text manipulation, development, and productivity. Word counter, JSON formatter, password generator, QR code generator, ASCII converter, and more. No registration required, works instantly in your browser.",
   keywords: "online tools, text tools, word counter, character counter, case converter, password generator, JSON formatter, QR code generator, ASCII converter, HTML entities, text manipulation, free tools, web utilities, developer tools",
   authors: [{ name: "Tools Hub" }],
   creator: "Tools Hub",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     canonical: 'https://toolshub.com',
   },
   openGraph: {
-    title: "Tools Hub - 33+ Free Online Tools for Text, Development & Productivity",
+    title: "Tools Hub - 44+ Free Online Tools for Text, Development & Productivity",
     description: "Free online text tools including word counter, character counter, case converter, password generator, JSON formatter, QR code generator, and more. Fast, secure, no registration required.",
     url: 'https://toolshub.com',
     siteName: 'Tools Hub',
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: "Tools Hub - Free Online Tools & Utilities",
-    description: "33+ free online tools for text manipulation, development, and productivity. Word counter, JSON formatter, password generator, and more.",
+    description: "44+ free online tools for text manipulation, development, and productivity. Word counter, JSON formatter, password generator, and more.",
     images: ['/og-image.png'],
     creator: '@toolshub',
   },

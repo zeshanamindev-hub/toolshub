@@ -25,94 +25,123 @@ import {
   Filter,
   Grid3X3,
   Smile,
-  Activity
+  Activity,
+  Eye,
+  Facebook,
+  Image as ImageIcon
 } from "lucide-react"
 
 const categories = [
-   {
-     name: "Text & Writing",
-     description: "Analyze, transform, and process text content with powerful utilities",
-     count: 13,
-     color: "text-blue-600",
-     bgColor: "bg-blue-50",
-     borderColor: "border-blue-200",
-     tools: [
-       { name: "Word Counter", href: "/tools/word-counter", icon: FileText },
-       { name: "Character Counter", href: "/tools/character-counter", icon: Hash },
-       { name: "Case Converter", href: "/tools/case-converter", icon: Type },
-       { name: "Remove Extra Spaces", href: "/tools/remove-spaces", icon: Scissors },
-       { name: "Reverse Text", href: "/tools/reverse-text", icon: RotateCcw },
-       { name: "Palindrome Checker", href: "/tools/palindrome-checker", icon: RotateCcw },
-       { name: "Palindrome Detector", href: "/tools/palindrome-detector", icon: Search },
-       { name: "Reverse Word Order Tool", href: "/tools/reverse-word-order", icon: RotateCcw },
-       { name: "Emoji Translator", href: "/tools/emoji-translator", icon: Smile },
-       { name: "Letter Counter", href: "/tools/letter-counter", icon: BarChart3 },
-       { name: "Text Diff Checker", href: "/tools/text-diff-checker", icon: GitCompare },
-       { name: "Text Extractor", href: "/tools/text-extractor", icon: Filter },
-       { name: "Line Sorter", href: "/tools/line-sorter", icon: ArrowUpDown },
-     ]
-   },
-   {
-     name: "Converters & Encoding",
-     description: "Convert between different formats, encodings, and data representations",
-     count: 9,
-     color: "text-purple-600",
-     bgColor: "bg-purple-50",
-     borderColor: "border-purple-200",
-     tools: [
-       { name: "URL Encoder/Decoder", href: "/tools/url-encoder", icon: LinkIcon },
-       { name: "Base64 Converter", href: "/tools/base64-converter", icon: Binary },
-       { name: "JSON Formatter", href: "/tools/json-formatter", icon: Braces },
-       { name: "Text to ASCII", href: "/tools/text-to-ascii", icon: Binary },
-       { name: "ASCII to Text", href: "/tools/ascii-to-text", icon: FileText },
-       { name: "HTML Entities", href: "/tools/html-entities", icon: Code },
-       { name: "Text to Morse", href: "/tools/text-to-morse", icon: Code },
-       { name: "Morse to Text", href: "/tools/morse-to-text", icon: Code },
-       { name: "Timestamp Converter", href: "/tools/timestamp-converter", icon: Clock },
-     ]
-   },
-   {
-     name: "Generators",
-     description: "Generate passwords, QR codes, placeholder content, and more",
-     count: 6,
-     color: "text-green-600",
-     bgColor: "bg-green-50",
-     borderColor: "border-green-200",
-     tools: [
-       { name: "Password Generator", href: "/tools/password-generator", icon: Lock },
-       { name: "Hash Generator", href: "/tools/hash-generator", icon: Shield },
-       { name: "QR Code Generator", href: "/tools/qr-generator", icon: QrCode },
-       { name: "Lorem Ipsum Generator", href: "/tools/lorem-ipsum-generator", icon: FileText },
-       { name: "Color Palette Generator", href: "/tools/color-palette-generator", icon: Palette },
-       { name: "Random String", href: "/tools/random-string", icon: Shuffle },
-     ]
-   },
-   {
-     name: "Developer Tools",
-     description: "Essential utilities for developers and programmers",
-     count: 3,
-     color: "text-orange-600",
-     bgColor: "bg-orange-50",
-     borderColor: "border-orange-200",
-     tools: [
-       { name: "Regex Tester", href: "/tools/regex-tester", icon: Search },
-       { name: "CSS Minifier", href: "/tools/css-minifier", icon: Code },
-       { name: "JS Minifier", href: "/tools/js-minifier", icon: Code },
-     ]
-   },
-   {
-     name: "Calculators",
-     description: "BMI, percentage, and various calculation tools",
-     count: 2,
-     color: "text-teal-600",
-     bgColor: "bg-teal-50",
-     borderColor: "border-teal-200",
-     tools: [
-       { name: "BMI Calculator", href: "/tools/bmi-calculator", icon: Activity },
-       { name: "Percentage Calculator", href: "/tools/percentage-calculator", icon: BarChart3 },
-     ]
-   }
- ]
+    {
+      name: "Text & Writing",
+      description: "Analyze, transform, and process text content with powerful utilities",
+      count: 14,
+      color: "text-blue-600",
+      bgColor: "bg-blue-50",
+      borderColor: "border-blue-200",
+      tools: [
+        { name: "Word Counter", href: "/tools/word-counter", icon: FileText },
+        { name: "Character Counter", href: "/tools/character-counter", icon: Hash },
+        { name: "Case Converter", href: "/tools/case-converter", icon: Type },
+        { name: "Remove Extra Spaces", href: "/tools/remove-spaces", icon: Scissors },
+        { name: "Reverse Text", href: "/tools/reverse-text", icon: RotateCcw },
+        { name: "Palindrome Checker", href: "/tools/palindrome-checker", icon: RotateCcw },
+        { name: "Palindrome Detector", href: "/tools/palindrome-detector", icon: Search },
+        { name: "Reverse Word Order Tool", href: "/tools/reverse-word-order", icon: RotateCcw },
+        { name: "Emoji Translator", href: "/tools/emoji-translator", icon: Smile },
+        { name: "Letter Counter", href: "/tools/letter-counter", icon: BarChart3 },
+        { name: "Text Diff Checker", href: "/tools/text-diff-checker", icon: GitCompare },
+        { name: "Text Extractor", href: "/tools/text-extractor", icon: Filter },
+        { name: "Line Sorter", href: "/tools/line-sorter", icon: ArrowUpDown },
+      ]
+    },
+    {
+      name: "Converters & Encoding",
+      description: "Convert between different formats, encodings, and data representations",
+      count: 9,
+      color: "text-purple-600",
+      bgColor: "bg-purple-50",
+      borderColor: "border-purple-200",
+      tools: [
+        { name: "URL Encoder/Decoder", href: "/tools/url-encoder", icon: LinkIcon },
+        { name: "Base64 Converter", href: "/tools/base64-converter", icon: Binary },
+        { name: "JSON Formatter", href: "/tools/json-formatter", icon: Braces },
+        { name: "Text to ASCII", href: "/tools/text-to-ascii", icon: Binary },
+        { name: "ASCII to Text", href: "/tools/ascii-to-text", icon: FileText },
+        { name: "HTML Entities", href: "/tools/html-entities", icon: Code },
+        { name: "Text to Morse", href: "/tools/text-to-morse", icon: Code },
+        { name: "Morse to Text", href: "/tools/morse-to-text", icon: Code },
+        { name: "Timestamp Converter", href: "/tools/timestamp-converter", icon: Clock },
+      ]
+    },
+    {
+      name: "Generators",
+      description: "Generate passwords, QR codes, placeholder content, and more",
+      count: 7,
+      color: "text-green-600",
+      bgColor: "bg-green-50",
+      borderColor: "border-green-200",
+      tools: [
+        { name: "Password Generator", href: "/tools/password-generator", icon: Lock },
+        { name: "Hash Generator", href: "/tools/hash-generator", icon: Shield },
+        { name: "QR Code Generator", href: "/tools/qr-generator", icon: QrCode },
+        { name: "Lorem Ipsum Generator", href: "/tools/lorem-ipsum-generator", icon: FileText },
+        { name: "Color Palette Generator", href: "/tools/color-palette-generator", icon: Palette },
+        { name: "Random String", href: "/tools/random-string", icon: Shuffle },
+      ]
+    },
+    {
+      name: "SEO Tools",
+      description: "Search engine optimization tools for better website visibility",
+      count: 10,
+      color: "text-green-700",
+      bgColor: "bg-green-50",
+      borderColor: "border-green-200",
+      tools: [
+        { name: "Meta Tag Preview Tool", href: "/tools/meta-tag-preview", icon: Eye },
+        { name: "Open Graph Preview Tool", href: "/tools/open-graph-preview", icon: Facebook },
+        { name: "Robots.txt Generator", href: "/tools/robots-txt-generator", icon: FileText },
+        { name: "Sitemap Generator", href: "/tools/sitemap-generator", icon: FileText },
+        { name: "Heading Extractor for HTML", href: "/tools/heading-extractor", icon: Hash },
+        { name: "Keyword Density Checker", href: "/tools/keyword-density-checker", icon: BarChart3 },
+        { name: "URL Shortener", href: "/tools/url-shortener", icon: LinkIcon },
+        { name: "UTM Link Generator", href: "/tools/utm-link-generator", icon: LinkIcon },
+        { name: "Favicon Generator", href: "/tools/favicon-generator", icon: ImageIcon },
+        { name: "Broken Link Checker", href: "/tools/broken-link-checker", icon: LinkIcon },
+      ]
+    },
+    {
+      name: "Developer Tools",
+      description: "Essential utilities for developers and programmers",
+      count: 12,
+      color: "text-orange-600",
+      bgColor: "bg-orange-50",
+      borderColor: "border-orange-200",
+      tools: [
+        { name: "Regex Tester", href: "/tools/regex-tester", icon: Search },
+        { name: "CSS Minifier", href: "/tools/css-minifier", icon: Code },
+        { name: "JS Minifier", href: "/tools/js-minifier", icon: Code },
+        { name: "JSON Escape/Unescape", href: "/tools/json-escape-unescape", icon: Code },
+        { name: "HTML Escape/Unescape", href: "/tools/html-escape-unescape", icon: Code },
+        { name: "SQL Beautifier", href: "/tools/sql-beautifier", icon: Code },
+        { name: "CSV to Markdown Table Converter", href: "/tools/csv-to-markdown-table", icon: Code },
+        { name: "Markdown Table Generator", href: "/tools/markdown-table-generator", icon: Code },
+        { name: "Percentage Calculator", href: "/tools/percentage-calculator", icon: BarChart3 },
+        { name: "BMI Calculator", href: "/tools/bmi-calculator", icon: Activity },
+      ]
+    },
+    {
+      name: "Security & Hash",
+      description: "Hash generators, encryption tools, and security utilities",
+      count: 1,
+      color: "text-red-600",
+      bgColor: "bg-red-50",
+      borderColor: "border-red-200",
+      tools: [
+        { name: "Hash Generator", href: "/tools/hash-generator", icon: Shield },
+      ]
+    }
+  ]
 
 export default function CategoriesPage() {
   const totalTools = categories.reduce((sum, category) => sum + category.count, 0)
@@ -130,7 +159,7 @@ export default function CategoriesPage() {
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Browse our collection of {totalTools}+ tools organized by category.
-            Find exactly what you need for your text processing, conversion, and generation tasks.
+            Find exactly what you need for your text processing, conversion, generation, SEO, and development tasks.
           </p>
         </div>
 
@@ -197,7 +226,7 @@ export default function CategoriesPage() {
               <div className="text-gray-600">Total Tools</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-purple-600 mb-2">{categories.length}</div>
+              <div className="text-3xl font-bold text-purple-600 mb-2">6</div>
               <div className="text-gray-600">Categories</div>
             </div>
             <div className="text-center">

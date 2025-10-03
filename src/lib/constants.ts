@@ -2,9 +2,9 @@
 
 export const SITE_CONFIG = {
   name: "Tools Hub",
-  description: "33+ free online tools for text manipulation, development, security, and content creation",
+  description: "53+ free online tools for text manipulation, development, security, SEO, and content creation",
   url: "https://toolshub.com",
-  toolCount: 33
+  toolCount: 53
 }
 
 export const CATEGORIES = {
@@ -16,15 +16,21 @@ export const CATEGORIES = {
   },
   "converters": {
     id: "converters",
-    name: "Converters & Encoding", 
+    name: "Converters & Encoding",
     href: "/categories/converters",
     description: "Convert between formats, encodings, and data representations"
   },
   "generators": {
     id: "generators",
     name: "Generators",
-    href: "/categories/generators", 
+    href: "/categories/generators",
     description: "Generate passwords, QR codes, placeholder content, and assets"
+  },
+  "seo": {
+    id: "seo",
+    name: "SEO Tools",
+    href: "/categories/seo",
+    description: "Search engine optimization tools for better website visibility"
   },
   "developers": {
     id: "developers",
@@ -51,12 +57,14 @@ export const NAVIGATION_LINKS = {
     textTools: [
       { name: "Word Counter", href: "/tools/word-counter" },
       { name: "Character Counter", href: "/tools/character-counter" },
+      { name: "HTML Character Counter", href: "/tools/html-character-counter" },
       { name: "Case Converter", href: "/tools/case-converter" },
       { name: "Remove Spaces", href: "/tools/remove-spaces" },
       { name: "Reverse Text", href: "/tools/reverse-text" },
       { name: "Line Sorter", href: "/tools/line-sorter" },
       { name: "Text Diff Checker", href: "/tools/text-diff-checker" },
-      { name: "Text Extractor", href: "/tools/text-extractor" }
+      { name: "Text Extractor", href: "/tools/text-extractor" },
+      { name: "Keyword Density Checker", href: "/tools/keyword-density-checker" }
     ],
     converters: [
       { name: "URL Encoder/Decoder", href: "/tools/url-encoder" },
@@ -74,16 +82,36 @@ export const NAVIGATION_LINKS = {
       { name: "Hash Generator", href: "/tools/hash-generator" },
       { name: "QR Code Generator", href: "/tools/qr-generator" },
       { name: "Lorem Ipsum Generator", href: "/tools/lorem-ipsum-generator" },
+      { name: "Lorem Ipsum with Custom Words", href: "/tools/lorem-ipsum-custom-generator" },
+      { name: "Dummy JSON Generator", href: "/tools/dummy-json-generator" },
       { name: "Color Palette Generator", href: "/tools/color-palette-generator" },
       { name: "Random String", href: "/tools/random-string" }
+    ],
+    seo: [
+      { name: "Meta Tag Preview Tool", href: "/tools/meta-tag-preview" },
+      { name: "Open Graph Preview Tool", href: "/tools/open-graph-preview" },
+      { name: "Robots.txt Generator", href: "/tools/robots-txt-generator" },
+      { name: "Sitemap Generator", href: "/tools/sitemap-generator" },
+      { name: "Heading Extractor for HTML", href: "/tools/heading-extractor" },
+      { name: "Keyword Density Checker", href: "/tools/keyword-density-checker" },
+      { name: "URL Shortener", href: "/tools/url-shortener" },
+      { name: "UTM Link Generator", href: "/tools/utm-link-generator" },
+      { name: "Favicon Generator", href: "/tools/favicon-generator" },
+      { name: "Broken Link Checker", href: "/tools/broken-link-checker" }
     ],
     developers: [
       { name: "Regex Tester", href: "/tools/regex-tester" },
       { name: "Letter Counter", href: "/tools/letter-counter" },
       { name: "CSS Minifier", href: "/tools/css-minifier" },
       { name: "JS Minifier", href: "/tools/js-minifier" },
+      { name: "JavaScript Obfuscator", href: "/tools/javascript-obfuscator" },
       { name: "Percentage Calculator", href: "/tools/percentage-calculator" },
-      { name: "BMI Calculator", href: "/tools/bmi-calculator" }
+      { name: "BMI Calculator", href: "/tools/bmi-calculator" },
+      { name: "JSON Escape/Unescape", href: "/tools/json-escape-unescape" },
+      { name: "HTML Escape/Unescape", href: "/tools/html-escape-unescape" },
+      { name: "SQL Beautifier", href: "/tools/sql-beautifier" },
+      { name: "CSV to Markdown Table Converter", href: "/tools/csv-to-markdown-table" },
+      { name: "Markdown Table Generator", href: "/tools/markdown-table-generator" }
     ],
     company: [
       { name: "About", href: "/about" },
@@ -103,7 +131,7 @@ export const POPULAR_TOOLS = [
   { name: "Regex Tester", href: "/tools/regex-tester", description: "Test regular expressions" },
   { name: "Base64 Converter", href: "/tools/base64-converter", description: "Encode/decode Base64" },
   { name: "Password Generator", href: "/tools/password-generator", description: "Generate secure passwords" }
-] as const
+] as const;
 
 // Import icons for tools
 import {
@@ -127,12 +155,15 @@ import {
   ArrowUpDown,
   Filter,
   Activity,
-  Smile
+  Smile,
+  Eye,
+  Facebook,
+  Image as ImageIcon
 } from "lucide-react"
 
 export const ALL_TOOLS = [
   // Existing Tools
-  {
+  { 
     name: "Word Counter",
     description: "Count words, characters, paragraphs, and sentences in your text instantly.",
     icon: FileText,
@@ -281,6 +312,41 @@ export const ALL_TOOLS = [
     color: "text-orange-600",
   },
   {
+    name: "JSON Escape/Unescape",
+    description: "Escape and unescape JSON strings for safe embedding.",
+    icon: Code,
+    href: "/tools/json-escape-unescape",
+    color: "text-yellow-600",
+  },
+  {
+    name: "HTML Escape/Unescape",
+    description: "Escape and unescape HTML entities for safe embedding.",
+    icon: Code,
+    href: "/tools/html-escape-unescape",
+    color: "text-orange-600",
+  },
+  {
+    name: "SQL Beautifier",
+    description: "Format and beautify your SQL code to make it more readable and easier to understand.",
+    icon: Code,
+    href: "/tools/sql-beautifier",
+    color: "text-blue-600",
+  },
+  {
+    name: "CSV to Markdown Table Converter",
+    description: "Convert your CSV data into a Markdown table, making it easy to display tabular data in your Markdown files.",
+    icon: Code,
+    href: "/tools/csv-to-markdown-table",
+    color: "text-green-600",
+  },
+  {
+    name: "Markdown Table Generator",
+    description: "Easily generate Markdown tables with a user-friendly interface. Define the number of rows and columns, and the tool will create the table for you.",
+    icon: Code,
+    href: "/tools/markdown-table-generator",
+    color: "text-purple-600",
+  },
+  {
     name: "Hash Generator",
     description: "Generate MD5, SHA-1, SHA-256, SHA-384, and SHA-512 hashes from text.",
     icon: Shield,
@@ -363,6 +429,105 @@ export const ALL_TOOLS = [
     icon: BarChart3,
     href: "/tools/percentage-calculator",
     color: "text-green-600",
+  },
+  {
+    name: "Lorem Ipsum with Custom Words",
+    description: "Generate Lorem Ipsum text with your own custom words mixed in for industry-specific content.",
+    icon: FileText,
+    href: "/tools/lorem-ipsum-custom-generator",
+    color: "text-teal-600",
+  },
+  {
+    name: "Dummy JSON Generator",
+    description: "Create realistic sample JSON data structures for testing, development, and prototyping.",
+    icon: Braces,
+    href: "/tools/dummy-json-generator",
+    color: "text-blue-600",
+  },
+  {
+    name: "HTML Character Counter",
+    description: "Count characters in HTML text and check SEO limits for titles and meta descriptions.",
+    icon: FileText,
+    href: "/tools/html-character-counter",
+    color: "text-blue-600",
+  },
+  {
+    name: "JavaScript Obfuscator",
+    description: "Basic JavaScript code obfuscation to make code harder to read and reverse engineer.",
+    icon: Code,
+    href: "/tools/javascript-obfuscator",
+    color: "text-orange-600",
+  },
+  // New Tools
+  {
+    name: "Robots.txt Generator",
+    description: "Generate robots.txt files for your website with customizable rules for search engine crawlers.",
+    icon: FileText,
+    href: "/tools/robots-txt-generator",
+    color: "text-blue-600",
+  },
+  {
+    name: "Sitemap Generator",
+    description: "Generate XML sitemaps for your website with customizable URLs, priorities, and change frequencies.",
+    icon: FileText,
+    href: "/tools/sitemap-generator",
+    color: "text-green-600",
+  },
+  {
+    name: "Meta Tag Preview Tool",
+    description: "Preview how your meta tags will appear in Google search results and social media platforms.",
+    icon: Eye,
+    href: "/tools/meta-tag-preview",
+    color: "text-purple-600",
+  },
+  {
+    name: "Open Graph Preview Tool",
+    description: "Preview how your Open Graph meta tags will appear when shared on Facebook and other social platforms.",
+    icon: Facebook,
+    href: "/tools/open-graph-preview",
+    color: "text-blue-700",
+  },
+  {
+    name: "Favicon Generator",
+    description: "Convert PNG images to ICO favicon files instantly in your browser.",
+    icon: ImageIcon,
+    href: "/tools/favicon-generator",
+    color: "text-yellow-600",
+  },
+  {
+    name: "UTM Link Generator",
+    description: "Generate UTM tracking parameters for your links to monitor campaign performance in Google Analytics.",
+    icon: LinkIcon,
+    href: "/tools/utm-link-generator",
+    color: "text-indigo-600",
+  },
+  {
+    name: "URL Shortener",
+    description: "Shorten long URLs using base64 encoding for easy sharing.",
+    icon: LinkIcon,
+    href: "/tools/url-shortener",
+    color: "text-teal-600",
+  },
+  {
+    name: "Keyword Density Checker",
+    description: "Analyze keyword density in your content for SEO optimization.",
+    icon: BarChart3,
+    href: "/tools/keyword-density-checker",
+    color: "text-red-600",
+  },
+  {
+    name: "Heading Extractor for HTML",
+    description: "Extract and analyze headings (H1, H2, H3, etc.) from HTML content.",
+    icon: Hash,
+    href: "/tools/heading-extractor",
+    color: "text-cyan-600",
+  },
+  {
+    name: "Broken Link Checker",
+    description: "Check for broken links in your HTML content and validate URL formats.",
+    icon: LinkIcon,
+    href: "/tools/broken-link-checker",
+    color: "text-orange-700",
   },
 ] as const
 

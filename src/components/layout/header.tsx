@@ -17,11 +17,11 @@ const mainCategories = Object.values(CATEGORIES).map(category => ({
 // Helper function to get tool count for each category (you can make this dynamic later)
 function getToolCountForCategory(categoryId: string): number {
   const counts: Record<string, number> = {
-    "text-writing": 12,
-    "converters": 15, 
+    "text-writing": 14,
+    "converters": 9,
     "generators": 8,
-    "developers": 10,
-    "security": 6
+    "developers": 11,
+    "security": 1
   }
   return counts[categoryId] || 0
 }
@@ -103,7 +103,7 @@ export default function Header() {
           <div className="flex items-center justify-center py-2">
             <div className="flex items-center space-x-2 text-white text-sm font-medium">
               <Flame className="h-4 w-4 text-orange-300" />
-              <span>Tools Hub - 33+ Free Online Tools</span>
+              <span>Tools Hub - 44+ Free Online Tools</span>
               <div className="hidden sm:flex items-center space-x-1">
                 <span className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></span>
                 <span className="text-xs text-blue-100">Always Free</span>
