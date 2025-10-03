@@ -2,9 +2,9 @@
 
 export const SITE_CONFIG = {
   name: "Tools Hub",
-  description: "33+ free online tools for text manipulation, development, security, and content creation",
+  description: "44+ free online tools for text manipulation, development, security, and content creation",
   url: "https://toolshub.com",
-  toolCount: 33
+  toolCount: 44
 }
 
 export const CATEGORIES = {
@@ -51,6 +51,7 @@ export const NAVIGATION_LINKS = {
     textTools: [
       { name: "Word Counter", href: "/tools/word-counter" },
       { name: "Character Counter", href: "/tools/character-counter" },
+      { name: "HTML Character Counter", href: "/tools/html-character-counter" },
       { name: "Case Converter", href: "/tools/case-converter" },
       { name: "Remove Spaces", href: "/tools/remove-spaces" },
       { name: "Reverse Text", href: "/tools/reverse-text" },
@@ -74,6 +75,8 @@ export const NAVIGATION_LINKS = {
       { name: "Hash Generator", href: "/tools/hash-generator" },
       { name: "QR Code Generator", href: "/tools/qr-generator" },
       { name: "Lorem Ipsum Generator", href: "/tools/lorem-ipsum-generator" },
+      { name: "Lorem Ipsum with Custom Words", href: "/tools/lorem-ipsum-custom-generator" },
+      { name: "Dummy JSON Generator", href: "/tools/dummy-json-generator" },
       { name: "Color Palette Generator", href: "/tools/color-palette-generator" },
       { name: "Random String", href: "/tools/random-string" }
     ],
@@ -82,10 +85,14 @@ export const NAVIGATION_LINKS = {
       { name: "Letter Counter", href: "/tools/letter-counter" },
       { name: "CSS Minifier", href: "/tools/css-minifier" },
       { name: "JS Minifier", href: "/tools/js-minifier" },
+      { name: "JavaScript Obfuscator", href: "/tools/javascript-obfuscator" },
       { name: "Percentage Calculator", href: "/tools/percentage-calculator" },
       { name: "BMI Calculator", href: "/tools/bmi-calculator" },
       { name: "JSON Escape/Unescape", href: "/tools/json-escape-unescape" },
-      { name: "HTML Escape/Unescape", href: "/tools/html-escape-unescape" }
+      { name: "HTML Escape/Unescape", href: "/tools/html-escape-unescape" },
+      { name: "SQL Beautifier", href: "/tools/sql-beautifier" },
+      { name: "CSV to Markdown Table Converter", href: "/tools/csv-to-markdown-table" },
+      { name: "Markdown Table Generator", href: "/tools/markdown-table-generator" }
     ],
     company: [
       { name: "About", href: "/about" },
@@ -105,7 +112,7 @@ export const POPULAR_TOOLS = [
   { name: "Regex Tester", href: "/tools/regex-tester", description: "Test regular expressions" },
   { name: "Base64 Converter", href: "/tools/base64-converter", description: "Encode/decode Base64" },
   { name: "Password Generator", href: "/tools/password-generator", description: "Generate secure passwords" }
-] as const
+] as const;
 
 // Import icons for tools
 import {
@@ -134,7 +141,7 @@ import {
 
 export const ALL_TOOLS = [
   // Existing Tools
-  {
+  { 
     name: "Word Counter",
     description: "Count words, characters, paragraphs, and sentences in your text instantly.",
     icon: FileText,
@@ -297,6 +304,27 @@ export const ALL_TOOLS = [
     color: "text-orange-600",
   },
   {
+    name: "SQL Beautifier",
+    description: "Format and beautify your SQL code to make it more readable and easier to understand.",
+    icon: Code,
+    href: "/tools/sql-beautifier",
+    color: "text-blue-600",
+  },
+  {
+    name: "CSV to Markdown Table Converter",
+    description: "Convert your CSV data into a Markdown table, making it easy to display tabular data in your Markdown files.",
+    icon: Code,
+    href: "/tools/csv-to-markdown-table",
+    color: "text-green-600",
+  },
+  {
+    name: "Markdown Table Generator",
+    description: "Easily generate Markdown tables with a user-friendly interface. Define the number of rows and columns, and the tool will create the table for you.",
+    icon: Code,
+    href: "/tools/markdown-table-generator",
+    color: "text-purple-600",
+  },
+  {
     name: "Hash Generator",
     description: "Generate MD5, SHA-1, SHA-256, SHA-384, and SHA-512 hashes from text.",
     icon: Shield,
@@ -379,6 +407,34 @@ export const ALL_TOOLS = [
     icon: BarChart3,
     href: "/tools/percentage-calculator",
     color: "text-green-600",
+  },
+  {
+    name: "Lorem Ipsum with Custom Words",
+    description: "Generate Lorem Ipsum text with your own custom words mixed in for industry-specific content.",
+    icon: FileText,
+    href: "/tools/lorem-ipsum-custom-generator",
+    color: "text-teal-600",
+  },
+  {
+    name: "Dummy JSON Generator",
+    description: "Create realistic sample JSON data structures for testing, development, and prototyping.",
+    icon: Braces,
+    href: "/tools/dummy-json-generator",
+    color: "text-blue-600",
+  },
+  {
+    name: "HTML Character Counter",
+    description: "Count characters in HTML text and check SEO limits for titles and meta descriptions.",
+    icon: FileText,
+    href: "/tools/html-character-counter",
+    color: "text-blue-600",
+  },
+  {
+    name: "JavaScript Obfuscator",
+    description: "Basic JavaScript code obfuscation to make code harder to read and reverse engineer.",
+    icon: Code,
+    href: "/tools/javascript-obfuscator",
+    color: "text-orange-600",
   },
 ] as const
 
