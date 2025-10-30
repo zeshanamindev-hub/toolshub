@@ -102,18 +102,6 @@ export default function GoogleAdSlot({
         data-ad-format={config.format === "responsive" ? "auto" : undefined}
         data-full-width-responsive={config.format === "responsive" ? "true" : undefined}
       />
-
-      {/* Fallback for when ads don't load */}
-      <div className={`bg-gray-50 border border-gray-200 rounded-xl flex items-center justify-center ${className}`}
-            style={containerStyle}>
-        <div className="text-center">
-          <div className="text-xs text-gray-400 mb-1">Advertisement</div>
-          <div className="text-xs text-gray-500">{config.title}</div>
-          <div className="text-xs text-gray-400 mt-1">
-            {config.format === "responsive" ? "Responsive" : `${config.width} × ${config.height}`}
-          </div>
-        </div>
-      </div>
     </div>
   )
 }

@@ -4,6 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
+import BackToTop from "@/components/ui/back-to-top";
 
 const organizationStructuredData = {
   "@context": "https://schema.org",
@@ -152,6 +153,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <BackToTop />
       </body>
     </html>
   );
