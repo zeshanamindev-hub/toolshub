@@ -10,7 +10,7 @@ declare global {
 }
 
 interface GoogleAdSlotProps {
-  slot: "header" | "sidebar" | "footer" | "content" | "mobile" | "responsive"
+  slot: "header" | "sidebar" | "footer" | "content" | "mobile" | "responsive" | "homepage-top" | "homepage-middle" | "homepage-bottom"
   className?: string
   adSlot?: string // AdSense ad slot ID
   adClient?: string // AdSense publisher ID
@@ -73,6 +73,15 @@ export default function GoogleAdSlot({
           height: "auto",
           title: "Responsive Ad",
           format: "responsive"
+        }
+      case "homepage-top":
+      case "homepage-middle":
+      case "homepage-bottom":
+        return {
+          width: "728",
+          height: "90",
+          title: "Leaderboard",
+          format: "horizontal"
         }
       default:
         return {
