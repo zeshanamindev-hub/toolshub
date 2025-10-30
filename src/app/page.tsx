@@ -69,7 +69,7 @@ export default function HomePage() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
 
   // Categorize tools based on their name and functionality
-  const getToolCategory = (tool: typeof ALL_TOOLS[0]): string => {
+  const getToolCategory = (tool: { name: string; description: string }): string => {
     const name = tool.name.toLowerCase()
     const desc = tool.description.toLowerCase()
 
