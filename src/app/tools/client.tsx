@@ -6,299 +6,23 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { useState, useMemo } from "react"
 import {
-  FileText,
-  Hash,
-  Type,
-  Scissors,
-  RotateCcw,
   ArrowRight,
-  Lock,
-  BarChart3,
-  Binary,
-  Shuffle,
-  Code,
-  Link as LinkIcon,
-  Braces,
-  Palette,
   Search,
-  Clock,
-  QrCode,
-  GitCompare,
-  ArrowUpDown,
-  Filter,
   ArrowLeft,
   Grid3X3,
-  List,
-  Activity,
-  Smile
+  List
 } from "lucide-react"
-
-const tools = [
-  // Existing Tools
-  {
-    name: "Word Counter",
-    description: "Count words, characters, paragraphs, and sentences in your text instantly.",
-    icon: FileText,
-    href: "/tools/word-counter",
-    color: "text-blue-600",
-  },
-  {
-    name: "Character Counter",
-    description: "Count characters with or without spaces, perfect for social media posts.",
-    icon: Hash,
-    href: "/tools/character-counter",
-    color: "text-green-600",
-  },
-  {
-    name: "Case Converter",
-    description: "Convert text to UPPERCASE, lowercase, Title Case, and more formats.",
-    icon: Type,
-    href: "/tools/case-converter",
-    color: "text-purple-600",
-  },
-  {
-    name: "Remove Extra Spaces",
-    description: "Clean up your text by removing extra spaces and normalizing whitespace.",
-    icon: Scissors,
-    href: "/tools/remove-spaces",
-    color: "text-orange-600",
-  },
-  {
-    name: "Reverse Text",
-    description: "Reverse your text character by character or word by word.",
-    icon: RotateCcw,
-    href: "/tools/reverse-text",
-    color: "text-red-600",
-  },
-  {
-    name: "Palindrome Checker",
-    description: "Check if text is a palindrome, ignoring case, spaces, and punctuation.",
-    icon: RotateCcw,
-    href: "/tools/palindrome-checker",
-    color: "text-cyan-600",
-  },
-  {
-    name: "Palindrome Detector",
-    description: "Detect and highlight palindromic words within text, ignoring case and punctuation.",
-    icon: Search,
-    href: "/tools/palindrome-detector",
-    color: "text-purple-600",
-  },
-  {
-    name: "Reverse Word Order Tool",
-    description: "Reverse the order of words in your text instantly.",
-    icon: RotateCcw,
-    href: "/tools/reverse-word-order",
-    color: "text-indigo-600",
-  },
-  {
-    name: "Emoji Translator",
-    description: "Translate emojis to text and text to emojis instantly.",
-    icon: Smile,
-    href: "/tools/emoji-translator",
-    color: "text-yellow-600",
-  },
-  {
-    name: "Password Generator",
-    description: "Generate secure passwords with customizable length and character sets.",
-    icon: Lock,
-    href: "/tools/password-generator",
-    color: "text-green-700",
-  },
-  {
-    name: "Letter Counter",
-    description: "Analyze letter frequency and character distribution in your text.",
-    icon: BarChart3,
-    href: "/tools/letter-counter",
-    color: "text-blue-700",
-  },
-  {
-    name: "Text to ASCII",
-    description: "Convert text to ASCII codes in decimal, hexadecimal, binary, and octal formats.",
-    icon: Binary,
-    href: "/tools/text-to-ascii",
-    color: "text-purple-700",
-  },
-  {
-    name: "Random String Generator",
-    description: "Generate random strings with customizable length and character sets.",
-    icon: Shuffle,
-    href: "/tools/random-string",
-    color: "text-indigo-600",
-  },
-  {
-    name: "HTML Entities Encoder/Decoder",
-    description: "Encode and decode HTML entities for safe HTML display and processing.",
-    icon: Code,
-    href: "/tools/html-entities",
-    color: "text-orange-700",
-  },
-  {
-    name: "ASCII to Text",
-    description: "Convert ASCII codes back to readable text with error handling and validation.",
-    icon: FileText,
-    href: "/tools/ascii-to-text",
-    color: "text-teal-600",
-  },
-  {
-    name: "Text to Morse Code",
-    description: "Convert text to Morse code with support for letters, numbers, and punctuation.",
-    icon: Code,
-    href: "/tools/text-to-morse",
-    color: "text-cyan-600",
-  },
-  {
-    name: "Morse to Text",
-    description: "Convert Morse code back to readable text with error handling.",
-    icon: Code,
-    href: "/tools/morse-to-text",
-    color: "text-slate-600",
-  },
-  // New Tools
-  {
-    name: "URL Encoder/Decoder",
-    description: "Encode or decode URLs and text for safe web transmission and processing.",
-    icon: LinkIcon,
-    href: "/tools/url-encoder",
-    color: "text-blue-600",
-  },
-  {
-    name: "Base64 Converter",
-    description: "Convert text to Base64 encoding and decode Base64 strings back to text.",
-    icon: Binary,
-    href: "/tools/base64-converter",
-    color: "text-purple-600",
-  },
-  {
-    name: "BMI Calculator",
-    description: "Calculate BMI, ideal weight range, body fat estimation, and health recommendations.",
-    icon: Activity,
-    href: "/tools/bmi-calculator",
-    color: "text-emerald-600",
-  },
-  {
-    name: "JSON Formatter",
-    description: "Format, validate, and beautify JSON data with syntax highlighting.",
-    icon: Braces,
-    href: "/tools/json-formatter",
-    color: "text-orange-600",
-  },
-  {
-    name: "JSON Escape/Unescape",
-    description: "Escape and unescape JSON strings for safe embedding.",
-    icon: Code,
-    href: "/tools/json-escape-unescape",
-    color: "text-yellow-600",
-  },
-  {
-    name: "HTML Escape/Unescape",
-    description: "Escape and unescape HTML entities for safe embedding.",
-    icon: Code,
-    href: "/tools/html-escape-unescape",
-    color: "text-orange-600",
-  },
-  {
-    name: "SQL Beautifier",
-    description: "Format and beautify your SQL code to make it more readable and easier to understand.",
-    icon: Code,
-    href: "/tools/sql-beautifier",
-    color: "text-blue-600",
-  },
-  {
-    name: "Hash Generator",
-    description: "Generate MD5, SHA-1, SHA-256, SHA-384, and SHA-512 hashes from text.",
-    icon: Lock,
-    href: "/tools/hash-generator",
-    color: "text-red-600",
-  },
-  {
-    name: "Color Palette Generator",
-    description: "Create beautiful color palettes using color theory principles.",
-    icon: Palette,
-    href: "/tools/color-palette-generator",
-    color: "text-pink-600",
-  },
-  {
-    name: "Regex Tester",
-    description: "Test and debug regular expressions with real-time matching and highlighting.",
-    icon: Search,
-    href: "/tools/regex-tester",
-    color: "text-indigo-600",
-  },
-  {
-    name: "Lorem Ipsum Generator",
-    description: "Generate placeholder text in various formats for designs and layouts.",
-    icon: FileText,
-    href: "/tools/lorem-ipsum-generator",
-    color: "text-teal-600",
-  },
-  {
-    name: "Timestamp Converter",
-    description: "Convert between Unix timestamps, ISO dates, and human-readable formats.",
-    icon: Clock,
-    href: "/tools/timestamp-converter",
-    color: "text-blue-600",
-  },
-  {
-    name: "QR Code Generator",
-    description: "Generate QR codes for URLs, text, WiFi, contacts, and more with customization.",
-    icon: QrCode,
-    href: "/tools/qr-generator",
-    color: "text-gray-900",
-  },
-  {
-    name: "Text Diff Checker",
-    description: "Compare two text blocks and highlight differences line by line.",
-    icon: GitCompare,
-    href: "/tools/text-diff-checker",
-    color: "text-green-600",
-  },
-  {
-    name: "Line Sorter",
-    description: "Sort text lines alphabetically, numerically, by length, or randomly.",
-    icon: ArrowUpDown,
-    href: "/tools/line-sorter",
-    color: "text-purple-600",
-  },
-  {
-    name: "Text Extractor",
-    description: "Extract emails, URLs, phone numbers, dates, and patterns from text.",
-    icon: Filter,
-    href: "/tools/text-extractor",
-    color: "text-cyan-600",
-  },
-  {
-    name: "CSS Minifier",
-    description: "Minify CSS code to reduce file size and improve loading performance.",
-    icon: Code,
-    href: "/tools/css-minifier",
-    color: "text-blue-600",
-  },
-  {
-    name: "JS Minifier",
-    description: "Minify JavaScript code to reduce file size and improve loading performance.",
-    icon: Code,
-    href: "/tools/js-minifier",
-    color: "text-yellow-600",
-  },
-  {
-    name: "Percentage Calculator",
-    description: "Calculate percentages, percentage change, and percentage of amounts.",
-    icon: BarChart3,
-    href: "/tools/percentage-calculator",
-    color: "text-green-600",
-  },
-]
+import { ALL_TOOLS } from "@/lib/constants"
 
 export default function AllToolsClient() {
   const [searchQuery, setSearchQuery] = useState("")
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid")
 
   const filteredTools = useMemo(() => {
-    if (!searchQuery.trim()) return tools
-    
+    if (!searchQuery.trim()) return ALL_TOOLS
+
     const query = searchQuery.toLowerCase().trim()
-    return tools.filter(tool => 
+    return ALL_TOOLS.filter(tool =>
       tool.name.toLowerCase().includes(query) ||
       tool.description.toLowerCase().includes(query)
     )
@@ -306,20 +30,22 @@ export default function AllToolsClient() {
 
   // Group tools alphabetically
   const groupedTools = useMemo(() => {
-    const grouped = filteredTools.reduce((acc, tool) => {
+    type ToolType = typeof ALL_TOOLS[number]
+    const grouped: Record<string, ToolType[]> = {}
+
+    filteredTools.forEach((tool) => {
       const firstLetter = tool.name.charAt(0).toUpperCase()
-      if (!acc[firstLetter]) {
-        acc[firstLetter] = []
+      if (!grouped[firstLetter]) {
+        grouped[firstLetter] = []
       }
-      acc[firstLetter].push(tool)
-      return acc
-    }, {} as Record<string, typeof tools>)
-    
+      grouped[firstLetter].push(tool)
+    })
+
     // Sort each group
     Object.keys(grouped).forEach(letter => {
       grouped[letter].sort((a, b) => a.name.localeCompare(b.name))
     })
-    
+
     return grouped
   }, [filteredTools])
 
@@ -361,7 +87,7 @@ export default function AllToolsClient() {
             All Tools A-Z
           </h1>
           <p className="text-lg text-gray-600 mb-6">
-            Browse all {tools.length} tools organized alphabetically. Find exactly what you need quickly and efficiently.
+            Browse all {ALL_TOOLS.length} tools organized alphabetically. Find exactly what you need quickly and efficiently.
           </p>
           
           {/* Search Bar */}
