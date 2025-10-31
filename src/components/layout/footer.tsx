@@ -7,9 +7,11 @@ import { SITE_CONFIG } from "@/lib/constants"
 export default function Footer() {
   const quickLinks = [
     { name: "All Tools", href: "/tools" },
+    { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" },
     { name: "Privacy Policy", href: "/privacy" },
     { name: "Terms of Service", href: "/terms" },
-    { name: "Contact", href: "/contact" },
+    { name: "Cookie Policy", href: "/cookie-policy" },
   ]
 
   return (

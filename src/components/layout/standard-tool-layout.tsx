@@ -126,11 +126,7 @@ export default function StandardToolLayout({
               {quickReference.length > 0 && (
                 <div className="bg-white rounded-2xl p-4 border border-gray-200">
                   <div className="flex items-center gap-2 mb-3">
-                    {quickReference[0]?.icon ? (
-                      <quickReference[0].icon className="h-4 w-4 text-green-600" />
-                    ) : (
-                      <Info className="h-4 w-4 text-green-600" />
-                    )}
+                    <Info className="h-4 w-4 text-green-600" />
                     <h3 className="text-sm font-bold text-gray-900">{quickReferenceTitle}</h3>
                   </div>
                   <div className="space-y-2 text-xs">
@@ -266,6 +262,3 @@ export default function StandardToolLayout({
     </div>
   )
 }
-
-// Import useState at the top
-import { useState } from "react"
