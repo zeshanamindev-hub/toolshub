@@ -13,7 +13,7 @@ import {
   ArrowLeft,
   Download,
   BookOpen
-} from "lucide-react"
+} , Info from "lucide-react"
 
 
 
@@ -503,6 +503,125 @@ export default function HtmlEntitiesClient() {
               </CardContent>
             </Card>
           </div>
+        {/* Full-width SEO Content Section */}
+        <div className="mt-12 bg-white rounded-2xl p-8 border border-gray-200">
+          <div className="max-w-full">
+            <div className="flex items-center gap-2 mb-4">
+              <Info className="h-5 w-5 text-orange-600" />
+              <h2 className="text-2xl font-bold text-gray-900">About HTML Entities Encoder/Decoder</h2>
+            </div>
+
+            <div className="prose prose-sm text-gray-600 max-w-none">
+              <p className="mb-4">
+                The HTML Entities Encoder/Decoder is an essential web development tool that converts special characters and symbols into
+                their corresponding HTML entity representations and vice versa. HTML entities are used to display reserved characters
+                in HTML (like <, >, &) and to represent characters that aren't easily typed on a keyboard (like ©, ®, €). This tool
+                ensures your HTML content displays correctly across all browsers while preventing security vulnerabilities like XSS attacks.
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-6 my-6">
+                <div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-3">Key Features</h3>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2">
+                      <span className="text-orange-600 mt-1">•</span>
+                      <span><strong>Bidirectional Conversion:</strong> Seamlessly encode text to HTML entities or decode entities back to characters</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-orange-600 mt-1">•</span>
+                      <span><strong>Multiple Entity Formats:</strong> Support for named entities (&amp;copy;), decimal (&#169;), and hexadecimal (&#xA9;)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-orange-600 mt-1">•</span>
+                      <span><strong>XSS Prevention:</strong> Encode user input to prevent cross-site scripting vulnerabilities</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-orange-600 mt-1">•</span>
+                      <span><strong>Real-time Processing:</strong> Instant conversion as you type with no delays</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-orange-600 mt-1">•</span>
+                      <span><strong>Copy & Download:</strong> Easy copying and downloading of converted results</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-3">How to Use</h3>
+                  <ol className="space-y-2">
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-orange-600">1.</span>
+                      <span>Select 'Encode' to convert characters to entities, or 'Decode' for the reverse</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-orange-600">2.</span>
+                      <span>Paste or type your HTML text into the input field</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-orange-600">3.</span>
+                      <span>View the converted result instantly in the output area</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-orange-600">4.</span>
+                      <span>Review the entity mappings in the reference table</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-orange-600">5.</span>
+                      <span>Copy the result with one click or download for later use</span>
+                    </li>
+                  </ol>
+                </div>
+              </div>
+
+              <h3 className="text-lg font-bold text-gray-900 mb-3">What is it?</h3>
+              <p className="mb-4">
+                HTML entities are sequences of characters that begin with an ampersand (&) and end with a semicolon (;). They are
+                used to represent special characters in HTML that would otherwise be interpreted as code. For example, the less-than
+                sign (<) must be written as &amp;lt; in HTML to prevent it from being treated as the start of an HTML tag. There are
+                three types of HTML entities: named entities (like &amp;copy; for ©), decimal entities (like &#169; for ©), and
+                hexadecimal entities (like &#xA9; for ©).
+              </p>
+
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Common Use Cases</h3>
+              <ul className="space-y-2 mb-4">
+                <li className="flex items-start gap-2">
+                  <span className="text-orange-600 mt-1">•</span>
+                  <span><strong>Display Code Snippets:</strong> Show HTML, XML, or code examples on web pages without them being interpreted</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-orange-600 mt-1">•</span>
+                  <span><strong>XSS Attack Prevention:</strong> Encode user-generated content to prevent malicious script injection</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-orange-600 mt-1">•</span>
+                  <span><strong>Special Characters:</strong> Display copyright symbols, mathematical symbols, and foreign characters reliably</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-orange-600 mt-1">•</span>
+                  <span><strong>Email HTML Content:</strong> Encode HTML for email clients that have strict character requirements</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-orange-600 mt-1">•</span>
+                  <span><strong>Database Storage:</strong> Store HTML content safely in databases that may not support all character sets</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-orange-600 mt-1">•</span>
+                  <span><strong>SEO Meta Tags:</strong> Properly encode special characters in meta descriptions and titles</span>
+                </li>
+              </ul>
+
+              <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Privacy & Security</h3>
+                <p>
+                  All conversions are performed entirely in your browser using client-side JavaScript.
+                  Your data never leaves your device and is not transmitted to any server. This ensures
+                  complete privacy and security for all your conversions.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      
         </div>
       </div>
     </div>

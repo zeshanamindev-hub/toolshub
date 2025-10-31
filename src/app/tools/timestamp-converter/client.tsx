@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
-import { Clock, Copy, RefreshCw, Calendar } from "lucide-react"
+import { Clock, Copy, RefreshCw, Calendar } , Info from "lucide-react"
 
 interface ConversionResult {
   unix: number
@@ -480,6 +480,125 @@ export default function TimestampConverterClient() {
               </div>
             </CardContent>
           </Card>
+        {/* Full-width SEO Content Section */}
+        <div className="mt-12 bg-white rounded-2xl p-8 border border-gray-200">
+          <div className="max-w-full">
+            <div className="flex items-center gap-2 mb-4">
+              <Info className="h-5 w-5 text-teal-600" />
+              <h2 className="text-2xl font-bold text-gray-900">About Unix Timestamp Converter</h2>
+            </div>
+
+            <div className="prose prose-sm text-gray-600 max-w-none">
+              <p className="mb-4">
+                The Unix Timestamp Converter is a powerful tool for converting between Unix timestamps (epoch time) and human-readable
+                dates. Unix timestamps represent the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC (the Unix
+                epoch). This format is widely used in programming, databases, and APIs for storing and manipulating date/time data.
+                Our converter supports milliseconds, handles timezone conversions, and provides bidirectional conversion.
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-6 my-6">
+                <div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-3">Key Features</h3>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2">
+                      <span className="text-teal-600 mt-1">•</span>
+                      <span><strong>Bidirectional Conversion:</strong> Convert from timestamp to date and vice versa</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-teal-600 mt-1">•</span>
+                      <span><strong>Multiple Formats:</strong> Support for seconds and milliseconds timestamps</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-teal-600 mt-1">•</span>
+                      <span><strong>Timezone Support:</strong> Convert between different timezones with UTC offset display</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-teal-600 mt-1">•</span>
+                      <span><strong>Current Timestamp:</strong> Quick access to the current Unix timestamp</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-teal-600 mt-1">•</span>
+                      <span><strong>Relative Time:</strong> See how long ago or how far in the future a timestamp is</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-3">How to Use</h3>
+                  <ol className="space-y-2">
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-teal-600">1.</span>
+                      <span>Enter a Unix timestamp or select the current time</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-teal-600">2.</span>
+                      <span>View the converted human-readable date and time</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-teal-600">3.</span>
+                      <span>Adjust timezone settings if needed for local time display</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-teal-600">4.</span>
+                      <span>Reverse the process by entering a date to get its timestamp</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-teal-600">5.</span>
+                      <span>Copy the converted value for use in your application</span>
+                    </li>
+                  </ol>
+                </div>
+              </div>
+
+              <h3 className="text-lg font-bold text-gray-900 mb-3">What is it?</h3>
+              <p className="mb-4">
+                A Unix timestamp (also called Epoch time or POSIX time) is a system for describing a point in time as the number of
+                seconds that have elapsed since the Unix epoch (00:00:00 UTC on January 1, 1970), not counting leap seconds. This
+                makes it a simple and unambiguous way to represent time across different systems and timezones. For example, the
+                timestamp 1640995200 represents January 1, 2022, 00:00:00 UTC. Timestamps are stored as integers, making them
+                efficient for calculations and comparisons.
+              </p>
+
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Common Use Cases</h3>
+              <ul className="space-y-2 mb-4">
+                <li className="flex items-start gap-2">
+                  <span className="text-teal-600 mt-1">•</span>
+                  <span><strong>API Development:</strong> Work with timestamps in REST APIs and web services</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-teal-600 mt-1">•</span>
+                  <span><strong>Database Operations:</strong> Convert between database timestamps and display formats</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-teal-600 mt-1">•</span>
+                  <span><strong>Log File Analysis:</strong> Decode timestamps in server logs and debugging output</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-teal-600 mt-1">•</span>
+                  <span><strong>Programming:</strong> Test and debug time-based features in applications</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-teal-600 mt-1">•</span>
+                  <span><strong>Data Migration:</strong> Convert dates between different systems and formats</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-teal-600 mt-1">•</span>
+                  <span><strong>Scheduling:</strong> Calculate exact times for cron jobs and scheduled tasks</span>
+                </li>
+              </ul>
+
+              <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Privacy & Security</h3>
+                <p>
+                  All conversions are performed entirely in your browser using client-side JavaScript.
+                  Your data never leaves your device and is not transmitted to any server. This ensures
+                  complete privacy and security for all your conversions.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      
         </div>
       </div>
     </div>

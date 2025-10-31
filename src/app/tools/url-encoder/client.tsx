@@ -4,7 +4,7 @@ import { useState } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
-import { Link, Copy, Trash2, ArrowRightLeft } from "lucide-react"
+import { Link, Copy, Trash2, ArrowRightLeft, Info } from "lucide-react"
 
 export default function UrlEncoderClient() {
   const [inputText, setInputText] = useState("")
@@ -273,6 +273,183 @@ export default function UrlEncoderClient() {
               </div>
             </CardContent>
           </Card>
+        </div>
+
+        {/* Full-width SEO Content Section */}
+        <div className="mt-12 bg-white rounded-2xl p-8 border border-gray-200">
+          <div className="max-w-full">
+            <div className="flex items-center gap-2 mb-4">
+              <Info className="h-5 w-5 text-blue-600" />
+              <h2 className="text-2xl font-bold text-gray-900">About URL Encoder/Decoder</h2>
+            </div>
+
+            <div className="prose prose-sm text-gray-600 max-w-none">
+              <p className="mb-4">
+                The URL Encoder/Decoder is an essential web development tool that converts special characters in URLs and text into
+                a percent-encoded format safe for transmission over the internet. URL encoding (also known as percent-encoding) replaces
+                unsafe ASCII characters with a "%" followed by two hexadecimal digits, ensuring that URLs remain valid and functional
+                regardless of the characters they contain.
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-6 my-6">
+                <div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-3">Key Features</h3>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2">
+                      <span className="text-blue-600 mt-1">•</span>
+                      <span><strong>Bidirectional Conversion:</strong> Easily switch between encoding and decoding modes</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-blue-600 mt-1">•</span>
+                      <span><strong>Real-time Processing:</strong> Instant conversion as you type with no delays</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-blue-600 mt-1">•</span>
+                      <span><strong>Error Handling:</strong> Graceful handling of invalid encoded text with clear error messages</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-blue-600 mt-1">•</span>
+                      <span><strong>Copy Functionality:</strong> One-click copying of both input and output text</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-blue-600 mt-1">•</span>
+                      <span><strong>Practical Examples:</strong> Built-in examples for common encoding scenarios</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-3">How to Use</h3>
+                  <ol className="space-y-2">
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-blue-600">1.</span>
+                      <span>Select "Encode" or "Decode" mode based on your needs</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-blue-600">2.</span>
+                      <span>Paste or type your text or URL into the input field</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-blue-600">3.</span>
+                      <span>View the converted result instantly in the output area</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-blue-600">4.</span>
+                      <span>Click "Copy Result" to copy the encoded/decoded text</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-blue-600">5.</span>
+                      <span>Use the swap button to quickly reverse the operation</span>
+                    </li>
+                  </ol>
+                </div>
+              </div>
+
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 my-6">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Encoding Examples</h3>
+                <div className="space-y-2 text-sm">
+                  <div className="grid md:grid-cols-2 gap-3">
+                    <div>
+                      <strong className="text-gray-900">Space character:</strong>
+                      <code className="block bg-white px-2 py-1 rounded mt-1 font-mono">" " → "%20"</code>
+                    </div>
+                    <div>
+                      <strong className="text-gray-900">@ symbol:</strong>
+                      <code className="block bg-white px-2 py-1 rounded mt-1 font-mono">"@" → "%40"</code>
+                    </div>
+                    <div>
+                      <strong className="text-gray-900">& symbol:</strong>
+                      <code className="block bg-white px-2 py-1 rounded mt-1 font-mono">"&" → "%26"</code>
+                    </div>
+                    <div>
+                      <strong className="text-gray-900">= symbol:</strong>
+                      <code className="block bg-white px-2 py-1 rounded mt-1 font-mono">"=" → "%3D"</code>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <h3 className="text-lg font-bold text-gray-900 mb-3">What is URL Encoding?</h3>
+              <p className="mb-4">
+                URL encoding is a mechanism for encoding information in a Uniform Resource Identifier (URI) so that it can be safely
+                transmitted over the internet. URLs can only be sent over the internet using the ASCII character set. Since URLs often
+                contain characters outside this set, they must be converted into a valid ASCII format. URL encoding replaces unsafe
+                characters with a percent sign (%) followed by two hexadecimal digits representing the character's ASCII code.
+              </p>
+
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Common Use Cases</h3>
+              <ul className="space-y-2 mb-4">
+                <li className="flex items-start gap-2">
+                  <span className="text-blue-600 mt-1">•</span>
+                  <span><strong>Query Parameters:</strong> Encode special characters in URL query strings (e.g., search terms, filters)</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-blue-600 mt-1">•</span>
+                  <span><strong>API Requests:</strong> Properly format data sent to REST APIs and web services</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-blue-600 mt-1">•</span>
+                  <span><strong>Form Submissions:</strong> Encode form data before sending via GET or POST requests</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-blue-600 mt-1">•</span>
+                  <span><strong>Email Links:</strong> Create mailto links with pre-filled subject lines and body text</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-blue-600 mt-1">•</span>
+                  <span><strong>Social Media Sharing:</strong> Encode URLs for sharing on social platforms</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-blue-600 mt-1">•</span>
+                  <span><strong>Debugging:</strong> Decode encoded URLs to understand what data is being transmitted</span>
+                </li>
+              </ul>
+
+              <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 my-6">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Characters That Need Encoding</h3>
+                <p className="mb-3">The following characters are typically encoded in URLs:</p>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-sm font-mono">
+                  <div>Space → %20</div>
+                  <div>! → %21</div>
+                  <div>" → %22</div>
+                  <div># → %23</div>
+                  <div>$ → %24</div>
+                  <div>% → %25</div>
+                  <div>& → %26</div>
+                  <div>' → %27</div>
+                  <div>( → %28</div>
+                  <div>) → %29</div>
+                  <div>* → %2A</div>
+                  <div>+ → %2B</div>
+                  <div>, → %2C</div>
+                  <div>/ → %2F</div>
+                  <div>: → %3A</div>
+                  <div>; → %3B</div>
+                  <div>= → %3D</div>
+                  <div>? → %3F</div>
+                  <div>@ → %40</div>
+                  <div>[ → %5B</div>
+                </div>
+              </div>
+
+              <h3 className="text-lg font-bold text-gray-900 mb-3">URL Encoding vs. Other Encoding Types</h3>
+              <p className="mb-4">
+                URL encoding is specifically designed for URLs and differs from other encoding methods. Unlike Base64 encoding (used
+                for binary data), URL encoding preserves readability for simple ASCII text while only encoding special characters.
+                It's also different from HTML entity encoding, which is used for displaying special characters in HTML documents.
+                Each encoding method serves a specific purpose and should be used in the appropriate context.
+              </p>
+
+              <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Privacy & Security</h3>
+                <p>
+                  All URL encoding and decoding operations are performed entirely in your browser using JavaScript. Your data never
+                  leaves your device and is not sent to any server. This ensures complete privacy and security for all your conversions,
+                  making it safe to use with sensitive URLs and data.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

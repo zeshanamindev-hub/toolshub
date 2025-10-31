@@ -4,7 +4,7 @@ import { useState } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
-import { FileText, Copy, Trash2, ArrowRightLeft, Eye, EyeOff } from "lucide-react"
+import { FileText, Copy, Trash2, ArrowRightLeft, Eye, EyeOff, Info } from "lucide-react"
 
 export default function Base64ConverterClient() {
   const [inputText, setInputText] = useState("")
@@ -379,6 +379,169 @@ export default function Base64ConverterClient() {
               </div>
             </CardContent>
           </Card>
+        </div>
+
+        {/* Full-width SEO Content Section */}
+        <div className="mt-12 bg-white rounded-2xl p-8 border border-gray-200">
+          <div className="max-w-full">
+            <div className="flex items-center gap-2 mb-4">
+              <Info className="h-5 w-5 text-purple-600" />
+              <h2 className="text-2xl font-bold text-gray-900">About Base64 Encoder/Decoder</h2>
+            </div>
+
+            <div className="prose prose-sm text-gray-600 max-w-none">
+              <p className="mb-4">
+                The Base64 Encoder/Decoder is a powerful tool that converts binary data into ASCII text format and vice versa.
+                Base64 encoding is a binary-to-text encoding scheme that represents binary data in a printable ASCII string format
+                by translating it into a radix-64 representation. This encoding method is widely used across the internet for
+                transmitting data that needs to remain intact during transport across systems that are designed to handle text.
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-6 my-6">
+                <div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-3">Key Features</h3>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2">
+                      <span className="text-purple-600 mt-1">•</span>
+                      <span><strong>Bidirectional Conversion:</strong> Seamlessly switch between encoding and decoding with one click</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-purple-600 mt-1">•</span>
+                      <span><strong>Real-time Stats:</strong> Track character count, byte size, and size increase percentage</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-purple-600 mt-1">•</span>
+                      <span><strong>Privacy Mode:</strong> Hide output with eye toggle for sensitive data processing</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-purple-600 mt-1">•</span>
+                      <span><strong>Error Handling:</strong> Clear error messages for invalid Base64 input</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-purple-600 mt-1">•</span>
+                      <span><strong>Quick Examples:</strong> Pre-loaded samples for testing and learning</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-3">How to Use</h3>
+                  <ol className="space-y-2">
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-purple-600">1.</span>
+                      <span>Choose "Encode to Base64" or "Decode from Base64" mode</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-purple-600">2.</span>
+                      <span>Paste your text or Base64 string into the input field</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-purple-600">3.</span>
+                      <span>View the converted result instantly in the output area</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-purple-600">4.</span>
+                      <span>Review statistics to see size changes and byte counts</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-purple-600">5.</span>
+                      <span>Copy the result with one click or use the swap button to reverse</span>
+                    </li>
+                  </ol>
+                </div>
+              </div>
+
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-4 my-6">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Base64 Encoding Examples</h3>
+                <div className="grid md:grid-cols-2 gap-3 text-sm">
+                  <div>
+                    <strong className="text-gray-900">Simple Text:</strong>
+                    <code className="block bg-white px-2 py-1 rounded mt-1 font-mono text-xs">"Hello" → "SGVsbG8="</code>
+                  </div>
+                  <div>
+                    <strong className="text-gray-900">With Spaces:</strong>
+                    <code className="block bg-white px-2 py-1 rounded mt-1 font-mono text-xs">"Hello World" → "SGVsbG8gV29ybGQ="</code>
+                  </div>
+                  <div>
+                    <strong className="text-gray-900">Numbers:</strong>
+                    <code className="block bg-white px-2 py-1 rounded mt-1 font-mono text-xs">"12345" → "MTIzNDU="</code>
+                  </div>
+                  <div>
+                    <strong className="text-gray-900">Special Characters:</strong>
+                    <code className="block bg-white px-2 py-1 rounded mt-1 font-mono text-xs">"@#$%" → "QCMkJQ=="</code>
+                  </div>
+                </div>
+              </div>
+
+              <h3 className="text-lg font-bold text-gray-900 mb-3">What is Base64 Encoding?</h3>
+              <p className="mb-4">
+                Base64 is a group of binary-to-text encoding schemes that represent binary data in sequences of 24 bits that can be
+                represented by four 6-bit Base64 digits. It uses 64 characters (A-Z, a-z, 0-9, +, /) to represent data, hence the
+                name "Base64". The encoding process takes three bytes of binary data and converts them into four ASCII characters.
+                This makes it possible to transmit binary data as text, which is essential for protocols like email (MIME), data URLs,
+                and storing complex data in text-based formats like JSON or XML.
+              </p>
+
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Common Use Cases</h3>
+              <ul className="space-y-2 mb-4">
+                <li className="flex items-start gap-2">
+                  <span className="text-purple-600 mt-1">•</span>
+                  <span><strong>Email Attachments:</strong> MIME email encoding for sending binary files via email</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-purple-600 mt-1">•</span>
+                  <span><strong>Data URLs:</strong> Embedding images and files directly in HTML, CSS, or JavaScript</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-purple-600 mt-1">•</span>
+                  <span><strong>API Authentication:</strong> Basic authentication headers and API tokens</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-purple-600 mt-1">•</span>
+                  <span><strong>JSON Web Tokens (JWT):</strong> Encoding payload and signature in JWT authentication</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-purple-600 mt-1">•</span>
+                  <span><strong>Data Storage:</strong> Storing binary data in text-only databases or configuration files</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-purple-600 mt-1">•</span>
+                  <span><strong>Web Development:</strong> Encoding form data and transmitting binary content over HTTP</span>
+                </li>
+              </ul>
+
+              <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 my-6">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">⚠️ Important Security Notice</h3>
+                <p className="mb-3">
+                  <strong>Base64 is encoding, NOT encryption!</strong> Base64 encoding is reversible and provides no security
+                  whatsoever. Anyone can easily decode Base64 strings back to their original form.
+                </p>
+                <ul className="space-y-1 text-sm">
+                  <li>✗ Do NOT use Base64 to hide passwords or sensitive data</li>
+                  <li>✗ Do NOT rely on Base64 for data security</li>
+                  <li>✓ Use proper encryption (AES, RSA) for securing sensitive information</li>
+                  <li>✓ Use Base64 only for encoding data for transport, not for security</li>
+                </ul>
+              </div>
+
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Size Impact of Base64 Encoding</h3>
+              <p className="mb-4">
+                One important characteristic of Base64 encoding is that it increases the size of the encoded data. Every 3 bytes
+                of original data become 4 bytes of Base64-encoded data, resulting in approximately 33% size increase. For example,
+                a 300 byte file will become approximately 400 bytes when Base64 encoded. This size increase should be considered
+                when deciding whether to use Base64 encoding, especially for large files or bandwidth-constrained applications.
+              </p>
+
+              <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Privacy & Security</h3>
+                <p>
+                  All Base64 encoding and decoding operations are performed entirely in your browser using client-side JavaScript.
+                  Your data never leaves your device and is not transmitted to any server. This ensures complete privacy for all
+                  your conversions, making it safe to use with any type of data.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

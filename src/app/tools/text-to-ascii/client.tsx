@@ -4,14 +4,15 @@ import { useState, useMemo } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Textarea } from "@/components/ui/textarea"
-import { 
-  Binary, 
-  Copy, 
-  RotateCcw, 
+import {
+  Binary,
+  Copy,
+  RotateCcw,
   Check,
   ArrowRight,
   Download,
-  Settings
+  Settings,
+  Info
 } from "lucide-react"
 
 
@@ -407,11 +408,11 @@ export default function TextToAsciiClient() {
               </CardHeader>
               <CardContent className="text-sm text-gray-600 space-y-2">
                 <p>
-                  Convert text characters to their ASCII (American Standard Code for Information Interchange) 
+                  Convert text characters to their ASCII (American Standard Code for Information Interchange)
                   numeric representations in various formats.
                 </p>
                 <p>
-                  <strong>Use cases:</strong> Programming, data encoding, debugging, 
+                  <strong>Use cases:</strong> Programming, data encoding, debugging,
                   cryptography, and educational purposes.
                 </p>
                 <p>
@@ -419,6 +420,182 @@ export default function TextToAsciiClient() {
                 </p>
               </CardContent>
             </Card>
+          </div>
+        </div>
+
+        {/* Full-width SEO Content Section */}
+        <div className="mt-12 bg-white rounded-2xl p-8 border border-gray-200">
+          <div className="max-w-full">
+            <div className="flex items-center gap-2 mb-4">
+              <Info className="h-5 w-5 text-purple-600" />
+              <h2 className="text-2xl font-bold text-gray-900">About Text to ASCII Converter</h2>
+            </div>
+
+            <div className="prose prose-sm text-gray-600 max-w-none">
+              <p className="mb-4">
+                The Text to ASCII Converter is a powerful online tool that transforms plain text characters into their corresponding
+                ASCII numeric codes. Whether you need decimal, hexadecimal, binary, or octal representations, our converter provides
+                instant, accurate conversions with flexible formatting options for any use case.
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-6 my-6">
+                <div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-3">Key Features</h3>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2">
+                      <span className="text-purple-600 mt-1">•</span>
+                      <span><strong>Multiple Format Output:</strong> Choose from decimal, hexadecimal, binary, or octal representations</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-purple-600 mt-1">•</span>
+                      <span><strong>Flexible Separators:</strong> Use space, comma, newline, or no separator between codes</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-purple-600 mt-1">•</span>
+                      <span><strong>Character Map Table:</strong> View detailed breakdown of each character with all formats simultaneously</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-purple-600 mt-1">•</span>
+                      <span><strong>Whitespace Control:</strong> Option to include or exclude spaces and whitespace characters</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-purple-600 mt-1">•</span>
+                      <span><strong>Live Statistics:</strong> Real-time character, letter, and number counts</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-purple-600 mt-1">•</span>
+                      <span><strong>Export Options:</strong> Copy to clipboard or download detailed conversion reports</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-3">How to Use</h3>
+                  <ol className="space-y-2">
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-purple-600">1.</span>
+                      <span>Type or paste your text into the input field</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-purple-600">2.</span>
+                      <span>Select your desired output format (decimal, hex, binary, or octal)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-purple-600">3.</span>
+                      <span>Choose a separator style for the output codes</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-purple-600">4.</span>
+                      <span>View the converted ASCII codes instantly</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-purple-600">5.</span>
+                      <span>Enable character map for detailed analysis (optional)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-purple-600">6.</span>
+                      <span>Copy or download your results</span>
+                    </li>
+                  </ol>
+                </div>
+              </div>
+
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-4 my-6">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Output Format Examples</h3>
+                <div className="grid md:grid-cols-2 gap-3 text-sm">
+                  <div>
+                    <strong className="text-gray-900">Decimal (Base 10):</strong>
+                    <code className="block bg-white px-2 py-1 rounded mt-1 font-mono">72 101 108 108 111</code>
+                    <span className="text-gray-600">← "Hello"</span>
+                  </div>
+                  <div>
+                    <strong className="text-gray-900">Hexadecimal (Base 16):</strong>
+                    <code className="block bg-white px-2 py-1 rounded mt-1 font-mono">0x48 0x65 0x6C 0x6C 0x6F</code>
+                    <span className="text-gray-600">← "Hello"</span>
+                  </div>
+                  <div>
+                    <strong className="text-gray-900">Binary (Base 2):</strong>
+                    <code className="block bg-white px-2 py-1 rounded mt-1 font-mono text-xs">0b01001000 0b01100101...</code>
+                    <span className="text-gray-600">← "He..."</span>
+                  </div>
+                  <div>
+                    <strong className="text-gray-900">Octal (Base 8):</strong>
+                    <code className="block bg-white px-2 py-1 rounded mt-1 font-mono">0o110 0o145 0o154...</code>
+                    <span className="text-gray-600">← "Hel..."</span>
+                  </div>
+                </div>
+              </div>
+
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Understanding ASCII Encoding</h3>
+              <p className="mb-4">
+                ASCII (American Standard Code for Information Interchange) is a character encoding standard that assigns unique numeric
+                codes to letters, numbers, punctuation, and control characters. The standard ASCII table contains 128 characters (0-127),
+                where each character is represented by a 7-bit binary number. Extended ASCII uses 8 bits to represent 256 characters (0-255),
+                including additional symbols and international characters.
+              </p>
+
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Common Use Cases</h3>
+              <ul className="space-y-2 mb-4">
+                <li className="flex items-start gap-2">
+                  <span className="text-purple-600 mt-1">•</span>
+                  <span><strong>Programming & Development:</strong> Generate character codes for source code or data structures</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-purple-600 mt-1">•</span>
+                  <span><strong>Data Encoding:</strong> Convert text to numeric format for transmission or storage</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-purple-600 mt-1">•</span>
+                  <span><strong>Debugging:</strong> Analyze character values when troubleshooting encoding issues</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-purple-600 mt-1">•</span>
+                  <span><strong>Education:</strong> Learn about character encoding and number system conversions</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-purple-600 mt-1">•</span>
+                  <span><strong>Binary Analysis:</strong> Examine the binary representation of text data</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-purple-600 mt-1">•</span>
+                  <span><strong>Protocol Implementation:</strong> Work with communication protocols that require ASCII codes</span>
+                </li>
+              </ul>
+
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 my-6">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">ASCII Code Ranges</h3>
+                <div className="grid md:grid-cols-2 gap-2 text-sm">
+                  <div><strong>0-31:</strong> Control characters (non-printable)</div>
+                  <div><strong>32:</strong> Space character</div>
+                  <div><strong>33-47:</strong> Punctuation and symbols (!, ", #, etc.)</div>
+                  <div><strong>48-57:</strong> Digits 0-9</div>
+                  <div><strong>58-64:</strong> More punctuation (:, ;, &lt;, =, etc.)</div>
+                  <div><strong>65-90:</strong> Uppercase letters A-Z</div>
+                  <div><strong>91-96:</strong> Brackets and symbols</div>
+                  <div><strong>97-122:</strong> Lowercase letters a-z</div>
+                  <div><strong>123-127:</strong> Braces and symbols</div>
+                  <div><strong>128-255:</strong> Extended ASCII (varies by encoding)</div>
+                </div>
+              </div>
+
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Format Comparison</h3>
+              <p className="mb-4">
+                Different number systems offer various advantages depending on your use case. <strong>Decimal</strong> is the most
+                human-readable and commonly used in general programming. <strong>Hexadecimal</strong> is compact and popular in
+                low-level programming, memory addresses, and color codes. <strong>Binary</strong> shows the actual bit-level
+                representation and is essential for understanding data at the hardware level. <strong>Octal</strong> is less
+                common today but still used in Unix file permissions and some legacy systems.
+              </p>
+
+              <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Privacy & Security</h3>
+                <p>
+                  All text to ASCII conversions are performed entirely in your browser using client-side JavaScript.
+                  Your data never leaves your device and is not transmitted to any server. This ensures complete privacy
+                  and security for all your conversions, making it safe to use with sensitive text.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
