@@ -6,7 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
 
-import { QrCode, Download, Copy, Trash2, Smartphone } from "lucide-react"
+import { QrCode, Download, Copy, Trash2, Smartphone ,  Info } from "lucide-react"
 
 export default function QrGeneratorClient() {
   const [text, setText] = useState("")
@@ -438,6 +438,136 @@ END:VCARD`,
               </div>
             </CardContent>
           </Card>
+        {/* Full-width SEO Content Section */}
+        <div className="mt-12 bg-white rounded-2xl p-8 border border-gray-200">
+          <div className="max-w-full">
+            <div className="flex items-center gap-2 mb-4">
+              <Info className="h-5 w-5 text-blue-600" />
+              <h2 className="text-2xl font-bold text-gray-900">About QR Code Generator</h2>
+            </div>
+
+            <div className="prose prose-sm text-gray-600 max-w-none">
+              <p className="mb-4">
+                The QR Code Generator creates scannable QR (Quick Response) codes from text, URLs, contact information, and more.
+                QR codes are two-dimensional barcodes that can store up to 4,296 alphanumeric characters and can be scanned by
+                smartphones to instantly access information. Perfect for marketing materials, business cards, product packaging,
+                event tickets, and contactless information sharing.
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-6 my-6">
+                <div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-3">Key Features</h3>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2">
+                      <span className="text-blue-600 mt-1">•</span>
+                      <span><strong>Multiple Data Types:</strong> Generate QR codes for URLs, text, emails, phone numbers, WiFi, and vCards</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-blue-600 mt-1">•</span>
+                      <span><strong>Customizable Size:</strong> Choose from multiple size options for different use cases</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-blue-600 mt-1">•</span>
+                      <span><strong>Error Correction:</strong> Built-in error correction ensures scannability even if partially damaged</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-blue-600 mt-1">•</span>
+                      <span><strong>Download Options:</strong> Export as PNG, SVG, or other formats for print and digital use</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-blue-600 mt-1">•</span>
+                      <span><strong>Instant Preview:</strong> See your QR code generated in real-time</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-blue-600 mt-1">•</span>
+                      <span><strong>High Quality:</strong> Generate high-resolution codes suitable for printing</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-3">How to Use</h3>
+                  <ol className="space-y-2">
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-blue-600">1.</span>
+                      <span>Choose the type of data (URL, text, contact info, WiFi, etc.)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-blue-600">2.</span>
+                      <span>Enter your content in the input field</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-blue-600">3.</span>
+                      <span>Select QR code size and error correction level</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-blue-600">4.</span>
+                      <span>Preview the generated QR code</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-blue-600">5.</span>
+                      <span>Download in your preferred format (PNG, SVG)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-blue-600">6.</span>
+                      <span>Print or share digitally as needed</span>
+                    </li>
+                  </ol>
+                </div>
+              </div>
+
+              <h3 className="text-lg font-bold text-gray-900 mb-3">What is it?</h3>
+              <p className="mb-4">
+                QR codes (Quick Response codes) are two-dimensional matrix barcodes invented in 1994 by Denso Wave for tracking
+                automotive parts. They can store significantly more information than traditional barcodes—up to 4,296 characters
+                compared to about 20 digits. QR codes use Reed-Solomon error correction, allowing them to be read even if up to
+                30% of the code is damaged or obscured. They're read by smartphones and dedicated scanners, which decode the
+                pattern of black and white squares into usable data like URLs, text, or contact information.
+              </p>
+
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Common Use Cases</h3>
+              <ul className="space-y-2 mb-4">
+                <li className="flex items-start gap-2">
+                  <span className="text-blue-600 mt-1">•</span>
+                  <span><strong>Website Links:</strong> Direct users to websites, landing pages, or product pages instantly</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-blue-600 mt-1">•</span>
+                  <span><strong>Business Cards:</strong> Share contact information without manual entry (vCard QR codes)</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-blue-600 mt-1">•</span>
+                  <span><strong>Product Packaging:</strong> Link to product manuals, recipes, assembly instructions, or authenticity verification</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-blue-600 mt-1">•</span>
+                  <span><strong>Event Management:</strong> Create scannable tickets, registration codes, and check-in systems</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-blue-600 mt-1">•</span>
+                  <span><strong>WiFi Sharing:</strong> Generate QR codes that automatically connect devices to WiFi networks</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-blue-600 mt-1">•</span>
+                  <span><strong>Payment Systems:</strong> Enable contactless payments and cryptocurrency transactions</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-blue-600 mt-1">•</span>
+                  <span><strong>Marketing Campaigns:</strong> Track campaign engagement and provide instant access to promotions</span>
+                </li>
+              </ul>
+
+              <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Privacy & Security</h3>
+                <p>
+                  All generation happens entirely in your browser using client-side JavaScript.
+                  No data is transmitted to any server. Generated content remains private on your device.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      
         </div>
       </div>
     </div>

@@ -12,7 +12,8 @@ import {
   CheckCircle,
   AlertTriangle,
   FileImage,
-  Eye
+  Eye,
+  Info
 } from "lucide-react"
 
 export default function FaviconGeneratorClient() {
@@ -310,6 +311,132 @@ export default function FaviconGeneratorClient() {
               </div>
             </CardContent>
           </Card>
+        </div>
+
+        {/* Full-width SEO Content Section */}
+        <div className="mt-12 bg-white rounded-2xl p-8 border border-gray-200">
+          <div className="max-w-full">
+            <div className="flex items-center gap-2 mb-4">
+              <Info className="h-5 w-5 text-pink-600" />
+              <h2 className="text-2xl font-bold text-gray-900">About Favicon Generator</h2>
+            </div>
+
+            <div className="prose prose-sm text-gray-600 max-w-none">
+              <p className="mb-4">
+                The Favicon Generator creates favicons (favorite icons) for websites in all required sizes and formats. Favicons are
+                small icons that appear in browser tabs, bookmarks, and mobile home screens. This tool converts your image or design
+                into properly formatted favicons including .ico files, PNG images in multiple sizes, and generates the necessary
+                HTML code for implementation across all browsers and devices.
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-6 my-6">
+                <div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-3">Key Features</h3>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2">
+                      <span className="text-pink-600 mt-1">•</span>
+                      <span><strong>Multiple Formats:</strong> Generate .ico, PNG, and SVG favicon files</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-pink-600 mt-1">•</span>
+                      <span><strong>All Standard Sizes:</strong> Create 16×16, 32×32, 180×180, 192×192, 512×512 and more</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-pink-600 mt-1">•</span>
+                      <span><strong>Auto-Resizing:</strong> Automatically resize your source image to all required sizes</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-pink-600 mt-1">•</span>
+                      <span><strong>HTML Code Generation:</strong> Get ready-to-use HTML link tags for implementation</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-pink-600 mt-1">•</span>
+                      <span><strong>Preview Mode:</strong> See how your favicon looks across different contexts</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-pink-600 mt-1">•</span>
+                      <span><strong>Batch Download:</strong> Download all favicon sizes in a single ZIP file</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-3">How to Use</h3>
+                  <ol className="space-y-2">
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-pink-600">1.</span>
+                      <span>Upload your source image (PNG, JPG, or SVG recommended)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-pink-600">2.</span>
+                      <span>Preview how the favicon looks at different sizes</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-pink-600">3.</span>
+                      <span>Customize settings if needed (background color, padding)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-pink-600">4.</span>
+                      <span>Generate favicons in all required formats and sizes</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-pink-600">5.</span>
+                      <span>Download the favicon package as a ZIP file</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-pink-600">6.</span>
+                      <span>Copy the provided HTML code and add to your website's &lt;head&gt;</span>
+                    </li>
+                  </ol>
+                </div>
+              </div>
+
+              <h3 className="text-lg font-bold text-gray-900 mb-3">What is it?</h3>
+              <p className="mb-4">
+                A favicon (short for &apos;favorite icon&apos;) is a small icon associated with a particular website, displayed in browser tabs,
+                bookmark lists, and mobile home screens. The traditional favicon is a 16×16 pixel .ico file, but modern websites
+                require multiple sizes and formats: 16×16 and 32×32 for browser tabs, 180×180 for Apple Touch Icon, 192×192 and
+                512×512 for Android, and SVG for scalable displays. Proper favicon implementation requires linking to these files
+                in the HTML &lt;head&gt; section with appropriate rel attributes like &apos;icon&apos;, &apos;apple-touch-icon&apos;, and &apos;manifest&apos;.
+              </p>
+
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Common Use Cases</h3>
+              <ul className="space-y-2 mb-4">
+                <li className="flex items-start gap-2">
+                  <span className="text-pink-600 mt-1">•</span>
+                  <span><strong>Website Branding:</strong> Add professional branding to browser tabs and bookmarks</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-pink-600 mt-1">•</span>
+                  <span><strong>Mobile Home Screens:</strong> Create app-like icons when users save your site to their home screen</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-pink-600 mt-1">•</span>
+                  <span><strong>Browser Tab Identification:</strong> Help users quickly identify your site among many open tabs</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-pink-600 mt-1">•</span>
+                  <span><strong>Bookmark Recognition:</strong> Make your site easily recognizable in bookmark lists</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-pink-600 mt-1">•</span>
+                  <span><strong>Progressive Web Apps:</strong> Provide required icons for PWA manifests</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-pink-600 mt-1">•</span>
+                  <span><strong>Email Signatures:</strong> Include favicons in HTML email signatures for brand recognition</span>
+                </li>
+              </ul>
+
+              <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Privacy & Security</h3>
+                <p>
+                  All generation happens entirely in your browser using client-side JavaScript.
+                  No data is transmitted to any server. Generated content remains private on your device.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </ToolPageLayout>
     </>

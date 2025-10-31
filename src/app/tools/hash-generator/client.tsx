@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
 
-import { Shield, Copy, Trash2, Eye, EyeOff, Upload } from "lucide-react"
+import { Shield, Copy, Trash2, Eye, EyeOff, Upload ,  Info } from "lucide-react"
 
 interface HashResult {
   algorithm: string
@@ -404,6 +404,132 @@ export default function HashGeneratorClient() {
               </div>
             </CardContent>
           </Card>
+        {/* Full-width SEO Content Section */}
+        <div className="mt-12 bg-white rounded-2xl p-8 border border-gray-200">
+          <div className="max-w-full">
+            <div className="flex items-center gap-2 mb-4">
+              <Info className="h-5 w-5 text-violet-600" />
+              <h2 className="text-2xl font-bold text-gray-900">About Hash Generator</h2>
+            </div>
+
+            <div className="prose prose-sm text-gray-600 max-w-none">
+              <p className="mb-4">
+                The Hash Generator creates cryptographic hash values from text using industry-standard algorithms like MD5, SHA-1,
+                SHA-256, and SHA-512. Hashing is a one-way cryptographic function that converts input data of any size into a
+                fixed-size string of characters, which acts as a unique digital fingerprint. This tool is essential for developers,
+                security professionals, and anyone needing to verify data integrity or create checksums.
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-6 my-6">
+                <div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-3">Key Features</h3>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2">
+                      <span className="text-violet-600 mt-1">•</span>
+                      <span><strong>Multiple Algorithms:</strong> Support for MD5, SHA-1, SHA-256, SHA-512, and more</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-violet-600 mt-1">•</span>
+                      <span><strong>Real-time Hashing:</strong> Instant hash generation as you type</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-violet-600 mt-1">•</span>
+                      <span><strong>File Hashing:</strong> Generate hashes from uploaded files for verification</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-violet-600 mt-1">•</span>
+                      <span><strong>Comparison Mode:</strong> Compare hashes to verify data integrity</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-violet-600 mt-1">•</span>
+                      <span><strong>Uppercase/Lowercase:</strong> Choose hash output format preference</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-violet-600 mt-1">•</span>
+                      <span><strong>Copy & Download:</strong> Easy copying and downloading of hash values</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-3">How to Use</h3>
+                  <ol className="space-y-2">
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-violet-600">1.</span>
+                      <span>Select your preferred hashing algorithm (SHA-256 recommended)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-violet-600">2.</span>
+                      <span>Enter text or upload a file to hash</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-violet-600">3.</span>
+                      <span>View the generated hash value instantly</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-violet-600">4.</span>
+                      <span>Copy the hash for verification or storage purposes</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-violet-600">5.</span>
+                      <span>Optionally compare with an expected hash value</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-violet-600">6.</span>
+                      <span>Download results for record keeping</span>
+                    </li>
+                  </ol>
+                </div>
+              </div>
+
+              <h3 className="text-lg font-bold text-gray-900 mb-3">What is it?</h3>
+              <p className="mb-4">
+                A cryptographic hash function is a mathematical algorithm that maps data of arbitrary size to a fixed-size string
+                of bytes. The output (hash value or digest) has several important properties: it's deterministic (same input always
+                produces same output), it's quick to compute, it's infeasible to reverse (one-way function), and small changes to
+                input produce drastically different output (avalanche effect). Common algorithms include SHA-256 (256-bit output)
+                used in Bitcoin, and MD5 (128-bit) used for checksums despite known vulnerabilities.
+              </p>
+
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Common Use Cases</h3>
+              <ul className="space-y-2 mb-4">
+                <li className="flex items-start gap-2">
+                  <span className="text-violet-600 mt-1">•</span>
+                  <span><strong>File Integrity Verification:</strong> Verify downloaded files haven't been tampered with by comparing checksums</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-violet-600 mt-1">•</span>
+                  <span><strong>Password Storage:</strong> Hash passwords before storing in databases (use bcrypt for production)</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-violet-600 mt-1">•</span>
+                  <span><strong>Digital Signatures:</strong> Create unique identifiers for documents and files</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-violet-600 mt-1">•</span>
+                  <span><strong>Blockchain & Cryptocurrency:</strong> Generate addresses and validate transactions</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-violet-600 mt-1">•</span>
+                  <span><strong>Data Deduplication:</strong> Identify duplicate files or content using hash comparison</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-violet-600 mt-1">•</span>
+                  <span><strong>Git Commits:</strong> Understand how version control systems use SHA-1 hashes</span>
+                </li>
+              </ul>
+
+              <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Privacy & Security</h3>
+                <p>
+                  All generation happens entirely in your browser using client-side JavaScript.
+                  No data is transmitted to any server. Generated content remains private on your device.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      
         </div>
       </div>
     </div>

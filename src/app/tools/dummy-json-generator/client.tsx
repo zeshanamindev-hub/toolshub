@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { FileText, Copy, Trash2, RefreshCw, Plus, X, Download } from "lucide-react"
+import { FileText, Copy, Trash2, RefreshCw, Plus, X, Download ,  Info } from "lucide-react"
 
 interface JSONField {
   id: string
@@ -512,6 +512,133 @@ export default function DummyJsonGeneratorClient() {
               </CardContent>
             </Card>
           </div>
+        {/* Full-width SEO Content Section */}
+        <div className="mt-12 bg-white rounded-2xl p-8 border border-gray-200">
+          <div className="max-w-full">
+            <div className="flex items-center gap-2 mb-4">
+              <Info className="h-5 w-5 text-emerald-600" />
+              <h2 className="text-2xl font-bold text-gray-900">About Dummy JSON Generator</h2>
+            </div>
+
+            <div className="prose prose-sm text-gray-600 max-w-none">
+              <p className="mb-4">
+                The Dummy JSON Generator creates realistic JSON data for testing, development, and prototyping. Generate arrays of
+                objects with customizable schemas including names, emails, addresses, dates, numbers, and more. Perfect for populating
+                databases, testing APIs, creating mockups, and developing applications without real data. All data is randomly
+                generated and fictional.
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-6 my-6">
+                <div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-3">Key Features</h3>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2">
+                      <span className="text-emerald-600 mt-1">•</span>
+                      <span><strong>Realistic Data Types:</strong> Names, emails, phone numbers, addresses, dates, URLs, and more</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-emerald-600 mt-1">•</span>
+                      <span><strong>Customizable Schema:</strong> Define your own JSON structure and field types</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-emerald-600 mt-1">•</span>
+                      <span><strong>Array Generation:</strong> Create arrays with specified number of items</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-emerald-600 mt-1">•</span>
+                      <span><strong>Nested Objects:</strong> Support for complex nested JSON structures</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-emerald-600 mt-1">•</span>
+                      <span><strong>Data Validation:</strong> Generated JSON is valid and ready to use</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-emerald-600 mt-1">•</span>
+                      <span><strong>Export Options:</strong> Copy, download, or use directly in your application</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-3">How to Use</h3>
+                  <ol className="space-y-2">
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-emerald-600">1.</span>
+                      <span>Define your JSON schema or use a preset template</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-emerald-600">2.</span>
+                      <span>Specify field types (name, email, number, date, etc.)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-emerald-600">3.</span>
+                      <span>Set the number of records to generate</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-emerald-600">4.</span>
+                      <span>Configure any nested objects or arrays</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-emerald-600">5.</span>
+                      <span>Click 'Generate' to create random JSON data</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-emerald-600">6.</span>
+                      <span>Copy or download the generated JSON for use in your project</span>
+                    </li>
+                  </ol>
+                </div>
+              </div>
+
+              <h3 className="text-lg font-bold text-gray-900 mb-3">What is it?</h3>
+              <p className="mb-4">
+                Dummy JSON data is randomly generated JSON (JavaScript Object Notation) that follows a specified schema but contains
+                fictional information. It's used during development when real data isn't available or when you need large datasets
+                for testing without privacy concerns. The generator uses algorithms to create realistic-looking data like names
+                (from common name lists), emails (formatted correctly), phone numbers (following regional formats), and addresses
+                (with proper structure). This allows developers to test application functionality, UI layouts, and data processing
+                logic before integrating with real data sources.
+              </p>
+
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Common Use Cases</h3>
+              <ul className="space-y-2 mb-4">
+                <li className="flex items-start gap-2">
+                  <span className="text-emerald-600 mt-1">•</span>
+                  <span><strong>API Testing:</strong> Test REST APIs and GraphQL queries with realistic mock data</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-emerald-600 mt-1">•</span>
+                  <span><strong>Database Seeding:</strong> Populate development databases with test records</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-emerald-600 mt-1">•</span>
+                  <span><strong>Frontend Development:</strong> Build and test UI components without backend integration</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-emerald-600 mt-1">•</span>
+                  <span><strong>Load Testing:</strong> Generate large datasets to test application performance</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-emerald-600 mt-1">•</span>
+                  <span><strong>Demo Applications:</strong> Create realistic demos without exposing real customer data</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-emerald-600 mt-1">•</span>
+                  <span><strong>Documentation Examples:</strong> Provide example API responses in technical documentation</span>
+                </li>
+              </ul>
+
+              <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Privacy & Security</h3>
+                <p>
+                  All generation happens entirely in your browser using client-side JavaScript.
+                  No data is transmitted to any server. Generated content remains private on your device.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      
         </div>
       </div>
     </div>

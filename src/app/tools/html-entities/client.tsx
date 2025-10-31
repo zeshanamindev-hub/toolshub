@@ -13,7 +13,7 @@ import {
   ArrowLeft,
   Download,
   BookOpen
-} , Info from "lucide-react"
+,  Info } from "lucide-react"
 
 
 
@@ -515,7 +515,7 @@ export default function HtmlEntitiesClient() {
               <p className="mb-4">
                 The HTML Entities Encoder/Decoder is an essential web development tool that converts special characters and symbols into
                 their corresponding HTML entity representations and vice versa. HTML entities are used to display reserved characters
-                in HTML (like <, >, &) and to represent characters that aren't easily typed on a keyboard (like ©, ®, €). This tool
+                in HTML (like &lt;, &gt;, &amp;) and to represent characters that aren&apos;t easily typed on a keyboard (like ©, ®, €). This tool
                 ensures your HTML content displays correctly across all browsers while preventing security vulnerabilities like XSS attacks.
               </p>
 
@@ -575,11 +575,11 @@ export default function HtmlEntitiesClient() {
 
               <h3 className="text-lg font-bold text-gray-900 mb-3">What is it?</h3>
               <p className="mb-4">
-                HTML entities are sequences of characters that begin with an ampersand (&) and end with a semicolon (;). They are
+                HTML entities are sequences of characters that begin with an ampersand (&amp;) and end with a semicolon (;). They are
                 used to represent special characters in HTML that would otherwise be interpreted as code. For example, the less-than
-                sign (<) must be written as &amp;lt; in HTML to prevent it from being treated as the start of an HTML tag. There are
-                three types of HTML entities: named entities (like &amp;copy; for ©), decimal entities (like &#169; for ©), and
-                hexadecimal entities (like &#xA9; for ©).
+                sign (&lt;) must be written as &amp;lt; in HTML to prevent it from being treated as the start of an HTML tag. There are
+                three types of HTML entities: named entities (like &amp;copy; for ©), decimal entities (like &amp;#169; for ©), and
+                hexadecimal entities (like &amp;#xA9; for ©).
               </p>
 
               <h3 className="text-lg font-bold text-gray-900 mb-3">Common Use Cases</h3>

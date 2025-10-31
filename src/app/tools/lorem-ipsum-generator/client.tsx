@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { FileText, Copy, Trash2, RefreshCw } from "lucide-react"
+import { FileText, Copy, Trash2, RefreshCw ,  Info } from "lucide-react"
 
 export default function LoremIpsumGeneratorClient() {
   const [generatedText, setGeneratedText] = useState("")
@@ -385,6 +385,133 @@ export default function LoremIpsumGeneratorClient() {
               </div>
             </CardContent>
           </Card>
+        {/* Full-width SEO Content Section */}
+        <div className="mt-12 bg-white rounded-2xl p-8 border border-gray-200">
+          <div className="max-w-full">
+            <div className="flex items-center gap-2 mb-4">
+              <Info className="h-5 w-5 text-gray-600" />
+              <h2 className="text-2xl font-bold text-gray-900">About Lorem Ipsum Generator</h2>
+            </div>
+
+            <div className="prose prose-sm text-gray-600 max-w-none">
+              <p className="mb-4">
+                The Lorem Ipsum Generator creates placeholder text for design mockups, prototypes, and development projects.
+                Lorem ipsum is the standard dummy text used in the printing and typesetting industry since the 1500s. It allows
+                designers and developers to focus on visual elements and layout without being distracted by meaningful content,
+                while maintaining realistic text flow and word distribution.
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-6 my-6">
+                <div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-3">Key Features</h3>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2">
+                      <span className="text-gray-600 mt-1">•</span>
+                      <span><strong>Multiple Units:</strong> Generate by paragraphs, sentences, or words</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-gray-600 mt-1">•</span>
+                      <span><strong>Adjustable Length:</strong> Specify exactly how much text you need</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-gray-600 mt-1">•</span>
+                      <span><strong>Classic Lorem Ipsum:</strong> Uses traditional Latin-based placeholder text</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-gray-600 mt-1">•</span>
+                      <span><strong>HTML Formatted:</strong> Option to wrap paragraphs in &lt;p&gt; tags for web development</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-gray-600 mt-1">•</span>
+                      <span><strong>Instant Generation:</strong> Create placeholder text with one click</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-gray-600 mt-1">•</span>
+                      <span><strong>Copy & Download:</strong> Easy copying and downloading for immediate use</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-3">How to Use</h3>
+                  <ol className="space-y-2">
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-gray-600">1.</span>
+                      <span>Select the unit type (paragraphs, sentences, or words)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-gray-600">2.</span>
+                      <span>Specify how many units you need</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-gray-600">3.</span>
+                      <span>Choose whether to include HTML paragraph tags</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-gray-600">4.</span>
+                      <span>Click 'Generate' to create the placeholder text</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-gray-600">5.</span>
+                      <span>Copy to clipboard or download as a text file</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-gray-600">6.</span>
+                      <span>Paste into your design or development project</span>
+                    </li>
+                  </ol>
+                </div>
+              </div>
+
+              <h3 className="text-lg font-bold text-gray-900 mb-3">What is it?</h3>
+              <p className="mb-4">
+                Lorem ipsum is scrambled Latin text derived from Cicero's 'de Finibus Bonorum et Malorum' (The Extremes of Good
+                and Evil) written in 45 BC. The text has been used as placeholder text since the 1500s when an unknown printer
+                scrambled a galley of type to make a type specimen book. It's become the industry standard because it has a
+                normal distribution of letters (unlike 'Test test test'), looks like readable English, and doesn't distract
+                reviewers with meaningful content. The most common Lorem ipsum passage begins: 'Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit...'
+              </p>
+
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Common Use Cases</h3>
+              <ul className="space-y-2 mb-4">
+                <li className="flex items-start gap-2">
+                  <span className="text-gray-600 mt-1">•</span>
+                  <span><strong>Web Design Mockups:</strong> Fill layouts with realistic text before content is finalized</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-gray-600 mt-1">•</span>
+                  <span><strong>Print Design:</strong> Test typography, spacing, and layout in brochures and magazines</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-gray-600 mt-1">•</span>
+                  <span><strong>App Development:</strong> Populate UI elements during development and testing</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-gray-600 mt-1">•</span>
+                  <span><strong>Client Presentations:</strong> Demonstrate design concepts without final copy</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-gray-600 mt-1">•</span>
+                  <span><strong>Typography Testing:</strong> Evaluate font choices with varied text lengths</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-gray-600 mt-1">•</span>
+                  <span><strong>Content Planning:</strong> Visualize content areas and plan information architecture</span>
+                </li>
+              </ul>
+
+              <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Privacy & Security</h3>
+                <p>
+                  All generation happens entirely in your browser using client-side JavaScript.
+                  No data is transmitted to any server. Generated content remains private on your device.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      
         </div>
       </div>
     </div>

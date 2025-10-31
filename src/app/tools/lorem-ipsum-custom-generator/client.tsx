@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { FileText, Copy, Trash2, RefreshCw, Plus, X } from "lucide-react"
+import { FileText, Copy, Trash2, RefreshCw, Plus, X ,  Info } from "lucide-react"
 
 interface Preset {
   name: string
@@ -455,6 +455,132 @@ export default function LoremIpsumCustomGeneratorClient() {
               </CardContent>
             </Card>
           </div>
+        {/* Full-width SEO Content Section */}
+        <div className="mt-12 bg-white rounded-2xl p-8 border border-gray-200">
+          <div className="max-w-full">
+            <div className="flex items-center gap-2 mb-4">
+              <Info className="h-5 w-5 text-slate-600" />
+              <h2 className="text-2xl font-bold text-gray-900">About Lorem Ipsum Custom Generator</h2>
+            </div>
+
+            <div className="prose prose-sm text-gray-600 max-w-none">
+              <p className="mb-4">
+                The Lorem Ipsum Custom Generator creates placeholder text with advanced customization options including custom word
+                lists, sentence structure control, and formatting preferences. Unlike standard Lorem ipsum generators, this tool
+                allows you to create context-appropriate placeholder text that better represents your final content while maintaining
+                the benefits of non-meaningful filler text.
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-6 my-6">
+                <div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-3">Key Features</h3>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2">
+                      <span className="text-slate-600 mt-1">•</span>
+                      <span><strong>Custom Word Lists:</strong> Use your own vocabulary or industry-specific terms</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-slate-600 mt-1">•</span>
+                      <span><strong>Sentence Length Control:</strong> Adjust average sentence length for realistic variation</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-slate-600 mt-1">•</span>
+                      <span><strong>Paragraph Sizing:</strong> Control how many sentences appear in each paragraph</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-slate-600 mt-1">•</span>
+                      <span><strong>HTML/Markdown Support:</strong> Format output for web or documentation use</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-slate-600 mt-1">•</span>
+                      <span><strong>Capitalization Rules:</strong> Apply proper title case and sentence capitalization</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-slate-600 mt-1">•</span>
+                      <span><strong>Save Presets:</strong> Store custom configurations for repeated use</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-3">How to Use</h3>
+                  <ol className="space-y-2">
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-slate-600">1.</span>
+                      <span>Configure text generation settings (paragraphs, sentences, words)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-slate-600">2.</span>
+                      <span>Optionally provide custom word list or use defaults</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-slate-600">3.</span>
+                      <span>Adjust sentence and paragraph length preferences</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-slate-600">4.</span>
+                      <span>Select output format (plain text, HTML, or Markdown)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-slate-600">5.</span>
+                      <span>Generate customized placeholder text</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-slate-600">6.</span>
+                      <span>Copy, download, or save configuration for future use</span>
+                    </li>
+                  </ol>
+                </div>
+              </div>
+
+              <h3 className="text-lg font-bold text-gray-900 mb-3">What is it?</h3>
+              <p className="mb-4">
+                Custom Lorem ipsum generation extends the traditional placeholder text concept by allowing specific parameters and
+                custom vocabulary. This is useful when you need placeholder text that matches the tone, length, or technical level
+                of your final content. For example, a medical website might use medical terminology in its placeholder text, or
+                a technical documentation project might use programming-related words. The generator maintains proper capitalization,
+                punctuation, and paragraph structure while using your specified vocabulary.
+              </p>
+
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Common Use Cases</h3>
+              <ul className="space-y-2 mb-4">
+                <li className="flex items-start gap-2">
+                  <span className="text-slate-600 mt-1">•</span>
+                  <span><strong>Industry-Specific Mockups:</strong> Use relevant terminology for medical, legal, or technical designs</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-slate-600 mt-1">•</span>
+                  <span><strong>Localization Testing:</strong> Generate text with character sets and lengths matching target languages</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-slate-600 mt-1">•</span>
+                  <span><strong>Content Strategy:</strong> Create realistic placeholder text matching tone and reading level</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-slate-600 mt-1">•</span>
+                  <span><strong>A/B Testing:</strong> Generate varied text lengths to test responsive layouts</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-slate-600 mt-1">•</span>
+                  <span><strong>Documentation Templates:</strong> Create boilerplate text for technical documentation</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-slate-600 mt-1">•</span>
+                  <span><strong>SEO Mockups:</strong> Generate keyword-rich placeholder content for SEO optimization testing</span>
+                </li>
+              </ul>
+
+              <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Privacy & Security</h3>
+                <p>
+                  All generation happens entirely in your browser using client-side JavaScript.
+                  No data is transmitted to any server. Generated content remains private on your device.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      
         </div>
       </div>
     </div>

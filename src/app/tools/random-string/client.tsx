@@ -12,7 +12,7 @@ import {
   Download,
   Settings,
   Dices
-} from "lucide-react"
+,  Info } from "lucide-react"
 
 
 
@@ -470,6 +470,132 @@ export default function RandomStringClient() {
               </CardContent>
             </Card>
           </div>
+        {/* Full-width SEO Content Section */}
+        <div className="mt-12 bg-white rounded-2xl p-8 border border-gray-200">
+          <div className="max-w-full">
+            <div className="flex items-center gap-2 mb-4">
+              <Info className="h-5 w-5 text-amber-600" />
+              <h2 className="text-2xl font-bold text-gray-900">About Random String Generator</h2>
+            </div>
+
+            <div className="prose prose-sm text-gray-600 max-w-none">
+              <p className="mb-4">
+                The Random String Generator creates random character sequences for various purposes including testing, unique identifiers,
+                tokens, and placeholder data. Generate strings with custom length and character sets including letters, numbers,
+                symbols, and special characters. Perfect for creating test data, session tokens, API keys, and unique identifiers
+                in development and testing environments.
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-6 my-6">
+                <div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-3">Key Features</h3>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2">
+                      <span className="text-amber-600 mt-1">•</span>
+                      <span><strong>Customizable Length:</strong> Generate strings from 1 to 1000+ characters</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-amber-600 mt-1">•</span>
+                      <span><strong>Multiple Character Sets:</strong> Choose from letters, numbers, symbols, or custom characters</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-amber-600 mt-1">•</span>
+                      <span><strong>Case Control:</strong> Use uppercase, lowercase, or mixed case</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-amber-600 mt-1">•</span>
+                      <span><strong>Bulk Generation:</strong> Create multiple random strings at once</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-amber-600 mt-1">•</span>
+                      <span><strong>Pattern Support:</strong> Generate strings following specific patterns</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-amber-600 mt-1">•</span>
+                      <span><strong>Cryptographic Security:</strong> Option for cryptographically secure random generation</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-3">How to Use</h3>
+                  <ol className="space-y-2">
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-amber-600">1.</span>
+                      <span>Specify the desired string length</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-amber-600">2.</span>
+                      <span>Select character types to include (letters, numbers, symbols)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-amber-600">3.</span>
+                      <span>Choose case preference (upper, lower, or mixed)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-amber-600">4.</span>
+                      <span>Set the number of strings to generate</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-amber-600">5.</span>
+                      <span>Click 'Generate' to create random strings</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-amber-600">6.</span>
+                      <span>Copy individual strings or download all as a file</span>
+                    </li>
+                  </ol>
+                </div>
+              </div>
+
+              <h3 className="text-lg font-bold text-gray-900 mb-3">What is it?</h3>
+              <p className="mb-4">
+                Random string generation creates sequences of characters selected randomly from a specified character set. These can be
+                truly random (using cryptographic randomness for security applications) or pseudo-random (using mathematical algorithms
+                for general purposes). The randomness ensures that each generated string is unique and unpredictable. Common character
+                sets include alphanumeric (A-Z, a-z, 0-9), hexadecimal (0-9, A-F), or custom sets. The length and character diversity
+                determine the total number of possible combinations, affecting uniqueness and security strength.
+              </p>
+
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Common Use Cases</h3>
+              <ul className="space-y-2 mb-4">
+                <li className="flex items-start gap-2">
+                  <span className="text-amber-600 mt-1">•</span>
+                  <span><strong>Session Tokens:</strong> Generate unique session identifiers for web applications</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-amber-600 mt-1">•</span>
+                  <span><strong>Test Data:</strong> Create random strings for testing form inputs and validation</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-amber-600 mt-1">•</span>
+                  <span><strong>Unique IDs:</strong> Generate identifiers for database records or file names</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-amber-600 mt-1">•</span>
+                  <span><strong>API Keys:</strong> Create placeholder API keys during development</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-amber-600 mt-1">•</span>
+                  <span><strong>Coupon Codes:</strong> Generate unique promotional codes for marketing campaigns</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-amber-600 mt-1">•</span>
+                  <span><strong>Reference Numbers:</strong> Create order numbers, tracking IDs, or confirmation codes</span>
+                </li>
+              </ul>
+
+              <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Privacy & Security</h3>
+                <p>
+                  All generation happens entirely in your browser using client-side JavaScript.
+                  No data is transmitted to any server. Generated content remains private on your device.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      
         </div>
       </div>
     </div>

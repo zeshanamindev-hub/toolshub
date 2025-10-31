@@ -12,7 +12,7 @@ import {
   AlertTriangle,
   CheckCircle,
   XCircle
-} from "lucide-react"
+,  Info } from "lucide-react"
 
 
 
@@ -385,6 +385,132 @@ export default function PasswordGeneratorClient() {
               </CardContent>
             </Card>
           </div>
+        {/* Full-width SEO Content Section */}
+        <div className="mt-12 bg-white rounded-2xl p-8 border border-gray-200">
+          <div className="max-w-full">
+            <div className="flex items-center gap-2 mb-4">
+              <Info className="h-5 w-5 text-red-600" />
+              <h2 className="text-2xl font-bold text-gray-900">About Password Generator</h2>
+            </div>
+
+            <div className="prose prose-sm text-gray-600 max-w-none">
+              <p className="mb-4">
+                The Password Generator creates strong, random passwords that help protect your online accounts from unauthorized access.
+                With cyber attacks and data breaches becoming increasingly common, using unique, complex passwords for each account
+                is essential for digital security. Our password generator creates cryptographically secure passwords with customizable
+                length, character types, and complexity options to meet any security requirement.
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-6 my-6">
+                <div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-3">Key Features</h3>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2">
+                      <span className="text-red-600 mt-1">•</span>
+                      <span><strong>Customizable Length:</strong> Generate passwords from 8 to 128 characters to meet any requirement</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-red-600 mt-1">•</span>
+                      <span><strong>Multiple Character Sets:</strong> Include uppercase, lowercase, numbers, and special symbols</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-red-600 mt-1">•</span>
+                      <span><strong>Cryptographically Secure:</strong> Uses secure random number generation for unpredictable passwords</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-red-600 mt-1">•</span>
+                      <span><strong>Instant Generation:</strong> Create new passwords with a single click</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-red-600 mt-1">•</span>
+                      <span><strong>Copy to Clipboard:</strong> Quickly copy generated passwords for immediate use</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-red-600 mt-1">•</span>
+                      <span><strong>No Storage:</strong> Passwords are generated locally and never saved or transmitted</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-3">How to Use</h3>
+                  <ol className="space-y-2">
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-red-600">1.</span>
+                      <span>Select desired password length (8-128 characters recommended minimum 12)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-red-600">2.</span>
+                      <span>Choose character types: uppercase, lowercase, numbers, symbols</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-red-600">3.</span>
+                      <span>Click 'Generate Password' to create a secure password</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-red-600">4.</span>
+                      <span>Review the password strength indicator</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-red-600">5.</span>
+                      <span>Copy the password to your clipboard</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-red-600">6.</span>
+                      <span>Use immediately in your account or password manager</span>
+                    </li>
+                  </ol>
+                </div>
+              </div>
+
+              <h3 className="text-lg font-bold text-gray-900 mb-3">What is it?</h3>
+              <p className="mb-4">
+                A strong password is a sequence of characters that is difficult for humans or computers to guess. It should be long
+                (at least 12-16 characters), use a mix of character types (uppercase, lowercase, numbers, symbols), and be unique
+                for each account. The Password Generator uses cryptographically secure random number generation to create passwords
+                that are virtually impossible to guess through brute force attacks. Each password is generated with true randomness,
+                ensuring maximum security.
+              </p>
+
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Common Use Cases</h3>
+              <ul className="space-y-2 mb-4">
+                <li className="flex items-start gap-2">
+                  <span className="text-red-600 mt-1">•</span>
+                  <span><strong>New Account Creation:</strong> Generate strong passwords when signing up for new online services</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-red-600 mt-1">•</span>
+                  <span><strong>Password Reset:</strong> Create secure replacement passwords when changing compromised credentials</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-red-600 mt-1">•</span>
+                  <span><strong>Password Manager:</strong> Generate unique passwords to store in password management applications</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-red-600 mt-1">•</span>
+                  <span><strong>Application Secrets:</strong> Create API keys, tokens, and secret keys for applications</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-red-600 mt-1">•</span>
+                  <span><strong>Database Credentials:</strong> Generate secure passwords for database user accounts</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-red-600 mt-1">•</span>
+                  <span><strong>WiFi Networks:</strong> Create strong WPA2/WPA3 passwords for wireless networks</span>
+                </li>
+              </ul>
+
+              <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Privacy & Security</h3>
+                <p>
+                  All generation happens entirely in your browser using client-side JavaScript.
+                  No data is transmitted to any server. Generated content remains private on your device.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      
         </div>
       </div>
     </div>
