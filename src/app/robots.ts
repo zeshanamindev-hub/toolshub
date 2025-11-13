@@ -27,7 +27,7 @@ export default function robots(): MetadataRoute.Robots {
         crawlDelay: 1,
       }
     ],
-    sitemap: 'https://toolshub.com/sitemap.xml',
-    host: 'https://toolshub.com',
+    sitemap: 'https://toolshub-lemon.vercel.app/sitemap.xml',
+    host: 'https://toolshub-lemon.vercel.app',
   }
 }
