@@ -119,10 +119,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
         <Script
+          async
           src="https://www.googletagmanager.com/gtag/js?id=G-X4BXT9D1SX"
-          strategy="afterInteractive"
+          strategy="worker"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="worker">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
