@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next'
+import { SITE_CONFIG } from '@/lib/constants'
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -11,7 +12,6 @@ export default function robots(): MetadataRoute.Robots {
           '/admin/',
           '/_next/',
           '/private/',
-          '/search?q=',
         ],
       },
       {
@@ -25,9 +25,19 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
         disallow: ['/api/', '/admin/'],
         crawlDelay: 1,
+      },
+      {
+        userAgent: 'GPTBot',
+        allow: '/',
+        disallow: ['/api/', '/admin/'],
+      },
+      {
+        userAgent: 'ChatGPT-User',
+        allow: '/',
+        disallow: ['/api/', '/admin/'],
       }
     ],
-    sitemap: 'https://toolshub-lemon.vercel.app/sitemap.xml',
-    host: 'https://toolshub-lemon.vercel.app',
+    sitemap: `${SITE_CONFIG.url}/sitemap.xml`,
+    host: SITE_CONFIG.url,
   }
 }
