@@ -4,17 +4,29 @@ import WordCounterClient from "./client"
 // Export metadata for SEO
 export const metadata = generateToolMetadata({
   toolName: "Word Counter",
-  toolDescription: "Count words, characters, paragraphs, and sentences in your text instantly. Advanced text analysis with reading time, keyword density, and writing goals.",
+  toolDescription: "Free online word counter tool. Count words, characters, sentences, and paragraphs instantly. Track reading time, keyword density, and writing goals. Perfect for essays, articles, and social media posts.",
   category: "Text & Writing",
   keywords: [
     "word counter",
-    "character counter", 
-    "text analysis",
-    "word count",
-    "text statistics",
-    "writing tool",
+    "word count tool",
+    "count words online",
+    "character counter",
+    "free word counter",
+    "word counter online",
+    "text counter",
+    "word frequency counter",
+    "writing tracker",
+    "essay word counter",
+    "article word count",
+    "paragraph counter",
+    "sentence counter",
     "reading time calculator",
-    "text metrics"
+    "keyword density checker",
+    "writing goal tracker",
+    "word count for essay",
+    "character count tool",
+    "text analysis tool",
+    "word counter with character count"
   ],
   toolPath: "/tools/word-counter"
 })

@@ -7,13 +7,25 @@ export const metadata = generateToolMetadata({
   category: "Generators",
   keywords: [
     "UTM link generator",
+    "UTM link generator online",
     "Google Analytics tracking",
-    "campaign tracking",
-    "UTM parameters",
-    "link tracking",
-    "marketing links",
+    "campaign tracking tool",
+    "UTM parameters generator",
+    "link tracking generator",
+    "marketing links generator",
     "URL builder",
-    "campaign URLs"
+    "campaign URLs generator",
+    "free UTM generator",
+    "UTM code generator",
+    "UTM builder",
+    "google analytics url builder",
+    "campaign url generator",
+    "utm tracking generator",
+    "utm tag generator",
+    "marketing campaign tracker",
+    "utm parameter builder",
+    "trackable link generator",
+    "utm url creator"
   ],
   toolPath: "/tools/utm-link-generator"
 })

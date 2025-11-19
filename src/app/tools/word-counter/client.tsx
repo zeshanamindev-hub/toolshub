@@ -319,7 +319,7 @@ export default function WordCounterClient() {
         <div className="space-y-6">
           {/* Writing Goal Section */}
           {writingGoal.enabled && (
-            <Card className="bg-gradient-to-r from-blue-50 to-indigo-50 border-blue-200">
+            <Card className="bg-blue-50 border-blue-200">
               <CardHeader className="pb-3">
                 <div className="flex items-center justify-between">
                   <CardTitle className="text-lg flex items-center gap-2">
@@ -338,11 +338,11 @@ export default function WordCounterClient() {
                     <span className="font-medium text-blue-700">{Math.round(getProgressPercentage())}%</span>
                   </div>
                   <div className="w-full bg-blue-200 rounded-full h-2">
-                    <div 
+                    <div
                       className={`h-2 rounded-full transition-all duration-300 ${
-                        isGoalReached() 
-                          ? 'bg-gradient-to-r from-green-500 to-green-600' 
-                          : 'bg-gradient-to-r from-blue-500 to-indigo-600'
+                        isGoalReached()
+                          ? 'bg-green-500'
+                          : 'bg-blue-500'
                       }`}
                       style={{ width: `${getProgressPercentage()}%` }}
                     />
@@ -522,7 +522,7 @@ export default function WordCounterClient() {
 
           {/* Export Actions */}
           {text && (
-            <Card className="bg-gradient-to-r from-green-50 to-emerald-50 border-green-200">
+            <Card className="bg-green-50 border-green-200">
               <CardContent className="pt-4">
                 <div className="flex items-center justify-between">
                   <div>

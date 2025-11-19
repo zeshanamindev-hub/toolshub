@@ -7,13 +7,25 @@ export const metadata = generateToolMetadata({
   category: "Developer Tools",
   keywords: [
     "regex tester",
+    "regex tester online",
     "regular expression tester",
-    "regex validator",
-    "test regex",
-    "regex debugger",
-    "regex online",
+    "regex validator online",
+    "test regex online",
+    "regex debugger online",
     "regex checker",
-    "regex tool"
+    "regex tool",
+    "free regex tester",
+    "regex pattern tester",
+    "javascript regex tester",
+    "online regex validator",
+    "regex testing tool",
+    "test regular expression",
+    "regex match tester",
+    "regex playground",
+    "regex generator and tester",
+    "regular expression validator",
+    "regex pattern validator",
+    "regex evaluation tool"
   ],
   toolPath: "/tools/regex-tester"
 })

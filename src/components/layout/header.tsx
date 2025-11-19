@@ -85,8 +85,7 @@ export default function Header() {
         }
       `}>
         {/* Top Banner - Modern Gradient */}
-        <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-mesh opacity-30"></div>
+        <div className="bg-blue-600 relative overflow-hidden">
           <div className="relative mx-auto max-w-7xl px-4 py-2.5">
             <div className="flex items-center justify-center gap-2 text-white text-sm font-semibold">
               <Sparkles className="h-4 w-4 animate-pulse" />
@@ -104,12 +103,11 @@ export default function Header() {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 group" aria-label="Tools Hub Home">
-              <div className="relative p-2.5 bg-gradient-to-br from-blue-500 via-indigo-600 to-purple-600 rounded-2xl shadow-xl group-hover:shadow-2xl transition-all duration-300 group-hover:scale-110 animate-morph">
+              <div className="relative p-2.5 bg-blue-600 rounded-2xl shadow-xl group-hover:shadow-2xl transition-all duration-300 group-hover:scale-110">
                 <Wrench className="h-7 w-7 text-white relative z-10" />
-                <div className="absolute inset-0 bg-gradient-to-br from-white/30 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-green-400 rounded-full border-2 border-white animate-pulse"></div>
               </div>
-              <span className="text-2xl font-black text-gradient">
+              <span className="text-2xl font-black text-blue-600">
                 Tools Hub
               </span>
             </Link>
@@ -122,7 +120,7 @@ export default function Header() {
                 className="px-4 py-2 text-sm font-semibold text-gray-700 hover:text-purple-600 transition-all duration-300 relative group"
               >
                 All Tools
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 group-hover:w-full transition-all duration-300"></span>
               </Link>
 
               {/* Categories Dropdown */}
@@ -155,11 +153,11 @@ export default function Header() {
                         <Link
                           key={category.id}
                           href={category.href}
-                          className="group p-4 rounded-2xl hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 transition-all duration-300 border border-transparent hover:border-purple-200 hover:shadow-lg"
+                          className="group p-4 rounded-2xl hover:bg-blue-50 transition-all duration-300 border border-transparent hover:border-blue-200 hover:shadow-lg"
                           onClick={() => setCategoriesDropdownOpen(false)}
                         >
                           <div className="flex items-center justify-between mb-2">
-                            <h3 className="font-bold text-gray-900 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600">
+                            <h3 className="font-bold text-gray-900 group-hover:text-blue-600">
                               {category.name}
                             </h3>
                             <ArrowRight className="h-4 w-4 text-gray-400 group-hover:text-purple-600 group-hover:translate-x-1 transition-all duration-300" />
@@ -179,7 +177,7 @@ export default function Header() {
                 className="px-4 py-2 text-sm font-semibold text-gray-700 hover:text-purple-600 transition-all duration-300 relative group"
               >
                 About
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 group-hover:w-full transition-all duration-300"></span>
               </Link>
             </div>
 
@@ -232,7 +230,7 @@ export default function Header() {
                             <Link
                               key={tool.name}
                               href={tool.href}
-                              className="group flex items-center gap-3 p-3 rounded-xl hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 transition-all duration-300"
+                              className="group flex items-center gap-3 p-3 rounded-xl hover:bg-blue-50 transition-all duration-300"
                               onClick={() => {
                                 setSearchQuery("")
                                 setSearchFocused(false)

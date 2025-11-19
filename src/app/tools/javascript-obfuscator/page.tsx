@@ -7,13 +7,25 @@ export const metadata = generateToolMetadata({
   category: "Developer Tools",
   keywords: [
     "javascript obfuscator",
+    "javascript obfuscator online",
     "js obfuscator",
+    "js obfuscator online",
     "obfuscate javascript",
+    "obfuscate javascript online",
     "protect js code",
-    "javascript protection",
+    "javascript protection tool",
     "code obfuscation",
     "obfuscate js online",
-    "javascript security"
+    "javascript security",
+    "free javascript obfuscator",
+    "javascript code protection",
+    "obfuscate js code",
+    "javascript minify obfuscate",
+    "js code obfuscator",
+    "online js obfuscator",
+    "javascript obfuscation tool",
+    "protect javascript source",
+    "javascript code security"
   ],
   toolPath: "/tools/javascript-obfuscator"
 })

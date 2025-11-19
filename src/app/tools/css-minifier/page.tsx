@@ -7,13 +7,25 @@ export const metadata = generateToolMetadata({
   category: "Developer Tools",
   keywords: [
     "css minifier",
-    "minify css",
+    "css minifier online",
+    "minify css online",
     "css compressor",
-    "compress css",
+    "compress css online",
     "css optimizer",
     "reduce css size",
-    "css minification",
-    "optimize css"
+    "css minification tool",
+    "optimize css online",
+    "free css minifier",
+    "css file compressor",
+    "minify css code",
+    "css compression tool",
+    "online css optimizer",
+    "css size reducer",
+    "compress css files",
+    "css minify tool",
+    "web css minifier",
+    "css performance optimizer",
+    "shrink css file"
   ],
   toolPath: "/tools/css-minifier"
 })

@@ -7,13 +7,25 @@ export const metadata = generateToolMetadata({
   category: "Converters & Encoding",
   keywords: [
     "text to ascii",
-    "ascii converter",
+    "text to ascii converter",
+    "ascii converter online",
     "text to ascii code",
     "ascii generator",
-    "text to decimal",
-    "text to hex",
-    "character to ascii",
-    "ascii encoder"
+    "text to decimal ascii",
+    "text to hex ascii",
+    "character to ascii converter",
+    "ascii encoder online",
+    "convert text to ascii",
+    "free ascii converter",
+    "text to ascii online",
+    "string to ascii",
+    "ascii value converter",
+    "text ascii generator",
+    "character ascii code",
+    "text to binary ascii",
+    "ascii code generator",
+    "online text to ascii",
+    "convert characters to ascii"
   ],
   toolPath: "/tools/text-to-ascii"
 })

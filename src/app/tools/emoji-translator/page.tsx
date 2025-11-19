@@ -8,13 +8,25 @@ export const metadata = generateToolMetadata({
   category: "Text & Writing",
   keywords: [
     "emoji translator",
+    "emoji translator online",
     "emojis to text",
+    "emojis to text converter",
     "text to emojis",
+    "text to emojis converter",
     "emoji converter",
-    "emoji decoder",
-    "emoji encoder",
+    "emoji decoder online",
+    "emoji encoder online",
     "emoji translator tool",
-    "emoji text converter"
+    "emoji text converter",
+    "free emoji translator",
+    "emoji to words",
+    "translate emoji",
+    "emoji meaning translator",
+    "emoji language translator",
+    "convert emoji to text",
+    "convert text to emoji",
+    "emoji interpretation",
+    "emoji translation tool"
   ],
   toolPath: "/tools/emoji-translator"
 })

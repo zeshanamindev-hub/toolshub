@@ -7,13 +7,25 @@ export const metadata = generateToolMetadata({
   category: "Developer Tools",
   keywords: [
     "js minifier",
+    "js minifier online",
     "minify javascript",
-    "javascript minifier",
-    "compress js",
+    "javascript minifier online",
+    "compress js online",
     "js compressor",
     "javascript optimizer",
     "minify js online",
-    "reduce js size"
+    "reduce js size",
+    "free javascript minifier",
+    "compress javascript code",
+    "javascript compression tool",
+    "online js minifier",
+    "minify js code",
+    "javascript file compressor",
+    "reduce javascript file size",
+    "js code optimizer",
+    "shrink javascript file",
+    "javascript minification tool",
+    "web js minifier"
   ],
   toolPath: "/tools/js-minifier"
 })

@@ -3,17 +3,29 @@ import ReverseTextClient from "./client"
 
 export const metadata = generateToolMetadata({
   toolName: "Reverse Text",
-  toolDescription: "Reverse text character by character or word by word instantly. Create mirror text, flip text backwards, reverse lines. Free online text reversal tool with 8 different reversal modes.",
+  toolDescription: "Free online text reverser. Reverse text, flip words backwards, or create mirror text instantly. Multiple reversal modes including character, word, and line reversal.",
   category: "Text & Writing",
   keywords: [
     "reverse text",
-    "flip text backwards",
-    "mirror text",
-    "backwards text generator",
-    "reverse letters",
+    "reverse text online",
     "text reverser",
+    "reverse string",
+    "backwards text generator",
+    "flip text backwards",
+    "mirror text generator",
+    "reverse words",
+    "text flipper",
+    "backwards text",
+    "reverse letters",
+    "flip text online",
+    "text reversal tool",
+    "reverse sentence",
+    "backwards generator",
+    "mirror writing",
+    "reverse text generator",
     "flip words",
-    "backwards writing"
+    "backwards converter",
+    "reverse line"
   ],
   toolPath: "/tools/reverse-text"
 })

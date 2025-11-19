@@ -125,7 +125,7 @@ export default function PasswordGeneratorClient() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 py-12">
+    <div className="min-h-screen bg-gray-50 py-12">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-8">
@@ -385,6 +385,8 @@ export default function PasswordGeneratorClient() {
               </CardContent>
             </Card>
           </div>
+        </div>
+
         {/* Full-width SEO Content Section */}
         <div className="mt-12 bg-white rounded-2xl p-8 border border-gray-200">
           <div className="max-w-full">
@@ -509,8 +511,6 @@ export default function PasswordGeneratorClient() {
               </div>
             </div>
           </div>
-        </div>
-      
         </div>
       </div>
     </div>

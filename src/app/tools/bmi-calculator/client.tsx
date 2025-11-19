@@ -192,8 +192,8 @@ export default function BmiCalculatorClient() {
     const ageNum = parseInt(age) || 30
     if (!heightNum || !weightNum) return
 
-    let heightM = unit === "metric" ? heightNum / 100 : heightNum * 0.0254
-    let weightKg = unit === "metric" ? weightNum : weightNum * 0.453592
+    const heightM = unit === "metric" ? heightNum / 100 : heightNum * 0.0254
+    const weightKg = unit === "metric" ? weightNum : weightNum * 0.453592
 
     const bmi = calculateBMI(weightKg, heightM)
     const categoryInfo = getBMICategory(bmi)
@@ -426,7 +426,7 @@ export default function BmiCalculatorClient() {
                         <label className="block text-sm font-medium text-gray-700 mb-2">Activity Level</label>
                         <select
                           value={activityLevel}
-                          onChange={(e) => setActivityLevel(e.target.value as any)}
+                          onChange={(e) => setActivityLevel(e.target.value as "sedentary" | "light" | "moderate" | "active" | "very_active")}
                           className="w-full p-2 border rounded-md"
                         >
                           <option value="sedentary">Sedentary</option>

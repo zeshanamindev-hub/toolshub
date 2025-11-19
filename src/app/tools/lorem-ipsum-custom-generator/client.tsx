@@ -167,7 +167,7 @@ export default function LoremIpsumCustomGeneratorClient() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 py-12">
+    <div className="min-h-screen bg-blue-50 to-gray-50 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-8">

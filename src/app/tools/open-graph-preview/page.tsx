@@ -7,14 +7,25 @@ export const metadata = generateToolMetadata({
   category: "Developer Tools",
   keywords: [
     "Open Graph preview",
+    "Open Graph preview tool",
     "Facebook share preview",
+    "Facebook share preview tool",
     "social media preview",
+    "social media preview tool",
     "OG tags preview",
     "social sharing preview",
     "meta tags preview",
     "Facebook debugger",
-    "LinkedIn preview",
-    "social media optimization"
+    "LinkedIn preview tool",
+    "social media optimization",
+    "free Open Graph preview",
+    "og meta tags preview",
+    "test open graph tags",
+    "facebook card preview",
+    "social meta preview",
+    "og tag tester",
+    "social sharing tester",
+    "preview social cards"
   ],
   toolPath: "/tools/open-graph-preview"
 })

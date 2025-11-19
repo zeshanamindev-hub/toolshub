@@ -7,13 +7,25 @@ export const metadata = generateToolMetadata({
   category: "Calculators",
   keywords: [
     "percentage calculator",
+    "percentage calculator online",
     "calculate percentage",
+    "calculate percentage online",
     "percent calculator",
-    "percentage increase",
-    "percentage decrease",
-    "percent of",
-    "percentage change",
-    "percentage online"
+    "percentage increase calculator",
+    "percentage decrease calculator",
+    "percent of calculator",
+    "percentage change calculator",
+    "free percentage calculator",
+    "percentage calculator tool",
+    "percent calculator online",
+    "calculate percent increase",
+    "calculate percent decrease",
+    "percentage ratio calculator",
+    "percentage difference calculator",
+    "percent change calculator",
+    "percentage calculation tool",
+    "online percent calculator",
+    "percentage math calculator"
   ],
   toolPath: "/tools/percentage-calculator"
 })

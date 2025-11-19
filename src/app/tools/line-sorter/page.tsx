@@ -7,13 +7,25 @@ export const metadata = generateToolMetadata({
   category: "Text & Writing",
   keywords: [
     "line sorter",
-    "sort lines",
+    "line sorter online",
+    "sort lines online",
     "alphabetical sort",
-    "sort text",
+    "sort text lines",
     "line organizer",
     "text sorter",
-    "sort alphabetically",
-    "sort lines online"
+    "sort alphabetically online",
+    "sort lines tool",
+    "free line sorter",
+    "alphabetize lines",
+    "sort text alphabetically",
+    "numerical line sort",
+    "reverse line sort",
+    "remove duplicate lines",
+    "organize text lines",
+    "sort by length",
+    "line sorting tool",
+    "text line organizer",
+    "alphabetize text"
   ],
   toolPath: "/tools/line-sorter"
 })

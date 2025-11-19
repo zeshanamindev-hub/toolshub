@@ -7,13 +7,25 @@ export const metadata = generateToolMetadata({
   category: "Developer Tools",
   keywords: [
     "text diff",
-    "compare text",
-    "text difference",
-    "diff checker",
-    "text comparison",
-    "compare documents",
-    "file diff",
-    "text compare tool"
+    "text diff checker",
+    "compare text online",
+    "text difference checker",
+    "diff checker online",
+    "text comparison tool",
+    "compare documents online",
+    "file diff checker",
+    "text compare tool",
+    "side by side text comparison",
+    "find differences in text",
+    "document comparison tool",
+    "code diff checker",
+    "free text diff",
+    "online diff tool",
+    "text diff tool",
+    "compare two texts",
+    "text change tracker",
+    "text difference finder",
+    "compare text files"
   ],
   toolPath: "/tools/text-diff-checker"
 })

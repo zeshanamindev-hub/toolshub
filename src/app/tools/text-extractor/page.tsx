@@ -7,13 +7,25 @@ export const metadata = generateToolMetadata({
   category: "Text & Writing",
   keywords: [
     "text extractor",
-    "extract text",
+    "text extractor online",
+    "extract text online",
     "text from pdf",
+    "extract text from pdf",
     "text from image",
-    "copy text",
+    "extract text from image",
+    "copy text from file",
     "extract content",
     "text extraction tool",
-    "get text from file"
+    "get text from file",
+    "free text extractor",
+    "extract text from document",
+    "pdf text extractor",
+    "image text extractor",
+    "ocr text extractor",
+    "extract plain text",
+    "text from documents",
+    "copy text tool",
+    "document text extractor"
   ],
   toolPath: "/tools/text-extractor"
 })

@@ -8,13 +8,25 @@ export const metadata = generateToolMetadata({
   category: "Text & Writing",
   keywords: [
     "reverse word order",
+    "reverse word order online",
     "word reverser",
-    "text reversal",
+    "word reverser online",
+    "text reversal tool",
     "sentence reversal",
+    "word order reverser",
+    "text manipulation tool",
+    "reverse text words",
     "word order tool",
-    "text manipulation",
-    "reverse text",
-    "word shuffle"
+    "free word reverser",
+    "backwards word order",
+    "flip word order",
+    "reverse sentence words",
+    "word order changer",
+    "reverse words in sentence",
+    "text word reverser",
+    "sentence word reverser",
+    "invert word order",
+    "reverse word sequence"
   ],
   toolPath: "/tools/reverse-word-order"
 })

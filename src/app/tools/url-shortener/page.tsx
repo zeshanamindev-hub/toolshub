@@ -7,13 +7,25 @@ export const metadata = generateToolMetadata({
   category: "Generators",
   keywords: [
     "URL shortener",
+    "URL shortener online",
     "link shortener",
-    "base64 URL",
+    "link shortener online",
+    "base64 URL shortener",
     "compact links",
+    "shorten url",
     "URL encoder",
-    "link sharing",
+    "link sharing tool",
     "browser shortener",
-    "URL compression"
+    "URL compression",
+    "free url shortener",
+    "shorten link",
+    "url compressor",
+    "short url generator",
+    "url shortening tool",
+    "link compressor",
+    "shorten urls free",
+    "offline url shortener",
+    "privacy url shortener"
   ],
   toolPath: "/tools/url-shortener"
 })

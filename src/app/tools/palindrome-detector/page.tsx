@@ -7,13 +7,25 @@ export const metadata = generateToolMetadata({
   category: "Text & Writing",
   keywords: [
     "palindrome detector",
+    "palindrome detector online",
     "find palindromes",
+    "find palindromes online",
     "palindrome finder",
+    "palindrome finder online",
     "detect palindromes",
-    "palindrome words",
+    "palindrome words finder",
     "palindrome analyzer",
     "find palindromic words",
-    "palindrome scanner"
+    "palindrome scanner",
+    "free palindrome detector",
+    "palindrome word finder",
+    "detect palindromic words",
+    "palindrome search tool",
+    "find palindrome words",
+    "palindrome detection tool",
+    "identify palindromes",
+    "palindrome highlighter",
+    "palindrome checker tool"
   ],
   toolPath: "/tools/palindrome-detector"
 })

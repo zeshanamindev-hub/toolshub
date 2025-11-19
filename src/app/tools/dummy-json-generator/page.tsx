@@ -7,13 +7,25 @@ export const metadata = generateToolMetadata({
   category: "Generators",
   keywords: [
     "dummy json",
+    "dummy json generator",
     "json generator",
+    "json generator online",
     "fake json data",
-    "mock json",
-    "json test data",
+    "fake json data generator",
+    "mock json generator",
+    "json test data generator",
     "json data generator",
     "dummy data generator",
-    "mock api generator"
+    "mock api generator",
+    "free json generator",
+    "json sample data",
+    "json placeholder data",
+    "json mock data",
+    "generate json data",
+    "json test generator",
+    "api mock data generator",
+    "dummy json online",
+    "fake api data generator"
   ],
   toolPath: "/tools/dummy-json-generator"
 })

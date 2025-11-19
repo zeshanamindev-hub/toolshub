@@ -7,13 +7,25 @@ export const metadata = generateToolMetadata({
   category: "Developer Tools",
   keywords: [
     "broken link checker",
+    "broken link checker online",
     "link validator",
+    "link validator online",
     "HTML link checker",
     "dead link detector",
-    "URL validation",
-    "link checker",
-    "broken links",
-    "link analysis"
+    "dead link checker",
+    "URL validation tool",
+    "link checker online",
+    "broken links finder",
+    "link analysis tool",
+    "free broken link checker",
+    "check broken links",
+    "find broken links",
+    "html link validator",
+    "website link checker",
+    "link testing tool",
+    "validate links",
+    "broken url checker",
+    "link health checker"
   ],
   toolPath: "/tools/broken-link-checker"
 })

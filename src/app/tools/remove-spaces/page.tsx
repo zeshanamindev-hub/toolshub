@@ -7,13 +7,25 @@ export const metadata = generateToolMetadata({
   category: "Text & Writing",
   keywords: [
     "remove extra spaces",
+    "remove extra spaces online",
     "remove whitespace",
+    "remove whitespace online",
     "clean text",
     "normalize spaces",
     "text formatter",
-    "remove tabs",
-    "trim spaces",
-    "whitespace remover"
+    "remove tabs online",
+    "trim spaces online",
+    "whitespace remover",
+    "free space remover",
+    "delete extra spaces",
+    "remove double spaces",
+    "clean up text formatting",
+    "space cleaner",
+    "text whitespace cleaner",
+    "remove multiple spaces",
+    "space normalizer",
+    "trim whitespace",
+    "cleanup text spaces"
   ],
   toolPath: "/tools/remove-spaces"
 })

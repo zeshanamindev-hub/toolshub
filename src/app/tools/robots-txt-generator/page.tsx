@@ -7,13 +7,25 @@ export const metadata = generateToolMetadata({
   category: "Developer Tools",
   keywords: [
     "robots.txt generator",
+    "robots.txt generator online",
     "search engine crawler",
-    "SEO robots",
+    "SEO robots.txt",
     "web crawler control",
-    "robots.txt file",
-    "crawl delay",
-    "sitemap robots",
-    "bot blocking"
+    "robots.txt file generator",
+    "crawl delay settings",
+    "sitemap robots.txt",
+    "bot blocking tool",
+    "create robots.txt",
+    "generate robots.txt file",
+    "free robots.txt generator",
+    "robots txt maker",
+    "seo crawler control",
+    "website robots.txt",
+    "robots.txt creator",
+    "search engine robots",
+    "robots.txt builder",
+    "googlebot control",
+    "web crawler rules"
   ],
   toolPath: "/tools/robots-txt-generator"
 })

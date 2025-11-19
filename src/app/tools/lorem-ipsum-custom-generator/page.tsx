@@ -7,13 +7,25 @@ export const metadata = generateToolMetadata({
   category: "Generators",
   keywords: [
     "custom lorem ipsum",
+    "custom lorem ipsum generator",
     "lorem ipsum custom",
     "custom placeholder text",
+    "custom placeholder text generator",
     "custom dummy text",
-    "personalized lorem",
+    "custom dummy text generator",
+    "personalized lorem ipsum",
     "custom text generator",
     "lorem with custom words",
-    "custom filler text"
+    "custom filler text",
+    "free custom lorem ipsum",
+    "generate custom placeholder",
+    "custom lorem generator",
+    "personalized dummy text",
+    "custom word lorem ipsum",
+    "custom lipsum generator",
+    "lorem ipsum own words",
+    "custom fake text",
+    "custom lorem maker"
   ],
   toolPath: "/tools/lorem-ipsum-custom-generator"
 })

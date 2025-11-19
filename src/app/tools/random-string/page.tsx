@@ -8,12 +8,24 @@ export const metadata = generateToolMetadata({
   keywords: [
     "random string",
     "random string generator",
+    "random string generator online",
     "generate random string",
     "random text generator",
-    "string generator",
+    "string generator online",
     "random id generator",
-    "random token",
-    "random characters"
+    "random token generator",
+    "random characters generator",
+    "free random string",
+    "random password generator",
+    "random alphanumeric string",
+    "secure random string",
+    "random string maker",
+    "generate random text",
+    "random character generator",
+    "unique string generator",
+    "random key generator",
+    "random code generator",
+    "random string creator"
   ],
   toolPath: "/tools/random-string"
 })

@@ -3,17 +3,29 @@ import JsonFormatterClient from "./client"
 
 export const metadata = generateToolMetadata({
   toolName: "JSON Formatter",
-  toolDescription: "Format, validate, and beautify JSON instantly. Minify JSON and fix syntax errors. Free online JSON formatter and validator with syntax highlighting.",
+  toolDescription: "Free online JSON formatter, validator, and beautifier. Format, validate, and prettify JSON instantly with syntax highlighting and error detection. Minify or beautify JSON data with custom indentation.",
   category: "Developer Tools",
   keywords: [
     "json formatter",
-    "json beautifier",
+    "json formatter online",
     "json validator",
-    "format json",
+    "json beautifier",
+    "format json online",
     "json pretty print",
     "json minifier",
     "json viewer",
-    "validate json"
+    "validate json",
+    "beautify json",
+    "json formatter and validator",
+    "json syntax checker",
+    "json lint",
+    "format json data",
+    "json editor online",
+    "json parser online",
+    "json formatter tool",
+    "online json formatter",
+    "free json formatter",
+    "json prettifier"
   ],
   toolPath: "/tools/json-formatter"
 })

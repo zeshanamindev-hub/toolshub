@@ -7,14 +7,25 @@ export const metadata = generateToolMetadata({
   category: "Developer Tools",
   keywords: [
     "sitemap generator",
-    "XML sitemap",
-    "SEO sitemap",
-    "website sitemap",
+    "sitemap generator online",
+    "XML sitemap generator",
+    "SEO sitemap generator",
+    "website sitemap generator",
     "search engine sitemap",
-    "sitemap.xml",
-    "URL priority",
-    "change frequency",
-    "last modified"
+    "sitemap.xml generator",
+    "create sitemap",
+    "generate sitemap",
+    "free sitemap generator",
+    "sitemap builder",
+    "sitemap creator",
+    "xml sitemap maker",
+    "google sitemap generator",
+    "website sitemap creator",
+    "sitemap xml builder",
+    "seo sitemap tool",
+    "sitemap generation tool",
+    "url sitemap generator",
+    "sitemap.xml creator"
   ],
   toolPath: "/tools/sitemap-generator"
 })

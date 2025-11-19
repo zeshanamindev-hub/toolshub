@@ -3,17 +3,29 @@ import QrGeneratorClient from "./client"
 
 export const metadata = generateToolMetadata({
   toolName: "QR Code Generator",
-  toolDescription: "Generate QR codes for URLs, text, emails, and more. Customize size and download as PNG. Free online QR code generator with instant preview.",
+  toolDescription: "Free QR code generator online. Create custom QR codes for URLs, text, WiFi, vCards, and more. Download high-quality PNG or SVG. No registration required.",
   category: "Generators",
   keywords: [
     "qr code generator",
-    "qr generator",
+    "qr code generator free",
     "create qr code",
     "qr code maker",
-    "generate qr code",
+    "free qr code generator",
+    "qr code creator online",
+    "generate qr code free",
+    "qr generator online",
+    "make qr code",
+    "qr code builder",
+    "custom qr code generator",
+    "qr code generator online free",
+    "barcode generator",
     "qr code creator",
-    "free qr code",
-    "qr code online"
+    "url to qr code",
+    "wifi qr code generator",
+    "vcard qr code",
+    "qr code download",
+    "qr code png",
+    "qr code svg"
   ],
   toolPath: "/tools/qr-generator"
 })

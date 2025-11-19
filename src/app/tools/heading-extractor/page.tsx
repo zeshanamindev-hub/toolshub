@@ -7,13 +7,25 @@ export const metadata = generateToolMetadata({
   category: "Developer Tools",
   keywords: [
     "heading extractor",
-    "HTML headings",
+    "heading extractor online",
+    "HTML headings extractor",
     "H1 H2 H3 analysis",
+    "H1 H2 H3 extractor",
     "SEO heading structure",
-    "content hierarchy",
+    "content hierarchy analyzer",
     "HTML parser",
-    "heading tags",
-    "accessibility headings"
+    "heading tags extractor",
+    "accessibility headings checker",
+    "extract headings from html",
+    "html heading analyzer",
+    "seo heading checker",
+    "heading structure tool",
+    "h tag extractor",
+    "html heading structure",
+    "extract h1 h2 h3",
+    "heading hierarchy",
+    "html heading tool",
+    "seo heading extractor"
   ],
   toolPath: "/tools/heading-extractor"
 })

@@ -3,17 +3,29 @@ import UrlEncoderClient from "./client"
 
 export const metadata = generateToolMetadata({
   toolName: "URL Encoder/Decoder",
-  toolDescription: "Encode and decode URLs instantly. Convert special characters to percent-encoding and decode URL-encoded strings. Free online URL encoding tool for developers.",
+  toolDescription: "Free online URL encoder and decoder. Encode special characters to percent-encoded format or decode URLs instantly. Convert URLs for web development and API calls.",
   category: "Converters & Encoding",
   keywords: [
     "url encoder",
     "url decoder",
-    "percent encoding",
+    "encode url online",
+    "decode url online",
     "url encode",
     "url decode",
+    "percent encoding",
+    "url encoding tool",
     "uri encoder",
-    "encode url",
-    "decode url"
+    "uri decoder",
+    "url escape",
+    "url parameter encoder",
+    "encode url parameters",
+    "url converter",
+    "encode special characters",
+    "url encoding decoder",
+    "online url encoder",
+    "url encode decode",
+    "percent encode",
+    "url safe encoder"
   ],
   toolPath: "/tools/url-encoder"
 })

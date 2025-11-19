@@ -7,13 +7,25 @@ export const metadata = generateToolMetadata({
   category: "Converters & Encoding",
   keywords: [
     "html entities",
-    "html encoder",
-    "html decoder",
-    "encode html",
-    "decode html",
+    "html entities encoder",
+    "html entities decoder",
+    "html encoder online",
+    "html decoder online",
+    "encode html entities",
+    "decode html entities",
     "html special characters",
-    "html escape",
-    "html unescape"
+    "html escape characters",
+    "html unescape",
+    "convert html entities",
+    "html character codes",
+    "html entity converter",
+    "encode special characters html",
+    "html entity reference",
+    "free html encoder",
+    "html encoding tool",
+    "html character encoder",
+    "html entity escape",
+    "html entities list"
   ],
   toolPath: "/tools/html-entities"
 })

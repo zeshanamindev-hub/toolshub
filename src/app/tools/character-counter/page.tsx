@@ -3,17 +3,29 @@ import CharacterCounterClient from "./client"
 
 export const metadata = generateToolMetadata({
   toolName: "Character Counter",
-  toolDescription: "Count characters with or without spaces instantly. Perfect for Twitter, SMS, meta descriptions. Detailed breakdown with social media limits including Twitter/X (280), Instagram (2200), and Facebook. Real-time character counting tool.",
+  toolDescription: "Free online character counter for Twitter, Facebook, Instagram, and essays. Count characters, letters, words, spaces, and punctuation instantly. Check social media limits in real-time.",
   category: "Text & Writing",
   keywords: [
     "character counter",
-    "character count",
-    "twitter character count",
-    "sms character limit",
-    "meta description length",
-    "character counter with spaces",
+    "character count tool",
+    "count characters online",
+    "free character counter",
+    "twitter character counter",
+    "facebook character counter",
+    "instagram character counter",
+    "social media character count",
+    "text character counter",
     "letter counter",
-    "text length checker"
+    "character limit checker",
+    "character count online free",
+    "text length counter",
+    "character counter with spaces",
+    "character counter without spaces",
+    "tweet character counter",
+    "post character limit",
+    "character counting tool",
+    "online character count",
+    "how many characters"
   ],
   toolPath: "/tools/character-counter"
 })

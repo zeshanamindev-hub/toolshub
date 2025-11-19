@@ -7,14 +7,25 @@ export const metadata = generateToolMetadata({
   category: "Developer Tools",
   keywords: [
     "meta tag preview",
-    "SEO preview",
+    "meta tag preview tool",
+    "SEO preview tool",
     "Google search preview",
-    "social media preview",
+    "social media preview tool",
     "meta description preview",
     "title tag preview",
     "Open Graph preview",
     "Twitter Card preview",
-    "search result preview"
+    "search result preview",
+    "SERP preview tool",
+    "Google SERP preview",
+    "meta tags tester",
+    "preview meta tags",
+    "Facebook preview tool",
+    "LinkedIn preview tool",
+    "social sharing preview",
+    "SEO meta tag preview",
+    "test meta tags",
+    "free meta tag preview"
   ],
   toolPath: "/tools/meta-tag-preview"
 })

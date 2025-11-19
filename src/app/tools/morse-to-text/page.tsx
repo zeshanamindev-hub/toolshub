@@ -7,13 +7,25 @@ export const metadata = generateToolMetadata({
   category: "Converters & Encoding",
   keywords: [
     "morse to text",
+    "morse to text converter",
     "morse code decoder",
-    "decode morse code",
+    "morse code decoder online",
+    "decode morse code online",
     "morse translator",
     "morse code converter",
-    "morse to english",
+    "morse to english converter",
     "morse decoder online",
-    "morse code reader"
+    "morse code reader",
+    "free morse decoder",
+    "morse code translator",
+    "morse to text online",
+    "convert morse to text",
+    "morse code to english",
+    "decode morse",
+    "morse audio decoder",
+    "morse signal decoder",
+    "online morse translator",
+    "morse code interpreter"
   ],
   toolPath: "/tools/morse-to-text"
 })

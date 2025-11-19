@@ -7,13 +7,25 @@ export const metadata = generateToolMetadata({
   category: "Generators",
   keywords: [
     "favicon generator",
+    "favicon generator online",
     "PNG to ICO converter",
+    "PNG to ICO converter online",
     "website favicon",
-    "favicon creator",
+    "favicon creator online",
     "ico file generator",
     "browser favicon maker",
     "favicon converter",
-    "website icon generator"
+    "website icon generator",
+    "free favicon generator",
+    "create favicon",
+    "favicon maker",
+    "generate favicon",
+    "favicon from image",
+    "favicon tool",
+    "online favicon creator",
+    "favicon builder",
+    "favicon icon generator",
+    "make favicon"
   ],
   toolPath: "/tools/favicon-generator"
 })
