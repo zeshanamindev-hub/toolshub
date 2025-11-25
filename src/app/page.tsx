@@ -3,7 +3,6 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import StructuredData from "@/components/structured-data"
-import GoogleAdSlot from "@/components/ads/google-ad-slot"
 import { useState } from "react"
 import {
   Sparkles,
@@ -275,18 +274,6 @@ export default function HomePage() {
 
       </section>
 
-      {/* Ad Placement 1 - After Hero Section */}
-      <section className="py-8 px-4 sm:px-6 lg:px-8 bg-gray-50">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-3">
-            <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider">Advertisement</span>
-          </div>
-          <div className="bg-white rounded-3xl p-6 border-2 border-dashed border-gray-300 flex items-center justify-center min-h-[280px]">
-            <GoogleAdSlot slot="homepage-top" />
-          </div>
-        </div>
-      </section>
-
       {/* Features Section */}
       <section className="relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden bg-white">
         {/* Decorative elements */}
@@ -462,18 +449,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Ad Placement 2 - After Trending Tools */}
-      <section className="py-8 px-4 sm:px-6 lg:px-8 bg-purple-50">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-3">
-            <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider">Advertisement</span>
-          </div>
-          <div className="bg-white rounded-3xl p-6 shadow-lg border-2 border-dashed border-purple-200 flex items-center justify-center min-h-[280px]">
-            <GoogleAdSlot slot="homepage-middle" />
-          </div>
-        </div>
-      </section>
-
       {/* All Tools Section */}
       <section className="relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden bg-blue-50">
         {/* Gentle floating orbs */}
@@ -575,18 +550,6 @@ export default function HomePage() {
                 <ChevronRight className="ml-3 h-5 w-5 group-hover:translate-x-2 transition-transform duration-500" />
               </Button>
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Ad Placement 3 - Before Footer */}
-      <section className="py-8 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-3">
-            <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider">Advertisement</span>
-          </div>
-          <div className="bg-white rounded-3xl p-6 shadow-xl border-2 border-dashed border-blue-200 flex items-center justify-center min-h-[280px]">
-            <GoogleAdSlot slot="homepage-bottom" />
           </div>
         </div>
       </section>

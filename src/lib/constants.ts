@@ -3,7 +3,7 @@
 export const SITE_CONFIG = {
   name: "Tools Hub",
   description: "53+ free online tools for text manipulation, development, security, SEO, and content creation",
-  url: "https://toolshub.com",
+  url: "https://toolshub-lemon.vercel.app",
   toolCount: 53
 }
 
