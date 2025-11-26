@@ -188,13 +188,13 @@ export default function PalindromeDetectorClient() {
                   <div className="font-mono text-sm text-gray-800 mb-3">
                     {highlightPalindromes("A man, a plan, a canal: Panama. Madam, racecar is cool.")}
                   </div>
-                  <div className="text-sm text-green-600 font-semibold">
+                  <div className="text-sm text-green-600 font-bold">
                     Detected: {detectPalindromes("A man, a plan, a canal: Panama. Madam, racecar is cool.").join(", ")}
                   </div>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="p-3 bg-purple-50 rounded-lg">
-                    <div className="font-semibold text-purple-600 mb-2">Common Palindromes:</div>
+                    <div className="font-bold text-purple-600 mb-2">Common Palindromes:</div>
                     <div className="text-sm space-y-1">
                       <div>radar, level, madam, racecar</div>
                       <div>deed, peep, noon, civic</div>
@@ -202,7 +202,7 @@ export default function PalindromeDetectorClient() {
                     </div>
                   </div>
                   <div className="p-3 bg-blue-50 rounded-lg">
-                    <div className="font-semibold text-blue-600 mb-2">Longer Examples:</div>
+                    <div className="font-bold text-blue-600 mb-2">Longer Examples:</div>
                     <div className="text-sm space-y-1">
                       <div>Able was I ere I saw Elba</div>
                       <div>A Santa at NASA</div>
@@ -227,25 +227,25 @@ export default function PalindromeDetectorClient() {
             <CardContent>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div className="text-center p-4">
-                  <div className="text-purple-600 font-semibold mb-2">Literature Analysis</div>
+                  <div className="text-purple-600 font-bold mb-2">Literature Analysis</div>
                   <p className="text-sm text-gray-600">
                     Find palindromic words in poems and stories
                   </p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-green-600 font-semibold mb-2">Word Games</div>
+                  <div className="text-green-600 font-bold mb-2">Word Games</div>
                   <p className="text-sm text-gray-600">
                     Discover palindromes in crosswords and puzzles
                   </p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-indigo-600 font-semibold mb-2">Content Creation</div>
+                  <div className="text-indigo-600 font-bold mb-2">Content Creation</div>
                   <p className="text-sm text-gray-600">
                     Identify palindromic elements in writing
                   </p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-orange-600 font-semibold mb-2">Language Learning</div>
+                  <div className="text-orange-600 font-bold mb-2">Language Learning</div>
                   <p className="text-sm text-gray-600">
                     Study symmetrical words and patterns
                   </p>

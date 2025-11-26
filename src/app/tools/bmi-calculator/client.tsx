@@ -283,9 +283,9 @@ export default function BmiCalculatorClient() {
           <div className="text-center mb-8">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 backdrop-blur-sm border border-gray-200 mb-4">
               <Activity className="h-4 w-4 text-emerald-600" />
-              <span className="text-sm font-semibold text-gray-700">Health Calculator</span>
+              <span className="text-sm font-bold text-gray-700">Health Calculator</span>
             </div>
-            <h1 className="text-4xl sm:text-5xl font-black text-gray-900 mb-4">
+            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
               Advanced BMI Calculator
             </h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -457,21 +457,21 @@ export default function BmiCalculatorClient() {
                   <CardContent>
                     <div className="text-center">
                       <div className={`text-4xl font-bold ${result.categoryColor}`}>{result.bmi}</div>
-                      <div className={`text-lg font-semibold ${result.categoryColor}`}>{result.category}</div>
+                      <div className={`text-lg font-bold ${result.categoryColor}`}>{result.category}</div>
                     </div>
                     <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <h4 className="font-semibold">Ideal Weight</h4>
+                        <h4 className="font-bold">Ideal Weight</h4>
                         <p>{result.idealWeightRange.min} - {result.idealWeightRange.max} kg</p>
                       </div>
                       <div>
-                        <h4 className="font-semibold">Body Fat % (Est.)</h4>
+                        <h4 className="font-bold">Body Fat % (Est.)</h4>
                         <p>{result.bodyFatEstimate.min}% - {result.bodyFatEstimate.max}%</p>
                       </div>
                     </div>
                     {healthMetrics && (
                       <div className="mt-4">
-                        <h4 className="font-semibold">Daily Health Metrics</h4>
+                        <h4 className="font-bold">Daily Health Metrics</h4>
                         <ul className="list-disc list-inside">
                           <li>BMR: {healthMetrics.bmr} calories</li>
                           <li>TDEE: {healthMetrics.tdee} calories</li>
@@ -481,7 +481,7 @@ export default function BmiCalculatorClient() {
                       </div>
                     )}
                     <div className="mt-4">
-                      <h4 className="font-semibold">Recommendations</h4>
+                      <h4 className="font-bold">Recommendations</h4>
                       <ul className="list-disc list-inside">
                         {result.recommendations.map((rec, i) => <li key={i}>{rec}</li>)}
                       </ul>

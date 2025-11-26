@@ -147,7 +147,7 @@ export default function ToolsCategorySection({
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-5 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-semibold mb-6 animate-fade-in-up">
+          <div className="inline-flex items-center px-5 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-bold mb-6 animate-fade-in-up">
             <Grid3X3 className="mr-2 h-4 w-4" />
             Tool Categories
           </div>
@@ -239,7 +239,7 @@ export default function ToolsCategorySection({
                   {/* Category CTA Button */}
                   <Button 
                     asChild 
-                    className={`w-full group-hover:shadow-lg transition-all duration-300 transform group-hover:scale-105 bg-gradient-to-r ${category.accent} hover:shadow-xl border-0 text-white font-semibold`}
+                    className={`w-full group-hover:shadow-lg transition-all duration-300 transform group-hover:scale-105 bg-gradient-to-r ${category.accent} hover:shadow-xl border-0 text-white font-bold`}
                   >
                     <Link href={`/categories/${category.id}`}>
                       <Target className="mr-2 h-4 w-4" />
@@ -304,7 +304,7 @@ export default function ToolsCategorySection({
             <Button 
               size="lg" 
               asChild 
-              className="bg-gradient-to-r from-primary to-indigo-600 hover:from-primary/90 hover:to-indigo-600/90 text-white shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 px-8 py-4 text-lg font-semibold"
+              className="bg-gradient-to-r from-primary to-indigo-600 hover:from-primary/90 hover:to-indigo-600/90 text-white shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 px-8 py-4 text-lg font-bold"
             >
               <Link href="/categories">
                 <Star className="mr-2 h-5 w-5 animate-pulse" />

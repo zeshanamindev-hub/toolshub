@@ -191,10 +191,10 @@ export default function AboutPage() {
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 backdrop-blur-sm border border-gray-200 mb-6">
               <Sparkles className="h-4 w-4 text-blue-600" />
-              <span className="text-sm font-semibold text-gray-700">About Us</span>
+              <span className="text-sm font-bold text-gray-700">About Us</span>
             </div>
 
-            <h1 className="text-5xl sm:text-6xl font-black text-gray-900 mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600">
+            <h1 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600">
               About Tools Hub
             </h1>
 
@@ -212,7 +212,7 @@ export default function AboutPage() {
                 <Card key={index} className="text-center hover:shadow-lg transition-shadow">
                   <CardContent className="pt-6">
                     <StatIcon className={`h-8 w-8 ${stat.color} mx-auto mb-3`} />
-                    <div className="text-3xl font-black text-gray-900 mb-1">
+                    <div className="text-3xl font-bold text-gray-900 mb-1">
                       {stat.value}
                     </div>
                     <div className="text-sm text-gray-600 font-medium">
@@ -349,19 +349,19 @@ export default function AboutPage() {
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="flex items-center space-x-3 p-4 rounded-lg bg-blue-50">
                   <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0" />
-                  <span className="font-semibold">Next.js 15 - Fast, SEO-optimized framework</span>
+                  <span className="font-bold">Next.js 15 - Fast, SEO-optimized framework</span>
                 </div>
                 <div className="flex items-center space-x-3 p-4 rounded-lg bg-purple-50">
                   <CheckCircle className="h-5 w-5 text-purple-600 flex-shrink-0" />
-                  <span className="font-semibold">React 19 - Modern UI library</span>
+                  <span className="font-bold">React 19 - Modern UI library</span>
                 </div>
                 <div className="flex items-center space-x-3 p-4 rounded-lg bg-green-50">
                   <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0" />
-                  <span className="font-semibold">TypeScript - Type-safe development</span>
+                  <span className="font-bold">TypeScript - Type-safe development</span>
                 </div>
                 <div className="flex items-center space-x-3 p-4 rounded-lg bg-orange-50">
                   <CheckCircle className="h-5 w-5 text-orange-600 flex-shrink-0" />
-                  <span className="font-semibold">Tailwind CSS - Responsive design</span>
+                  <span className="font-bold">Tailwind CSS - Responsive design</span>
                 </div>
               </div>
             </CardContent>
@@ -371,7 +371,7 @@ export default function AboutPage() {
           <Card className="bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 border-0 text-white">
             <CardContent className="p-12 text-center">
               <Sparkles className="h-12 w-12 mx-auto mb-6 opacity-90" />
-              <h2 className="text-3xl sm:text-4xl font-black mb-4">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
                 Ready to Get Started?
               </h2>
               <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">

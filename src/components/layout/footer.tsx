@@ -28,7 +28,7 @@ export default function Footer() {
               <div className="relative p-2.5 bg-blue-600 rounded-xl transition-all duration-500 ease-out group-hover:scale-110">
                 <Wrench className="h-6 w-6 text-white" />
               </div>
-              <span className="text-2xl font-black text-blue-600">
+              <span className="text-2xl font-bold text-blue-600">
                 Tools Hub
               </span>
             </Link>

@@ -240,7 +240,7 @@ export default function BrokenLinkCheckerClient() {
 
               <div className="flex items-center justify-between">
                 <div className="text-sm text-gray-600">
-                  Total links found: <span className="font-semibold">{stats.total}</span>
+                  Total links found: <span className="font-bold">{stats.total}</span>
                 </div>
                 <Button variant="outline" size="sm" onClick={clearHtml}>
                   <Trash2 className="h-4 w-4 mr-2" />
@@ -281,19 +281,19 @@ export default function BrokenLinkCheckerClient() {
 
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                   <div className="text-center p-2 bg-gray-50 rounded">
-                    <div className="text-lg font-semibold text-gray-700">{stats.internal}</div>
+                    <div className="text-lg font-bold text-gray-700">{stats.internal}</div>
                     <div className="text-xs text-gray-600">Internal</div>
                   </div>
                   <div className="text-center p-2 bg-gray-50 rounded">
-                    <div className="text-lg font-semibold text-gray-700">{stats.anchor}</div>
+                    <div className="text-lg font-bold text-gray-700">{stats.anchor}</div>
                     <div className="text-xs text-gray-600">Anchors</div>
                   </div>
                   <div className="text-center p-2 bg-gray-50 rounded">
-                    <div className="text-lg font-semibold text-gray-700">{stats.mailto}</div>
+                    <div className="text-lg font-bold text-gray-700">{stats.mailto}</div>
                     <div className="text-xs text-gray-600">Email</div>
                   </div>
                   <div className="text-center p-2 bg-gray-50 rounded">
-                    <div className="text-lg font-semibold text-gray-700">{stats.tel}</div>
+                    <div className="text-lg font-bold text-gray-700">{stats.tel}</div>
                     <div className="text-xs text-gray-600">Phone</div>
                   </div>
                 </div>
@@ -370,7 +370,7 @@ export default function BrokenLinkCheckerClient() {
               <CardContent>
                 <div className="space-y-3">
                   <div className="p-3 bg-orange-50 rounded-lg">
-                    <h4 className="font-semibold text-orange-900 mb-2">Fix Invalid Links</h4>
+                    <h4 className="font-bold text-orange-900 mb-2">Fix Invalid Links</h4>
                     <ul className="text-sm text-orange-800 space-y-1">
                       <li>• Check for typos in URLs</li>
                       <li>• Ensure proper URL formatting (http:// or https://)</li>
@@ -380,7 +380,7 @@ export default function BrokenLinkCheckerClient() {
                   </div>
 
                   <div className="p-3 bg-blue-50 rounded-lg">
-                    <h4 className="font-semibold text-blue-900 mb-2">Best Practices</h4>
+                    <h4 className="font-bold text-blue-900 mb-2">Best Practices</h4>
                     <ul className="text-sm text-blue-800 space-y-1">
                       <li>• Use descriptive anchor text for better SEO</li>
                       <li>• Regularly audit links for broken URLs</li>

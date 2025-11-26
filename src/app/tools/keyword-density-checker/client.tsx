@@ -211,7 +211,7 @@ export default function KeywordDensityCheckerClient() {
 
               <div className="flex items-center justify-between">
                 <div className="text-sm text-gray-600">
-                  Total words: <span className="font-semibold">{totalWords.toLocaleString()}</span>
+                  Total words: <span className="font-bold">{totalWords.toLocaleString()}</span>
                 </div>
                 <Button variant="outline" size="sm" onClick={clearText}>
                   <Trash2 className="h-4 w-4 mr-2" />
@@ -240,7 +240,7 @@ export default function KeywordDensityCheckerClient() {
                 {targetDensity && (
                   <div className="p-4 bg-blue-50 rounded-lg">
                     <div className="flex items-center justify-between mb-2">
-                      <span className="font-semibold text-blue-900">"{targetDensity.keyword}"</span>
+                      <span className="font-bold text-blue-900">"{targetDensity.keyword}"</span>
                       <div className="flex items-center gap-2">
                         {targetDensity.status === 'good' && <CheckCircle className="h-4 w-4 text-green-600" />}
                         {targetDensity.status === 'high' && <AlertTriangle className="h-4 w-4 text-orange-600" />}
@@ -257,11 +257,11 @@ export default function KeywordDensityCheckerClient() {
                     <div className="grid grid-cols-2 gap-4 text-sm">
                       <div>
                         <span className="text-gray-600">Count:</span>
-                        <span className="font-semibold ml-2">{targetDensity.count}</span>
+                        <span className="font-bold ml-2">{targetDensity.count}</span>
                       </div>
                       <div>
                         <span className="text-gray-600">Density:</span>
-                        <span className="font-semibold ml-2">{targetDensity.density.toFixed(2)}%</span>
+                        <span className="font-bold ml-2">{targetDensity.density.toFixed(2)}%</span>
                       </div>
                     </div>
                   </div>
@@ -334,7 +334,7 @@ export default function KeywordDensityCheckerClient() {
                       <div className="flex items-start gap-2">
                         <AlertTriangle className="h-5 w-5 text-orange-600 mt-0.5" />
                         <div>
-                          <h4 className="font-semibold text-orange-900">High Density Keywords</h4>
+                          <h4 className="font-bold text-orange-900">High Density Keywords</h4>
                           <p className="text-sm text-orange-700">
                             Consider reducing the frequency of: {keywords.filter(k => k.status === 'high').slice(0, 3).map(k => k.keyword).join(', ')}
                           </p>
@@ -348,7 +348,7 @@ export default function KeywordDensityCheckerClient() {
                       <div className="flex items-start gap-2">
                         <TrendingUp className="h-5 w-5 text-blue-600 mt-0.5" />
                         <div>
-                          <h4 className="font-semibold text-blue-900">Potential Target Keywords</h4>
+                          <h4 className="font-bold text-blue-900">Potential Target Keywords</h4>
                           <p className="text-sm text-blue-700">
                             Consider optimizing for: {keywords.filter(k => k.status === 'low' && k.count >= 3).slice(0, 3).map(k => k.keyword).join(', ')}
                           </p>
@@ -361,7 +361,7 @@ export default function KeywordDensityCheckerClient() {
                     <div className="flex items-start gap-2">
                       <CheckCircle className="h-5 w-5 text-green-600 mt-0.5" />
                       <div>
-                        <h4 className="font-semibold text-green-900">Optimization Tips</h4>
+                        <h4 className="font-bold text-green-900">Optimization Tips</h4>
                         <ul className="text-sm text-green-700 list-disc list-inside space-y-1">
                           <li>Aim for 0.5-3% keyword density for optimal SEO</li>
                           <li>Use semantic keywords and related terms</li>

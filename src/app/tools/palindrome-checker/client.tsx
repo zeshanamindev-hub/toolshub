@@ -157,7 +157,7 @@ export default function PalindromeCheckerClient() {
               {/* Result Stats */}
               {palindromeResult !== null && (
                 <div className="text-sm text-gray-600 space-y-1">
-                  <div>Status: <span className={palindromeResult ? "text-green-600 font-semibold" : "text-red-600 font-semibold"}>
+                  <div>Status: <span className={palindromeResult ? "text-green-600 font-bold" : "text-red-600 font-bold"}>
                     {palindromeResult ? "Palindrome" : "Not a Palindrome"}
                   </span></div>
                   <div>Reversed: {cleanedInput.split("").reverse().join("")}</div>
@@ -179,7 +179,7 @@ export default function PalindromeCheckerClient() {
             <CardContent>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-3">
-                  <div className="font-semibold text-green-600">Palindromes:</div>
+                  <div className="font-bold text-green-600">Palindromes:</div>
                   {[
                     "racecar",
                     "A man, a plan, a canal: Panama",
@@ -193,7 +193,7 @@ export default function PalindromeCheckerClient() {
                   ))}
                 </div>
                 <div className="space-y-3">
-                  <div className="font-semibold text-red-600">Non-Palindromes:</div>
+                  <div className="font-bold text-red-600">Non-Palindromes:</div>
                   {[
                     "hello world",
                     "This is not a palindrome",
@@ -223,25 +223,25 @@ export default function PalindromeCheckerClient() {
             <CardContent>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div className="text-center p-4">
-                  <div className="text-cyan-600 font-semibold mb-2">Word Games</div>
+                  <div className="text-cyan-600 font-bold mb-2">Word Games</div>
                   <p className="text-sm text-gray-600">
                     Check words in puzzles and crosswords
                   </p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-green-600 font-semibold mb-2">Programming</div>
+                  <div className="text-green-600 font-bold mb-2">Programming</div>
                   <p className="text-sm text-gray-600">
                     Test algorithms and string manipulation
                   </p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-purple-600 font-semibold mb-2">Education</div>
+                  <div className="text-purple-600 font-bold mb-2">Education</div>
                   <p className="text-sm text-gray-600">
                     Learn about symmetry and patterns
                   </p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-orange-600 font-semibold mb-2">Fun & Creativity</div>
+                  <div className="text-orange-600 font-bold mb-2">Fun & Creativity</div>
                   <p className="text-sm text-gray-600">
                     Create palindromic poems and phrases
                   </p>

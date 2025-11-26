@@ -442,25 +442,25 @@ export default function JsonFormatterClient() {
             <CardContent>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div className="text-center p-4">
-                  <div className="text-green-600 font-semibold mb-2">Real-time Validation</div>
+                  <div className="text-green-600 font-bold mb-2">Real-time Validation</div>
                   <p className="text-sm text-gray-600">
                     Instant syntax checking with error details
                   </p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-blue-600 font-semibold mb-2">Smart Formatting</div>
+                  <div className="text-blue-600 font-bold mb-2">Smart Formatting</div>
                   <p className="text-sm text-gray-600">
                     Customizable indentation and minification
                   </p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-purple-600 font-semibold mb-2">File Support</div>
+                  <div className="text-purple-600 font-bold mb-2">File Support</div>
                   <p className="text-sm text-gray-600">
                     Upload and download JSON files
                   </p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-orange-600 font-semibold mb-2">Statistics</div>
+                  <div className="text-orange-600 font-bold mb-2">Statistics</div>
                   <p className="text-sm text-gray-600">
                     Detailed analysis of JSON structure
                   </p>

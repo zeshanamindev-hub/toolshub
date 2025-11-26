@@ -276,7 +276,7 @@ export default function UrlShortenerClient() {
                     <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
                       <span className="text-blue-600 font-bold">1</span>
                     </div>
-                    <h4 className="font-semibold mb-2">Input URL</h4>
+                    <h4 className="font-bold mb-2">Input URL</h4>
                     <p className="text-sm text-gray-600">
                       Enter your long URL that you want to shorten
                     </p>
@@ -286,7 +286,7 @@ export default function UrlShortenerClient() {
                     <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
                       <span className="text-green-600 font-bold">2</span>
                     </div>
-                    <h4 className="font-semibold mb-2">Base64 Encode</h4>
+                    <h4 className="font-bold mb-2">Base64 Encode</h4>
                     <p className="text-sm text-gray-600">
                       URL is encoded using base64 and shortened to 8 characters
                     </p>
@@ -296,7 +296,7 @@ export default function UrlShortenerClient() {
                     <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3">
                       <span className="text-purple-600 font-bold">3</span>
                     </div>
-                    <h4 className="font-semibold mb-2">Get Short URL</h4>
+                    <h4 className="font-bold mb-2">Get Short URL</h4>
                     <p className="text-sm text-gray-600">
                       Receive your shortened URL ready for sharing
                     </p>
@@ -307,7 +307,7 @@ export default function UrlShortenerClient() {
                   <div className="flex items-start gap-3">
                     <div className="text-yellow-600 mt-0.5">⚠️</div>
                     <div>
-                      <h4 className="font-semibold text-yellow-900">Important Note</h4>
+                      <h4 className="font-bold text-yellow-900">Important Note</h4>
                       <p className="text-sm text-yellow-700">
                         These shortened URLs won't work unless you set up URL redirection on your server.
                         The tool generates the short format but requires server-side configuration to redirect to the original URLs.

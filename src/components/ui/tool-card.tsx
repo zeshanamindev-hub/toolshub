@@ -69,7 +69,7 @@ export default function ToolCard({
         </p>
 
         {/* CTA */}
-        <div className="mt-6 flex items-center text-blue-600 group-hover:text-purple-600 font-semibold transition-colors duration-300">
+        <div className="mt-6 flex items-center text-blue-600 group-hover:text-purple-600 font-bold transition-colors duration-300">
           <span className={large ? 'text-base' : 'text-sm'}>Try it now</span>
           <ArrowRight className={`ml-2 ${large ? 'h-5 w-5' : 'h-4 w-4'} transition-transform duration-300 group-hover:translate-x-2`} />
         </div>

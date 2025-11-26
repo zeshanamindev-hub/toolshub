@@ -250,25 +250,25 @@ export default function CharacterCounterClient() {
             <CardContent>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div className="text-center p-4">
-                  <div className="text-blue-600 font-semibold mb-2">Real-time Analysis</div>
+                  <div className="text-blue-600 font-bold mb-2">Real-time Analysis</div>
                   <p className="text-sm text-gray-600">
                     Instant character counting as you type
                   </p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-green-600 font-semibold mb-2">Detailed Breakdown</div>
+                  <div className="text-green-600 font-bold mb-2">Detailed Breakdown</div>
                   <p className="text-sm text-gray-600">
                     Letters, numbers, punctuation, and more
                   </p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-purple-600 font-semibold mb-2">Social Media Limits</div>
+                  <div className="text-purple-600 font-bold mb-2">Social Media Limits</div>
                   <p className="text-sm text-gray-600">
                     Check limits for Twitter, Facebook, Instagram
                   </p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-orange-600 font-semibold mb-2">Copy & Clear</div>
+                  <div className="text-orange-600 font-bold mb-2">Copy & Clear</div>
                   <p className="text-sm text-gray-600">
                     Easy text management with one-click actions
                   </p>

@@ -166,7 +166,7 @@ export default function RemoveSpacesClient() {
                     onClick={() => setSelectedOperation(operation.name.toLowerCase().replace(/\s+/g, "").replace(/&/g, ""))}
                   >
                     <div className="w-full">
-                      <div className={`font-semibold ${operation.color} mb-1`}>
+                      <div className={`font-bold ${operation.color} mb-1`}>
                         {operation.name}
                       </div>
                       <div className="text-xs text-gray-500 mb-2">
@@ -311,25 +311,25 @@ export default function RemoveSpacesClient() {
             <CardContent>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div className="text-center p-4">
-                  <div className="text-blue-600 font-semibold mb-2">8 Operations</div>
+                  <div className="text-blue-600 font-bold mb-2">8 Operations</div>
                   <p className="text-sm text-gray-600">
                     Multiple space removal and cleaning options
                   </p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-green-600 font-semibold mb-2">Real-time Preview</div>
+                  <div className="text-green-600 font-bold mb-2">Real-time Preview</div>
                   <p className="text-sm text-gray-600">
                     See results instantly as you select operations
                   </p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-purple-600 font-semibold mb-2">Statistics</div>
+                  <div className="text-purple-600 font-bold mb-2">Statistics</div>
                   <p className="text-sm text-gray-600">
                     Track spaces and characters removed
                   </p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-orange-600 font-semibold mb-2">Examples</div>
+                  <div className="text-orange-600 font-bold mb-2">Examples</div>
                   <p className="text-sm text-gray-600">
                     See examples for each operation type
                   </p>

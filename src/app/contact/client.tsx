@@ -86,7 +86,7 @@ export default function ContactClient() {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 mb-6">
                 <CheckCircle2 className="h-8 w-8 text-green-600" />
               </div>
-              <h2 className="text-3xl font-black text-gray-900 mb-4">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
                 Message Sent Successfully!
               </h2>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
@@ -130,10 +130,10 @@ export default function ContactClient() {
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 backdrop-blur-sm border border-gray-200 mb-6">
             <Mail className="h-4 w-4 text-blue-600" />
-            <span className="text-sm font-semibold text-gray-700">Contact Us</span>
+            <span className="text-sm font-bold text-gray-700">Contact Us</span>
           </div>
 
-          <h1 className="text-5xl sm:text-6xl font-black text-gray-900 mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600">
+          <h1 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600">
             Get in Touch
           </h1>
 
@@ -185,7 +185,7 @@ export default function ContactClient() {
                               />
                               <div>
                                 <div
-                                  className={`font-semibold text-sm mb-1 ${
+                                  className={`font-bold text-sm mb-1 ${
                                     isSelected ? "text-blue-900" : "text-gray-900"
                                   }`}
                                 >
@@ -341,7 +341,7 @@ export default function ContactClient() {
                 <div className="flex items-start gap-3">
                   <Mail className="h-5 w-5 text-purple-600 mt-0.5" />
                   <div>
-                    <div className="font-semibold text-gray-900 text-sm mb-1">
+                    <div className="font-bold text-gray-900 text-sm mb-1">
                       General Inquiries
                     </div>
                     <a
@@ -355,7 +355,7 @@ export default function ContactClient() {
                 <div className="flex items-start gap-3">
                   <HelpCircle className="h-5 w-5 text-green-600 mt-0.5" />
                   <div>
-                    <div className="font-semibold text-gray-900 text-sm mb-1">
+                    <div className="font-bold text-gray-900 text-sm mb-1">
                       Technical Support
                     </div>
                     <a
@@ -369,7 +369,7 @@ export default function ContactClient() {
                 <div className="flex items-start gap-3">
                   <Bug className="h-5 w-5 text-red-600 mt-0.5" />
                   <div>
-                    <div className="font-semibold text-gray-900 text-sm mb-1">
+                    <div className="font-bold text-gray-900 text-sm mb-1">
                       Privacy & Legal
                     </div>
                     <a

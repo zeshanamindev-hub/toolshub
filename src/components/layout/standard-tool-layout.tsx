@@ -91,10 +91,10 @@ export default function StandardToolLayout({
           <div className="text-center mb-8">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 backdrop-blur-sm border border-gray-200 mb-4">
               <ToolIcon className="h-4 w-4 text-blue-600" />
-              <span className="text-sm font-semibold text-gray-700">{categoryBadge}</span>
+              <span className="text-sm font-bold text-gray-700">{categoryBadge}</span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl font-black text-gray-900 mb-4">
+            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
               {toolName}
             </h1>
 
@@ -132,7 +132,7 @@ export default function StandardToolLayout({
                   <div className="space-y-2 text-xs">
                     {quickReference.map((item, index) => (
                       <div key={index} className="flex justify-between py-1.5 border-b border-gray-100 last:border-b-0">
-                        <span className="font-semibold text-gray-700">{item.label}</span>
+                        <span className="font-bold text-gray-700">{item.label}</span>
                         <span className="text-gray-500">{item.value}</span>
                       </div>
                     ))}

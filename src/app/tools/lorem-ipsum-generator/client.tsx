@@ -359,25 +359,25 @@ export default function LoremIpsumGeneratorClient() {
             <CardContent>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div className="text-center p-4">
-                  <div className="text-teal-600 font-semibold mb-2">Multiple Formats</div>
+                  <div className="text-teal-600 font-bold mb-2">Multiple Formats</div>
                   <p className="text-sm text-gray-600">
                     Generate paragraphs, sentences, or individual words
                   </p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-blue-600 font-semibold mb-2">Customizable Length</div>
+                  <div className="text-blue-600 font-bold mb-2">Customizable Length</div>
                   <p className="text-sm text-gray-600">
                     Control exactly how much text you need
                   </p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-green-600 font-semibold mb-2">Classic Lorem</div>
+                  <div className="text-green-600 font-bold mb-2">Classic Lorem</div>
                   <p className="text-sm text-gray-600">
                     Option to start with traditional "Lorem ipsum"
                   </p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-purple-600 font-semibold mb-2">Text Statistics</div>
+                  <div className="text-purple-600 font-bold mb-2">Text Statistics</div>
                   <p className="text-sm text-gray-600">
                     Real-time word, sentence, and character counts
                   </p>

@@ -247,25 +247,25 @@ export default function UrlEncoderClient() {
             <CardContent>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div className="text-center p-4">
-                  <div className="text-blue-600 font-semibold mb-2">Bidirectional</div>
+                  <div className="text-blue-600 font-bold mb-2">Bidirectional</div>
                   <p className="text-sm text-gray-600">
                     Both encoding and decoding with easy mode switching
                   </p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-green-600 font-semibold mb-2">Real-time Processing</div>
+                  <div className="text-green-600 font-bold mb-2">Real-time Processing</div>
                   <p className="text-sm text-gray-600">
                     Instant conversion as you type
                   </p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-purple-600 font-semibold mb-2">Error Handling</div>
+                  <div className="text-purple-600 font-bold mb-2">Error Handling</div>
                   <p className="text-sm text-gray-600">
                     Graceful handling of invalid encoded text
                   </p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-orange-600 font-semibold mb-2">Copy & Paste</div>
+                  <div className="text-orange-600 font-bold mb-2">Copy & Paste</div>
                   <p className="text-sm text-gray-600">
                     Easy copying of input and output
                   </p>

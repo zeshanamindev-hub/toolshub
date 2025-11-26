@@ -244,7 +244,7 @@ export default function MetaTagPreviewClient() {
             <CardContent className="space-y-6">
               {/* Basic Meta Tags */}
               <div className="space-y-4">
-                <h3 className="font-semibold text-gray-900">Basic Meta Tags</h3>
+                <h3 className="font-bold text-gray-900">Basic Meta Tags</h3>
 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -296,7 +296,7 @@ export default function MetaTagPreviewClient() {
 
               {/* Open Graph Tags */}
               <div className="space-y-4">
-                <h3 className="font-semibold text-gray-900">Open Graph Tags (Facebook)</h3>
+                <h3 className="font-bold text-gray-900">Open Graph Tags (Facebook)</h3>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
@@ -339,7 +339,7 @@ export default function MetaTagPreviewClient() {
 
               {/* Twitter Card Tags */}
               <div className="space-y-4">
-                <h3 className="font-semibold text-gray-900">Twitter Card Tags</h3>
+                <h3 className="font-bold text-gray-900">Twitter Card Tags</h3>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
@@ -453,7 +453,7 @@ export default function MetaTagPreviewClient() {
                     </div>
                   )}
                   <div className="p-4">
-                    <div className="font-semibold text-gray-900">
+                    <div className="font-bold text-gray-900">
                       {metaTags.ogTitle || metaTags.title || 'Open Graph Title'}
                     </div>
                     <div className="text-gray-600 text-sm mt-1">
@@ -486,7 +486,7 @@ export default function MetaTagPreviewClient() {
                       </div>
                     </div>
                     <div className="p-3 flex-1">
-                      <div className="font-semibold text-gray-900 text-sm">
+                      <div className="font-bold text-gray-900 text-sm">
                         {metaTags.twitterTitle || metaTags.title || 'Twitter Card Title'}
                       </div>
                       <div className="text-gray-600 text-sm mt-1 line-clamp-2">

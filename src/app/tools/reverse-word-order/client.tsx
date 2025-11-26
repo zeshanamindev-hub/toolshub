@@ -277,7 +277,7 @@ export default function ReverseWordOrderClient() {
             <CardContent>
               <div className="grid gap-4 md:grid-cols-2">
                 <div className="space-y-3">
-                  <div className="font-semibold text-gray-900">Simple Examples:</div>
+                  <div className="font-bold text-gray-900">Simple Examples:</div>
                   {[
                     { original: "Hello world", reversed: "world Hello" },
                     { original: "The cat sat on the mat", reversed: "mat the on sat cat The" },
@@ -291,7 +291,7 @@ export default function ReverseWordOrderClient() {
                   ))}
                 </div>
                 <div className="space-y-3">
-                  <div className="font-semibold text-gray-900">Complex Examples:</div>
+                  <div className="font-bold text-gray-900">Complex Examples:</div>
                   {[
                     { original: "To be or not to be", reversed: "be to not or be To" },
                     { original: "The quick brown fox", reversed: "fox brown quick The" },
@@ -320,11 +320,11 @@ export default function ReverseWordOrderClient() {
               <CardContent>
                 <div className="grid gap-4 md:grid-cols-2">
                   <div className="p-4 bg-red-50 rounded-lg">
-                    <div className="font-semibold text-red-900 mb-2">Before (Original):</div>
+                    <div className="font-bold text-red-900 mb-2">Before (Original):</div>
                     <div className="text-sm text-gray-800 whitespace-pre-wrap">"{inputText}"</div>
                   </div>
                   <div className="p-4 bg-green-50 rounded-lg">
-                    <div className="font-semibold text-green-900 mb-2">After (Reversed):</div>
+                    <div className="font-bold text-green-900 mb-2">After (Reversed):</div>
                     <div className="text-sm text-gray-800 whitespace-pre-wrap">"{reversedText}"</div>
                   </div>
                 </div>

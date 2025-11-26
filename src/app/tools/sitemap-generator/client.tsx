@@ -242,7 +242,7 @@ export default function SitemapGeneratorClient() {
               {urls.map((url, index) => (
                 <div key={index} className="border border-gray-200 rounded-lg p-4 space-y-4">
                   <div className="flex items-center justify-between">
-                    <h3 className="font-semibold text-gray-900">URL #{index + 1}</h3>
+                    <h3 className="font-bold text-gray-900">URL #{index + 1}</h3>
                     <Button
                       variant="outline"
                       size="sm"

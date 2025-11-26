@@ -175,7 +175,7 @@ export default function ReverseTextClient() {
                     onClick={() => setSelectedOperation(operation.name.toLowerCase().replace(/\s+/g, "").replace(/&/g, ""))}
                   >
                     <div className="w-full">
-                      <div className={`font-semibold ${operation.color} mb-1`}>
+                      <div className={`font-bold ${operation.color} mb-1`}>
                         {operation.name}
                       </div>
                       <div className="text-xs text-gray-500 mb-2">
@@ -298,7 +298,7 @@ export default function ReverseTextClient() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {reverseOperations.slice(0, 6).map((operation) => (
                     <div key={operation.name} className="p-3 bg-gray-50 rounded-lg">
-                      <div className={`font-semibold text-sm ${operation.color} mb-2`}>
+                      <div className={`font-bold text-sm ${operation.color} mb-2`}>
                         {operation.name}
                       </div>
                       <div className="text-sm space-y-1">
@@ -329,25 +329,25 @@ export default function ReverseTextClient() {
             <CardContent>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div className="text-center p-4">
-                  <div className="text-blue-600 font-semibold mb-2">Creative Writing</div>
+                  <div className="text-blue-600 font-bold mb-2">Creative Writing</div>
                   <p className="text-sm text-gray-600">
                     Create interesting effects and hidden messages
                   </p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-green-600 font-semibold mb-2">Puzzles & Games</div>
+                  <div className="text-green-600 font-bold mb-2">Puzzles & Games</div>
                   <p className="text-sm text-gray-600">
                     Generate word puzzles and brain teasers
                   </p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-purple-600 font-semibold mb-2">Data Processing</div>
+                  <div className="text-purple-600 font-bold mb-2">Data Processing</div>
                   <p className="text-sm text-gray-600">
                     Reverse data for analysis or formatting
                   </p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-orange-600 font-semibold mb-2">Fun & Entertainment</div>
+                  <div className="text-orange-600 font-bold mb-2">Fun & Entertainment</div>
                   <p className="text-sm text-gray-600">
                     Create mirror text and amusing effects
                   </p>

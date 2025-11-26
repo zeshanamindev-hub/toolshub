@@ -241,7 +241,7 @@ export default function HeadingExtractorClient() {
 
               <div className="flex items-center justify-between">
                 <div className="text-sm text-gray-600">
-                  Total headings found: <span className="font-semibold">{stats.total}</span>
+                  Total headings found: <span className="font-bold">{stats.total}</span>
                 </div>
                 <Button variant="outline" size="sm" onClick={clearHtml}>
                   <Trash2 className="h-4 w-4 mr-2" />

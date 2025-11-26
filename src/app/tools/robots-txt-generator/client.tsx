@@ -305,7 +305,7 @@ export default function RobotsTxtGeneratorClient() {
               {rules.map((rule, ruleIndex) => (
                 <div key={ruleIndex} className="border border-gray-200 rounded-lg p-4 space-y-4">
                   <div className="flex items-center justify-between">
-                    <h3 className="font-semibold text-gray-900">Rule #{ruleIndex + 1}</h3>
+                    <h3 className="font-bold text-gray-900">Rule #{ruleIndex + 1}</h3>
                     {rules.length > 1 && (
                       <Button
                         variant="outline"

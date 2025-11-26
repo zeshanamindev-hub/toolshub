@@ -46,7 +46,7 @@ export default function WPAegisAd() {
             <Shield className="w-8 h-8 text-white" />
           </div>
           <div>
-            <h3 className="text-3xl font-black bg-gradient-to-r from-cyan-300 to-blue-300 bg-clip-text text-transparent">
+            <h3 className="text-3xl font-bold bg-gradient-to-r from-cyan-300 to-blue-300 bg-clip-text text-transparent">
               WPAegis
             </h3>
             <p className="text-blue-200 text-sm font-medium">Enterprise WordPress Security</p>

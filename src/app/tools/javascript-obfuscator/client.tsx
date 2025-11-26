@@ -329,7 +329,7 @@ export default function JavascriptObfuscatorClient() {
             <CardContent>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="p-4 border rounded-lg">
-                  <h4 className="font-semibold mb-2">Simple Function</h4>
+                  <h4 className="font-bold mb-2">Simple Function</h4>
                   <pre className="text-xs bg-gray-100 p-2 rounded overflow-x-auto">
 {`function calculateSum(a, b) {
   // This function adds two numbers
@@ -349,7 +349,7 @@ export default function JavascriptObfuscatorClient() {
                 </div>
 
                 <div className="p-4 border rounded-lg">
-                  <h4 className="font-semibold mb-2">Variable Declarations</h4>
+                  <h4 className="font-bold mb-2">Variable Declarations</h4>
                   <pre className="text-xs bg-gray-100 p-2 rounded overflow-x-auto">
 {`const userName = "John";
 let userAge = 25;

@@ -282,13 +282,13 @@ export default function FaviconGeneratorClient() {
             <CardContent className="space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">1. Upload to Server</h4>
+                  <h4 className="font-bold text-gray-900 mb-2">1. Upload to Server</h4>
                   <p className="text-sm text-gray-600">
                     Upload the generated favicon.ico file to your website's root directory.
                   </p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">2. Add to HTML</h4>
+                  <h4 className="font-bold text-gray-900 mb-2">2. Add to HTML</h4>
                   <p className="text-sm text-gray-600">
                     Add this link tag to your HTML head section:
                   </p>
@@ -302,7 +302,7 @@ export default function FaviconGeneratorClient() {
                 <div className="flex items-start gap-3">
                   <AlertTriangle className="h-5 w-5 text-blue-600 mt-0.5" />
                   <div>
-                    <h4 className="font-semibold text-blue-900">Browser Cache</h4>
+                    <h4 className="font-bold text-blue-900">Browser Cache</h4>
                     <p className="text-sm text-blue-700">
                       Browsers cache favicons. Clear your browser cache or do a hard refresh (Ctrl+F5) to see changes.
                     </p>

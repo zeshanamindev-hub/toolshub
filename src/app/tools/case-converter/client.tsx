@@ -167,7 +167,7 @@ export default function CaseConverterClient() {
                     onClick={() => setSelectedCase(conversion.name.toLowerCase().replace(/\s+/g, ""))}
                   >
                     <div>
-                      <div className={`font-semibold ${conversion.color}`}>
+                      <div className={`font-bold ${conversion.color}`}>
                         {conversion.name}
                       </div>
                       <div className="text-xs text-gray-500 mt-1">
@@ -260,7 +260,7 @@ export default function CaseConverterClient() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   {caseConversions.slice(0, 9).map((conversion) => (
                     <div key={conversion.name} className="p-3 bg-gray-50 rounded-lg">
-                      <div className={`font-semibold text-sm ${conversion.color} mb-1`}>
+                      <div className={`font-bold text-sm ${conversion.color} mb-1`}>
                         {conversion.name}
                       </div>
                       <div className="text-sm font-mono bg-white p-2 rounded border">
@@ -286,25 +286,25 @@ export default function CaseConverterClient() {
             <CardContent>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div className="text-center p-4">
-                  <div className="text-blue-600 font-semibold mb-2">11 Case Formats</div>
+                  <div className="text-blue-600 font-bold mb-2">11 Case Formats</div>
                   <p className="text-sm text-gray-600">
                     Support for all popular case formats
                   </p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-green-600 font-semibold mb-2">Instant Conversion</div>
+                  <div className="text-green-600 font-bold mb-2">Instant Conversion</div>
                   <p className="text-sm text-gray-600">
                     Real-time conversion as you type
                   </p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-purple-600 font-semibold mb-2">Copy & Paste</div>
+                  <div className="text-purple-600 font-bold mb-2">Copy & Paste</div>
                   <p className="text-sm text-gray-600">
                     Easy copying of input and output text
                   </p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-orange-600 font-semibold mb-2">Examples Included</div>
+                  <div className="text-orange-600 font-bold mb-2">Examples Included</div>
                   <p className="text-sm text-gray-600">
                     See examples for each case format
                   </p>

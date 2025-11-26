@@ -438,7 +438,7 @@ export default function ColorPaletteGeneratorPage() {
                     }`}
                     onClick={() => setSelectedPaletteType(type.name)}
                   >
-                    <h4 className="font-semibold capitalize mb-2">{type.name}</h4>
+                    <h4 className="font-bold capitalize mb-2">{type.name}</h4>
                     <p className="text-sm text-gray-600">{type.description}</p>
                   </div>
                 ))}
@@ -459,25 +459,25 @@ export default function ColorPaletteGeneratorPage() {
             <CardContent>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div className="text-center p-4">
-                  <div className="text-pink-600 font-semibold mb-2">Color Theory</div>
+                  <div className="text-pink-600 font-bold mb-2">Color Theory</div>
                   <p className="text-sm text-gray-600">
                     Based on proven color harmony principles
                   </p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-blue-600 font-semibold mb-2">Multiple Formats</div>
+                  <div className="text-blue-600 font-bold mb-2">Multiple Formats</div>
                   <p className="text-sm text-gray-600">
                     Copy colors in HEX, RGB, and HSL formats
                   </p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-green-600 font-semibold mb-2">Export Palettes</div>
+                  <div className="text-green-600 font-bold mb-2">Export Palettes</div>
                   <p className="text-sm text-gray-600">
                     Download palettes as JSON files
                   </p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-orange-600 font-semibold mb-2">Random Generation</div>
+                  <div className="text-orange-600 font-bold mb-2">Random Generation</div>
                   <p className="text-sm text-gray-600">
                     Generate random color combinations
                   </p>

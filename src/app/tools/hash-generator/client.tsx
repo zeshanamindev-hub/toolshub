@@ -390,7 +390,7 @@ export default function HashGeneratorClient() {
                     <div key={index} className="p-4 border rounded-lg">
                       <div className="flex items-center justify-between mb-2">
                         <div>
-                          <h4 className="font-semibold text-lg">{result.algorithm}</h4>
+                          <h4 className="font-bold text-lg">{result.algorithm}</h4>
                           <p className="text-sm text-gray-600">{result.description}</p>
                         </div>
                         <div className="text-sm text-gray-500">
@@ -442,25 +442,25 @@ export default function HashGeneratorClient() {
             <CardContent>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div className="text-center p-4">
-                  <div className="text-red-600 font-semibold mb-2">Multiple Algorithms</div>
+                  <div className="text-red-600 font-bold mb-2">Multiple Algorithms</div>
                   <p className="text-sm text-gray-600">
                     Support for MD5, SHA-1, SHA-256, SHA-384, SHA-512
                   </p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-blue-600 font-semibold mb-2">Real-time Generation</div>
+                  <div className="text-blue-600 font-bold mb-2">Real-time Generation</div>
                   <p className="text-sm text-gray-600">
                     Instant hash calculation as you type
                   </p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-green-600 font-semibold mb-2">File Support</div>
+                  <div className="text-green-600 font-bold mb-2">File Support</div>
                   <p className="text-sm text-gray-600">
                     Upload files for hash generation
                   </p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-purple-600 font-semibold mb-2">Privacy Mode</div>
+                  <div className="text-purple-600 font-bold mb-2">Privacy Mode</div>
                   <p className="text-sm text-gray-600">
                     Hide hashes for sensitive data
                   </p>

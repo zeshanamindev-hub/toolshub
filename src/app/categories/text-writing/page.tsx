@@ -105,7 +105,7 @@ export default function TextWritingCategoryPage() {
                 href={cat.href}
                 className="p-4 border border-gray-200 rounded-lg hover:border-primary hover:bg-primary/5 transition-all duration-300 group"
               >
-                <h3 className="font-semibold text-gray-900 group-hover:text-primary transition-colors">
+                <h3 className="font-bold text-gray-900 group-hover:text-primary transition-colors">
                   {cat.name}
                 </h3>
                 <p className="text-sm text-gray-600 mt-1">

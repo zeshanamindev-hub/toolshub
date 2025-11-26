@@ -279,25 +279,25 @@ export default function LetterCounterClient() {
               <CardContent className="space-y-3">
                 <div className="flex justify-between">
                   <span className="text-sm text-gray-600">Total Characters:</span>
-                  <span className="font-semibold">{analysis.totalChars.toLocaleString()}</span>
+                  <span className="font-bold">{analysis.totalChars.toLocaleString()}</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-sm text-gray-600">Letters Analyzed:</span>
-                  <span className="font-semibold">{analysis.totalLetters.toLocaleString()}</span>
+                  <span className="font-bold">{analysis.totalLetters.toLocaleString()}</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-sm text-gray-600">Unique Letters:</span>
-                  <span className="font-semibold">{analysis.total}</span>
+                  <span className="font-bold">{analysis.total}</span>
                 </div>
                 {showOnlyLetters && (
                   <>
                     <div className="flex justify-between">
                       <span className="text-sm text-gray-600">Vowels:</span>
-                      <span className="font-semibold">{vowelCount} ({((vowelCount / analysis.totalLetters) * 100).toFixed(1)}%)</span>
+                      <span className="font-bold">{vowelCount} ({((vowelCount / analysis.totalLetters) * 100).toFixed(1)}%)</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-sm text-gray-600">Consonants:</span>
-                      <span className="font-semibold">{consonantCount} ({((consonantCount / analysis.totalLetters) * 100).toFixed(1)}%)</span>
+                      <span className="font-bold">{consonantCount} ({((consonantCount / analysis.totalLetters) * 100).toFixed(1)}%)</span>
                     </div>
                   </>
                 )}
@@ -328,7 +328,7 @@ export default function LetterCounterClient() {
                             </span>
                           </div>
                           <div className="text-right">
-                            <div className="font-semibold">{count}</div>
+                            <div className="font-bold">{count}</div>
                             <div className="text-xs text-gray-500">{percentage.toFixed(1)}%</div>
                           </div>
                         </div>

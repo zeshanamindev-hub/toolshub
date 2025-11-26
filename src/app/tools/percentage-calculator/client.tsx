@@ -169,7 +169,7 @@ export default function PercentageCalculatorClient() {
                 <CardContent className="pt-6">
                   <div className="space-y-4">
                     <div className="flex justify-between items-center">
-                      <div className="text-lg font-semibold">
+                      <div className="text-lg font-bold">
                         Result: {result.result.toFixed(2)}
                         {calculationType !== "percentageOf" && "%"}
                       </div>

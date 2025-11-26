@@ -747,7 +747,7 @@ export default function EmojiTranslatorClient() {
             <CardContent>
               <div className="grid gap-4 md:grid-cols-2">
                 <div className="space-y-3">
-                  <div className="font-semibold text-gray-900">Emojis to Text:</div>
+                  <div className="font-bold text-gray-900">Emojis to Text:</div>
                   {[
                     { input: "😀❤️", output: "grinning face red heart" },
                     { input: "👍🎉", output: "thumbs up party popper" },
@@ -760,7 +760,7 @@ export default function EmojiTranslatorClient() {
                   ))}
                 </div>
                 <div className="space-y-3">
-                  <div className="font-semibold text-gray-900">Text to Emojis:</div>
+                  <div className="font-bold text-gray-900">Text to Emojis:</div>
                   {[
                     { input: "grinning face red heart", output: "😀❤️" },
                     { input: "thumbs up party popper", output: "👍🎉" },

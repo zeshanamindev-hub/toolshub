@@ -433,7 +433,7 @@ console.log('Total cost:', totalCost);`}
                     <div className="mx-auto w-12 h-12 bg-white rounded-2xl shadow-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                       <Icon className={`h-6 w-6 ${feature.color}`} />
                     </div>
-                    <h3 className="font-semibold text-gray-900 mb-2">{feature.title}</h3>
+                    <h3 className="font-bold text-gray-900 mb-2">{feature.title}</h3>
                     <p className="text-sm text-gray-600 leading-relaxed">{feature.description}</p>
                   </div>
                 )
@@ -454,7 +454,7 @@ console.log('Total cost:', totalCost);`}
             <CardContent>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-3">
-                  <h4 className="font-semibold text-gray-900">Best Practices:</h4>
+                  <h4 className="font-bold text-gray-900">Best Practices:</h4>
                   <ul className="space-y-2 text-sm text-gray-600">
                     <li className="flex items-start space-x-2">
                       <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
@@ -471,7 +471,7 @@ console.log('Total cost:', totalCost);`}
                   </ul>
                 </div>
                 <div className="space-y-3">
-                  <h4 className="font-semibold text-gray-900">Performance Benefits:</h4>
+                  <h4 className="font-bold text-gray-900">Performance Benefits:</h4>
                   <ul className="space-y-2 text-sm text-gray-600">
                     <li className="flex items-start space-x-2">
                       <Zap className="h-4 w-4 text-blue-500 mt-0.5 flex-shrink-0" />

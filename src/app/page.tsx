@@ -207,7 +207,7 @@ export default function HomePage() {
               </div>
 
               {/* Main Heading */}
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black tracking-tight animate-fade-in-up leading-tight" style={{animationDelay: '0.1s'}}>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight animate-fade-in-up leading-tight" style={{animationDelay: '0.1s'}}>
                 <span className="block text-blue-600">
                   Free Online Tools
                 </span>
@@ -228,7 +228,7 @@ export default function HomePage() {
               <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
                 <Link href="#tools">
                   <Button size="lg" className="group relative overflow-hidden bg-blue-600 hover:bg-blue-700 text-white px-10 py-7 text-lg rounded-2xl transition-all duration-300 magnetic border-0 w-full sm:w-auto cursor-pointer">
-                    <span className="relative z-10 flex items-center gap-3 font-bold">
+                    <span className="relative z-10 flex items-center gap-3 font-normal">
                       <Rocket className="h-5 w-5 group-hover:rotate-12 transition-transform duration-300" />
                       Explore All Tools
                       <ArrowRight className="h-5 w-5 group-hover:translate-x-2 transition-transform duration-300" />
@@ -237,7 +237,7 @@ export default function HomePage() {
                 </Link>
 
                 <Link href="/about">
-                  <Button size="lg" variant="outline" className="group bg-white hover:bg-gray-50 px-10 py-7 text-lg rounded-2xl border-2 border-gray-300 hover:border-blue-500 transition-all duration-300 magnetic font-bold text-gray-700 hover:text-blue-600 w-full sm:w-auto cursor-pointer">
+                  <Button size="lg" variant="outline" className="group bg-white hover:bg-gray-50 px-10 py-7 text-lg rounded-2xl border-2 border-gray-300 hover:border-blue-500 transition-all duration-300 magnetic font-normal text-gray-700 hover:text-blue-600 w-full sm:w-auto cursor-pointer">
                     <Globe className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform duration-300" />
                     Learn More
                   </Button>
@@ -263,8 +263,8 @@ export default function HomePage() {
                     <div className={`inline-flex p-3 rounded-2xl ${stat.bgColor} mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 ease-out`}>
                       <stat.icon className="h-6 w-6 text-white" />
                     </div>
-                    <div className="text-4xl font-black text-gray-900 mb-2 group-hover:scale-105 transition-all duration-500 ease-out">{stat.value}</div>
-                    <div className="text-sm text-gray-600 font-semibold group-hover:text-gray-900 transition-all duration-500 ease-out">{stat.label}</div>
+                    <div className="text-4xl font-bold text-gray-900 mb-2 group-hover:scale-105 transition-all duration-500 ease-out">{stat.value}</div>
+                    <div className="text-sm text-gray-600 font-bold group-hover:text-gray-900 transition-all duration-500 ease-out">{stat.label}</div>
                   </div>
                 </div>
               ))}
@@ -287,8 +287,8 @@ export default function HomePage() {
               <Sparkles className="h-4 w-4 text-purple-600 animate-pulse" />
               <span className="text-sm font-bold text-gray-700">Our Advantages</span>
             </div>
-            <h2 className="text-5xl sm:text-6xl font-black text-gray-900 mb-6">
-              Why Choose <span className="text-blue-600 font-black">Tools Hub</span>?
+            <h2 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-6">
+              Why Choose <span className="text-blue-600 font-bold">Tools Hub</span>?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Experience the perfect blend of <span className="font-bold text-gray-900">speed, security, and simplicity</span> with our modern web-based tools
@@ -319,7 +319,7 @@ export default function HomePage() {
 
                       {/* Text Content */}
                       <div className="flex-1 pt-1">
-                        <h3 className={`text-2xl font-black text-gray-900 mb-3 group-hover:${feature.color} transition-all duration-500`}>
+                        <h3 className={`text-2xl font-bold text-gray-900 mb-3 group-hover:${feature.color} transition-all duration-500`}>
                           {feature.name}
                         </h3>
                         <p className="text-gray-600 leading-relaxed mb-5 text-base">
@@ -329,10 +329,10 @@ export default function HomePage() {
                         {/* Stats Badge */}
                         <div className="inline-flex items-center gap-3 px-5 py-3 rounded-2xl bg-gray-50 group-hover:bg-white border border-gray-200 transition-all duration-500">
                           <div className="flex flex-col">
-                            <span className={`text-3xl font-black ${feature.color}`}>
+                            <span className={`text-3xl font-bold ${feature.color}`}>
                               {feature.stats}
                             </span>
-                            <span className="text-xs text-gray-500 font-semibold uppercase tracking-wider">
+                            <span className="text-xs text-gray-500 font-bold uppercase tracking-wider">
                               {feature.benefit}
                             </span>
                           </div>
@@ -354,7 +354,7 @@ export default function HomePage() {
               Ready to boost your productivity?
             </p>
             <Link href="#tools">
-              <Button size="lg" className="group bg-blue-600 hover:bg-blue-700 text-white px-10 py-6 text-lg rounded-2xl transition-all duration-300 border-0 font-bold cursor-pointer">
+              <Button size="lg" className="group bg-blue-600 hover:bg-blue-700 text-white px-10 py-6 text-lg rounded-2xl transition-all duration-300 border-0 font-normal cursor-pointer">
                 <Rocket className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform duration-300" />
                 Start Using Tools Now
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-2 transition-transform duration-300" />
@@ -378,8 +378,8 @@ export default function HomePage() {
               <span className="text-sm font-bold">Most Popular</span>
               <Star className="h-4 w-4 fill-current" />
             </div>
-            <h2 className="text-5xl sm:text-6xl font-black text-gray-900 mb-6">
-              Trending <span className="text-orange-600 font-black">Tools</span>
+            <h2 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-6">
+              Trending <span className="text-orange-600 font-bold">Tools</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
               Join <span className="font-bold text-orange-600">100K+ users</span> who rely on these powerful tools every day
@@ -424,7 +424,7 @@ export default function HomePage() {
                     </p>
 
                     {/* CTA */}
-                    <div className="flex items-center text-orange-600 group-hover:text-orange-700 font-semibold text-sm transition-colors duration-500">
+                    <div className="flex items-center text-orange-600 group-hover:text-orange-700 font-bold text-sm transition-colors duration-500">
                       <span>Try now</span>
                       <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-2 transition-transform duration-500" />
                     </div>
@@ -440,7 +440,7 @@ export default function HomePage() {
           {/* Bottom CTA */}
           <div className="text-center">
             <Link href="/tools">
-              <Button size="lg" variant="outline" className="group bg-white hover:bg-orange-500 px-10 py-6 text-base rounded-2xl border-2 border-orange-300 hover:border-orange-500 transition-all duration-500 font-bold hover:text-white cursor-pointer">
+              <Button size="lg" variant="outline" className="group bg-white hover:bg-orange-500 px-10 py-6 text-base rounded-2xl border-2 border-orange-300 hover:border-orange-500 transition-all duration-500 font-normal hover:text-white cursor-pointer">
                 <span className="text-gray-700 group-hover:text-white transition-colors duration-500">View All {SITE_CONFIG.toolCount}+ Tools</span>
                 <ChevronRight className="ml-2 h-5 w-5 group-hover:translate-x-2 transition-transform duration-500" />
               </Button>
@@ -462,8 +462,8 @@ export default function HomePage() {
               <Grid3X3 className="h-4 w-4 text-blue-600" />
               <span className="text-sm font-bold text-gray-700">Full Collection</span>
             </div>
-            <h2 className="text-5xl sm:text-6xl font-black text-gray-900 mb-6">
-              Complete <span className="text-blue-600 font-black">Toolbox</span>
+            <h2 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-6">
+              Complete <span className="text-blue-600 font-bold">Toolbox</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
               Discover all <span className="font-bold text-gray-900">{SITE_CONFIG.toolCount}+ powerful tools</span> organized by category
@@ -474,7 +474,7 @@ export default function HomePage() {
           <div className="flex flex-wrap justify-center gap-3 mb-16">
             <button
               onClick={() => setSelectedCategory(null)}
-              className={`px-6 py-3 rounded-full font-semibold text-sm transition-all duration-500 cursor-pointer ${
+              className={`px-6 py-3 rounded-full font-bold text-sm transition-all duration-500 cursor-pointer ${
                 selectedCategory === null
                   ? 'bg-blue-600 text-white scale-105'
                   : 'bg-white text-gray-700 border-2 border-gray-200 hover:border-blue-300'
@@ -486,7 +486,7 @@ export default function HomePage() {
               <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
-                className={`px-6 py-3 rounded-full font-semibold text-sm transition-all duration-500 cursor-pointer ${
+                className={`px-6 py-3 rounded-full font-bold text-sm transition-all duration-500 cursor-pointer ${
                   selectedCategory === category.id
                     ? 'bg-blue-600 text-white scale-105'
                     : 'bg-white text-gray-700 border-2 border-gray-200 hover:border-blue-300'
@@ -528,7 +528,7 @@ export default function HomePage() {
                     </div>
 
                     {/* CTA */}
-                    <div className="flex items-center text-blue-600 group-hover:text-blue-700 font-semibold text-sm mt-4 transition-colors duration-500">
+                    <div className="flex items-center text-blue-600 group-hover:text-blue-700 font-bold text-sm mt-4 transition-colors duration-500">
                       <span>Explore</span>
                       <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-2 transition-transform duration-500" />
                     </div>
@@ -544,7 +544,7 @@ export default function HomePage() {
           {/* Bottom CTA */}
           <div className="text-center">
             <Link href="/tools">
-              <Button size="lg" className="group bg-blue-600 hover:bg-blue-700 text-white px-12 py-7 text-lg rounded-2xl transition-all duration-500 font-bold border-0 hover:scale-105 cursor-pointer">
+              <Button size="lg" className="group bg-blue-600 hover:bg-blue-700 text-white px-12 py-7 text-lg rounded-2xl transition-all duration-500 font-normal border-0 hover:scale-105 cursor-pointer">
                 <Search className="mr-3 h-5 w-5 group-hover:rotate-12 transition-transform duration-500" />
                 Browse All {SITE_CONFIG.toolCount}+ Tools
                 <ChevronRight className="ml-3 h-5 w-5 group-hover:translate-x-2 transition-transform duration-500" />

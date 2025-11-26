@@ -64,7 +64,7 @@ export default function PrivacyPage() {
           </CardHeader>
           <CardContent className="text-gray-600 space-y-6">
             <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Text Data</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Text Data</h3>
               <p>
                 <strong>We do NOT collect, store, or transmit any text data you enter into our tools.</strong> 
                 All text processing happens entirely in your browser using client-side JavaScript. 
@@ -73,7 +73,7 @@ export default function PrivacyPage() {
             </div>
             
             <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Usage Analytics</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Usage Analytics</h3>
               <p>
                 We may collect basic, anonymous usage statistics such as:
               </p>
@@ -90,7 +90,7 @@ export default function PrivacyPage() {
             </div>
 
             <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Cookies and Local Storage</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Cookies and Local Storage</h3>
               <p>
                 We may use cookies and local storage for:
               </p>
@@ -134,7 +134,7 @@ export default function PrivacyPage() {
           </CardHeader>
           <CardContent className="text-gray-600 dark:text-gray-300 space-y-6">
             <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Google AdSense</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Google AdSense</h3>
               <p>
                 We use Google AdSense to display advertisements. Google may use cookies 
                 to serve ads based on your visits to this and other websites. You can 
@@ -146,7 +146,7 @@ export default function PrivacyPage() {
             </div>
             
             <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Analytics Services</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Analytics Services</h3>
               <p>
                 We may use analytics services like Google Analytics to understand how 
                 visitors use our website. These services may collect information about 

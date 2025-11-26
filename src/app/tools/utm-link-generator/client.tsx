@@ -364,7 +364,7 @@ export default function UtmLinkGeneratorClient() {
             <CardContent>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                  <h4 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
                     <MousePointer className="h-4 w-4" />
                     Required Parameters
                   </h4>
@@ -382,7 +382,7 @@ export default function UtmLinkGeneratorClient() {
                 </div>
 
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                  <h4 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
                     <BarChart3 className="h-4 w-4" />
                     Optional Parameters
                   </h4>

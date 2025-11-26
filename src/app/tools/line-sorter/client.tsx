@@ -491,25 +491,25 @@ kiwi
             <CardContent>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div className="text-center p-4">
-                  <div className="text-purple-600 font-semibold mb-2">Multiple Sort Types</div>
+                  <div className="text-purple-600 font-bold mb-2">Multiple Sort Types</div>
                   <p className="text-sm text-gray-600">
                     Alphabetical, numerical, length-based, and random sorting
                   </p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-blue-600 font-semibold mb-2">Flexible Processing</div>
+                  <div className="text-blue-600 font-bold mb-2">Flexible Processing</div>
                   <p className="text-sm text-gray-600">
                     Remove duplicates, empty lines, and trim whitespace
                   </p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-green-600 font-semibold mb-2">Real-time Results</div>
+                  <div className="text-green-600 font-bold mb-2">Real-time Results</div>
                   <p className="text-sm text-gray-600">
                     See sorted results instantly as you type
                   </p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-orange-600 font-semibold mb-2">Detailed Statistics</div>
+                  <div className="text-orange-600 font-bold mb-2">Detailed Statistics</div>
                   <p className="text-sm text-gray-600">
                     Track processing results and changes
                   </p>

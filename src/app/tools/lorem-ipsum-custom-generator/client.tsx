@@ -385,19 +385,19 @@ export default function LoremIpsumCustomGeneratorClient() {
               <CardContent className="text-sm text-gray-600 space-y-2">
                 <div className="flex justify-between">
                   <span>Total Words:</span>
-                  <span className="font-semibold">{allWords.length}</span>
+                  <span className="font-bold">{allWords.length}</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Default Words:</span>
-                  <span className="font-semibold">{defaultLoremWords.length}</span>
+                  <span className="font-bold">{defaultLoremWords.length}</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Custom Words:</span>
-                  <span className="font-semibold">{customWords.length}</span>
+                  <span className="font-bold">{customWords.length}</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Custom Ratio:</span>
-                  <span className="font-semibold">{customWordRatio}%</span>
+                  <span className="font-bold">{customWordRatio}%</span>
                 </div>
               </CardContent>
             </Card>
@@ -433,21 +433,21 @@ export default function LoremIpsumCustomGeneratorClient() {
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-teal-500 rounded-full mt-2"></div>
                     <div>
-                      <div className="font-semibold text-sm">Custom Word Integration</div>
+                      <div className="font-bold text-sm">Custom Word Integration</div>
                       <p className="text-xs text-gray-600">Mix your own words with classic Lorem Ipsum</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
                     <div>
-                      <div className="font-semibold text-sm">Ratio Control</div>
+                      <div className="font-bold text-sm">Ratio Control</div>
                       <p className="text-xs text-gray-600">Adjust how often custom words appear</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
                     <div>
-                      <div className="font-semibold text-sm">Real-time Stats</div>
+                      <div className="font-bold text-sm">Real-time Stats</div>
                       <p className="text-xs text-gray-600">Track word distribution and text metrics</p>
                     </div>
                   </div>

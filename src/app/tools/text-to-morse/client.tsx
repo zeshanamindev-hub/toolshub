@@ -461,7 +461,7 @@ export default function TextToMorseClient() {
             <CardContent>
               <div className="grid gap-4 md:grid-cols-2">
                 <div className="space-y-3">
-                  <div className="font-semibold text-gray-900">Emergency Signals:</div>
+                  <div className="font-bold text-gray-900">Emergency Signals:</div>
                   {[
                     { text: "SOS", morse: "... --- ..." },
                     { text: "HELP", morse: ".... . .-.. .--." },
@@ -474,7 +474,7 @@ export default function TextToMorseClient() {
                   ))}
                 </div>
                 <div className="space-y-3">
-                  <div className="font-semibold text-gray-900">Common Words:</div>
+                  <div className="font-bold text-gray-900">Common Words:</div>
                   {[
                     { text: "HI", morse: ".... .." },
                     { text: "BYE", morse: "-... -.-- ." },

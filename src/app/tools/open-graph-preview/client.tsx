@@ -291,7 +291,7 @@ export default function OpenGraphPreviewClient() {
                   </div>
                 )}
                 <div className="p-4">
-                  <div className="font-semibold text-gray-900 text-lg leading-tight">
+                  <div className="font-bold text-gray-900 text-lg leading-tight">
                     {ogTags.title || 'Your content title will appear here'}
                   </div>
                   <div className="text-gray-600 text-sm mt-2 leading-relaxed">

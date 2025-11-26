@@ -86,7 +86,7 @@ export default function CustomServiceAd({
 
         {/* Main Content */}
         <div className="mb-8">
-          <h4 className="text-xl font-semibold mb-4">
+          <h4 className="text-xl font-bold mb-4">
             {headline}
           </h4>
           <p className={`text-${textColor === 'white' ? 'blue-100' : 'gray-600'} mb-6 leading-relaxed`}>
@@ -118,7 +118,7 @@ export default function CustomServiceAd({
             href={buttonLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="group bg-white text-gray-800 hover:bg-gray-100 px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center"
+            className="group bg-white text-gray-800 hover:bg-gray-100 px-6 py-3 rounded-xl font-bold hover:shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center"
           >
             {buttonText}
             <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />

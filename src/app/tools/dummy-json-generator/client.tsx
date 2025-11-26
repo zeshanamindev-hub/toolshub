@@ -490,21 +490,21 @@ export default function DummyJsonGeneratorClient() {
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
                     <div>
-                      <div className="font-semibold text-sm">Custom Fields</div>
+                      <div className="font-bold text-sm">Custom Fields</div>
                       <p className="text-xs text-gray-600">Define any JSON structure you need</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
                     <div>
-                      <div className="font-semibold text-sm">Multiple Types</div>
+                      <div className="font-bold text-sm">Multiple Types</div>
                       <p className="text-xs text-gray-600">Support for all JSON data types</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
                     <div>
-                      <div className="font-semibold text-sm">Validation</div>
+                      <div className="font-bold text-sm">Validation</div>
                       <p className="text-xs text-gray-600">Real-time JSON validation</p>
                     </div>
                   </div>

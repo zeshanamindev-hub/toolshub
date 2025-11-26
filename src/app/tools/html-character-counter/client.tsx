@@ -221,7 +221,7 @@ export default function HtmlCharacterCounterClient() {
                           </div>
                           <p className="text-xs text-gray-600 mb-2">{platform.description}</p>
                           <div className="flex items-center gap-4 text-xs">
-                            <span className={`${plainStats.characters > platform.maxLength ? 'text-red-600 font-semibold' : 'text-gray-600'}`}>
+                            <span className={`${plainStats.characters > platform.maxLength ? 'text-red-600 font-bold' : 'text-gray-600'}`}>
                               {plainStats.characters}/{platform.maxLength}
                             </span>
                             {platform.recommendedMax && (
@@ -291,42 +291,42 @@ export default function HtmlCharacterCounterClient() {
                 <div className="grid grid-cols-2 gap-4 text-sm">
                   <div>
                     <span className="text-gray-600">Characters:</span>
-                    <div className="font-semibold text-lg">{stats.characters.toLocaleString()}</div>
+                    <div className="font-bold text-lg">{stats.characters.toLocaleString()}</div>
                   </div>
                   <div>
                     <span className="text-gray-600">No Spaces:</span>
-                    <div className="font-semibold text-lg">{stats.charactersNoSpaces.toLocaleString()}</div>
+                    <div className="font-bold text-lg">{stats.charactersNoSpaces.toLocaleString()}</div>
                   </div>
                   <div>
                     <span className="text-gray-600">Words:</span>
-                    <div className="font-semibold text-lg">{stats.words.toLocaleString()}</div>
+                    <div className="font-bold text-lg">{stats.words.toLocaleString()}</div>
                   </div>
                   <div>
                     <span className="text-gray-600">Sentences:</span>
-                    <div className="font-semibold text-lg">{stats.sentences.toLocaleString()}</div>
+                    <div className="font-bold text-lg">{stats.sentences.toLocaleString()}</div>
                   </div>
                   <div>
                     <span className="text-gray-600">Paragraphs:</span>
-                    <div className="font-semibold text-lg">{stats.paragraphs.toLocaleString()}</div>
+                    <div className="font-bold text-lg">{stats.paragraphs.toLocaleString()}</div>
                   </div>
                   <div>
                     <span className="text-gray-600">Lines:</span>
-                    <div className="font-semibold text-lg">{stats.lines.toLocaleString()}</div>
+                    <div className="font-bold text-lg">{stats.lines.toLocaleString()}</div>
                   </div>
                 </div>
 
                 {stats.hasHTML && (
                   <div className="mt-4 pt-4 border-t">
                     <div className="text-sm text-gray-600 space-y-1">
-                      <div>HTML Tags: <span className="font-semibold">{stats.htmlTags}</span></div>
-                      <div>HTML Entities: <span className="font-semibold">{stats.htmlEntities}</span></div>
+                      <div>HTML Tags: <span className="font-bold">{stats.htmlTags}</span></div>
+                      <div>HTML Entities: <span className="font-bold">{stats.htmlEntities}</span></div>
                     </div>
                   </div>
                 )}
 
                 <div className="mt-4 pt-4 border-t">
                   <div className="text-sm text-gray-600">
-                    <div>Reading Time: <span className="font-semibold">{getReadingTime(stats.words)}</span></div>
+                    <div>Reading Time: <span className="font-bold">{getReadingTime(stats.words)}</span></div>
                   </div>
                 </div>
               </CardContent>
@@ -383,21 +383,21 @@ export default function HtmlCharacterCounterClient() {
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
                     <div>
-                      <div className="font-semibold text-sm">Multi-Platform</div>
+                      <div className="font-bold text-sm">Multi-Platform</div>
                       <p className="text-xs text-gray-600">Check limits for all major platforms</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
                     <div>
-                      <div className="font-semibold text-sm">HTML Aware</div>
+                      <div className="font-bold text-sm">HTML Aware</div>
                       <p className="text-xs text-gray-600">Handles HTML entities and tags</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
                     <div>
-                      <div className="font-semibold text-sm">Real-time Analysis</div>
+                      <div className="font-bold text-sm">Real-time Analysis</div>
                       <p className="text-xs text-gray-600">Instant character and word counts</p>
                     </div>
                   </div>

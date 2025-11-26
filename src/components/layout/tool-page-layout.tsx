@@ -263,7 +263,7 @@ export default function ToolPageLayout({
                   <div className="space-y-6">
                     {faqs.map((faq, index) => (
                       <div key={index}>
-                        <h3 className="font-semibold text-gray-900 mb-2">{faq.question}</h3>
+                        <h3 className="font-bold text-gray-900 mb-2">{faq.question}</h3>
                         <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
                       </div>
                     ))}
@@ -332,7 +332,7 @@ export default function ToolPageLayout({
               <CardContent className="pt-6">
                 <div className="text-center">
                   <Heart className="h-8 w-8 text-red-500 mx-auto mb-3" />
-                  <h3 className="font-semibold text-gray-900 mb-2">Loving our tools?</h3>
+                  <h3 className="font-bold text-gray-900 mb-2">Loving our tools?</h3>
                   <p className="text-sm text-gray-600 mb-4">
                     Help us spread the word and reach more users who need these tools.
                   </p>

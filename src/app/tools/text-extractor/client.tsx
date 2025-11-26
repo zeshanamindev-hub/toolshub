@@ -379,7 +379,7 @@ Temperature reading: 98.6°F, humidity: 45.2%`)
                   {extractionResults.map((result, index) => (
                     <div key={index} className="border rounded-lg p-4">
                       <div className="flex justify-between items-center mb-3">
-                        <h4 className="font-semibold text-lg">{result.type}</h4>
+                        <h4 className="font-bold text-lg">{result.type}</h4>
                         <div className="flex items-center gap-2">
                           <span className="text-sm text-gray-500">
                             {result.count} found
@@ -425,25 +425,25 @@ Temperature reading: 98.6°F, humidity: 45.2%`)
             <CardContent>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div className="text-center p-4">
-                  <div className="text-cyan-600 font-semibold mb-2">12 Pattern Types</div>
+                  <div className="text-cyan-600 font-bold mb-2">12 Pattern Types</div>
                   <p className="text-sm text-gray-600">
                     Extract emails, URLs, phones, dates, and more
                   </p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-blue-600 font-semibold mb-2">Duplicate Removal</div>
+                  <div className="text-blue-600 font-bold mb-2">Duplicate Removal</div>
                   <p className="text-sm text-gray-600">
                     Automatically removes duplicate matches
                   </p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-green-600 font-semibold mb-2">Export Options</div>
+                  <div className="text-green-600 font-bold mb-2">Export Options</div>
                   <p className="text-sm text-gray-600">
                     Copy to clipboard or download as JSON
                   </p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-purple-600 font-semibold mb-2">Real-time Results</div>
+                  <div className="text-purple-600 font-bold mb-2">Real-time Results</div>
                   <p className="text-sm text-gray-600">
                     See extraction results instantly
                   </p>

@@ -40,7 +40,7 @@ export default function CategoryPill({
       {/* Content */}
       <div className="relative z-10 flex items-center gap-2">
         {Icon && <Icon className="h-4 w-4" />}
-        <span className="font-semibold text-sm">{name}</span>
+        <span className="font-bold text-sm">{name}</span>
         {count !== undefined && (
           <span className={`
             px-2 py-0.5 text-xs font-bold rounded-full

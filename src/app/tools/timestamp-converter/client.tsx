@@ -454,25 +454,25 @@ export default function TimestampConverterClient() {
             <CardContent>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div className="text-center p-4">
-                  <div className="text-blue-600 font-semibold mb-2">Multiple Formats</div>
+                  <div className="text-blue-600 font-bold mb-2">Multiple Formats</div>
                   <p className="text-sm text-gray-600">
                     Unix, ISO 8601, UTC, and local time formats
                   </p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-green-600 font-semibold mb-2">Real-time Updates</div>
+                  <div className="text-green-600 font-bold mb-2">Real-time Updates</div>
                   <p className="text-sm text-gray-600">
                     Live current time and relative time calculations
                   </p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-purple-600 font-semibold mb-2">Auto-Detection</div>
+                  <div className="text-purple-600 font-bold mb-2">Auto-Detection</div>
                   <p className="text-sm text-gray-600">
                     Automatically detects seconds vs milliseconds
                   </p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-orange-600 font-semibold mb-2">Copy & Paste</div>
+                  <div className="text-orange-600 font-bold mb-2">Copy & Paste</div>
                   <p className="text-sm text-gray-600">
                     One-click copying of any format
                   </p>

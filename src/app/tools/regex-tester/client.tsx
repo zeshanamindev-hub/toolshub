@@ -314,7 +314,7 @@ export default function RegexTesterClient() {
                 {/* Match Details */}
                 {result.matches.length > 0 && (
                   <div className="space-y-2">
-                    <h4 className="font-semibold">Match Details:</h4>
+                    <h4 className="font-bold">Match Details:</h4>
                     <div className="space-y-2 max-h-60 overflow-y-auto">
                       {result.matches.map((match, index) => (
                         <div key={index} className="p-2 bg-yellow-50 border border-yellow-200 rounded text-sm">
@@ -440,25 +440,25 @@ export default function RegexTesterClient() {
             <CardContent>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div className="text-center p-4">
-                  <div className="text-indigo-600 font-semibold mb-2">Real-time Testing</div>
+                  <div className="text-indigo-600 font-bold mb-2">Real-time Testing</div>
                   <p className="text-sm text-gray-600">
                     See results instantly as you type
                   </p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-green-600 font-semibold mb-2">Match Highlighting</div>
+                  <div className="text-green-600 font-bold mb-2">Match Highlighting</div>
                   <p className="text-sm text-gray-600">
                     Visual highlighting of regex matches
                   </p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-blue-600 font-semibold mb-2">Group Details</div>
+                  <div className="text-blue-600 font-bold mb-2">Group Details</div>
                   <p className="text-sm text-gray-600">
                     Detailed information about capture groups
                   </p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-purple-600 font-semibold mb-2">Common Patterns</div>
+                  <div className="text-purple-600 font-bold mb-2">Common Patterns</div>
                   <p className="text-sm text-gray-600">
                     Pre-built patterns for common use cases
                   </p>

@@ -253,7 +253,7 @@ export default function MorseToTextClient() {
           </div>
 
           <div className="mt-4">
-            <h3 className="text-lg font-semibold mb-2">Converted Text:</h3>
+            <h3 className="text-lg font-bold mb-2">Converted Text:</h3>
             <div className="p-4 bg-gray-100 dark:bg-gray-800 rounded-md font-mono min-h-[50px]">
               {inputText ? convertToText(inputText) : <span className="text-gray-400">Converted text will appear here...</span>}
             </div>

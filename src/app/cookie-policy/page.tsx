@@ -100,7 +100,7 @@ export default function CookiePolicyPage() {
           </CardHeader>
           <CardContent className="text-gray-600 dark:text-gray-300 space-y-6">
             <div>
-              <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
+              <h3 className="font-bold text-gray-900 dark:text-white mb-2">
                 1. Essential Cookies
               </h3>
               <p>
@@ -115,7 +115,7 @@ export default function CookiePolicyPage() {
             </div>
 
             <div>
-              <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
+              <h3 className="font-bold text-gray-900 dark:text-white mb-2">
                 2. Preference Cookies
               </h3>
               <p>
@@ -129,7 +129,7 @@ export default function CookiePolicyPage() {
             </div>
 
             <div>
-              <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
+              <h3 className="font-bold text-gray-900 dark:text-white mb-2">
                 3. Analytics Cookies
               </h3>
               <p>
@@ -152,7 +152,7 @@ export default function CookiePolicyPage() {
             </div>
 
             <div>
-              <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
+              <h3 className="font-bold text-gray-900 dark:text-white mb-2">
                 4. Advertising Cookies
               </h3>
               <p>
@@ -188,7 +188,7 @@ export default function CookiePolicyPage() {
               appear on our pages:
             </p>
             <div>
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+              <h4 className="font-bold text-gray-900 dark:text-white mb-2">
                 Google AdSense
               </h4>
               <p>
@@ -210,7 +210,7 @@ export default function CookiePolicyPage() {
               </p>
             </div>
             <div>
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+              <h4 className="font-bold text-gray-900 dark:text-white mb-2">
                 Google Analytics
               </h4>
               <p>
@@ -248,7 +248,7 @@ export default function CookiePolicyPage() {
             </p>
 
             <div>
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+              <h4 className="font-bold text-gray-900 dark:text-white mb-2">
                 Browser Settings
               </h4>
               <p>
@@ -264,7 +264,7 @@ export default function CookiePolicyPage() {
             </div>
 
             <div>
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+              <h4 className="font-bold text-gray-900 dark:text-white mb-2">
                 Browser-Specific Instructions
               </h4>
               <ul className="space-y-2 ml-4">
@@ -316,7 +316,7 @@ export default function CookiePolicyPage() {
             </div>
 
             <div>
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+              <h4 className="font-bold text-gray-900 dark:text-white mb-2">
                 Opt-Out of Personalized Advertising
               </h4>
               <p>You can opt out of personalized advertising by visiting:</p>

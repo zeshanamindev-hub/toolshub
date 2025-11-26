@@ -412,25 +412,25 @@ END:VCARD`,
             <CardContent>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div className="text-center p-4">
-                  <div className="text-gray-900 font-semibold mb-2">Multiple Formats</div>
+                  <div className="text-gray-900 font-bold mb-2">Multiple Formats</div>
                   <p className="text-sm text-gray-600">
                     Support for URLs, text, WiFi, email, and more
                   </p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-blue-600 font-semibold mb-2">Customizable Size</div>
+                  <div className="text-blue-600 font-bold mb-2">Customizable Size</div>
                   <p className="text-sm text-gray-600">
                     Choose from multiple size options
                   </p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-green-600 font-semibold mb-2">Error Correction</div>
+                  <div className="text-green-600 font-bold mb-2">Error Correction</div>
                   <p className="text-sm text-gray-600">
                     Multiple error correction levels
                   </p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-purple-600 font-semibold mb-2">Easy Export</div>
+                  <div className="text-purple-600 font-bold mb-2">Easy Export</div>
                   <p className="text-sm text-gray-600">
                     Download or copy QR codes instantly
                   </p>

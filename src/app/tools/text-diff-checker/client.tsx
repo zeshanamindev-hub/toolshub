@@ -456,25 +456,25 @@ The end.`)
             <CardContent>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div className="text-center p-4">
-                  <div className="text-green-600 font-semibold mb-2">Line-by-Line Diff</div>
+                  <div className="text-green-600 font-bold mb-2">Line-by-Line Diff</div>
                   <p className="text-sm text-gray-600">
                     Clear visualization of added, removed, and changed lines
                   </p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-blue-600 font-semibold mb-2">Flexible Options</div>
+                  <div className="text-blue-600 font-bold mb-2">Flexible Options</div>
                   <p className="text-sm text-gray-600">
                     Ignore case and whitespace differences as needed
                   </p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-purple-600 font-semibold mb-2">Statistics</div>
+                  <div className="text-purple-600 font-bold mb-2">Statistics</div>
                   <p className="text-sm text-gray-600">
                     Detailed summary of changes and modifications
                   </p>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-orange-600 font-semibold mb-2">Export Results</div>
+                  <div className="text-orange-600 font-bold mb-2">Export Results</div>
                   <p className="text-sm text-gray-600">
                     Copy diff output in standard format
                   </p>

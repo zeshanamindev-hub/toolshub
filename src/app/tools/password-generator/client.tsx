@@ -180,7 +180,7 @@ export default function PasswordGeneratorClient() {
                   <div className="space-y-2">
                     <div className="flex items-center justify-between">
                       <span className="text-sm font-medium">Password Strength:</span>
-                      <span className={`text-sm font-semibold ${strength.color}`}>
+                      <span className={`text-sm font-bold ${strength.color}`}>
                         {strength.text}
                       </span>
                     </div>

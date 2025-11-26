@@ -361,7 +361,7 @@ export default function WordCounterClient() {
           {/* Text Input Area */}
           <div className="space-y-4">
             <div className="flex items-center justify-between">
-              <h2 className="text-lg font-semibold text-gray-900">Enter Your Text</h2>
+              <h2 className="text-lg font-bold text-gray-900">Enter Your Text</h2>
               <div className="flex gap-2">
                 <Button
                   variant="outline"
@@ -478,7 +478,7 @@ export default function WordCounterClient() {
                           <Icon className="h-5 w-5 text-primary" />
                         </div>
                       </div>
-                      <p className="text-lg font-semibold text-gray-900">{stat.value}</p>
+                      <p className="text-lg font-bold text-gray-900">{stat.value}</p>
                       <p className="text-sm text-gray-600">{stat.label}</p>
                     </div>
                   )
@@ -526,7 +526,7 @@ export default function WordCounterClient() {
               <CardContent className="pt-4">
                 <div className="flex items-center justify-between">
                   <div>
-                    <h3 className="font-semibold text-green-900 mb-1">Export Analysis</h3>
+                    <h3 className="font-bold text-green-900 mb-1">Export Analysis</h3>
                     <p className="text-sm text-green-700">Download your text analysis results</p>
                   </div>
                   <Button onClick={exportStats} className="bg-green-600 hover:bg-green-700">

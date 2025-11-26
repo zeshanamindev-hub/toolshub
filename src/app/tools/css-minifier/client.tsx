@@ -333,7 +333,7 @@ export default function CssMinifierClient() {
                     <div className="mx-auto w-12 h-12 bg-white rounded-2xl shadow-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                       <Icon className={`h-6 w-6 ${feature.color}`} />
                     </div>
-                    <h3 className="font-semibold text-gray-900 mb-2">{feature.title}</h3>
+                    <h3 className="font-bold text-gray-900 mb-2">{feature.title}</h3>
                     <p className="text-sm text-gray-600 leading-relaxed">{feature.description}</p>
                   </div>
                 )

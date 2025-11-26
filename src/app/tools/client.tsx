@@ -162,7 +162,7 @@ export default function AllToolsClient() {
                               <Icon className={`h-5 w-5 ${tool.color}`} />
                             </div>
                             <div>
-                              <h3 className="font-semibold text-gray-900 group-hover:text-primary transition-colors">
+                              <h3 className="font-bold text-gray-900 group-hover:text-primary transition-colors">
                                 {tool.name}
                               </h3>
                               <p className="text-sm text-gray-600">{tool.description}</p>
@@ -185,7 +185,7 @@ export default function AllToolsClient() {
         ) : (
           <div className="text-center py-12">
             <div className="text-6xl mb-4">🔍</div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">No tools found</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-2">No tools found</h3>
             <p className="text-gray-600 mb-6">Try searching for different keywords</p>
             <Button onClick={() => setSearchQuery("")} variant="outline">
               Clear Search
