@@ -77,23 +77,23 @@ export default function ToolPageLayout({
           <div className="flex items-center justify-between">
             {/* Breadcrumb */}
             <nav className="flex items-center space-x-2 text-sm">
-              <Link 
-                href="/" 
-                className="text-gray-500 hover:text-primary transition-colors"
+              <Link
+                href="/"
+                className="text-gray-500 hover:text-blue-600 transition-colors"
               >
                 Home
               </Link>
               <ChevronRight className="h-4 w-4 text-gray-400" />
-              <Link 
-                href="/tools" 
-                className="text-gray-500 hover:text-primary transition-colors"
+              <Link
+                href="/tools"
+                className="text-gray-500 hover:text-blue-600 transition-colors"
               >
                 Tools
               </Link>
               <ChevronRight className="h-4 w-4 text-gray-400" />
-              <Link 
-                href={categoryHref} 
-                className="text-gray-500 hover:text-primary transition-colors"
+              <Link
+                href={categoryHref}
+                className="text-gray-500 hover:text-blue-600 transition-colors"
               >
                 {category}
               </Link>
@@ -130,8 +130,8 @@ export default function ToolPageLayout({
             {/* Tool Header */}
             <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-8">
               <div className="flex items-start gap-6">
-                <div className="p-4 bg-primary/10 rounded-2xl">
-                  <ToolIcon className="h-12 w-12 text-primary" />
+                <div className="p-4 bg-blue-100 rounded-2xl">
+                  <ToolIcon className="h-12 w-12 text-blue-600" />
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-3">
@@ -150,7 +150,7 @@ export default function ToolPageLayout({
                   {/* Key Features */}
                   <div className="flex flex-wrap gap-4">
                     <div className="flex items-center text-sm text-gray-600">
-                      <Shield className="h-4 w-4 mr-2 text-green-600" />
+                      <Shield className="h-4 w-4 mr-2 text-blue-600" />
                       100% Private
                     </div>
                     <div className="flex items-center text-sm text-gray-600">
@@ -158,7 +158,7 @@ export default function ToolPageLayout({
                       Instant Results
                     </div>
                     <div className="flex items-center text-sm text-gray-600">
-                      <Users className="h-4 w-4 mr-2 text-purple-600" />
+                      <Users className="h-4 w-4 mr-2 text-blue-600" />
                       No Registration
                     </div>
                   </div>
@@ -170,7 +170,7 @@ export default function ToolPageLayout({
             <Card className="shadow-sm border-gray-200">
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-2">
-                  <Target className="h-5 w-5 text-primary" />
+                  <Target className="h-5 w-5 text-blue-600" />
                   Use the Tool
                 </CardTitle>
                 <CardDescription>
@@ -187,7 +187,7 @@ export default function ToolPageLayout({
               <Card className="shadow-sm border-gray-200">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <Star className="h-5 w-5 text-primary" />
+                    <Star className="h-5 w-5 text-blue-600" />
                     Key Features
                   </CardTitle>
                 </CardHeader>
@@ -195,7 +195,7 @@ export default function ToolPageLayout({
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {features.map((feature, index) => (
                       <div key={index} className="flex items-start gap-3">
-                        <div className="flex-shrink-0 w-2 h-2 bg-primary rounded-full mt-2"></div>
+                        <div className="flex-shrink-0 w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
                         <span className="text-gray-700">{feature}</span>
                       </div>
                     ))}
@@ -209,7 +209,7 @@ export default function ToolPageLayout({
               <Card className="shadow-sm border-gray-200">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <Lightbulb className="h-5 w-5 text-primary" />
+                    <Lightbulb className="h-5 w-5 text-blue-600" />
                     Use Cases
                   </CardTitle>
                 </CardHeader>
@@ -217,8 +217,8 @@ export default function ToolPageLayout({
                   <div className="space-y-3">
                     {useCases.map((useCase, index) => (
                       <div key={index} className="flex items-start gap-3">
-                        <div className="flex-shrink-0 w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center mt-0.5">
-                          <span className="text-xs font-medium text-primary">{index + 1}</span>
+                        <div className="flex-shrink-0 w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mt-0.5">
+                          <span className="text-xs font-medium text-blue-600">{index + 1}</span>
                         </div>
                         <span className="text-gray-700">{useCase}</span>
                       </div>
@@ -255,7 +255,7 @@ export default function ToolPageLayout({
               <Card className="shadow-sm border-gray-200">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <HelpCircle className="h-5 w-5 text-primary" />
+                    <HelpCircle className="h-5 w-5 text-blue-600" />
                     Frequently Asked Questions
                   </CardTitle>
                 </CardHeader>
@@ -291,18 +291,18 @@ export default function ToolPageLayout({
                         href={tool.href}
                         className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group"
                       >
-                        <div className="p-2 bg-gray-100 rounded-lg group-hover:bg-primary/10 transition-colors">
-                          <RelatedIcon className="h-4 w-4 text-gray-600 group-hover:text-primary transition-colors" />
+                        <div className="p-2 bg-gray-100 rounded-lg group-hover:bg-blue-100 transition-colors">
+                          <RelatedIcon className="h-4 w-4 text-gray-600 group-hover:text-blue-600 transition-colors" />
                         </div>
                         <div className="flex-1 min-w-0">
-                          <div className="font-medium text-sm text-gray-900 group-hover:text-primary transition-colors truncate">
+                          <div className="font-medium text-sm text-gray-900 group-hover:text-blue-600 transition-colors truncate">
                             {tool.name}
                           </div>
                           <div className="text-xs text-gray-500 truncate">
                             {tool.description}
                           </div>
                         </div>
-                        <ArrowRight className="h-4 w-4 text-gray-400 group-hover:text-primary transition-colors" />
+                        <ArrowRight className="h-4 w-4 text-gray-400 group-hover:text-blue-600 transition-colors" />
                       </Link>
                     )
                   })}
@@ -328,10 +328,10 @@ export default function ToolPageLayout({
             </Card>
 
             {/* Support Section */}
-            <Card className="shadow-sm border-gray-200 bg-gradient-to-br from-primary/5 to-indigo-50">
+            <Card className="shadow-sm border-gray-200 bg-gradient-to-br from-blue-50 to-blue-100">
               <CardContent className="pt-6">
                 <div className="text-center">
-                  <Heart className="h-8 w-8 text-red-500 mx-auto mb-3" />
+                  <Heart className="h-8 w-8 text-blue-600 mx-auto mb-3" />
                   <h3 className="font-bold text-gray-900 mb-2">Loving our tools?</h3>
                   <p className="text-sm text-gray-600 mb-4">
                     Help us spread the word and reach more users who need these tools.
@@ -339,7 +339,7 @@ export default function ToolPageLayout({
                   <Button
                     onClick={handleShare}
                     size="sm"
-                    className="w-full bg-gradient-to-r from-primary to-indigo-600"
+                    className="w-full bg-blue-600 hover:bg-blue-700"
                   >
                     <Share2 className="h-4 w-4 mr-2" />
                     Share Tool

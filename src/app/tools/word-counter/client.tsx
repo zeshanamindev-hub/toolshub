@@ -182,37 +182,37 @@ export default function WordCounterClient() {
   }
 
   const primaryStats = [
-    { 
-      label: "Words", 
-      value: stats.words, 
+    {
+      label: "Words",
+      value: stats.words,
       color: "from-blue-500 to-blue-600",
       textColor: "text-blue-600",
       icon: Type,
       bgColor: "bg-blue-50"
     },
-    { 
-      label: "Characters", 
-      value: stats.characters, 
-      color: "from-emerald-500 to-emerald-600",
-      textColor: "text-emerald-600",
+    {
+      label: "Characters",
+      value: stats.characters,
+      color: "from-blue-500 to-blue-600",
+      textColor: "text-blue-600",
       icon: Hash,
-      bgColor: "bg-emerald-50"
+      bgColor: "bg-blue-50"
     },
-    { 
-      label: "Characters (no spaces)", 
-      value: stats.charactersNoSpaces, 
-      color: "from-purple-500 to-purple-600",
-      textColor: "text-purple-600",
+    {
+      label: "Characters (no spaces)",
+      value: stats.charactersNoSpaces,
+      color: "from-blue-500 to-blue-600",
+      textColor: "text-blue-600",
       icon: Hash,
-      bgColor: "bg-purple-50"
+      bgColor: "bg-blue-50"
     },
-    { 
-      label: "Sentences", 
-      value: stats.sentences, 
-      color: "from-orange-500 to-orange-600",
-      textColor: "text-orange-600",
+    {
+      label: "Sentences",
+      value: stats.sentences,
+      color: "from-blue-500 to-blue-600",
+      textColor: "text-blue-600",
       icon: AlignLeft,
-      bgColor: "bg-orange-50"
+      bgColor: "bg-blue-50"
     }
   ]
 
@@ -463,7 +463,7 @@ export default function WordCounterClient() {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <TrendingUp className="h-5 w-5 text-primary" />
+                <TrendingUp className="h-5 w-5 text-blue-600" />
                 Advanced Statistics
               </CardTitle>
             </CardHeader>
@@ -474,8 +474,8 @@ export default function WordCounterClient() {
                   return (
                     <div key={stat.label} className="text-center">
                       <div className="flex justify-center mb-2">
-                        <div className="p-2 bg-primary/10 rounded-lg">
-                          <Icon className="h-5 w-5 text-primary" />
+                        <div className="p-2 bg-blue-100 rounded-lg">
+                          <Icon className="h-5 w-5 text-blue-600" />
                         </div>
                       </div>
                       <p className="text-lg font-bold text-gray-900">{stat.value}</p>
@@ -492,7 +492,7 @@ export default function WordCounterClient() {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <BarChart3 className="h-5 w-5 text-primary" />
+                  <BarChart3 className="h-5 w-5 text-blue-600" />
                   Most Common Words
                 </CardTitle>
               </CardHeader>
@@ -503,7 +503,7 @@ export default function WordCounterClient() {
                     return (
                       <div key={word.word} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                         <div className="flex items-center gap-3">
-                          <span className="flex items-center justify-center w-6 h-6 bg-primary text-white text-xs font-medium rounded-full">
+                          <span className="flex items-center justify-center w-6 h-6 bg-blue-600 text-white text-xs font-medium rounded-full">
                             {index + 1}
                           </span>
                           <span className="font-medium text-gray-900">{word.word}</span>
@@ -522,14 +522,14 @@ export default function WordCounterClient() {
 
           {/* Export Actions */}
           {text && (
-            <Card className="bg-green-50 border-green-200">
+            <Card className="bg-blue-50 border-blue-200">
               <CardContent className="pt-4">
                 <div className="flex items-center justify-between">
                   <div>
-                    <h3 className="font-bold text-green-900 mb-1">Export Analysis</h3>
-                    <p className="text-sm text-green-700">Download your text analysis results</p>
+                    <h3 className="font-bold text-blue-900 mb-1">Export Analysis</h3>
+                    <p className="text-sm text-blue-700">Download your text analysis results</p>
                   </div>
-                  <Button onClick={exportStats} className="bg-green-600 hover:bg-green-700">
+                  <Button onClick={exportStats} className="bg-blue-600 hover:bg-blue-700">
                     <Download className="h-4 w-4 mr-2" />
                     Export JSON
                   </Button>

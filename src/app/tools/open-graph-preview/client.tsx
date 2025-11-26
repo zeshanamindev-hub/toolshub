@@ -174,7 +174,7 @@ export default function OpenGraphPreviewClient() {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Facebook className="h-5 w-5 text-primary" />
+                <Facebook className="h-5 w-5 text-blue-600" />
                 Open Graph Configuration
               </CardTitle>
             </CardHeader>
@@ -263,7 +263,7 @@ export default function OpenGraphPreviewClient() {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Eye className="h-5 w-5 text-primary" />
+                <Eye className="h-5 w-5 text-blue-600" />
                 Facebook Preview
               </CardTitle>
             </CardHeader>
@@ -313,7 +313,7 @@ export default function OpenGraphPreviewClient() {
             <CardHeader>
               <div className="flex items-center justify-between">
                 <CardTitle className="flex items-center gap-2">
-                  <LinkIcon className="h-5 w-5 text-primary" />
+                  <LinkIcon className="h-5 w-5 text-blue-600" />
                   Generated Open Graph Tags
                 </CardTitle>
                 <Button onClick={handleCopy}>

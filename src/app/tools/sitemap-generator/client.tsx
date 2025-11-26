@@ -234,7 +234,7 @@ export default function SitemapGeneratorClient() {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <LinkIcon className="h-5 w-5 text-primary" />
+                <LinkIcon className="h-5 w-5 text-blue-600" />
                 Sitemap URLs
               </CardTitle>
             </CardHeader>
@@ -326,7 +326,7 @@ export default function SitemapGeneratorClient() {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <FileText className="h-5 w-5 text-primary" />
+                <FileText className="h-5 w-5 text-blue-600" />
                 Bulk Import URLs
               </CardTitle>
             </CardHeader>
@@ -362,7 +362,7 @@ export default function SitemapGeneratorClient() {
             <CardHeader>
               <div className="flex items-center justify-between">
                 <CardTitle className="flex items-center gap-2">
-                  <FileText className="h-5 w-5 text-primary" />
+                  <FileText className="h-5 w-5 text-blue-600" />
                   Generated sitemap.xml
                 </CardTitle>
                 <div className="flex gap-2">

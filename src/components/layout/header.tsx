@@ -116,7 +116,7 @@ export default function Header() {
               {/* All Tools Link */}
               <Link
                 href="/tools"
-                className="px-4 py-2 text-sm font-bold text-gray-700 hover:text-purple-600 transition-all duration-300 relative group"
+                className="px-4 py-2 text-sm font-bold text-gray-700 hover:text-blue-600 transition-all duration-300 relative group"
               >
                 All Tools
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 group-hover:w-full transition-all duration-300"></span>
@@ -133,7 +133,7 @@ export default function Header() {
                     setCategoriesDropdownOpen(true)
                     setToolsDropdownOpen(false)
                   }}
-                  className="flex items-center gap-1.5 px-4 py-2 text-sm font-bold text-gray-700 hover:text-purple-600 transition-all duration-300"
+                  className="flex items-center gap-1.5 px-4 py-2 text-sm font-bold text-gray-700 hover:text-blue-600 transition-all duration-300"
                   aria-expanded={categoriesDropdownOpen}
                 >
                   <Grid3X3 className="h-4 w-4" />
@@ -159,7 +159,7 @@ export default function Header() {
                             <h3 className="font-bold text-gray-900 group-hover:text-blue-600">
                               {category.name}
                             </h3>
-                            <ArrowRight className="h-4 w-4 text-gray-400 group-hover:text-purple-600 group-hover:translate-x-1 transition-all duration-300" />
+                            <ArrowRight className="h-4 w-4 text-gray-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all duration-300" />
                           </div>
                           <p className="text-sm text-gray-600 group-hover:text-gray-700">
                             {category.description}
@@ -173,7 +173,7 @@ export default function Header() {
 
               <Link
                 href="/about"
-                className="px-4 py-2 text-sm font-bold text-gray-700 hover:text-purple-600 transition-all duration-300 relative group"
+                className="px-4 py-2 text-sm font-bold text-gray-700 hover:text-blue-600 transition-all duration-300 relative group"
               >
                 About
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 group-hover:w-full transition-all duration-300"></span>
@@ -184,7 +184,7 @@ export default function Header() {
             <div className="hidden md:flex items-center">
               <div className="relative" ref={searchRef}>
                 <div className="relative">
-                  <Search className={`absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 z-10 transition-all duration-300 ${searchFocused || searchQuery ? 'text-purple-600 scale-110' : 'text-gray-400'}`} />
+                  <Search className={`absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 z-10 transition-all duration-300 ${searchFocused || searchQuery ? 'text-blue-600 scale-110' : 'text-gray-400'}`} />
                   <Input
                     type="text"
                     placeholder={`Search ${SITE_CONFIG.toolCount}+ tools...`}
@@ -198,7 +198,7 @@ export default function Header() {
                       }
                     }}
                     onFocus={() => setSearchFocused(true)}
-                    className="pl-10 pr-20 py-2.5 w-80 bg-white border-gray-200 focus:border-purple-500 focus:ring-0 rounded-2xl transition-all duration-300 text-sm font-medium"
+                    className="pl-10 pr-20 py-2.5 w-80 bg-white border-gray-200 focus:border-blue-500 focus:ring-0 rounded-2xl transition-all duration-300 text-sm font-medium"
                   />
                   {!searchQuery && !searchFocused && (
                     <div className="absolute right-3 top-1/2 -translate-y-1/2 px-2 py-1 bg-gray-100 border border-gray-200 rounded-lg text-xs text-gray-400 font-medium">
@@ -236,17 +236,17 @@ export default function Header() {
                               }}
                             >
                               <div className="p-2 rounded-lg bg-gray-100 group-hover:bg-white transition-colors">
-                                <Icon className={`w-4 h-4 ${tool.color}`} />
+                                <Icon className={`w-4 h-4 text-blue-600`} />
                               </div>
                               <div className="flex-1 min-w-0">
-                                <div className="font-bold text-sm text-gray-900 group-hover:text-purple-600 transition-colors truncate">
+                                <div className="font-bold text-sm text-gray-900 group-hover:text-blue-600 transition-colors truncate">
                                   {tool.name}
                                 </div>
                                 <div className="text-xs text-gray-600 truncate">
                                   {tool.description}
                                 </div>
                               </div>
-                              <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-purple-600 group-hover:translate-x-1 transition-all duration-300" />
+                              <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all duration-300" />
                             </Link>
                           )
                         })}
@@ -268,7 +268,7 @@ export default function Header() {
               variant="ghost"
               size="icon"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden rounded-xl hover:bg-purple-50 transition-all duration-300"
+              className="lg:hidden rounded-xl hover:bg-blue-50 transition-all duration-300"
               aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
             >
               {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -309,7 +309,7 @@ export default function Header() {
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="block px-4 py-3 text-sm font-bold text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-xl transition-all duration-300"
+                    className="block px-4 py-3 text-sm font-bold text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-all duration-300"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {item.name}
@@ -325,10 +325,10 @@ export default function Header() {
                     <Link
                       key={tool.name}
                       href={tool.href}
-                      className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-xl transition-all duration-300"
+                      className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-all duration-300"
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      <div className="w-1.5 h-1.5 bg-purple-500 rounded-full"></div>
+                      <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
                       {tool.name}
                     </Link>
                   ))}

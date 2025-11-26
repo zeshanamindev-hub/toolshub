@@ -160,7 +160,7 @@ export default function FaviconGeneratorClient() {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Upload className="h-5 w-5 text-primary" />
+                <Upload className="h-5 w-5 text-blue-600" />
                 Upload PNG Image
               </CardTitle>
             </CardHeader>
@@ -215,7 +215,7 @@ export default function FaviconGeneratorClient() {
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <Eye className="h-5 w-5 text-primary" />
+                    <Eye className="h-5 w-5 text-blue-600" />
                     Preview (32x32)
                   </CardTitle>
                 </CardHeader>
@@ -239,7 +239,7 @@ export default function FaviconGeneratorClient() {
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <Download className="h-5 w-5 text-primary" />
+                    <Download className="h-5 w-5 text-blue-600" />
                     Generate ICO
                   </CardTitle>
                 </CardHeader>

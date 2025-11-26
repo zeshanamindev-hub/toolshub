@@ -177,7 +177,7 @@ export default function UrlShortenerClient() {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <LinkIcon className="h-5 w-5 text-primary" />
+                <LinkIcon className="h-5 w-5 text-blue-600" />
                 URL to Shorten
               </CardTitle>
             </CardHeader>
@@ -201,7 +201,7 @@ export default function UrlShortenerClient() {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Shuffle className="h-5 w-5 text-primary" />
+                <Shuffle className="h-5 w-5 text-blue-600" />
                 Short Domain Settings
               </CardTitle>
             </CardHeader>
@@ -227,7 +227,7 @@ export default function UrlShortenerClient() {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <ExternalLink className="h-5 w-5 text-primary" />
+                  <ExternalLink className="h-5 w-5 text-blue-600" />
                   Shortened URL
                 </CardTitle>
               </CardHeader>

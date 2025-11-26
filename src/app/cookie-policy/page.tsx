@@ -58,7 +58,7 @@ export default function CookiePolicyPage() {
         <Card className="mb-8">
           <CardHeader>
             <div className="flex items-center space-x-3">
-              <Eye className="h-6 w-6 text-primary" />
+              <Eye className="h-6 w-6 text-blue-600" />
               <CardTitle>How We Use Cookies</CardTitle>
             </div>
           </CardHeader>
@@ -203,7 +203,7 @@ export default function CookiePolicyPage() {
                   href="https://policies.google.com/technologies/ads"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary hover:underline"
+                  className="text-blue-600 hover:underline"
                 >
                   Google Advertising Policies
                 </a>
@@ -224,7 +224,7 @@ export default function CookiePolicyPage() {
                   href="https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary hover:underline"
+                  className="text-blue-600 hover:underline"
                 >
                   Google Analytics Cookie Usage
                 </a>
@@ -237,7 +237,7 @@ export default function CookiePolicyPage() {
         <Card className="mb-8">
           <CardHeader>
             <div className="flex items-center space-x-3">
-              <Settings className="h-6 w-6 text-primary" />
+              <Settings className="h-6 w-6 text-blue-600" />
               <CardTitle>How to Manage and Control Cookies</CardTitle>
             </div>
           </CardHeader>
@@ -274,7 +274,7 @@ export default function CookiePolicyPage() {
                     href="https://support.google.com/chrome/answer/95647"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-primary hover:underline"
+                    className="text-blue-600 hover:underline"
                   >
                     Manage cookies in Chrome
                   </a>
@@ -285,7 +285,7 @@ export default function CookiePolicyPage() {
                     href="https://support.mozilla.org/en-US/kb/cookies-information-websites-store-on-your-computer"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-primary hover:underline"
+                    className="text-blue-600 hover:underline"
                   >
                     Manage cookies in Firefox
                   </a>
@@ -296,7 +296,7 @@ export default function CookiePolicyPage() {
                     href="https://support.apple.com/guide/safari/manage-cookies-sfri11471/mac"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-primary hover:underline"
+                    className="text-blue-600 hover:underline"
                   >
                     Manage cookies in Safari
                   </a>
@@ -307,7 +307,7 @@ export default function CookiePolicyPage() {
                     href="https://support.microsoft.com/en-us/microsoft-edge/delete-cookies-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-primary hover:underline"
+                    className="text-blue-600 hover:underline"
                   >
                     Manage cookies in Edge
                   </a>
@@ -326,7 +326,7 @@ export default function CookiePolicyPage() {
                     href="https://www.google.com/settings/ads"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-primary hover:underline"
+                    className="text-blue-600 hover:underline"
                   >
                     Google Ads Settings
                   </a>
@@ -336,7 +336,7 @@ export default function CookiePolicyPage() {
                     href="https://optout.aboutads.info/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-primary hover:underline"
+                    className="text-blue-600 hover:underline"
                   >
                     Digital Advertising Alliance Opt-Out
                   </a>
@@ -346,7 +346,7 @@ export default function CookiePolicyPage() {
                     href="https://www.youronlinechoices.com/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-primary hover:underline"
+                    className="text-blue-600 hover:underline"
                   >
                     Your Online Choices (EU)
                   </a>
@@ -382,7 +382,7 @@ export default function CookiePolicyPage() {
         <Card>
           <CardHeader>
             <div className="flex items-center space-x-3">
-              <Mail className="h-6 w-6 text-primary" />
+              <Mail className="h-6 w-6 text-blue-600" />
               <CardTitle>Questions About Cookies?</CardTitle>
             </div>
           </CardHeader>
@@ -397,7 +397,7 @@ export default function CookiePolicyPage() {
               </p>
               <p>
                 <strong>Website:</strong>{" "}
-                <a href="/contact" className="text-primary hover:underline">
+                <a href="/contact" className="text-blue-600 hover:underline">
                   Contact Form
                 </a>
               </p>

@@ -297,7 +297,7 @@ export default function RobotsTxtGeneratorClient() {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Shield className="h-5 w-5 text-primary" />
+                <Shield className="h-5 w-5 text-blue-600" />
                 Crawler Rules
               </CardTitle>
             </CardHeader>
@@ -448,7 +448,7 @@ export default function RobotsTxtGeneratorClient() {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <LinkIcon className="h-5 w-5 text-primary" />
+                <LinkIcon className="h-5 w-5 text-blue-600" />
                 Sitemap URLs
               </CardTitle>
             </CardHeader>
@@ -483,7 +483,7 @@ export default function RobotsTxtGeneratorClient() {
             <CardHeader>
               <div className="flex items-center justify-between">
                 <CardTitle className="flex items-center gap-2">
-                  <FileText className="h-5 w-5 text-primary" />
+                  <FileText className="h-5 w-5 text-blue-600" />
                   Generated robots.txt
                 </CardTitle>
                 <div className="flex gap-2">

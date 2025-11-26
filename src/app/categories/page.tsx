@@ -59,9 +59,9 @@ const categories = [
       name: "Converters & Encoding",
       description: "Convert between different formats, encodings, and data representations",
       count: 9,
-      color: "text-purple-600",
-      bgColor: "bg-purple-50",
-      borderColor: "border-purple-200",
+      color: "text-blue-600",
+      bgColor: "bg-blue-50",
+      borderColor: "border-blue-200",
       tools: [
         { name: "URL Encoder/Decoder", href: "/tools/url-encoder", icon: LinkIcon },
         { name: "Base64 Converter", href: "/tools/base64-converter", icon: Binary },
@@ -78,9 +78,9 @@ const categories = [
       name: "Generators",
       description: "Generate passwords, QR codes, placeholder content, and more",
       count: 7,
-      color: "text-green-600",
-      bgColor: "bg-green-50",
-      borderColor: "border-green-200",
+      color: "text-blue-600",
+      bgColor: "bg-blue-50",
+      borderColor: "border-blue-200",
       tools: [
         { name: "Password Generator", href: "/tools/password-generator", icon: Lock },
         { name: "Hash Generator", href: "/tools/hash-generator", icon: Shield },
@@ -94,9 +94,9 @@ const categories = [
       name: "SEO Tools",
       description: "Search engine optimization tools for better website visibility",
       count: 10,
-      color: "text-green-700",
-      bgColor: "bg-green-50",
-      borderColor: "border-green-200",
+      color: "text-blue-600",
+      bgColor: "bg-blue-50",
+      borderColor: "border-blue-200",
       tools: [
         { name: "Meta Tag Preview Tool", href: "/tools/meta-tag-preview", icon: Eye },
         { name: "Open Graph Preview Tool", href: "/tools/open-graph-preview", icon: Facebook },
@@ -114,9 +114,9 @@ const categories = [
       name: "Developer Tools",
       description: "Essential utilities for developers and programmers",
       count: 12,
-      color: "text-orange-600",
-      bgColor: "bg-orange-50",
-      borderColor: "border-orange-200",
+      color: "text-blue-600",
+      bgColor: "bg-blue-50",
+      borderColor: "border-blue-200",
       tools: [
         { name: "Regex Tester", href: "/tools/regex-tester", icon: Search },
         { name: "CSS Minifier", href: "/tools/css-minifier", icon: Code },
@@ -134,9 +134,9 @@ const categories = [
       name: "Security & Hash",
       description: "Hash generators, encryption tools, and security utilities",
       count: 1,
-      color: "text-red-600",
-      bgColor: "bg-red-50",
-      borderColor: "border-red-200",
+      color: "text-blue-600",
+      bgColor: "bg-blue-50",
+      borderColor: "border-blue-200",
       tools: [
         { name: "Hash Generator", href: "/tools/hash-generator", icon: Shield },
       ]
@@ -226,15 +226,15 @@ export default function CategoriesPage() {
               <div className="text-gray-600">Total Tools</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-purple-600 mb-2">6</div>
+              <div className="text-3xl font-bold text-blue-600 mb-2">6</div>
               <div className="text-gray-600">Categories</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-green-600 mb-2">100%</div>
+              <div className="text-3xl font-bold text-blue-600 mb-2">100%</div>
               <div className="text-gray-600">Free to Use</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-orange-600 mb-2">0ms</div>
+              <div className="text-3xl font-bold text-blue-600 mb-2">0ms</div>
               <div className="text-gray-600">Server Delay</div>
             </div>
           </div>
@@ -242,7 +242,7 @@ export default function CategoriesPage() {
 
         {/* Coming Soon */}
         <div className="mt-12 text-center">
-          <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-8 border border-blue-200">
+          <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl p-8 border border-blue-200">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">More Categories Coming Soon!</h2>
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
               We're constantly expanding our collection. Upcoming categories include:

@@ -18,7 +18,7 @@ export default function Footer() {
     <footer className="relative overflow-hidden bg-blue-50 border-t border-gray-200">
       {/* Subtle decorative orbs */}
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-blue-100 opacity-10 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 left-1/3 w-80 h-80 bg-purple-100 opacity-10 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-1/3 w-80 h-80 bg-blue-100 opacity-10 rounded-full blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
@@ -43,7 +43,7 @@ export default function Footer() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium text-gray-600 hover:text-purple-600 transition-colors duration-300"
+                className="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors duration-300"
               >
                 {link.name}
               </Link>

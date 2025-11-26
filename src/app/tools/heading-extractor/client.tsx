@@ -227,7 +227,7 @@ export default function HeadingExtractorClient() {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <FileText className="h-5 w-5 text-primary" />
+                <FileText className="h-5 w-5 text-blue-600" />
                 HTML Content
               </CardTitle>
             </CardHeader>
@@ -256,7 +256,7 @@ export default function HeadingExtractorClient() {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <List className="h-5 w-5 text-primary" />
+                  <List className="h-5 w-5 text-blue-600" />
                   Heading Statistics
                 </CardTitle>
               </CardHeader>
@@ -264,7 +264,7 @@ export default function HeadingExtractorClient() {
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                   {Object.entries(stats).filter(([key]) => key !== 'total').map(([level, count]) => (
                     <div key={level} className="text-center p-3 bg-gray-50 rounded-lg">
-                      <div className="text-2xl font-bold text-primary">{count}</div>
+                      <div className="text-2xl font-bold text-blue-600">{count}</div>
                       <div className="text-sm text-gray-600 uppercase">{level}</div>
                     </div>
                   ))}
@@ -323,7 +323,7 @@ export default function HeadingExtractorClient() {
               <CardHeader>
                 <div className="flex items-center justify-between">
                   <CardTitle className="flex items-center gap-2">
-                    <Hash className="h-5 w-5 text-primary" />
+                    <Hash className="h-5 w-5 text-blue-600" />
                     Extracted Headings
                   </CardTitle>
                   <Button onClick={handleCopy}>

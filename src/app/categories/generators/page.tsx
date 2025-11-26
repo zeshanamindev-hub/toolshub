@@ -32,7 +32,7 @@ export default function GeneratorsCategoryPage() {
         <div className="mb-12">
           <Link
             href="/categories"
-            className="inline-flex items-center text-primary hover:text-primary/80 transition-colors mb-6"
+            className="inline-flex items-center text-blue-600 hover:text-blue-700/80 transition-colors mb-6"
           >
             <ArrowLeft className="mr-2 h-5 w-5" />
             Back to Categories
@@ -46,13 +46,13 @@ export default function GeneratorsCategoryPage() {
               {category.description}. Browse our collection of {categoryTools.length} powerful content generation utilities.
             </p>
             <div className="flex items-center justify-center gap-4 text-sm text-gray-500">
-              <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full font-medium">
+              <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-medium">
                 {categoryTools.length} Tools Available
               </span>
               <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-medium">
                 100% Free
               </span>
-              <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full font-medium">
+              <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-medium">
                 Instant Results
               </span>
             </div>
@@ -67,10 +67,10 @@ export default function GeneratorsCategoryPage() {
               <Card key={tool.name} className="hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group">
                 <CardHeader>
                   <div className="flex items-center space-x-3">
-                    <div className="p-2 rounded-lg bg-gray-50 group-hover:bg-green-50 transition-colors">
+                    <div className="p-2 rounded-lg bg-gray-50 group-hover:bg-blue-100 transition-colors">
                       <Icon className={`h-6 w-6 ${tool.color}`} />
                     </div>
-                    <CardTitle className="text-xl group-hover:text-primary transition-colors">{tool.name}</CardTitle>
+                    <CardTitle className="text-xl group-hover:text-blue-600 transition-colors">{tool.name}</CardTitle>
                   </div>
                   <CardDescription className="text-base leading-relaxed">
                     {tool.description}
@@ -97,9 +97,9 @@ export default function GeneratorsCategoryPage() {
               <Link
                 key={cat.id}
                 href={cat.href}
-                className="p-4 border border-gray-200 rounded-lg hover:border-primary hover:bg-primary/5 transition-all duration-300 group"
+                className="p-4 border border-gray-200 rounded-lg hover:border-blue-600 hover:bg-blue-50 transition-all duration-300 group"
               >
-                <h3 className="font-bold text-gray-900 group-hover:text-primary transition-colors">
+                <h3 className="font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
                   {cat.name}
                 </h3>
                 <p className="text-sm text-gray-600 mt-1">

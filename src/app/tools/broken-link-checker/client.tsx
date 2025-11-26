@@ -226,7 +226,7 @@ export default function BrokenLinkCheckerClient() {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <FileText className="h-5 w-5 text-primary" />
+                <FileText className="h-5 w-5 text-blue-600" />
                 HTML Content
               </CardTitle>
             </CardHeader>
@@ -255,7 +255,7 @@ export default function BrokenLinkCheckerClient() {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Search className="h-5 w-5 text-primary" />
+                  <Search className="h-5 w-5 text-blue-600" />
                   Link Analysis Summary
                 </CardTitle>
               </CardHeader>
@@ -306,7 +306,7 @@ export default function BrokenLinkCheckerClient() {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <LinkIcon className="h-5 w-5 text-primary" />
+                  <LinkIcon className="h-5 w-5 text-blue-600" />
                   Link Details
                 </CardTitle>
               </CardHeader>

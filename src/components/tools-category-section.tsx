@@ -147,7 +147,7 @@ export default function ToolsCategorySection({
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-5 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-bold mb-6 animate-fade-in-up">
+          <div className="inline-flex items-center px-5 py-2 rounded-full bg-blue-100 border border-blue-200 text-blue-600 text-sm font-bold mb-6 animate-fade-in-up">
             <Grid3X3 className="mr-2 h-4 w-4" />
             Tool Categories
           </div>
@@ -304,7 +304,7 @@ export default function ToolsCategorySection({
             <Button 
               size="lg" 
               asChild 
-              className="bg-gradient-to-r from-primary to-indigo-600 hover:from-primary/90 hover:to-indigo-600/90 text-white shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 px-8 py-4 text-lg font-bold"
+              className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700/90 hover:to-indigo-600/90 text-white shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 px-8 py-4 text-lg font-bold"
             >
               <Link href="/categories">
                 <Star className="mr-2 h-5 w-5 animate-pulse" />

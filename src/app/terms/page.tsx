@@ -105,7 +105,7 @@ export default function TermsPage() {
             <p>
               We may collect anonymous usage statistics and use cookies for analytics and 
               advertising purposes. Please refer to our 
-              <a href="/privacy" className="text-primary hover:underline ml-1">Privacy Policy</a> 
+              <a href="/privacy" className="text-blue-600 hover:underline ml-1">Privacy Policy</a> 
               for detailed information.
             </p>
           </CardContent>
@@ -208,7 +208,7 @@ export default function TermsPage() {
         <Card className="mb-8">
           <CardHeader>
             <div className="flex items-center space-x-3">
-              <Scale className="h-6 w-6 text-primary" />
+              <Scale className="h-6 w-6 text-blue-600" />
               <CardTitle>10. Governing Law</CardTitle>
             </div>
           </CardHeader>
@@ -244,7 +244,7 @@ export default function TermsPage() {
         <Card>
           <CardHeader>
             <div className="flex items-center space-x-3">
-              <Mail className="h-6 w-6 text-primary" />
+              <Mail className="h-6 w-6 text-blue-600" />
               <CardTitle>12. Contact Information</CardTitle>
             </div>
           </CardHeader>
@@ -254,7 +254,7 @@ export default function TermsPage() {
             </p>
             <div className="mt-4 space-y-2">
               <p><strong>Email:</strong> legal@toolshub.com</p>
-              <p><strong>Website:</strong> <a href="/contact" className="text-primary hover:underline">Contact Form</a></p>
+              <p><strong>Website:</strong> <a href="/contact" className="text-blue-600 hover:underline">Contact Form</a></p>
             </div>
             <p className="mt-4 text-sm">
               By using Tools Hub, you acknowledge that you have read and understood these 

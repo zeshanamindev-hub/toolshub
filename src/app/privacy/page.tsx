@@ -36,7 +36,7 @@ export default function PrivacyPage() {
         <Card className="mb-8">
           <CardHeader>
             <div className="flex items-center space-x-3">
-              <Eye className="h-6 w-6 text-primary" />
+              <Eye className="h-6 w-6 text-blue-600" />
               <CardTitle>Privacy Overview</CardTitle>
             </div>
           </CardHeader>
@@ -139,7 +139,7 @@ export default function PrivacyPage() {
                 We use Google AdSense to display advertisements. Google may use cookies 
                 to serve ads based on your visits to this and other websites. You can 
                 opt out of personalized advertising by visiting Google's 
-                <a href="https://www.google.com/settings/ads" className="text-primary hover:underline ml-1">
+                <a href="https://www.google.com/settings/ads" className="text-blue-600 hover:underline ml-1">
                   Ads Settings
                 </a>.
               </p>
@@ -225,7 +225,7 @@ export default function PrivacyPage() {
         <Card>
           <CardHeader>
             <div className="flex items-center space-x-3">
-              <Mail className="h-6 w-6 text-primary" />
+              <Mail className="h-6 w-6 text-blue-600" />
               <CardTitle>Contact Us</CardTitle>
             </div>
           </CardHeader>
@@ -236,7 +236,7 @@ export default function PrivacyPage() {
             </p>
             <div className="mt-4 space-y-2">
               <p><strong>Email:</strong> privacy@toolshub.com</p>
-              <p><strong>Website:</strong> <a href="/contact" className="text-primary hover:underline">Contact Form</a></p>
+              <p><strong>Website:</strong> <a href="/contact" className="text-blue-600 hover:underline">Contact Form</a></p>
             </div>
           </CardContent>
         </Card>

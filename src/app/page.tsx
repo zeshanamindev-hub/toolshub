@@ -30,8 +30,8 @@ const features = [
     name: "Lightning Fast",
     description: "All tools work instantly in your browser without any delays. No waiting, no loading - just immediate results.",
     icon: Zap,
-    color: "text-yellow-600",
-    bgColor: "bg-yellow-500",
+    color: "text-blue-600",
+    bgColor: "bg-blue-500",
     stats: "< 100ms",
     benefit: "Processing Time"
   },
@@ -39,8 +39,8 @@ const features = [
     name: "Privacy First",
     description: "Your data never leaves your browser. Everything is processed locally with zero server communication for maximum security.",
     icon: Shield,
-    color: "text-green-600",
-    bgColor: "bg-green-500",
+    color: "text-blue-600",
+    bgColor: "bg-blue-500",
     stats: "100%",
     benefit: "Local Processing"
   },
@@ -57,8 +57,8 @@ const features = [
     name: "Always Free",
     description: "No subscriptions, no hidden fees, no catch. All tools are completely free to use without any limitations.",
     icon: Star,
-    color: "text-purple-600",
-    bgColor: "bg-purple-500",
+    color: "text-blue-600",
+    bgColor: "bg-blue-500",
     stats: "Forever",
     benefit: "100% Free"
   }
@@ -179,9 +179,9 @@ export default function HomePage() {
         {/* Decorative Orbs - Solid Colors */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-20 left-10 w-96 h-96 bg-blue-100 rounded-full blur-3xl opacity-40 animate-float-bounce"></div>
-          <div className="absolute top-40 right-20 w-80 h-80 bg-purple-100 rounded-full blur-3xl opacity-30 animate-float-bounce" style={{animationDelay: '2s'}}></div>
-          <div className="absolute bottom-20 left-1/4 w-72 h-72 bg-cyan-100 rounded-full blur-3xl opacity-25 animate-float-bounce" style={{animationDelay: '4s'}}></div>
-          <div className="absolute bottom-40 right-1/3 w-64 h-64 bg-indigo-100 rounded-full blur-3xl opacity-20 animate-float-bounce" style={{animationDelay: '1s'}}></div>
+          <div className="absolute top-40 right-20 w-80 h-80 bg-blue-100 rounded-full blur-3xl opacity-30 animate-float-bounce" style={{animationDelay: '2s'}}></div>
+          <div className="absolute bottom-20 left-1/4 w-72 h-72 bg-blue-100 rounded-full blur-3xl opacity-25 animate-float-bounce" style={{animationDelay: '4s'}}></div>
+          <div className="absolute bottom-40 right-1/3 w-64 h-64 bg-blue-100 rounded-full blur-3xl opacity-20 animate-float-bounce" style={{animationDelay: '1s'}}></div>
         </div>
 
         {/* Grid Pattern Overlay */}
@@ -199,11 +199,11 @@ export default function HomePage() {
             <div className="space-y-8 text-left">
               {/* Badge */}
               <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white border border-gray-200 animate-fade-in-up">
-                <Sparkles className="h-4 w-4 text-purple-600 animate-pulse" />
+                <Sparkles className="h-4 w-4 text-blue-600 animate-pulse" />
                 <span className="text-sm font-bold text-blue-600">
                   {SITE_CONFIG.toolCount}+ Professional Tools
                 </span>
-                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
               </div>
 
               {/* Main Heading */}
@@ -227,7 +227,7 @@ export default function HomePage() {
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
                 <Link href="#tools">
-                  <Button size="lg" className="group relative overflow-hidden bg-blue-600 hover:bg-blue-700 text-white px-10 py-7 text-lg rounded-2xl transition-all duration-300 magnetic border-0 w-full sm:w-auto cursor-pointer">
+                  <Button size="lg" className="group relative overflow-hidden bg-blue-600 hover:bg-blue-700 text-white px-10 py-6 text-lg rounded-2xl transition-all duration-300 border-0 w-full sm:w-auto cursor-pointer">
                     <span className="relative z-10 flex items-center gap-3 font-normal">
                       <Rocket className="h-5 w-5 group-hover:rotate-12 transition-transform duration-300" />
                       Explore All Tools
@@ -237,7 +237,7 @@ export default function HomePage() {
                 </Link>
 
                 <Link href="/about">
-                  <Button size="lg" variant="outline" className="group bg-white hover:bg-gray-50 px-10 py-7 text-lg rounded-2xl border-2 border-gray-300 hover:border-blue-500 transition-all duration-300 magnetic font-normal text-gray-700 hover:text-blue-600 w-full sm:w-auto cursor-pointer">
+                  <Button size="lg" variant="outline" className="group bg-white hover:bg-gray-50 px-10 py-6 text-lg rounded-2xl border-2 border-gray-300 hover:border-blue-500 transition-all duration-300 font-normal text-gray-700 hover:text-blue-600 w-full sm:w-auto cursor-pointer">
                     <Globe className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform duration-300" />
                     Learn More
                   </Button>
@@ -249,9 +249,9 @@ export default function HomePage() {
             <div className="grid grid-cols-2 gap-6 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
               {[
                 { label: "Tools Available", value: `${SITE_CONFIG.toolCount}+`, icon: Grid3X3, bgColor: "bg-blue-500", lightBg: "bg-blue-50" },
-                { label: "Always Free", value: "100%", icon: Star, bgColor: "bg-purple-500", lightBg: "bg-purple-50" },
-                { label: "Privacy First", value: "Local", icon: Lock, bgColor: "bg-green-500", lightBg: "bg-green-50" },
-                { label: "Users Worldwide", value: "100K+", icon: Users, bgColor: "bg-orange-500", lightBg: "bg-orange-50" }
+                { label: "Always Free", value: "100%", icon: Star, bgColor: "bg-blue-500", lightBg: "bg-blue-50" },
+                { label: "Privacy First", value: "Local", icon: Lock, bgColor: "bg-blue-500", lightBg: "bg-blue-50" },
+                { label: "Users Worldwide", value: "100K+", icon: Users, bgColor: "bg-blue-500", lightBg: "bg-blue-50" }
               ].map((stat, index) => (
                 <div
                   key={stat.label}
@@ -277,14 +277,14 @@ export default function HomePage() {
       {/* Features Section */}
       <section className="relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden bg-white">
         {/* Decorative elements */}
-        <div className="absolute top-20 right-10 w-72 h-72 bg-purple-100 opacity-20 rounded-full blur-3xl"></div>
+        <div className="absolute top-20 right-10 w-72 h-72 bg-blue-100 opacity-20 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 left-10 w-80 h-80 bg-blue-100 opacity-20 rounded-full blur-3xl"></div>
 
         <div className="relative max-w-7xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-20">
             <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white border border-gray-200 mb-6">
-              <Sparkles className="h-4 w-4 text-purple-600 animate-pulse" />
+              <Sparkles className="h-4 w-4 text-blue-600 animate-pulse" />
               <span className="text-sm font-bold text-gray-700">Our Advantages</span>
             </div>
             <h2 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-6">
@@ -365,24 +365,24 @@ export default function HomePage() {
       </section>
 
       {/* Popular Tools Section */}
-      <section id="tools" className="relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden bg-orange-50">
+      <section id="tools" className="relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden bg-blue-50">
         {/* Animated orbs */}
-        <div className="absolute top-10 left-1/4 w-96 h-96 bg-orange-200 opacity-20 rounded-full blur-3xl animate-float-bounce"></div>
-        <div className="absolute bottom-10 right-1/4 w-80 h-80 bg-purple-200 opacity-20 rounded-full blur-3xl animate-float-bounce" style={{animationDelay: '2s'}}></div>
+        <div className="absolute top-10 left-1/4 w-96 h-96 bg-blue-200 opacity-20 rounded-full blur-3xl animate-float-bounce"></div>
+        <div className="absolute bottom-10 right-1/4 w-80 h-80 bg-blue-200 opacity-20 rounded-full blur-3xl animate-float-bounce" style={{animationDelay: '2s'}}></div>
 
         <div className="relative max-w-7xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-orange-500 text-white mb-6">
+            <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-blue-500 text-white mb-6">
               <TrendingUp className="h-4 w-4" />
               <span className="text-sm font-bold">Most Popular</span>
               <Star className="h-4 w-4 fill-current" />
             </div>
             <h2 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-6">
-              Trending <span className="text-orange-600 font-bold">Tools</span>
+              Trending <span className="text-blue-600 font-bold">Tools</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              Join <span className="font-bold text-orange-600">100K+ users</span> who rely on these powerful tools every day
+              Join <span className="font-bold text-blue-600">100K+ users</span> who rely on these powerful tools every day
             </p>
           </div>
 
@@ -397,24 +397,24 @@ export default function HomePage() {
                 <Link
                   key={tool.name}
                   href={tool.href}
-                  className="group relative bg-white rounded-2xl p-6 transition-all duration-500 border border-gray-100 hover:border-orange-200 overflow-hidden hover:-translate-y-1"
+                  className="group relative bg-white rounded-2xl p-6 transition-all duration-500 border border-gray-100 hover:border-blue-200 overflow-hidden hover:-translate-y-1"
                   style={{animationDelay: `${index * 0.1}s`}}
                 >
                   {/* Popular badge for first item */}
                   {index === 0 && (
-                    <div className="absolute top-4 right-4 px-3 py-1 bg-orange-500 text-white text-xs font-bold rounded-full">
+                    <div className="absolute top-4 right-4 px-3 py-1 bg-blue-500 text-white text-xs font-bold rounded-full">
                       #1 Popular
                     </div>
                   )}
 
                   <div className="relative z-10">
                     {/* Icon */}
-                    <div className={`inline-flex p-4 rounded-2xl bg-orange-100 mb-4 group-hover:scale-110 transition-all duration-500`}>
-                      <Icon className={`h-8 w-8 ${toolData.color}`} />
+                    <div className={`inline-flex p-4 rounded-2xl bg-blue-100 mb-4 group-hover:scale-110 transition-all duration-500`}>
+                      <Icon className={`h-8 w-8 text-blue-600`} />
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-orange-600 transition-all duration-500">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-all duration-500">
                       {toolData.name}
                     </h3>
 
@@ -424,14 +424,14 @@ export default function HomePage() {
                     </p>
 
                     {/* CTA */}
-                    <div className="flex items-center text-orange-600 group-hover:text-orange-700 font-bold text-sm transition-colors duration-500">
+                    <div className="flex items-center text-blue-600 group-hover:text-blue-700 font-bold text-sm transition-colors duration-500">
                       <span>Try now</span>
                       <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-2 transition-transform duration-500" />
                     </div>
                   </div>
 
                   {/* Bottom accent bar */}
-                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-orange-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-blue-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
                 </Link>
               )
             })}
@@ -440,8 +440,8 @@ export default function HomePage() {
           {/* Bottom CTA */}
           <div className="text-center">
             <Link href="/tools">
-              <Button size="lg" variant="outline" className="group bg-white hover:bg-orange-500 px-10 py-6 text-base rounded-2xl border-2 border-orange-300 hover:border-orange-500 transition-all duration-500 font-normal hover:text-white cursor-pointer">
-                <span className="text-gray-700 group-hover:text-white transition-colors duration-500">View All {SITE_CONFIG.toolCount}+ Tools</span>
+              <Button size="lg" className="group bg-blue-600 hover:bg-blue-700 text-white px-10 py-6 text-lg rounded-2xl transition-all duration-500 font-normal cursor-pointer">
+                <span className="transition-colors duration-500">View All {SITE_CONFIG.toolCount}+ Tools</span>
                 <ChevronRight className="ml-2 h-5 w-5 group-hover:translate-x-2 transition-transform duration-500" />
               </Button>
             </Link>
@@ -453,7 +453,7 @@ export default function HomePage() {
       <section className="relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden bg-blue-50">
         {/* Gentle floating orbs */}
         <div className="absolute top-20 left-10 w-96 h-96 bg-blue-200 opacity-30 rounded-full blur-3xl animate-float-bounce"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-200 opacity-30 rounded-full blur-3xl animate-float-bounce" style={{animationDelay: '3s'}}></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-200 opacity-30 rounded-full blur-3xl animate-float-bounce" style={{animationDelay: '3s'}}></div>
 
         <div className="relative max-w-7xl mx-auto">
           {/* Section Header */}
@@ -513,7 +513,7 @@ export default function HomePage() {
                     {/* Icon */}
                     <div className="mb-4">
                       <div className={`inline-flex p-3 rounded-xl bg-blue-100 group-hover:scale-110 transition-all duration-500`}>
-                        <Icon className={`h-6 w-6 ${tool.color}`} />
+                        <Icon className={`h-6 w-6 text-blue-600`} />
                       </div>
                     </div>
 
@@ -544,7 +544,7 @@ export default function HomePage() {
           {/* Bottom CTA */}
           <div className="text-center">
             <Link href="/tools">
-              <Button size="lg" className="group bg-blue-600 hover:bg-blue-700 text-white px-12 py-7 text-lg rounded-2xl transition-all duration-500 font-normal border-0 hover:scale-105 cursor-pointer">
+              <Button size="lg" className="group bg-blue-600 hover:bg-blue-700 text-white px-10 py-6 text-lg rounded-2xl transition-all duration-300 font-normal border-0 cursor-pointer">
                 <Search className="mr-3 h-5 w-5 group-hover:rotate-12 transition-transform duration-500" />
                 Browse All {SITE_CONFIG.toolCount}+ Tools
                 <ChevronRight className="ml-3 h-5 w-5 group-hover:translate-x-2 transition-transform duration-500" />

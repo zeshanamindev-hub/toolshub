@@ -197,7 +197,7 @@ export default function KeywordDensityCheckerClient() {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <FileText className="h-5 w-5 text-primary" />
+                <FileText className="h-5 w-5 text-blue-600" />
                 Content Analysis
               </CardTitle>
             </CardHeader>
@@ -225,7 +225,7 @@ export default function KeywordDensityCheckerClient() {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Search className="h-5 w-5 text-primary" />
+                <Search className="h-5 w-5 text-blue-600" />
                 Target Keyword Analysis
               </CardTitle>
             </CardHeader>
@@ -281,7 +281,7 @@ export default function KeywordDensityCheckerClient() {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <TrendingUp className="h-5 w-5 text-primary" />
+                  <TrendingUp className="h-5 w-5 text-blue-600" />
                   Keyword Density Analysis
                 </CardTitle>
               </CardHeader>
@@ -290,7 +290,7 @@ export default function KeywordDensityCheckerClient() {
                   {keywords.slice(0, 20).map((keyword, index) => (
                     <div key={keyword.keyword} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                       <div className="flex items-center gap-3">
-                        <span className="flex items-center justify-center w-6 h-6 bg-primary text-white text-xs font-medium rounded-full">
+                        <span className="flex items-center justify-center w-6 h-6 bg-blue-600 text-white text-xs font-medium rounded-full">
                           {index + 1}
                         </span>
                         <span className="font-medium text-gray-900">{keyword.keyword}</span>

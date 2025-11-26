@@ -54,12 +54,12 @@ export default function AllToolsClient() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <div className="bg-gradient-to-r from-primary/10 to-indigo-100/50 border-b">
+      <div className="bg-gradient-to-r from-blue-50 to-blue-100/50 border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex items-center justify-between mb-6">
-            <Link 
+            <Link
               href="/"
-              className="inline-flex items-center text-primary hover:text-primary/80 transition-colors"
+              className="inline-flex items-center text-blue-600 hover:text-blue-700 transition-colors"
             >
               <ArrowLeft className="mr-2 h-5 w-5" />
               Back to Home
@@ -99,7 +99,7 @@ export default function AllToolsClient() {
                 placeholder="Search tools..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-10 border-gray-300 focus:border-primary focus:ring-primary"
+                className="pl-10 border-gray-300 focus:border-blue-600 focus:ring-blue-600"
               />
             </div>
           </div>
@@ -113,7 +113,7 @@ export default function AllToolsClient() {
             {alphabeticalLetters.map(letter => (
               <div key={letter} className="scroll-mt-24" id={letter}>
                 <div className="flex items-center mb-6">
-                  <div className="flex items-center justify-center w-12 h-12 bg-primary text-white rounded-xl font-bold text-xl">
+                  <div className="flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-xl font-bold text-xl">
                     {letter}
                   </div>
                   <div className="ml-4 flex-1 h-px bg-gray-200"></div>
@@ -130,10 +130,10 @@ export default function AllToolsClient() {
                         <Card key={tool.name} className="hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group">
                           <CardHeader>
                             <div className="flex items-center space-x-3">
-                              <div className="p-2 rounded-lg bg-gray-50 group-hover:bg-primary/10 transition-colors">
+                              <div className="p-2 rounded-lg bg-gray-50 group-hover:bg-blue-100 transition-colors">
                                 <Icon className={`h-6 w-6 ${tool.color}`} />
                               </div>
-                              <CardTitle className="text-xl group-hover:text-primary transition-colors">{tool.name}</CardTitle>
+                              <CardTitle className="text-xl group-hover:text-blue-600 transition-colors">{tool.name}</CardTitle>
                             </div>
                             <CardDescription className="text-base leading-relaxed">
                               {tool.description}
@@ -156,13 +156,13 @@ export default function AllToolsClient() {
                     {groupedTools[letter].map((tool) => {
                       const Icon = tool.icon
                       return (
-                        <div key={tool.name} className="flex items-center justify-between p-4 bg-white border border-gray-200 rounded-lg hover:border-primary/30 hover:shadow-md transition-all duration-200 group">
+                        <div key={tool.name} className="flex items-center justify-between p-4 bg-white border border-gray-200 rounded-lg hover:border-blue-300 hover:shadow-md transition-all duration-200 group">
                           <div className="flex items-center space-x-4">
-                            <div className="p-2 rounded-lg bg-gray-50 group-hover:bg-primary/10 transition-colors">
+                            <div className="p-2 rounded-lg bg-gray-50 group-hover:bg-blue-100 transition-colors">
                               <Icon className={`h-5 w-5 ${tool.color}`} />
                             </div>
                             <div>
-                              <h3 className="font-bold text-gray-900 group-hover:text-primary transition-colors">
+                              <h3 className="font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
                                 {tool.name}
                               </h3>
                               <p className="text-sm text-gray-600">{tool.description}</p>
@@ -202,7 +202,7 @@ export default function AllToolsClient() {
               <a
                 key={letter}
                 href={`#${letter}`}
-                className="w-8 h-8 flex items-center justify-center text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/10 rounded transition-colors"
+                className="w-8 h-8 flex items-center justify-center text-sm font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-100 rounded transition-colors"
               >
                 {letter}
               </a>

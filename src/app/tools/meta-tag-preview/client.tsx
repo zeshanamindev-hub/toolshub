@@ -237,7 +237,7 @@ export default function MetaTagPreviewClient() {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Search className="h-5 w-5 text-primary" />
+                <Search className="h-5 w-5 text-blue-600" />
                 Meta Tag Configuration
               </CardTitle>
             </CardHeader>
@@ -386,7 +386,7 @@ export default function MetaTagPreviewClient() {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Eye className="h-5 w-5 text-primary" />
+                <Eye className="h-5 w-5 text-blue-600" />
                 Preview
               </CardTitle>
               <div className="flex gap-2">
@@ -507,7 +507,7 @@ export default function MetaTagPreviewClient() {
             <CardHeader>
               <div className="flex items-center justify-between">
                 <CardTitle className="flex items-center gap-2">
-                  <LinkIcon className="h-5 w-5 text-primary" />
+                  <LinkIcon className="h-5 w-5 text-blue-600" />
                   Generated Meta Tags
                 </CardTitle>
                 <Button onClick={handleCopy}>

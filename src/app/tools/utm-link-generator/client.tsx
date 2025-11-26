@@ -199,7 +199,7 @@ export default function UtmLinkGeneratorClient() {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <LinkIcon className="h-5 w-5 text-primary" />
+                <LinkIcon className="h-5 w-5 text-blue-600" />
                 Base URL
               </CardTitle>
             </CardHeader>
@@ -220,7 +220,7 @@ export default function UtmLinkGeneratorClient() {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Target className="h-5 w-5 text-primary" />
+                <Target className="h-5 w-5 text-blue-600" />
                 UTM Parameters
               </CardTitle>
             </CardHeader>
@@ -330,7 +330,7 @@ export default function UtmLinkGeneratorClient() {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <ExternalLink className="h-5 w-5 text-primary" />
+                  <ExternalLink className="h-5 w-5 text-blue-600" />
                   Generated UTM URL
                 </CardTitle>
               </CardHeader>
