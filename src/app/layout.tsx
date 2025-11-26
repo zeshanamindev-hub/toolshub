@@ -97,10 +97,6 @@ export const metadata: Metadata = {
   },
   category: 'technology',
   manifest: '/manifest.json',
-  icons: {
-    icon: '/favicon.ico',
-    apple: '/favicon.ico',
-  },
 }
 
 export const viewport = {

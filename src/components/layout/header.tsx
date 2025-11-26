@@ -80,7 +80,7 @@ export default function Header() {
       <header className={`
         sticky top-0 z-50 transition-all duration-500
         ${scrolled
-          ? 'glass shadow-lg border-b border-gray-200/50'
+          ? 'glass border-b border-gray-200/50'
           : 'bg-white/95 backdrop-blur-sm border-b border-gray-100'
         }
       `}>
@@ -103,9 +103,8 @@ export default function Header() {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 group" aria-label="Tools Hub Home">
-              <div className="relative p-2.5 bg-blue-600 rounded-2xl shadow-xl group-hover:shadow-2xl transition-all duration-300 group-hover:scale-110">
+              <div className="relative p-2.5 bg-blue-600 rounded-2xl transition-all duration-300 group-hover:scale-110">
                 <Wrench className="h-7 w-7 text-white relative z-10" />
-                <div className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-green-400 rounded-full border-2 border-white animate-pulse"></div>
               </div>
               <span className="text-2xl font-black text-blue-600">
                 Tools Hub
@@ -145,7 +144,7 @@ export default function Header() {
                 {/* Categories Mega Dropdown */}
                 {categoriesDropdownOpen && (
                   <div
-                    className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[600px] bg-white rounded-3xl shadow-2xl border border-gray-200 p-6 z-50 animate-fade-in-up"
+                    className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[600px] bg-white rounded-3xl border border-gray-200 p-6 z-50 animate-fade-in-up"
                     onMouseLeave={() => setCategoriesDropdownOpen(false)}
                   >
                     <div className="grid grid-cols-2 gap-4">
@@ -153,7 +152,7 @@ export default function Header() {
                         <Link
                           key={category.id}
                           href={category.href}
-                          className="group p-4 rounded-2xl hover:bg-blue-50 transition-all duration-300 border border-transparent hover:border-blue-200 hover:shadow-lg"
+                          className="group p-4 rounded-2xl hover:bg-blue-50 transition-all duration-300 border border-transparent hover:border-blue-200"
                           onClick={() => setCategoriesDropdownOpen(false)}
                         >
                           <div className="flex items-center justify-between mb-2">
@@ -221,7 +220,7 @@ export default function Header() {
 
                 {/* Search Results Dropdown */}
                 {searchFocused && searchQuery && (
-                  <div className="absolute top-full left-0 right-0 mt-3 bg-white rounded-2xl shadow-2xl border border-gray-200 p-4 max-h-96 overflow-y-auto z-50 animate-fade-in-up">
+                  <div className="absolute top-full left-0 right-0 mt-3 bg-white rounded-2xl border border-gray-200 p-4 max-h-96 overflow-y-auto z-50 animate-fade-in-up">
                     {filteredTools.length > 0 ? (
                       <div className="space-y-2">
                         {filteredTools.map((tool) => {

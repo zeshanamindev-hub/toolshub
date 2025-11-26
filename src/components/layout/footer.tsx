@@ -25,7 +25,7 @@ export default function Footer() {
           {/* Brand Section */}
           <div className="text-center mb-8">
             <Link href="/" className="inline-flex items-center gap-3 group mb-4">
-              <div className="relative p-2.5 bg-blue-600 rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-500 ease-out group-hover:scale-110">
+              <div className="relative p-2.5 bg-blue-600 rounded-xl transition-all duration-500 ease-out group-hover:scale-110">
                 <Wrench className="h-6 w-6 text-white" />
               </div>
               <span className="text-2xl font-black text-blue-600">
@@ -72,9 +72,7 @@ export default function Footer() {
               <p>&copy; {new Date().getFullYear()} Tools Hub. All rights reserved.</p>
               <span className="hidden sm:inline text-gray-400">•</span>
               <div className="flex items-center gap-1.5">
-                <span>Made with</span>
-                <span className="text-red-500 text-base">❤️</span>
-                <span>for developers</span>
+                <span>Made with love for developers</span>
               </div>
             </div>
           </div>

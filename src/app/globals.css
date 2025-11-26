@@ -95,18 +95,18 @@ body {
   opacity: 0;
 }
 
-/* Search input glow effect */
+/* Search input glow effect - disabled */
 @keyframes search-glow {
   0%, 100% {
     box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
   }
   50% {
-    box-shadow: 0 0 20px 5px rgba(59, 130, 246, 0.1);
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
   }
 }
 
 .search-input-focus:focus {
-  animation: search-glow 2s ease-in-out infinite;
+  /* animation: search-glow 2s ease-in-out infinite; */
 }
 
 /* Floating animation */

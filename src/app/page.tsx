@@ -198,7 +198,7 @@ export default function HomePage() {
             {/* Left Side - Text Content & CTA */}
             <div className="space-y-8 text-left">
               {/* Badge */}
-              <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white border border-gray-200 animate-fade-in-up shadow-lg">
+              <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white border border-gray-200 animate-fade-in-up">
                 <Sparkles className="h-4 w-4 text-purple-600 animate-pulse" />
                 <span className="text-sm font-bold text-blue-600">
                   {SITE_CONFIG.toolCount}+ Professional Tools
@@ -208,7 +208,7 @@ export default function HomePage() {
 
               {/* Main Heading */}
               <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black tracking-tight animate-fade-in-up leading-tight" style={{animationDelay: '0.1s'}}>
-                <span className="block text-blue-600 drop-shadow-lg">
+                <span className="block text-blue-600">
                   Free Online Tools
                 </span>
                 <span className="block text-gray-900 mt-3">
@@ -221,13 +221,13 @@ export default function HomePage() {
                 Boost your productivity with our collection of
                 <span className="text-blue-700 font-bold"> professional tools</span> for
                 text manipulation, development, SEO, and content creation.
-                <span className="block mt-3 text-base sm:text-lg text-gray-600">⚡ Fast • 🔒 Secure • ✓ No Registration Required</span>
+                <span className="block mt-3 text-base sm:text-lg text-gray-600">Fast • Secure • No Registration Required</span>
               </p>
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
                 <Link href="#tools">
-                  <Button size="lg" className="group relative overflow-hidden bg-blue-600 hover:bg-blue-700 text-white px-10 py-7 text-lg rounded-2xl shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 magnetic border-0 w-full sm:w-auto cursor-pointer">
+                  <Button size="lg" className="group relative overflow-hidden bg-blue-600 hover:bg-blue-700 text-white px-10 py-7 text-lg rounded-2xl transition-all duration-300 magnetic border-0 w-full sm:w-auto cursor-pointer">
                     <span className="relative z-10 flex items-center gap-3 font-bold">
                       <Rocket className="h-5 w-5 group-hover:rotate-12 transition-transform duration-300" />
                       Explore All Tools
@@ -255,12 +255,12 @@ export default function HomePage() {
               ].map((stat, index) => (
                 <div
                   key={stat.label}
-                  className={`${stat.lightBg} rounded-3xl p-8 group relative overflow-hidden transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-2xl border border-gray-200`}
+                  className={`${stat.lightBg} rounded-3xl p-8 group relative overflow-hidden transition-all duration-500 ease-out hover:-translate-y-2 border border-gray-200`}
                   style={{animationDelay: `${0.5 + index * 0.1}s`}}
                 >
                   {/* Content */}
                   <div className="relative z-10">
-                    <div className={`inline-flex p-3 rounded-2xl ${stat.bgColor} mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 ease-out shadow-lg`}>
+                    <div className={`inline-flex p-3 rounded-2xl ${stat.bgColor} mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 ease-out`}>
                       <stat.icon className="h-6 w-6 text-white" />
                     </div>
                     <div className="text-4xl font-black text-gray-900 mb-2 group-hover:scale-105 transition-all duration-500 ease-out">{stat.value}</div>
@@ -283,7 +283,7 @@ export default function HomePage() {
         <div className="relative max-w-7xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-20">
-            <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white shadow-lg border border-gray-200 mb-6">
+            <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white border border-gray-200 mb-6">
               <Sparkles className="h-4 w-4 text-purple-600 animate-pulse" />
               <span className="text-sm font-bold text-gray-700">Our Advantages</span>
             </div>
@@ -307,12 +307,12 @@ export default function HomePage() {
                   style={{animationDelay: `${index * 0.1}s`}}
                 >
                   {/* Card */}
-                  <div className="relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 ease-out border border-gray-100 overflow-hidden hover:-translate-y-2">
+                  <div className="relative bg-white rounded-3xl p-8 transition-all duration-500 ease-out border border-gray-100 overflow-hidden hover:-translate-y-2">
                     {/* Content Grid */}
                     <div className="relative z-10 flex items-start gap-6">
                       {/* Icon Section */}
                       <div className="flex-shrink-0">
-                        <div className={`p-5 rounded-2xl ${feature.bgColor} shadow-xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 ease-out`}>
+                        <div className={`p-5 rounded-2xl ${feature.bgColor} group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 ease-out`}>
                           <Icon className="h-10 w-10 text-white" />
                         </div>
                       </div>
@@ -327,7 +327,7 @@ export default function HomePage() {
                         </p>
 
                         {/* Stats Badge */}
-                        <div className="inline-flex items-center gap-3 px-5 py-3 rounded-2xl bg-gray-50 group-hover:bg-white border border-gray-200 group-hover:border-transparent group-hover:shadow-lg transition-all duration-500">
+                        <div className="inline-flex items-center gap-3 px-5 py-3 rounded-2xl bg-gray-50 group-hover:bg-white border border-gray-200 transition-all duration-500">
                           <div className="flex flex-col">
                             <span className={`text-3xl font-black ${feature.color}`}>
                               {feature.stats}
@@ -354,7 +354,7 @@ export default function HomePage() {
               Ready to boost your productivity?
             </p>
             <Link href="#tools">
-              <Button size="lg" className="group bg-blue-600 hover:bg-blue-700 text-white px-10 py-6 text-lg rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border-0 font-bold cursor-pointer">
+              <Button size="lg" className="group bg-blue-600 hover:bg-blue-700 text-white px-10 py-6 text-lg rounded-2xl transition-all duration-300 border-0 font-bold cursor-pointer">
                 <Rocket className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform duration-300" />
                 Start Using Tools Now
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-2 transition-transform duration-300" />
@@ -373,7 +373,7 @@ export default function HomePage() {
         <div className="relative max-w-7xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-orange-500 text-white shadow-xl mb-6">
+            <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-orange-500 text-white mb-6">
               <TrendingUp className="h-4 w-4" />
               <span className="text-sm font-bold">Most Popular</span>
               <Star className="h-4 w-4 fill-current" />
@@ -397,19 +397,19 @@ export default function HomePage() {
                 <Link
                   key={tool.name}
                   href={tool.href}
-                  className="group relative bg-white rounded-2xl p-6 shadow-md hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-orange-200 overflow-hidden hover:-translate-y-1"
+                  className="group relative bg-white rounded-2xl p-6 transition-all duration-500 border border-gray-100 hover:border-orange-200 overflow-hidden hover:-translate-y-1"
                   style={{animationDelay: `${index * 0.1}s`}}
                 >
                   {/* Popular badge for first item */}
                   {index === 0 && (
-                    <div className="absolute top-4 right-4 px-3 py-1 bg-orange-500 text-white text-xs font-bold rounded-full shadow-lg">
+                    <div className="absolute top-4 right-4 px-3 py-1 bg-orange-500 text-white text-xs font-bold rounded-full">
                       #1 Popular
                     </div>
                   )}
 
                   <div className="relative z-10">
                     {/* Icon */}
-                    <div className={`inline-flex p-4 rounded-2xl bg-orange-100 mb-4 group-hover:scale-110 group-hover:shadow-lg transition-all duration-500`}>
+                    <div className={`inline-flex p-4 rounded-2xl bg-orange-100 mb-4 group-hover:scale-110 transition-all duration-500`}>
                       <Icon className={`h-8 w-8 ${toolData.color}`} />
                     </div>
 
@@ -440,7 +440,7 @@ export default function HomePage() {
           {/* Bottom CTA */}
           <div className="text-center">
             <Link href="/tools">
-              <Button size="lg" variant="outline" className="group bg-white hover:bg-orange-500 px-10 py-6 text-base rounded-2xl border-2 border-orange-300 hover:border-orange-500 transition-all duration-500 font-bold hover:text-white shadow-lg hover:shadow-xl cursor-pointer">
+              <Button size="lg" variant="outline" className="group bg-white hover:bg-orange-500 px-10 py-6 text-base rounded-2xl border-2 border-orange-300 hover:border-orange-500 transition-all duration-500 font-bold hover:text-white cursor-pointer">
                 <span className="text-gray-700 group-hover:text-white transition-colors duration-500">View All {SITE_CONFIG.toolCount}+ Tools</span>
                 <ChevronRight className="ml-2 h-5 w-5 group-hover:translate-x-2 transition-transform duration-500" />
               </Button>
@@ -458,7 +458,7 @@ export default function HomePage() {
         <div className="relative max-w-7xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white shadow-lg border border-gray-200 mb-6">
+            <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white border border-gray-200 mb-6">
               <Grid3X3 className="h-4 w-4 text-blue-600" />
               <span className="text-sm font-bold text-gray-700">Full Collection</span>
             </div>
@@ -476,8 +476,8 @@ export default function HomePage() {
               onClick={() => setSelectedCategory(null)}
               className={`px-6 py-3 rounded-full font-semibold text-sm transition-all duration-500 cursor-pointer ${
                 selectedCategory === null
-                  ? 'bg-blue-600 text-white shadow-xl scale-105'
-                  : 'bg-white text-gray-700 border-2 border-gray-200 hover:border-blue-300 hover:shadow-md'
+                  ? 'bg-blue-600 text-white scale-105'
+                  : 'bg-white text-gray-700 border-2 border-gray-200 hover:border-blue-300'
               }`}
             >
               All Tools
@@ -488,8 +488,8 @@ export default function HomePage() {
                 onClick={() => setSelectedCategory(category.id)}
                 className={`px-6 py-3 rounded-full font-semibold text-sm transition-all duration-500 cursor-pointer ${
                   selectedCategory === category.id
-                    ? 'bg-blue-600 text-white shadow-xl scale-105'
-                    : 'bg-white text-gray-700 border-2 border-gray-200 hover:border-blue-300 hover:shadow-md'
+                    ? 'bg-blue-600 text-white scale-105'
+                    : 'bg-white text-gray-700 border-2 border-gray-200 hover:border-blue-300'
                 }`}
               >
                 {category.name}
@@ -506,13 +506,13 @@ export default function HomePage() {
                 <Link
                   key={tool.name}
                   href={tool.href}
-                  className="group relative bg-white rounded-2xl p-6 border-2 border-gray-100 hover:border-blue-200 hover:shadow-xl transition-all duration-500 overflow-hidden hover:-translate-y-1"
+                  className="group relative bg-white rounded-2xl p-6 border-2 border-gray-100 hover:border-blue-200 transition-all duration-500 overflow-hidden hover:-translate-y-1"
                   style={{animationDelay: `${index * 0.05}s`}}
                 >
                   <div className="relative z-10">
                     {/* Icon */}
                     <div className="mb-4">
-                      <div className={`inline-flex p-3 rounded-xl bg-blue-100 group-hover:scale-110 group-hover:shadow-lg transition-all duration-500`}>
+                      <div className={`inline-flex p-3 rounded-xl bg-blue-100 group-hover:scale-110 transition-all duration-500`}>
                         <Icon className={`h-6 w-6 ${tool.color}`} />
                       </div>
                     </div>
@@ -544,7 +544,7 @@ export default function HomePage() {
           {/* Bottom CTA */}
           <div className="text-center">
             <Link href="/tools">
-              <Button size="lg" className="group bg-blue-600 hover:bg-blue-700 text-white px-12 py-7 text-lg rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 font-bold border-0 hover:scale-105 cursor-pointer">
+              <Button size="lg" className="group bg-blue-600 hover:bg-blue-700 text-white px-12 py-7 text-lg rounded-2xl transition-all duration-500 font-bold border-0 hover:scale-105 cursor-pointer">
                 <Search className="mr-3 h-5 w-5 group-hover:rotate-12 transition-transform duration-500" />
                 Browse All {SITE_CONFIG.toolCount}+ Tools
                 <ChevronRight className="ml-3 h-5 w-5 group-hover:translate-x-2 transition-transform duration-500" />
