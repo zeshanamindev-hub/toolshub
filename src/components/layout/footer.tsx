@@ -50,6 +50,19 @@ export default function Footer() {
             ))}
           </div>
 
+          {/* Launch Platform Badges */}
+          <div className="flex flex-wrap items-center justify-center gap-6 mb-8">
+            <a href="https://wired.business" target="_blank" rel="noopener noreferrer" className="transition-transform duration-300 hover:scale-105">
+              <img src="https://wired.business/badge0-dark.svg" alt="Featured on Wired Business" width="200" height="54" />
+            </a>
+            <a href="https://www.nxgntools.com/tools/tools-hub" target="_blank" rel="noopener noreferrer" className="transition-transform duration-300 hover:scale-105">
+              <img src="https://www.nxgntools.com/api/embed/tools-hub?type=FIND_US_ON" alt="NextGen Tools Badge" style={{height: '48px', width: 'auto'}} />
+            </a>
+            <a href="https://twelve.tools" target="_blank" rel="noopener noreferrer" className="transition-transform duration-300 hover:scale-105">
+              <img src="https://twelve.tools/badge0-white.svg" alt="Featured on Twelve Tools" width="200" height="54" />
+            </a>
+          </div>
+
           {/* Bottom Section */}
           <div className="pt-6 border-t border-gray-200 text-center">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-2 text-sm text-gray-600">
