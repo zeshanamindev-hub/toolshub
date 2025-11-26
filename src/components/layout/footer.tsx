@@ -61,6 +61,9 @@ export default function Footer() {
             <a href="https://twelve.tools" target="_blank" rel="noopener noreferrer" className="transition-transform duration-300 hover:scale-105">
               <img src="https://twelve.tools/badge0-white.svg" alt="Featured on Twelve Tools" width="200" height="54" />
             </a>
+            <a href="https://www.producthunt.com/products/tools-hub?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-tools-hub" target="_blank" rel="noopener noreferrer" className="transition-transform duration-300 hover:scale-105">
+              <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1042435&theme=light&t=1764168744810" alt="Tools Hub - Free online text tools & utilities | word counter etc | Product Hunt" style={{width: '250px', height: '54px'}} width="250" height="54" />
+            </a>
           </div>
 
           {/* Bottom Section */}
